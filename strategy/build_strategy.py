@@ -113,7 +113,7 @@ for q in SERPQ:
     tr = "".join(f'<tr><td class="n">{p["position"]}</td><td>{E(dom(p["url"]))}</td><td class="n">{int(p["domain_rating"] or 0)}</td><td>{ptype(p["url"], p.get("title"))}</td><td class="n">{"–" if p.get("traffic") is None else fmt(p["traffic"])}</td></tr>' for p in rows[:8])
     low = [p for p in rows if (p.get("domain_rating") or 100) < 45]
     note = f'{len(low)} of the page-one results sit below DR 45, the lowest at DR {int(min(p["domain_rating"] for p in low))}.' if low else "Every page-one result is DR 45 or above."
-    serp_html.append(f'<details class="topic"><summary><span class="tt">"{E(kw)}"</span><span class="tag lp">{"US" if c == "us" else "India"}</span><span class="cnt">{("AI Overview cites " + str(ai) + " sources · ") if ai else ""}{E(note)}</span></summary>'
+    serp_html.append(f'<details class="topic"><summary><span class="tt">"{E(kw)}"</span><span class="tag lp">{"Google USA" if c == "us" else "Google India"}</span><span class="cnt">{("AI Overview cites " + str(ai) + " sources · ") if ai else ""}{E(note)}</span></summary>'
                      f'<div class="tbody"><div class="tw"><table><thead><tr><th class="n">#</th><th>Site</th><th class="n">DR</th><th>Page type</th><th class="n">Est. visits / mo</th></tr></thead><tbody>{tr}</tbody></table></div></div></details>')
 
 # ---------- page quality benchmark ----------
@@ -159,8 +159,8 @@ plan_rows = "".join(f'<tr><td>{w}</td><td class="n">{n}</td><td><b>{E(t)}</b><br
 
 def kw_table(ks):
     if not ks: return '<p class="mut">Targets come from competitor and buyer-question research.</p>'
-    tr = "".join(f'<tr><td>{E(k["kw"])}</td><td>{k["ctry"].upper()}</td><td class="n">{fmt(k["vol"])}</td><td class="n">{"–" if k["kd"] is None else k["kd"]}</td><td>{"New from competitors" if k["src"] == "competitor gap" else ""}</td></tr>' for k in ks)
-    return f'<div class="tw"><table><thead><tr><th>Keyword</th><th>Market</th><th class="n">Searches / mo</th><th class="n">KD</th><th></th></tr></thead><tbody>{tr}</tbody></table></div>'
+    tr = "".join(f'<tr><td>{E(k["kw"])}</td><td>{"USA" if k["ctry"] == "us" else "India"}</td><td class="n">{fmt(k["vol"])}</td><td class="n">{"–" if k["kd"] is None else k["kd"]}</td><td>{"New from competitors" if k["src"] == "competitor gap" else ""}</td></tr>' for k in ks)
+    return f'<div class="tw"><table><thead><tr><th>Keyword</th><th>Google market</th><th class="n">Searches / mo</th><th class="n">KD</th><th></th></tr></thead><tbody>{tr}</tbody></table></div>'
 
 cl_html = []
 for cid, name, pg, url, why, who, win in CL:
