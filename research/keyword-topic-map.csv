@@ -1,0 +1,970 @@
+bucket,topic,page_type,target_page,keyword,country,volume,kd,cpc_usd,status
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,employer of record,US,2800,17,55.0,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,employer of record services,US,1700,16,0.9,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,eor services,US,1300,17,50.0,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,global employer of record,US,900,32,100.0,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,global eor services,US,700,31,35.0,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,employer of record companies,US,600,13,18.0,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,employer of record service,US,500,0,2.0,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,employer of record payroll services,US,500,13,0.4,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,eor employer of record,US,350,21,0.08,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,employer of record company,US,300,14,100.0,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,employer of record eor services,US,250,,0.0,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,eor global services,US,200,13,0.0,targeted
+Employer of Record,Employer of Record hub,Landing page,/employer-of-record/,fintech eor services,US,80,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,employer of record services india,US,300,2,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,employer of record india,US,250,2,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor services in india,IN,250,,40.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor services in india,US,200,1,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor india,IN,200,,25.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor services india,US,150,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor services india,IN,150,,2.5,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor in india,IN,150,,8.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor service providers in india,IN,150,,25.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor companies in india,IN,150,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor service provider in india,IN,80,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,india eor,IN,60,,30.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor company in india,IN,60,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor solutions india,IN,50,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,remote eor employees in india,IN,40,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor service in india,IN,30,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor provider in india,IN,30,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,india eor services,IN,30,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor providers in india,IN,20,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor and peo services india,IN,20,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor service company in india,IN,20,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor solutions in india,IN,20,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,eor companies india,IN,10,,0.0,targeted
+Employer of Record,Employer of Record India (pillar),Landing page,/employer-of-record-india/,employer of record eor in india,IN,10,,0.0,targeted
+Employer of Record,EOR India pricing and cost,Landing page,/employer-of-record-india/pricing/,how much does it cost to hire employees in india,US,0,,0.0,targeted
+Employer of Record,Hire employees in India,Landing page,/hire-employees-in-india/,hire employees in india,US,150,0,2.5,targeted
+Employer of Record,Hire employees in India,Landing page,/hire-employees-in-india/,hire employees in india without entity,US,30,,0.0,targeted
+Employer of Record,Hire employees in India,Landing page,/hire-employees-in-india/,hire employees in india without a legal entity,US,20,,0.0,targeted
+Employer of Record,Hire employees in India,Landing page,/hire-employees-in-india/,hire employees in india without legal entity,US,10,,0.0,targeted
+Employer of Record,Hire employees in India,Landing page,/hire-employees-in-india/,eor hiring in india,IN,10,,0.0,targeted
+Employer of Record,Hire employees in India,Landing page,/hire-employees-in-india/,hire eor in india,IN,10,,0.0,targeted
+Employer of Record,Hire employees in India,Landing page,/hire-employees-in-india/,hire remote employees in india,US,0,,0.0,targeted
+Employer of Record,"Segment pages: startups, UK companies",Landing page set,/eor-india-for-startups/ · /eor-india-for-uk-companies/,how to hire employees for small business in india,US,0,,0.0,targeted
+Employer of Record,"Segment pages: startups, UK companies",Landing page set,/eor-india-for-startups/ · /eor-india-for-uk-companies/,how to hire employees for startup in india,US,0,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record philippines,US,600,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record france,US,500,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record uk,US,500,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record australia,US,450,0,95.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record china,US,450,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record canada,US,400,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record singapore,US,400,0,50.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record germany,US,350,1,60.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record netherlands,US,350,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record vietnam,US,350,0,80.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record uae,US,350,0,70.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record services philippines,US,300,1,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record in switzerland,US,300,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record mexico,US,300,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record in poland,US,300,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,eor services middle east,US,300,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record switzerland,US,250,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record in slovakia,US,250,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record brazil,US,250,0,95.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record turkey,US,250,0,0.05,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record thailand,US,250,0,80.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record czech republic,US,250,0,45.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record usa,US,250,1,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record in portugal,US,250,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record luxembourg,US,250,0,75.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record south korea,US,200,0,60.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record guatemala,US,200,0,35.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record in honduras,US,200,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record poland,US,200,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record in south korea,US,200,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record portugal,US,200,0,1.3,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,czech republic employer of record,US,200,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record in belgium,US,200,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,singapore employer of record,US,200,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record in denmark,US,200,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,employer of record in costa rica,US,200,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,eor services gcc,US,200,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,eor services mena,US,200,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,eor services poland,US,150,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,eor services in germany,US,100,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,eor services in singapore,US,100,0,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,eor services germany,US,100,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,eor services usa,US,90,,0.0,targeted
+Employer of Record,Country EOR pages (Wave 3),Landing page set,/employer-of-record/[country]/,eor services krakow,US,90,,0.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,what's the best way to hire employees in india,US,300,,0.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,how to legally hire someone in india from the us,US,300,,0.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,how to hire employees in india,US,150,,15.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,best way to hire employees in india,US,100,,2.5,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,can a foreign company hire employees in india,US,40,,15.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,how to hire employees in india through eor,US,20,,0.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,how to hire employees in india through an eor,US,10,,0.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,how to hire remote employees in india,US,10,,0.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,how do i hire employees in india?,US,10,,0.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,how to hire employees online in india,US,0,,0.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,best website to hire employees in india,US,0,,0.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,best platform to hire employees in india,US,0,,0.0,targeted
+Employer of Record,How to hire employees in India without an entity,Support article,Guide,how to hire employees in the us from india,US,0,0,0.0,targeted
+Employer of Record,"What is an employer of record, and how it works",Support article,Guide,what is an employer of record,US,600,24,4.0,targeted
+Employer of Record,"What is an employer of record, and how it works",Support article,Guide,employer of record meaning,US,500,31,11.0,targeted
+Employer of Record,"What is an employer of record, and how it works",Support article,Guide,how do eor services work in the philippines,US,300,,0.0,targeted
+Employer of Record,"What is an employer of record, and how it works",Support article,Guide,what is employer of record,US,250,25,4.0,targeted
+Employer of Record,"What is an employer of record, and how it works",Support article,Guide,employer of record pros and cons,US,200,,0.0,targeted
+Employer of Record,"What is an employer of record, and how it works",Support article,Guide,eor services meaning,US,150,12,19.0,targeted
+Employer of Record,"What is an employer of record, and how it works",Support article,Guide,how do employer of record (eor) services work,US,90,,0.0,targeted
+Employer of Record,EOR vs PEO vs staffing agency in India,Support article,Guide,employer of record vs peo,US,350,1,18.0,targeted
+Employer of Record,EOR vs PEO vs staffing agency in India,Support article,Guide,peo vs eor services,US,250,,0.0,targeted
+Employer of Record,EOR vs PEO vs staffing agency in India,Support article,Guide,employer of record vs staffing agency,US,200,0,5.0,targeted
+Employer of Record,EOR vs PEO vs staffing agency in India,Support article,Guide,peo vs employer of record,US,200,1,4.0,targeted
+Employer of Record,EOR vs your own subsidiary in India,Support article,Guide,eor switch services that handle the transition,US,100,,0.0,targeted
+Employer of Record,EOR vs your own subsidiary in India,Support article,Guide,entity vs eor india,IN,30,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best employer of record,US,400,1,60.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best eor to hire in india,US,300,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,top employer of record companies,US,250,5,30.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,which hr software provides top employer of record,US,200,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,leading hr software employer of record,US,200,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,most reliable employer of record company for hr,US,200,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best eor services,US,200,3,0.7,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best global eor services 2025,US,150,7,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best eor provider for a digital services company,US,150,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,top eor services for contractor management,US,100,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best eor services in hr software industry,US,100,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best eor in india,IN,100,,17.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best eor services in singapore,US,90,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best eor services in india,IN,60,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,top eor companies in india,IN,40,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best eor services providers in india,IN,40,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best eor companies in india,IN,30,,0.0,targeted
+Employer of Record,Best employer of record providers for India,Support article,Guide,best eor services india,IN,20,,0.0,targeted
+Employer of Record,,,,hire php developers in india,US,250,0,19.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,employer of record news today,US,200,,0.0,excluded: News searches
+Employer of Record,,,,hire app developers in india,US,200,12,12.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire angularjs developers in india,US,200,0,0.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire developers in india,US,200,3,35.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire ecommerce developers in india,US,200,2,0.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire seo expert in india,US,200,22,6.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire shopify developers in india,US,200,3,0.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire blockchain developers in india,US,200,14,0.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire software developer in india,US,200,6,15.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire app developer in india,US,200,11,15.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire dedicated python developers in india,US,200,,0.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire web developers in india,US,200,13,12.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire certified laravel developers in india,US,200,,0.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire flutter developers in india,US,200,3,20.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,ior eor services,US,150,25,20.0,"excluded: Importer of record, a different service"
+Employer of Record,,,,hire node js developer in india,US,150,0,0.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire java developers in india,US,150,2,0.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire a developer in india,US,150,4,16.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire react native developers in india,US,150,3,19.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire dedicated developers in india,US,150,14,25.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire android developer in india,US,150,1,0.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire django developers in india,US,150,0,0.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire ios developer in india,US,150,0,20.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire programmers in india,US,150,1,35.0,"excluded: Developer-staffing searches, not EOR buyers"
+Employer of Record,,,,hire remote developers in india,US,150,0,55.0,"excluded: Developer-staffing searches, not EOR buyers"
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll,US,1200,33,30.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll services,US,800,12,30.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll,US,700,0,20.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll outsourcing,US,600,11,0.25,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll services,US,600,0,0.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll solutions,US,500,8,0.8,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll platform,US,450,12,18.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll software,US,450,12,35.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll providers,US,400,6,35.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll management,US,400,7,4.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll solution,US,400,10,4.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global hr payroll,US,350,12,1.3,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll companies,US,350,7,40.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll processing,US,350,8,80.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll providers,US,300,12,0.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll provider,US,250,13,40.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll payments,US,250,4,3.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll service,US,250,0,35.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll companies,US,250,2,0.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi country payroll outsourcing,US,200,10,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll outsourcing,US,200,6,0.45,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll outsourcing providers,US,200,9,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll processing,US,200,7,45.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global hr payroll solutions,US,200,12,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global hr and payroll,US,200,13,20.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll service providers,US,200,0,0.04,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll software,US,200,10,7.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll management,US,200,8,1.3,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll company,US,200,3,1.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,payroll global,US,150,26,35.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll partners,US,150,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll company,US,150,7,35.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global international payroll services,US,150,13,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll system,US,150,16,1.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll experts,US,150,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll resources,US,150,6,35.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll systems,US,150,11,5.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi country payroll,US,150,4,0.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi-country payroll software,US,150,12,55.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll solutions,US,150,0,1.2,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll service,US,150,8,0.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,payroll international,US,150,16,30.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll system,US,150,12,0.4,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll solution,US,150,12,7.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll provider,US,150,10,0.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi country payroll providers,US,100,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi country payroll solutions,US,100,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global international payroll,US,100,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international hr outsourced payroll services,US,100,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international global payroll services,US,100,7,60.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international global payroll,US,100,9,3.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,payroll services international,US,100,12,1.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll services,IN,100,5,0.8,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international payroll services,IN,90,9,2.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi country payroll software,US,70,11,0.35,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi-country payroll solutions,US,50,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,global payroll outsourcing,IN,40,,4.5,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi country payroll services,US,40,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,international hr outsourced payroll services,IN,40,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi-country payroll processing,US,30,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi-country payroll,US,30,11,30.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi country payroll companies,US,30,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,multi country payroll tools,US,30,,0.0,targeted
+Multi-Country Payroll,Multi-country payroll (pillar),Landing page,/multi-country-payroll/,“global payroll outsourcing services india”,US,10,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing,US,2900,8,13.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing services,US,1600,8,0.3,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing companies,US,800,7,0.6,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll services,IN,800,7,0.7,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,outsourcing payroll,US,700,0,14.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing services,IN,600,2,1.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing,IN,600,1,1.1,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,outsourcing payroll services,US,600,1,0.6,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll processing outsourcing,US,500,11,10.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr and payroll outsourcing,US,500,10,0.2,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr payroll outsourcing,US,350,5,0.45,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing solutions,US,350,10,0.5,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing company,US,350,4,1.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing service,US,300,5,0.3,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll management services,IN,300,2,0.03,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing provider,US,250,5,0.6,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,outsourced payroll services,IN,250,6,0.8,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll services in india,IN,250,0,1.7,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr payroll outsourcing companies,US,200,6,0.2,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing service provider,US,200,8,18.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,outsourcing payroll companies,US,200,5,30.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr and payroll outsourcing companies,US,200,8,0.6,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing providers,US,200,4,1.3,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,online payroll outsourcing,US,200,69,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing vendors,US,200,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll processing services,IN,200,3,0.03,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing services in india,IN,150,2,1.7,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing companies in india,IN,150,77,0.6,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing companies,IN,150,7,1.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing india,IN,150,8,0.9,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing company,IN,150,1,1.6,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll and outsourcing,US,150,,14.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll services in india,US,150,0,20.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll compliance services,IN,150,,0.9,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll services india,IN,150,7,0.9,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,online payroll services,IN,150,62,0.3,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll services provider,IN,150,25,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll services for small business,IN,150,0,0.02,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing service,IN,100,2,1.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing solutions,IN,100,,0.2,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll services india,US,100,2,50.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing services in india,US,100,1,45.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll management services in india,IN,90,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr payroll services,IN,90,4,1.6,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing software,IN,80,,0.15,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll processing outsourcing,IN,80,2,0.7,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,outsource payroll services,IN,80,0,1.2,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,outsourcing payroll,IN,70,4,0.45,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,india payroll services,US,70,3,25.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,india payroll services,IN,70,,0.8,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll consultancy services,IN,70,,0.7,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,business payroll services,IN,70,39,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll management services india,IN,70,,0.5,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr payroll outsourcing,IN,60,,0.7,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing in india,IN,60,0,0.9,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing services india,US,60,0,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,employer of record payroll services,IN,60,,1.7,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,employee payroll services,IN,60,,0.45,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,small business payroll services,IN,60,39,1.6,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr and payroll services,IN,60,3,0.5,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing services india,IN,50,1,0.25,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll management outsourcing services,IN,50,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing companies india,IN,50,,2.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll services near me,IN,50,34,0.07,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing provider,IN,40,,3.5,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,outsourcing payroll services,IN,40,6,1.2,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing company in india,IN,40,1,2.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr and payroll outsourcing,IN,40,,0.7,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll processing services india,US,40,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,outsource payroll services to india,US,40,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,employee payroll outsourcing,IN,30,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing firm,IN,30,,3.5,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,business payroll outsourcing,IN,30,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll outsourcing service provider,IN,30,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr payroll outsourcing services,IN,30,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll processing outsourcing firm,IN,30,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr and payroll outsourcing companies,IN,30,,0.03,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll processing services in india,US,30,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll compliance services in india,US,20,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,online payroll services in india,US,20,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll management services in india,US,10,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,online payroll services india,US,10,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,uk payroll outsourcing services in india,US,10,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,employer of record payroll services india,US,10,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,employer of record & payroll services | india,US,10,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,australia payroll outsourcing services in india,US,0,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,cloud based payroll services in india,US,0,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll services outsourcing india,US,0,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,payroll services portal india,US,0,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,hr and payroll services in india,US,0,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,corporate payroll services in india,US,0,,0.0,targeted
+Multi-Country Payroll,Payroll outsourcing India,Landing page,/payroll-outsourcing-india/,cloud hr payroll services in india,US,0,,0.0,targeted
+Multi-Country Payroll,Managed payroll,Landing page,/managed-payroll/,managed payroll services,IN,100,0,1.3,targeted
+Multi-Country Payroll,Managed payroll,Landing page,/managed-payroll/,third party payroll services,IN,80,,0.9,targeted
+Multi-Country Payroll,Managed payroll,Landing page,/managed-payroll/,payroll managed services,IN,50,,0.7,targeted
+Multi-Country Payroll,Managed payroll,Landing page,/managed-payroll/,third party payroll services in india,US,0,,0.0,targeted
+Multi-Country Payroll,Country payroll pages,Landing page set,/global-payroll/[uae | singapore | united-kingdom | united-states | india]/,payroll outsourcing companies middle east,US,300,,0.0,targeted
+Multi-Country Payroll,Country payroll pages,Landing page set,/global-payroll/[uae | singapore | united-kingdom | united-states | india]/,payroll outsourcing services middle east,US,250,,0.0,targeted
+Multi-Country Payroll,Country payroll pages,Landing page set,/global-payroll/[uae | singapore | united-kingdom | united-states | india]/,payroll outsourcing companies mena,US,200,,0.0,targeted
+Multi-Country Payroll,Country payroll pages,Landing page set,/global-payroll/[uae | singapore | united-kingdom | united-states | india]/,payroll outsourcing services gcc,US,200,,0.0,targeted
+Multi-Country Payroll,Country payroll pages,Landing page set,/global-payroll/[uae | singapore | united-kingdom | united-states | india]/,payroll outsourcing companies gcc,US,200,,0.0,targeted
+Multi-Country Payroll,Country payroll pages,Landing page set,/global-payroll/[uae | singapore | united-kingdom | united-states | india]/,payroll outsourcing services mena,US,200,,0.0,targeted
+Multi-Country Payroll,Country payroll pages,Landing page set,/global-payroll/[uae | singapore | united-kingdom | united-states | india]/,payroll outsourcing hong kong,IN,40,,0.0,targeted
+Multi-Country Payroll,Country payroll pages,Landing page set,/global-payroll/[uae | singapore | united-kingdom | united-states | india]/,payroll services singapore,IN,40,0,3.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll services in bangalore,IN,200,0,1.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing services in chennai,IN,150,,0.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing services in mumbai,IN,150,,1.8,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll services in delhi,IN,150,,4.5,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing companies in bangalore,IN,100,,0.3,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing companies in mumbai,IN,100,0,0.02,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll services in chennai,IN,100,47,0.6,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing services in bangalore,IN,90,,3.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing companies in pune,IN,90,0,0.25,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing companies in chennai,IN,90,,0.8,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing services in pune,IN,80,,0.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing in chennai,IN,70,,0.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing services in delhi,IN,70,,3.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing company in chennai,IN,70,,0.35,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll management services in bangalore,IN,70,,0.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll services in hyderabad,IN,60,,0.35,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing companies in delhi ncr,IN,50,,0.04,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing services bangalore,IN,50,,0.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll services in mumbai,IN,50,,0.45,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll services in pune,IN,50,,0.1,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing services chennai,IN,40,,0.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing companies bangalore,IN,40,,0.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing services delhi ncr,IN,30,,0.0,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing company in pune,IN,30,,0.5,targeted
+Multi-Country Payroll,City payroll outsourcing pages,Landing page set,/payroll-outsourcing-[city]/,payroll outsourcing company in mumbai,IN,30,,0.7,targeted
+Multi-Country Payroll,What is multi-country payroll,Support article,Guide,what is global payroll?,US,250,,0.0,targeted
+Multi-Country Payroll,What is multi-country payroll,Support article,Guide,global payroll meaning,US,200,2,0.0,targeted
+Multi-Country Payroll,What is multi-country payroll,Support article,Guide,what is global payroll,US,150,13,1.9,targeted
+Multi-Country Payroll,What is multi-country payroll,Support article,Guide,what is multi country payroll,US,80,,0.0,targeted
+Multi-Country Payroll,What is multi-country payroll,Support article,Guide,what is international payroll,US,80,,3.0,targeted
+Multi-Country Payroll,What is multi-country payroll,Support article,Guide,what is multi-country payroll software?,US,30,,0.0,targeted
+Multi-Country Payroll,What is multi-country payroll,Support article,Guide,what is multi-country payroll,US,30,,0.0,targeted
+Multi-Country Payroll,Global payroll vs EOR vs PEO,Support article,Guide,peo payroll outsourcing,US,300,,0.0,targeted
+Multi-Country Payroll,Global payroll vs EOR vs PEO,Support article,Guide,outsourcing payroll with a peo,US,300,,0.0,targeted
+Multi-Country Payroll,Global payroll vs EOR vs PEO,Support article,Guide,eor vs global payroll,US,150,,0.0,targeted
+Multi-Country Payroll,How much payroll outsourcing costs in India,Support article,Guide,payroll outsourcing cost,US,250,1,14.0,targeted
+Multi-Country Payroll,How much payroll outsourcing costs in India,Support article,Guide,payroll services cost per employee in india,US,0,,0.0,targeted
+Multi-Country Payroll,"Should you outsource payroll? Benefits, risks, and trade-offs",Support article,Guide,benefits of outsourcing payroll,US,400,7,0.7,targeted
+Multi-Country Payroll,"Should you outsource payroll? Benefits, risks, and trade-offs",Support article,Guide,pros and cons of outsourcing payroll,US,200,2,5.0,targeted
+Multi-Country Payroll,"Should you outsource payroll? Benefits, risks, and trade-offs",Support article,Guide,outsourcing payroll pros and cons,US,200,2,12.0,targeted
+Multi-Country Payroll,"Should you outsource payroll? Benefits, risks, and trade-offs",Support article,Guide,advantages of outsourcing payroll,US,200,9,0.5,targeted
+Multi-Country Payroll,"Should you outsource payroll? Benefits, risks, and trade-offs",Support article,Guide,benefits of outsourcing payroll and hrm functions,US,200,,0.0,targeted
+Multi-Country Payroll,"Should you outsource payroll? Benefits, risks, and trade-offs",Support article,Guide,payroll services meaning,IN,90,0,0.0,targeted
+Multi-Country Payroll,"Should you outsource payroll? Benefits, risks, and trade-offs",Support article,Guide,what is payroll services,IN,70,0,0.1,targeted
+Multi-Country Payroll,"Should you outsource payroll? Benefits, risks, and trade-offs",Support article,Guide,what is payroll outsourcing,IN,50,,0.0,targeted
+Multi-Country Payroll,"Should you outsource payroll? Benefits, risks, and trade-offs",Support article,Guide,payroll outsourcing meaning,IN,30,2,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,how do startups handle payroll for global teams,US,300,,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,how to integrate global payroll with hr systems,US,300,0,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,how to centralize payroll for global teams,US,300,,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,what’s the simplest international payroll setup,US,300,,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,how do international payroll systems handle taxes,US,300,,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,how to manage payroll for international employees,US,300,,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,global payroll compliance,US,200,5,1.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,global payroll administration,US,200,0,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,international payroll compliance,US,200,17,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,currency and fx considerations for global payroll,US,150,,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,managing global payroll,US,150,,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,global payroll challenges,US,150,1,18.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,global payroll tax compliance,US,150,,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,global payroll reporting,US,150,3,4.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,global payroll data,US,150,,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,global payroll process,US,150,6,20.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,remote international payroll,US,150,3,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,payroll for international employees,US,100,5,0.0,targeted
+Multi-Country Payroll,"Running payroll across countries: compliance, tax, FX, reporting",Support article,Guide,multi-country payroll compliance,US,50,,0.0,targeted
+Multi-Country Payroll,Top payroll outsourcing companies in India,Support article,Guide,top 10 payroll outsourcing companies in india,IN,70,1,0.45,targeted
+Multi-Country Payroll,Top payroll outsourcing companies in India,Support article,Guide,top payroll outsourcing companies in india,IN,60,,1.1,targeted
+Multi-Country Payroll,Top payroll outsourcing companies in India,Support article,Guide,top 10 payroll outsourcing companies in bangalore,IN,40,,0.7,targeted
+Multi-Country Payroll,Top payroll outsourcing companies in India,Support article,Guide,best payroll outsourcing companies,IN,40,,0.0,targeted
+Multi-Country Payroll,Top payroll outsourcing companies in India,Support article,Guide,best payroll outsourcing,IN,40,,0.0,targeted
+Multi-Country Payroll,Top payroll outsourcing companies in India,Support article,Guide,best payroll outsourcing companies in india,IN,40,,1.6,targeted
+Multi-Country Payroll,Top payroll outsourcing companies in India,Support article,Guide,top payroll outsourcing companies,IN,40,,0.0,targeted
+Multi-Country Payroll,Top payroll outsourcing companies in India,Support article,Guide,best payroll services in india,US,40,,0.0,targeted
+Multi-Country Payroll,Top payroll outsourcing companies in India,Support article,Guide,best payroll services in delhi,IN,40,,0.0,targeted
+Multi-Country Payroll,Top payroll outsourcing companies in India,Support article,Guide,top 10 payroll outsourcing companies in chennai,IN,30,,0.25,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best global payroll services,US,350,6,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best international payroll platform,US,300,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best international payroll solutions,US,300,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best global payroll software,US,250,2,1.1,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,top payroll outsourcing companies,US,200,6,4.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,most recommended global payroll hr systems,US,200,,25.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,top global payroll solutions for hr teams,US,200,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best international payroll software,US,200,7,60.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,leading hr software for international payroll,US,200,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,top global payroll companies,US,150,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best global payroll providers,US,150,7,30.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best company for global payroll management,US,150,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,leading global payroll providers,US,150,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best global payroll service,US,150,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best global payroll companies,US,150,3,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best-reviewed global payroll solutions,US,150,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best rated multi-country payroll provider,US,150,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,top-rated international payroll companies,US,150,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,most reliable international payroll services,US,150,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best international payroll providers,US,150,0,85.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best multi-country payroll software,US,100,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best international payroll services,US,100,8,70.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,expert reviews on international payroll software,US,100,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best multi country payroll software,US,40,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best multi-country payroll software in 2025?,US,40,,0.0,targeted
+Multi-Country Payroll,Best global payroll providers,Support article,Guide,best multi-country payroll software 2025,US,20,,0.0,targeted
+Multi-Country Payroll,,,,global payroll news today,US,200,,0.0,excluded: Market-research or news searches
+Multi-Country Payroll,,,,brinker international payroll,US,200,3,4.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,payroll outsourcing market,US,150,,0.0,excluded: Market-research or news searches
+Multi-Country Payroll,,,,global payroll news,US,150,6,0.0,excluded: Market-research or news searches
+Multi-Country Payroll,,,,sap global payroll,US,150,,6.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,papaya global payroll,US,150,8,55.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,evaluate the hr solutions company ukg on global payroll solutions,US,150,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,gusto international payroll,US,150,3,16.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,india payroll outsourcing market,IN,60,,0.0,excluded: Market-research or news searches
+Multi-Country Payroll,,,,celonis multi-country payroll,US,30,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,mdaemon technologies multi-country payroll,US,30,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,timextender multi-country payroll,US,20,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,zingtree multi-country payroll,US,20,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,sophos multi-country payroll features,US,20,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,copado solutions multi-country payroll,US,20,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,caspio multi-country payroll features,US,20,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,kaseya multi-country payroll,US,20,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,intuit mailchimp multi-country payroll,US,20,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,payroll outsourcing services target users india,US,10,,0.0,excluded: Market-research or news searches
+Multi-Country Payroll,,,,randstad india payroll services,US,0,,0.0,excluded: Another vendor's brand name
+Multi-Country Payroll,,,,ey payroll services india,US,0,,0.0,excluded: Another vendor's brand name
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,gcc setup in india,US,200,,7.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,global capability center services,US,200,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,gcc setup guide india,US,100,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,how to set up a global capability center in india,US,100,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,top gcc setup consultants india,US,90,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,global capability center setup,US,90,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,setup global capability center,US,60,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,setup gcc in india,US,50,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,gcc setup india,US,50,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,setting up a gcc in india,US,50,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,best partners to help establish a gcc in india,US,50,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,india global capability center setup,US,50,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,how to set up a global capability center,US,50,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,how to set up a gcc in india,US,40,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,set up gcc in india,US,40,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,starting a gcc in india,US,40,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,setting up gcc in india,US,40,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,gcc set up in india,US,40,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,gcc consulting firms in india,US,40,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,global capability center platform,US,40,,0.0,targeted
+Managed India Office,GCC setup in India,Landing page,/gcc-setup-india/,global capability centre solutions for startups,IN,20,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,subsidiary company in india,US,50,0,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,how to set up a business in india,US,50,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,setting up a subsidiary company in india,US,30,0,3.5,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,foreign subsidiary company registration in india,US,30,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,set up a business in india,US,30,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,business set up in india,US,30,,3.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,set up business in india,US,30,,3.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,how to register a subsidiary company in india,US,20,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,wholly owned subsidiary in india,US,10,0,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,subsidiary company registration in india,US,10,0,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,incorporation of foreign subsidiary in india,US,10,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,subsidiary registration in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,incorporation of wholly owned subsidiary in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,how to open subsidiary company in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,checklist for incorporation of wholly owned subsidiary in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,how to setup a wholly owned subsidiary in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,taxation of wholly owned subsidiary in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,steps to start a subsidiary in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,how to establish a subsidiary in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,foreign subsidiary company incorporation in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,benefits of subsidiary company in india,US,0,2,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,documentation for subsidiary company in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,wholly owned subsidiary in india examples,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,foreign company subsidiary in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,foreign subsidiary registration in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,set-up your business in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,consultants for business set up in india,US,0,,0.0,targeted
+Managed India Office,India subsidiary setup,Landing page,/india-subsidiary-setup/,how to set up business in india,US,0,,0.0,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance,IN,2500,0,0.15,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance in hr,IN,600,1,0.05,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,payroll and statutory compliance,IN,150,0,0.15,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance software,IN,150,,1.0,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,payroll statutory compliance,IN,150,0,0.15,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,hr statutory compliance,IN,150,0,0.05,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,hr statutory compliance in india,IN,100,,0.0,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance services,IN,100,0,0.05,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance in payroll,IN,100,0,0.05,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,pf statutory compliance,IN,80,,0.0,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory and compliance,IN,70,,0.15,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance in india,IN,60,0,0.1,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance payroll,IN,50,,0.0,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance management,IN,50,,0.0,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,legal statutory compliance,IN,50,,0.4,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,legal and statutory compliance,IN,50,,0.8,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance management software,IN,40,,2.5,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance outsourcing,IN,40,,0.0,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,employee statutory compliance,IN,40,,0.0,targeted
+Managed India Office,Statutory compliance outsourcing,Landing page,/statutory-compliance-outsourcing-india/,statutory compliance services in bangalore,IN,40,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing services,IN,300,0,0.05,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing companies,IN,300,3,0.03,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing,IN,300,9,0.6,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,best hr outsourcing firm in pune,IN,150,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing company,IN,100,3,0.35,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing companies in india,IN,100,2,1.7,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,outsourcing hr,IN,90,9,0.5,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing services in india,IN,90,,0.25,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr service outsourcing,IN,80,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,best hr outsourcing companies,IN,60,,0.5,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing services in chennai,IN,60,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing services hyderabad,IN,50,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr management outsourcing,IN,50,,0.4,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing consulting,IN,50,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing companies in bangalore,IN,50,,0.35,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr process outsourcing,IN,50,4,0.5,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing solutions,IN,50,,0.15,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing india,IN,40,,0.3,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr operations outsourcing,IN,40,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing for smes,IN,40,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing services india,IN,40,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,global hr outsourcing,IN,40,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing service providers,IN,40,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr business process outsourcing,IN,40,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing services bangalore,IN,40,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,global hr outsourcing companies,IN,40,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,full hr outsourcing,IN,30,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing companies for small business,IN,30,,0.0,targeted
+Managed India Office,HR outsourcing services India,Landing page,/hr-outsourcing-india/,hr outsourcing companies in chennai,IN,30,,0.35,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,new labour code 2025,IN,9400,12,0.3,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,new labour code,IN,7000,11,0.25,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,labour code,IN,4900,7,0.04,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,labour code 2025,IN,3000,12,0.01,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,new labour code implementation date,IN,1200,14,0.15,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,new labour code 2025 implementation date,IN,1100,0,0.03,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,new labour code 2026 implementation date,IN,700,16,0.25,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,labour code 2026,IN,500,15,0.09,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,new labour code effective date,IN,450,,0.01,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,new labour code 2026,IN,450,,0.0,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,labour code implementation date,IN,300,18,0.2,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,labour code implementation,IN,300,4,0.1,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,india new labour code 2025,IN,250,,0.01,targeted
+Managed India Office,Labour Codes hub and state tracker,Tool,/labour-codes/,new labour code gazette notification,IN,250,,0.3,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,statutory compliance checklist,IN,200,0,0.2,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,statutory compliance checklist excel format,IN,80,0,0.0,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,statutory tax compliance tracker october 2025,IN,80,,0.0,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,hr statutory compliance checklist in india,IN,70,0,0.0,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,statutory compliance documents,IN,70,,0.0,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,list of statutory compliance in hr,IN,40,0,0.0,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,statutory compliance calendar,IN,40,,0.0,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,statutory compliance calendar kerala,IN,30,,0.0,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,statutory compliance chart,IN,30,,0.0,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,statutory compliance checklist in india,IN,30,,0.0,targeted
+Managed India Office,Compliance calendar and GCC cost estimator,Tool,/tools/,list of statutory compliance forms in hr,IN,30,,0.0,targeted
+Managed India Office,"New Labour Codes: gratuity, wages, and leave explained",Support article,Guide,gratuity calculation as per new labour code,IN,500,3,0.3,targeted
+Managed India Office,"New Labour Codes: gratuity, wages, and leave explained",Support article,Guide,new labour code 2025 for gratuity,IN,300,,0.35,targeted
+Managed India Office,"New Labour Codes: gratuity, wages, and leave explained",Support article,Guide,new labour code basic salary,IN,250,,0.0,targeted
+Managed India Office,"New Labour Codes: gratuity, wages, and leave explained",Support article,Guide,leave encashment as per new labour code,IN,250,,0.4,targeted
+Managed India Office,"New Labour Codes: gratuity, wages, and leave explained",Support article,Guide,new labour code 2025 leaves,IN,250,,0.0,targeted
+Managed India Office,"New Labour Codes: gratuity, wages, and leave explained",Support article,Guide,definition of wages under new labour code,IN,250,,0.0,targeted
+Managed India Office,"New Labour Codes: gratuity, wages, and leave explained",Support article,Guide,gratuity as per new labour code,IN,250,,0.3,targeted
+Managed India Office,What statutory compliance means for HR and payroll in India,Support article,Guide,statutory compliance meaning,IN,1700,0,0.04,targeted
+Managed India Office,What statutory compliance means for HR and payroll in India,Support article,Guide,what is statutory compliance,IN,300,0,0.03,targeted
+Managed India Office,What statutory compliance means for HR and payroll in India,Support article,Guide,what is statutory compliance in hr,IN,150,0,0.03,targeted
+Managed India Office,What statutory compliance means for HR and payroll in India,Support article,Guide,what are statutory compliance,IN,60,0,0.0,targeted
+Managed India Office,What statutory compliance means for HR and payroll in India,Support article,Guide,statutory compliance means,IN,50,0,0.0,targeted
+Managed India Office,What statutory compliance means for HR and payroll in India,Support article,Guide,what is meant by statutory compliance,IN,40,,0.0,targeted
+Managed India Office,What statutory compliance means for HR and payroll in India,Support article,Guide,meaning of statutory compliance,IN,40,0,0.0,targeted
+Managed India Office,What statutory compliance means for HR and payroll in India,Support article,Guide,why statutory compliance is required,IN,30,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,shops and establishments act,IN,250,4,0.02,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,karnataka shops and commercial establishments act 1961,IN,150,0,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,delhi shops and establishments act,IN,150,0,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,kerala shops and commercial establishments act 1960,IN,100,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,rajasthan shops and commercial establishments act 1958,IN,70,0,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,maharashtra shops and establishments act,IN,70,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,karnataka shops and commercial establishments act,IN,60,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,delhi shops and establishments act 1954,IN,60,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,tamil nadu shops and establishments act 1947,IN,60,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,karnataka shops and establishments act,IN,60,,0.05,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,"tamil nadu shops and establishments act, 1947",IN,50,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,telangana shops and establishments act 1988,IN,40,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,shops and commercial establishments act,IN,40,3,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,maharashtra shops and establishments act 2017,IN,40,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,kerala shops and establishments act,IN,30,0,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,bombay shops and establishments act 1948,IN,30,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,tamil nadu shops and establishments act,IN,30,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,the karnataka shops and commercial establishments act 1961,IN,30,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,"telangana shops and establishments act, 1988",IN,30,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,"maharashtra shops and establishments act, 2017",IN,30,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,the maharashtra shops and establishments act 1948,IN,30,1,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,west bengal shops and establishments act 1963,IN,30,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,"delhi shops and establishments act, 1954",IN,30,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,telangana shops and establishments act,IN,20,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,gujarat shops and establishments act,IN,20,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,west bengal shops and establishments act,IN,20,,0.0,targeted
+Managed India Office,Shops and Establishments Act by state,Support article,Guide,"andhra pradesh shops and establishments act, 1988",IN,10,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability center,US,900,4,8.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability centre,IN,600,11,0.5,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,gcc india,US,400,5,6.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,india gcc,US,250,0,8.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,gcc in india,US,200,9,10.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,gcc global capability center,US,200,5,6.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,gcc companies in india,US,150,10,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability center definition,US,150,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,what is global capability center,US,150,,4.5,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,india global capability center,US,150,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,what is a global capability center,US,150,,2.5,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability center india,US,150,,6.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,what is global capability centre,IN,150,,0.8,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,india gcc market,US,100,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,what is gcc in india,US,100,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability center meaning,US,100,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability center companies in india,US,90,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability center examples,US,90,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability center gcc,US,90,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,what is a gcc in india,US,80,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability centre (gcc),IN,80,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability center in india,US,70,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,gcc global capability centre,IN,70,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability centre in india,IN,70,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,gcc centers in india,US,60,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,top gcc companies in india,US,60,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,gcc india meaning,US,60,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,best industries for building a gcc in india,US,60,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,what is a gcc global capability center,US,60,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,list of gcc companies in india,US,50,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,gcc meaning india,US,50,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,what is a global capability centre,IN,50,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,list of gcc in india,US,40,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,top gcc in india,US,40,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,gcc company in india,US,40,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,pharma gcc in india,US,40,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,gcc company india,US,40,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,india gcc landscape report,US,40,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,new gcc in india,US,40,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability center companies,US,40,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability centre india,IN,40,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability centre meaning,IN,40,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,what is a global capability center gcc,US,30,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,first global capability centre in india,IN,10,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability centre definition,IN,10,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,global capability centre means,IN,10,,0.0,targeted
+Managed India Office,"What is a GCC? Definition, examples, and India's GCC landscape",Support article,Guide,what is gcc global capability centre,IN,10,,0.0,targeted
+Managed India Office,How much a GCC in India costs,Support article,Guide,cost of setting up gcc in india,US,150,,0.0,targeted
+Managed India Office,How much a GCC in India costs,Support article,Guide,real estate cost per seat for gcc india,US,70,,0.0,targeted
+Managed India Office,How much a GCC in India costs,Support article,Guide,timeline to launch a gcc in india,US,60,,0.0,targeted
+Managed India Office,GCC vs EOR vs BOT vs shared services: choosing a model,Support article,Guide,global capability center operating model,US,200,,0.0,targeted
+Managed India Office,GCC vs EOR vs BOT vs shared services: choosing a model,Support article,Guide,global capability center benefits,US,50,,0.0,targeted
+Managed India Office,GCC vs EOR vs BOT vs shared services: choosing a model,Support article,Guide,global capability center vs shared service center,US,50,,0.0,targeted
+Managed India Office,GCC vs EOR vs BOT vs shared services: choosing a model,Support article,Guide,global capability center challenges,US,30,,0.0,targeted
+Managed India Office,GCC vs EOR vs BOT vs shared services: choosing a model,Support article,Guide,global capability center governance structure,US,30,,0.0,targeted
+Managed India Office,Best city for a GCC in India,Support article,Guide,global capability center chennai,US,60,,0.0,targeted
+Managed India Office,Best city for a GCC in India,Support article,Guide,global capability center bangalore,US,50,,0.0,targeted
+Managed India Office,Best city for a GCC in India,Support article,Guide,global capability center hyderabad,US,50,,0.0,targeted
+Managed India Office,Best city for a GCC in India,Support article,Guide,global capability centre chennai,IN,30,,0.0,targeted
+Managed India Office,Best city for a GCC in India,Support article,Guide,global capability centre setup chennai,IN,10,,0.0,targeted
+Managed India Office,State GCC policies compared,Support article,Guide,rajasthan global capability centre policy 2025,IN,40,,0.0,targeted
+Managed India Office,State GCC policies compared,Support article,Guide,rajasthan global capability centre policy,IN,20,,0.0,targeted
+Managed India Office,State GCC policies compared,Support article,Guide,gujarat global capability centre policy,IN,10,,0.0,targeted
+Managed India Office,State GCC policies compared,Support article,Guide,maharashtra global capability centre policy-2025,IN,10,,0.0,targeted
+Managed India Office,State GCC policies compared,Support article,Guide,global capability centre policy 2025,IN,10,,0.0,targeted
+Managed India Office,"What HR outsourcing is, and when it makes sense",Support article,Guide,what is hr outsourcing,IN,60,0,0.07,targeted
+Managed India Office,"What HR outsourcing is, and when it makes sense",Support article,Guide,hr outsourcing meaning,IN,50,4,0.5,targeted
+Managed India Office,"What HR outsourcing is, and when it makes sense",Support article,Guide,what is hr outsourcing services,IN,40,,0.02,targeted
+Managed India Office,"What HR outsourcing is, and when it makes sense",Support article,Guide,benefits of hr outsourcing,IN,30,5,0.0,targeted
+Managed India Office,"What HR outsourcing is, and when it makes sense",Support article,Guide,hr outsourcing in hrm,IN,30,1,0.25,targeted
+Managed India Office,,,,india gcc news,US,150,,0.0,excluded: News searches
+Managed India Office,,,,statutory compliance meaning in tamil,IN,150,0,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,gcc india news,US,100,,0.0,excluded: News searches
+Managed India Office,,,,global capability center news,US,100,,0.0,excluded: News searches
+Managed India Office,,,,gsk global capability centre,IN,100,2,0.15,excluded: A named company's own GCC
+Managed India Office,,,,gst statutory compliance,IN,100,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,randstad global capability center,US,90,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,global capability center india news,US,80,,0.0,excluded: News searches
+Managed India Office,,,,transunion global capability center,US,70,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,statutory compliance meaning in marathi,IN,70,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,digi key global capability center,US,60,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,reveleer global capability center,US,60,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,mishcon global capability centre,IN,60,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,statutory compliance meaning in malayalam,IN,60,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,gcc jobs india,US,40,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,global capability center india news today,US,40,,0.0,excluded: News searches
+Managed India Office,,,,global capability center philippines,US,40,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,ansr global capability center,US,40,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,global capability center europe,US,40,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,statutory compliance for hospitals in india,IN,40,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,statutory compliance meaning in telugu,IN,40,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,statutory audit compliance,IN,40,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,jindal global capability centre private limited,IN,30,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,statutory compliance meaning in kannada,IN,30,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,hr outsourcing vietnam,IN,30,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,bridgestone global capability centre bengaluru,IN,20,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,adani global capability centre,IN,20,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,global capability centre kya hai,IN,20,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,jindal global capability centre,IN,20,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,tw global capability centre private limited,IN,20,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,maximus global capability centre india,IN,20,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,global capability centre kya hota hai,IN,20,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,hybe subsidiary in india establishment date,US,20,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,gsk global capability centre reviews,IN,10,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,mishcon global capability centre reviews,IN,10,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,tata steel global capability centre limited,IN,10,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,pma global capability centre kozhikode,IN,10,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,gsk global capability centre scholarship,IN,10,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,bridgestone global capability centre,IN,10,,0.0,excluded: A named company's own GCC
+Managed India Office,,,,gsk global capability centre photos,IN,10,0,0.0,excluded: A named company's own GCC
+Managed India Office,,,,global capability centre upsc,IN,10,,0.0,"excluded: Jobs, exam, translation or off-topic searches"
+Managed India Office,,,,when will hybe establish subsidiary in india,US,10,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,hybe establishes subsidiary in india announcement,US,10,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,xai elon musk subsidiary in india,US,10,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,hybe establishes subsidiary in india,US,10,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,how to set up an seo business in india,US,10,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,manufacturing subsidiary in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,holding company and subsidiary company in india,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,subsidiary companies in india,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,"clearwater electronics just hired a new warehouse manager in india. he has several employees who report to him. the hr director will be training the warehouse manager to conduct quarterly performance appraisals and has sent him the performance appraisal form she uses for her own direct reports as a template. however, she has asked him to modify it to better assess the needs of the indian subsidiary. why is it important that the warehouse manager make the modifications?",US,0,0,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,subsidiary banks in india,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,hybe subsidiary in india,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,hybe establishing subsidiary in india,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,hybe establishing subsidiary in india date,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,hybe launches subsidiary in india when,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,johnson & johnson subsidiary in india,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,ge healthcare subsidiary in india,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,list of holding and subsidiary companies in india,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,first subsidiary alliance in india,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,wholly owned subsidiary of foreign banks in india,US,0,,0.0,excluded: Company news or unrelated subsidiary searches
+Managed India Office,,,,how to set up bpo business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up an atm machine business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up an online business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,business to set up in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up online business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up a cold storage business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up a solar energy business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up export business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,set up import export business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up an ecommerce business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,best business to set up in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up a crypto business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up travel agency business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up a franchise business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,set up business in dubai from india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up ecommerce business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Managed India Office,,,,how to set up a small business in india,US,0,,0.0,excluded: Starting an unrelated local business
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hcm software,US,3200,43,10.0,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr software,IN,1800,34,0.8,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr management software,IN,1200,27,0.5,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,cloud based hcm software,US,800,0,9.0,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr software india,IN,600,33,0.9,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr software in india,IN,600,12,0.9,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,cloud based hr software,IN,400,0,2.0,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr software tools,IN,350,8,0.6,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr automation software,IN,350,6,0.02,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hcm software solutions,US,350,11,1.2,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,cloud hr software,IN,300,7,1.9,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr software solutions,IN,300,17,0.5,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hcm hr software,US,300,54,11.0,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr analytics software,IN,250,3,0.6,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,cloud hcm software,US,250,62,0.35,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,software hcm,US,250,62,9.0,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr document management software,IN,200,2,0.6,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,core hr software,IN,200,,0.8,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hcm software company,US,200,24,6.0,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr recruitment software,IN,150,79,0.7,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hr tools and software,IN,150,,0.25,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,human capital management hcm software,US,150,45,12.0,targeted
+Global HCM,HCM and HRMS software (pillar),Landing page,/hcm-software/,hcm talent management software,US,80,20,0.0,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll software,IN,2400,29,0.8,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll software india,IN,900,20,1.2,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll management software,IN,800,29,0.02,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,hr payroll software,IN,600,0,0.8,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,cloud based payroll software,IN,400,1,0.04,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,hr and payroll software,IN,350,13,0.7,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll software in india,IN,350,26,1.0,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll processing software,IN,300,24,0.04,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,online payroll software,IN,300,39,0.45,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll hrms software,IN,200,48,0.9,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,hr and payroll software india,IN,200,25,2.0,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,hrms payroll software,IN,200,57,1.0,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll management software in india,IN,200,,1.5,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,cloud payroll software,IN,200,5,0.04,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll erp software,IN,200,,0.35,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,software for hr and payroll,IN,150,27,0.8,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll software for hr,IN,150,27,0.9,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,hr payroll software in india,IN,150,,2.0,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll and hr software,IN,150,37,0.9,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll automation software,IN,150,22,1.9,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,software for payroll,IN,150,31,1.0,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll hr software,IN,150,20,0.9,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll management system software,IN,150,13,0.5,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,payroll software online,IN,150,7,0.45,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,hrms and payroll software,IN,150,0,1.4,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,cloud based payroll software india,IN,150,,3.0,targeted
+Global HCM,Payroll software India,Landing page,/payroll-software/,hcm payroll software,US,150,56,5.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,attendance management software,IN,800,13,0.8,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,attendance and payroll software,IN,250,26,1.1,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,leave and attendance management system,IN,250,0,0.6,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,payroll attendance software,IN,200,31,0.8,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,best attendance management software,IN,150,,0.9,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,leave attendance management system,IN,150,43,0.5,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,attendance management software in india,IN,100,,0.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,leave and attendance management software,IN,90,,0.7,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,attendance management system software,IN,80,0,0.7,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,attendance and leave management system,IN,80,0,0.5,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,time and attendance management system software,IN,70,,0.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,time and attendance management software,IN,70,,1.4,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,online attendance management software,IN,70,,0.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,time & attendance management software,IN,60,,0.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,time attendance management software,IN,60,,0.8,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,software for attendance management,IN,60,,0.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,attendance and leave management software,IN,50,,0.7,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,software attendance management,IN,50,,0.6,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,attendance management software india,IN,40,,0.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,top attendance management software,IN,40,,0.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,software for attendance management system,IN,30,0,0.6,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,time attendance management system software,IN,30,,0.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,ai attendance management software,IN,30,,0.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,best attendance management software in india,IN,30,,0.0,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,software attendance management solution,IN,30,,0.5,targeted
+Global HCM,Attendance management software,Landing page,/attendance-management-software/,attendance management software tools,IN,20,,0.0,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,leave management system,IN,2500,6,0.25,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,employee leave management system,IN,400,3,0.35,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,hrms leave management system,IN,250,,5.0,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,online leave management system,IN,200,3,0.4,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,leave management system software,IN,100,,1.0,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,hr leave management system,IN,100,,0.5,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,leave management system in india,IN,100,0,0.35,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,best leave management system,IN,100,3,0.15,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,lms leave management system,IN,80,0,0.7,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,leave management system hrms,IN,70,,4.5,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,leave management system online,IN,70,,0.0,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,automated leave management system,IN,70,,0.4,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,employee leave management system in india,IN,60,,0.0,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,online leave management system in india,IN,60,,0.0,targeted
+Global HCM,Leave management software,Landing page,/leave-management-software/,leave management system india,IN,60,,0.35,targeted
+Global HCM,Employee self-service portal,Landing page,/employee-self-service-portal/,employee self service,IN,3200,21,0.2,targeted
+Global HCM,Employee self-service portal,Landing page,/employee-self-service-portal/,employee self service portal,IN,2000,13,0.25,targeted
+Global HCM,Employee self-service portal,Landing page,/employee-self-service-portal/,self employee service,IN,200,11,0.6,targeted
+Global HCM,Employee self-service portal,Landing page,/employee-self-service-portal/,employee self service system,IN,200,1,0.0,targeted
+Global HCM,Employee self-service portal,Landing page,/employee-self-service-portal/,employee self service ess,IN,150,3,0.2,targeted
+Global HCM,Employee self-service portal,Landing page,/employee-self-service-portal/,employee self service software,IN,150,1,0.02,targeted
+Global HCM,Employee self-service portal,Landing page,/employee-self-service-portal/,employee self service ess portal,IN,100,,0.0,targeted
+Global HCM,Segment and industry pages,Landing page set,/hr-software-for-[small-business | startups | healthcare | retail | enterprise]/,payroll software for small business,IN,500,28,0.04,targeted
+Global HCM,Segment and industry pages,Landing page set,/hr-software-for-[small-business | startups | healthcare | retail | enterprise]/,hr software for startups,IN,200,3,1.3,targeted
+Global HCM,Segment and industry pages,Landing page set,/hr-software-for-[small-business | startups | healthcare | retail | enterprise]/,hr software for healthcare,IN,200,,1.4,targeted
+Global HCM,Segment and industry pages,Landing page set,/hr-software-for-[small-business | startups | healthcare | retail | enterprise]/,hr software for small companies,IN,200,2,1.4,targeted
+Global HCM,Segment and industry pages,Landing page set,/hr-software-for-[small-business | startups | healthcare | retail | enterprise]/,hr software for retail,IN,200,,1.5,targeted
+Global HCM,Segment and industry pages,Landing page set,/hr-software-for-[small-business | startups | healthcare | retail | enterprise]/,hr software for small business,IN,200,1,0.04,targeted
+Global HCM,Segment and industry pages,Landing page set,/hr-software-for-[small-business | startups | healthcare | retail | enterprise]/,small business payroll software,IN,150,14,0.07,targeted
+Global HCM,Segment and industry pages,Landing page set,/hr-software-for-[small-business | startups | healthcare | retail | enterprise]/,enterprise hcm software,US,150,31,0.0,targeted
+Global HCM,Segment and industry pages,Landing page set,/hr-software-for-[small-business | startups | healthcare | retail | enterprise]/,attendance management software for enterprise,IN,20,,0.0,targeted
+Global HCM,City pages (optional),Landing page set,/hr-software-[city]/,payroll software in chennai,IN,250,0,1.0,targeted
+Global HCM,City pages (optional),Landing page set,/hr-software-[city]/,payroll software mumbai,IN,200,0,1.7,targeted
+Global HCM,City pages (optional),Landing page set,/hr-software-[city]/,payroll software in delhi,IN,200,,1.1,targeted
+Global HCM,City pages (optional),Landing page set,/hr-software-[city]/,hr software in bangalore,IN,200,,0.7,targeted
+Global HCM,City pages (optional),Landing page set,/hr-software-[city]/,hr software in delhi,IN,200,,0.7,targeted
+Global HCM,City pages (optional),Landing page set,/hr-software-[city]/,payroll software in hyderabad,IN,150,,1.4,targeted
+Global HCM,City pages (optional),Landing page set,/hr-software-[city]/,payroll software in bangalore,IN,150,26,0.03,targeted
+Global HCM,City pages (optional),Landing page set,/hr-software-[city]/,payroll software in mumbai,IN,150,,1.7,targeted
+Global HCM,City pages (optional),Landing page set,/hr-software-[city]/,payroll software delhi,IN,150,,1.8,targeted
+Global HCM,City pages (optional),Landing page set,/hr-software-[city]/,payroll software bangalore,IN,150,,0.8,targeted
+Global HCM,HCM vs HRIS vs HRMS for Indian employers,Support article,Guide,what is hcm software,US,1300,0,5.0,targeted
+Global HCM,HCM vs HRIS vs HRMS for Indian employers,Support article,Guide,hcm software meaning,US,300,12,0.02,targeted
+Global HCM,HCM vs HRIS vs HRMS for Indian employers,Support article,Guide,what is hr software,IN,200,8,0.07,targeted
+Global HCM,HCM vs HRIS vs HRMS for Indian employers,Support article,Guide,what is payroll software,IN,150,5,0.6,targeted
+Global HCM,HCM vs HRIS vs HRMS for Indian employers,Support article,Guide,hcm software examples,US,90,3,3.0,targeted
+Global HCM,HCM vs HRIS vs HRMS for Indian employers,Support article,Guide,what is hcm software?,US,90,,0.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,best hr software in india,IN,700,6,0.9,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,best hr software,IN,500,0,1.3,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,best hcm software,US,500,3,1.9,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,top hr software in india,IN,350,3,0.9,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,top 10 hr software in india,IN,250,2,0.7,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,hr software list,IN,250,3,0.45,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,top hcm software,US,250,3,3.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,best hr management software,IN,200,9,1.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,best hr software india,IN,200,9,1.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,most popular hcm software solutions,US,200,,0.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,user-friendly hcm software for hr teams,US,200,,0.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,best hcm software for hr departments,US,200,,0.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,best hcm software for small businesses,US,200,,18.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,top hcm software gartner,US,100,,2.5,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,what is the best hcm software?,US,100,,0.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,what's the leading hcm software for startups,US,100,4,0.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,best hcm software for medium sized business,US,90,,0.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,which hcm software companies are underrated?,US,80,,0.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,best hcm software for small sized businesses,US,80,,0.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,hcm software comparison,US,80,4,0.0,targeted
+Global HCM,Best HRMS software in India,Support article,Guide,which hcm software companies are highly rated?,US,80,,0.0,targeted
+Global HCM,Best payroll software in India,Support article,Guide,best payroll software in india,IN,600,3,1.1,targeted
+Global HCM,Best payroll software in India,Support article,Guide,best payroll software,IN,500,3,1.1,targeted
+Global HCM,Best payroll software in India,Support article,Guide,top 10 payroll software in india,IN,300,2,0.6,targeted
+Global HCM,Best payroll software in India,Support article,Guide,best payroll software india,IN,200,11,1.1,targeted
+Global HCM,Best payroll software in India,Support article,Guide,best payroll management software in india,IN,200,,3.0,targeted
+Global HCM,Best payroll software in India,Support article,Guide,best hr and payroll software in india,IN,200,11,1.3,targeted
+Global HCM,Best payroll software in India,Support article,Guide,payroll software reviews,IN,150,,0.45,targeted
+Global HCM,Best payroll software in India,Support article,Guide,best payroll software for small business in india,IN,150,,0.8,targeted
+Global HCM,Best payroll software in India,Support article,Guide,best hr payroll software in india,IN,150,,1.2,targeted
+Global HCM,Best payroll software in India,Support article,Guide,best attendance and payroll software in india,IN,150,,1.1,targeted
+Global HCM,Best payroll software in India,Support article,Guide,best payroll software for small business,IN,150,16,2.0,targeted
+Global HCM,Best payroll software in India,Support article,Guide,best payroll management software,IN,150,,1.5,targeted
+Global HCM,HRMS software price in India,Support article,Guide,hr software pricing,IN,300,10,0.9,targeted
+Global HCM,HRMS software price in India,Support article,Guide,payroll software price in india,IN,150,,0.35,targeted
+Global HCM,HRMS software price in India,Support article,Guide,payroll software cost,IN,150,,0.45,targeted
+Global HCM,HRMS software price in India,Support article,Guide,attendance management software pricing,IN,20,,0.0,targeted
+Global HCM,Free HRMS software: what the free plans leave out,Support article,Guide,free payroll software,IN,250,26,0.25,targeted
+Global HCM,Free HRMS software: what the free plans leave out,Support article,Guide,free payroll software india,IN,200,24,0.3,targeted
+Global HCM,Free HRMS software: what the free plans leave out,Support article,Guide,payroll software free,IN,200,26,0.4,targeted
+Global HCM,Free HRMS software: what the free plans leave out,Support article,Guide,free hr software,IN,200,42,0.45,targeted
+Global HCM,Free HRMS software: what the free plans leave out,Support article,Guide,free online leave management system,IN,80,10,0.35,targeted
+Global HCM,Free HRMS software: what the free plans leave out,Support article,Guide,free attendance management software,IN,50,,0.7,targeted
+Global HCM,How to choose HRMS software: checklist and RFP questions,Support article,Guide,hcm software companies,US,250,6,7.0,targeted
+Global HCM,How to choose HRMS software: checklist and RFP questions,Support article,Guide,hr software demo,IN,200,0,0.2,targeted
+Global HCM,How to choose HRMS software: checklist and RFP questions,Support article,Guide,hr software companies in india,IN,150,1,0.4,targeted
+Global HCM,How to choose HRMS software: checklist and RFP questions,Support article,Guide,hcm software vendors,US,150,8,0.6,targeted
+Global HCM,How to choose HRMS software: checklist and RFP questions,Support article,Guide,hcm software contract negotiation tips,US,150,,0.0,targeted
+Global HCM,How to choose HRMS software: checklist and RFP questions,Support article,Guide,top features of hcm software for mid-market firms,US,100,,0.0,targeted
+Global HCM,How to choose HRMS software: checklist and RFP questions,Support article,Guide,top features of hcm software,US,100,,0.0,targeted
+Global HCM,How to choose HRMS software: checklist and RFP questions,Support article,Guide,hcm software demo questions,US,100,,0.0,targeted
+Global HCM,How to choose HRMS software: checklist and RFP questions,Support article,Guide,hcm software providers,US,90,15,0.0,targeted
+Global HCM,,,,hrms,IN,780000,15,0.2,excluded: Government or employer portal logins
+Global HCM,,,,hrms pay slip,IN,13000,7,0.35,excluded: Government or employer portal logins
+Global HCM,,,,hrms leave management,IN,11000,0,0.3,excluded: Government or employer portal logins
+Global HCM,,,,hrms ess,IN,10000,6,0.2,excluded: Government or employer portal logins
+Global HCM,,,,hrms jharkhand,IN,5000,2,0.15,excluded: Government or employer portal logins
+Global HCM,,,,ess hrms,IN,5000,1,0.2,excluded: Government or employer portal logins
+Global HCM,,,,hrms employee self service,IN,3900,16,0.2,excluded: Government or employer portal logins
+Global HCM,,,,nwkrtc leave management system,IN,2400,0,0.2,excluded: Government or employer portal logins
+Global HCM,,,,hrms employee self service pay slip,IN,1300,0,0.0,excluded: Government or employer portal logins
+Global HCM,,,,leave management system nwkrtc,IN,450,6,1.5,excluded: Government or employer portal logins
+Global HCM,,,,tuio hcm software,US,300,,0.0,excluded: Another vendor's brand or news
+Global HCM,,,,pagarbook - staff attendance & payroll management software,IN,250,,0.4,excluded: Another vendor's brand or news
+Global HCM,,,,crew leave management system,IN,250,0,1.2,excluded: Government or employer portal logins
+Global HCM,,,,ascent employee self service,IN,200,,1.7,excluded: Government or employer portal logins
+Global HCM,,,,liberty employee self service,IN,200,2,0.0,excluded: Government or employer portal logins
+Global HCM,,,,hcm software news,US,150,,0.0,excluded: Another vendor's brand or news
+Global HCM,,,,sap hcm software,US,150,1,2.0,excluded: Another vendor's brand or news
+Global HCM,,,,patna high court leave management system,IN,150,,0.0,excluded: Government or employer portal logins
+Global HCM,,,,leave management system patna high court,IN,150,,0.0,excluded: Government or employer portal logins
+Global HCM,,,,randstad employee self service portal,IN,150,,0.0,excluded: Government or employer portal logins
+Global HCM,,,,hrms employee self service pay slip download,IN,150,,2.5,excluded: Government or employer portal logins
+Global HCM,,,,lms nwkrtc leave management system,IN,100,0,0.0,excluded: Government or employer portal logins
+Global HCM,,,,ultimate software hcm,US,80,,0.0,excluded: Another vendor's brand or news
+Global HCM,,,,leave management system project,IN,70,0,0.03,"excluded: Student projects, schools and downloads"
+Global HCM,,,,nwkrtc leave management system open,IN,70,8,0.0,excluded: Government or employer portal logins
+Global HCM,,,,employee leave management system project,IN,70,0,0.08,"excluded: Student projects, schools and downloads"
+Global HCM,,,,school attendance management software,IN,40,,0.0,"excluded: Student projects, schools and downloads"
+Global HCM,,,,attendance management software free download,IN,40,,0.5,"excluded: Student projects, schools and downloads"
+Global HCM,,,,time attendance management system software download,IN,30,,0.0,"excluded: Student projects, schools and downloads"
+Global HCM,,,,attendance management system software free download,IN,30,,0.7,"excluded: Student projects, schools and downloads"
+Global HCM,,,,student attendance management software,IN,20,,0.0,"excluded: Student projects, schools and downloads"
