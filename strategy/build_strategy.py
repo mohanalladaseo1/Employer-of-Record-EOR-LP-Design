@@ -128,7 +128,7 @@ BENCH = [
  ("safeguardglobal.com/country/india/eor", "Safeguard", "Country page", 1034, 5, 1, 0, False, "none on page"),
 ]
 bench_rows = "".join(f'<tr><td><b>{E(n)}</b><br><span class="mut">{E(u)}</span></td><td>{E(t)}</td><td class="n">{fmt(w)}</td><td class="n">{h}</td><td class="n">{q}</td><td class="n">{tb}</td><td>{"Yes" if f else "No"}</td><td>{E(pr)}</td></tr>' for u, n, t, w, h, q, tb, f, pr in BENCH)
-bench_rows += '<tr class="me"><td><b>Paybooks target (new page)</b><br><span class="mut">Replaces today's paybooks.in/eor/ and /eor-2/</span></td><td>Service page</td><td class="n">5,000+</td><td class="n">20+</td><td class="n">15+</td><td class="n">10+</td><td>Yes, with schema</td><td>$199, every line in USD</td></tr>'
+bench_rows += '<tr class="me"><td><b>Paybooks target (new page)</b><br><span class="mut">Replaces the current paybooks.in/eor/ and /eor-2/</span></td><td>Service page</td><td class="n">5,000+</td><td class="n">20+</td><td class="n">15+</td><td class="n">10+</td><td>Yes, with schema</td><td>$199, every line in USD</td></tr>'
 
 # ---------- competitor playbooks ----------
 PB = [
