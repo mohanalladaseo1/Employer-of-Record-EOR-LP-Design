@@ -243,6 +243,7 @@ for r in clean:
     r["topic"], r["why_x"] = t, why
 
 # ---------- aggregate ----------
+REPORT = ["eor"]  # this report covers the Employer of Record category only
 def fmt(n): return f"{n:,}"
 report = {}
 for cat in ORDER:
@@ -264,7 +265,7 @@ with open(os.path.join(OUT, "keyword-topic-map.csv"), "w", newline="", encoding=
     w = csv.writer(f)
     w.writerow(["bucket", "topic", "page_type", "target_page", "keyword", "country", "volume", "kd", "cpc_usd", "status"])
     TYPE = {"LP": "Landing page", "LPS": "Landing page set", "TOOL": "Tool", "ART": "Support article"}
-    for cat in ORDER:
+    for cat in REPORT:
         R = report[cat]
         for t in R["topics"]:
             for r in t["kws"]:
@@ -287,17 +288,19 @@ def kwtable(ks):
     return f'<div class="tw"><table><thead><tr><th>Keyword</th><th>Market</th><th class="n">Volume / mo</th><th class="n">KD</th><th class="n">CPC</th></tr></thead><tbody>{rows_}</tbody></table></div>'
 
 totals = dict(raw=RAW, exact=dups_exact, cross=dups_cross)
-kept_all = sum(len(report[c]["kept"]) for c in ORDER)
-excl_all = sum(len(report[c]["excl"]) for c in ORDER)
-vol_all = sum(sum(r["vol"] for r in report[c]["kept"]) for c in ORDER)
+kept_all = sum(len(report[c]["kept"]) for c in REPORT)
+excl_all = sum(len(report[c]["excl"]) for c in REPORT)
+vol_all = sum(sum(r["vol"] for r in report[c]["kept"]) for c in REPORT)
+raw_eor = len([r for r in rows if r["category"] == "eor"])
+dup_eor = raw_eor - len(report["eor"]["all"])
 pages = collections.Counter()
-for c in ORDER:
+for c in REPORT:
     for t in report[c]["topics"]:
         pages[TYPE_CLS[t["type"]]] += t["pages"]
 
 bucket_html = []
 plan_rows = []
-for i, cat in enumerate(ORDER, 1):
+for i, cat in enumerate(REPORT, 1):
     R = report[cat]; P = R["P"]
     lp = sum(t["pages"] for t in R["topics"] if t["type"] in ("LP", "LPS"))
     tl = sum(t["pages"] for t in R["topics"] if t["type"] == "TOOL")
@@ -356,19 +359,18 @@ COMP = [
   ], ["HCM vs HRIS vs HRMS from an India compliance view", "HR software for Indian companies with staff abroad", "Normalized cost per employee at 25, 50, 100, 250 people", "Implementation realism for Indian master data", "Leave rules by state as a real table"]),
 ]
 comp_html = []
-for name, rows_, gaps in COMP:
+for name, rows_, gaps in [c for c in COMP if c[0] == "Employer of Record"]:
     who = "".join(f'<li><b>{E(a)}</b> {E(b)}</li>' for a, b in rows_)
     gp = "".join(f"<li>{E(g)}</li>" for g in gaps)
     comp_html.append(f'<details class="topic"><summary><span class="tt">{E(name)}</span><span class="cnt">{len(rows_)} competitor sets · {len(gaps)} gaps</span></summary>'
                      f'<div class="tbody cols"><div><h4>Who holds the SERP</h4><ul>{who}</ul></div><div><h4>Gaps nobody covers well</h4><ul>{gp}</ul></div></div></details>')
 
-DR = [("zoho.com", 92), ("rippling.com", 84), ("deel.com", 81), ("remote.com", 80), ("keka.com", 77), ("darwinbox.com", 75), ("transperfect.com", 74),
-      ("greythr.com", 73), ("papayaglobal.com", 72), ("usemultiplier.com", 68), ("velocityglobal.com", 66), ("zinnov.com", 63), ("skuad.io", 60),
-      ("playroll.com", 59), ("ansr.com", 46), ("wisemonk.io", 45), ("paybooks.in", 41)]
+DR = [("rippling.com", 84), ("deel.com", 81), ("remote.com", 80), ("transperfect.com", 74), ("papayaglobal.com", 72), ("usemultiplier.com", 68),
+      ("velocityglobal.com", 66), ("skuad.io", 60), ("playroll.com", 59), ("wisemonk.io", 45), ("paybooks.in", 41)]
 dr_rows = "".join(f'<tr{" class=me" if d == "paybooks.in" else ""}><td>{d}</td><td class="n">{v}</td><td><i style="width:{v}%"></i></td></tr>' for d, v in DR)
 
 HTML = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Paybooks Keyword Research</title><meta name="robots" content="noindex,nofollow">
+<title>EOR Keyword Research</title><meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{{--ink:#101828;--ink2:#344054;--muted:#667085;--line:#E4E9E1;--bg:#F6F8F3;--card:#fff;--green:#4F8A10;--g600:#3E6E0C;--g100:#E9F3DC;--forest:#0B1F14;--orange:#F26B1D;--o100:#FDEBDD}}
@@ -383,7 +385,7 @@ nav{{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var
 nav a{{padding:14px 14px;color:var(--ink2);text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap;border-bottom:2px solid transparent}}nav a:hover{{color:var(--g600);border-color:var(--green)}}
 section{{padding:40px 0 8px}}h2{{font:700 26px "Instrument Sans";margin:0 0 6px;letter-spacing:-.01em}}.lead{{color:var(--muted);margin:0 0 18px;max-width:860px}}
 .card{{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px}}
-.funnel{{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}}.funnel div{{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}}
+.funnel{{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}}.funnel div{{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}}
 .funnel b{{display:block;font:700 22px "Instrument Sans"}}.funnel span{{font-size:13px;color:var(--muted)}}
 table{{width:100%;border-collapse:collapse;font-size:13.5px}}th{{text-align:left;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:9px 10px;border-bottom:1px solid var(--line);background:#FAFBF8}}
 td{{padding:8px 10px;border-bottom:1px solid #EEF1EC;vertical-align:top}}.n{{text-align:right;white-space:nowrap}}.tw{{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff}}
@@ -408,25 +410,24 @@ details{{border-radius:16px}}summary{{cursor:pointer;list-style:none}}summary::-
 footer{{padding:36px 0 50px;color:var(--muted);font-size:13px}}
 @media(max-width:800px){{.kpis{{grid-template-columns:1fr 1fr}}.funnel{{grid-template-columns:1fr 1fr}}.cols{{grid-template-columns:1fr}}}}
 </style></head><body>
-<header><div class="wrap"><h1>Paybooks keyword, topic and competitor research</h1>
-<p>Supporting research for the TransPerfect Paybooks SEO proposal. Every keyword from the Ahrefs pull is placed in one of four buckets, then in a topic, and each topic is a page to build: a landing page, a tool, or a support article.</p>
+<header><div class="wrap"><h1>Employer of Record: keyword, topic and competitor research</h1>
+<p>Supporting research for the TransPerfect Paybooks SEO proposal, worked in full for one category as the model for the other three. Every Employer of Record keyword from the Ahrefs pull is placed in a topic, and each topic is a page to build: a landing page, a tool, or a support article.</p>
 <div class="kpis"><div class="kpi"><b>{fmt(kept_all)}</b><span>keywords targeted</span></div><div class="kpi"><b>{fmt(vol_all)}</b><span>searches a month, US and India</span></div>
 <div class="kpi"><b>{pages["lp"]}</b><span>landing pages, incl. page sets</span></div><div class="kpi"><b>{pages["tool"]}</b><span>interactive tools</span></div><div class="kpi"><b>{pages["art"]}</b><span>support articles</span></div></div></div></header>
-<nav><div class="wrap"><a href="#method">Method</a><a href="#plan">Topic plan</a><a href="#buckets">Keyword buckets</a><a href="#competitors">Competitor analysis</a><a href="#download">Download</a></div></nav>
+<nav><div class="wrap"><a href="#method">Method</a><a href="#plan">Topic plan</a><a href="#buckets">Keywords by topic</a><a href="#competitors">Competitor analysis</a><a href="#download">Download</a></div></nav>
 <main class="wrap">
-<section id="method"><h2>How the keyword list was built</h2><p class="lead">Ahrefs Keywords Explorer, 23 September 2026. 28 seed terms pulled for the US and India, then cleaned in three passes.</p>
-<div class="funnel"><div><b>{fmt(RAW)}</b><span>rows pulled from Ahrefs across the four buckets</span></div>
-<div><b>−{totals["exact"] + totals["cross"]}</b><span>duplicates removed: {totals["exact"]} exact repeats, {totals["cross"]} keywords that sat in two buckets</span></div>
-<div><b>−{excl_all}</b><span>off-intent keywords excluded, each with a reason (portal logins, other vendors' brands, developer staffing, company news)</span></div>
+<section id="method"><h2>How the keyword list was built</h2><p class="lead">Ahrefs Keywords Explorer, 23 September 2026. Five Employer of Record seed terms pulled for the US and India, then cleaned in three passes.</p>
+<div class="funnel"><div><b>{fmt(raw_eor)}</b><span>Employer of Record keywords pulled from Ahrefs</span></div>
+<div><b>−{excl_all}</b><span>off-intent keywords excluded, each with a reason: developer-staffing searches, news, and importer-of-record services</span></div>
 <div><b>{fmt(kept_all)}</b><span>keywords targeted, each mapped to one page</span></div></div>
-<p class="note" style="margin-top:12px">The deck quotes 965 keywords: the 973 rows pulled, minus 8 government HRMS login searches. This report goes further, removing duplicates and every off-intent keyword, so its targeted count is lower and exact. Keyword difficulty (KD) is Ahrefs' 0 to 100 score, and a dash means Ahrefs returned no value; "reachable" in the deck means KD 15 or under with 100+ searches a month.</p></section>
-<section id="plan"><h2>Topic plan: what we build to own each category</h2><p class="lead">One main topic per category, with the landing pages, tools and support articles needed to dominate its search results. Page sets count every page they contain; for example, six city payroll pages count as six.</p>
+<p class="note" style="margin-top:12px">The deck quotes 161 Employer of Record keywords, the raw pull. This report removes duplicates and every off-intent keyword, so its targeted count is lower and exact. The same method applies to Multi-Country Payroll, Managed India Office and Global HCM. Keyword difficulty (KD) is Ahrefs' 0 to 100 score, and a dash means Ahrefs returned no value; "reachable" in the deck means KD 15 or under with 100+ searches a month.</p></section>
+<section id="plan"><h2>Topic plan: what we build to own the category</h2><p class="lead">One main topic, with the landing pages, tools and support articles needed to dominate its search results. Page sets count every page they contain; for example, the 27 country pages count as 27.</p>
 <div class="tw"><table><thead><tr><th>Category</th><th>Main topic and pillar page</th><th class="n">Landing pages</th><th class="n">Tools</th><th class="n">Support articles</th><th class="n">Keywords</th><th class="n">Searches / mo</th></tr></thead><tbody>{"".join(plan_rows)}
-<tr><td><b>Total</b></td><td></td><td class="n"><b>{pages["lp"]}</b></td><td class="n"><b>{pages["tool"]}</b></td><td class="n"><b>{pages["art"]}</b></td><td class="n"><b>{fmt(kept_all)}</b></td><td class="n"><b>{fmt(vol_all)}</b></td></tr></tbody></table></div>
-<p class="note" style="margin-top:10px">The 27 country EOR pages are a wave-three option, only worth building once Paybooks can deliver EOR outside India. Without them, the plan is {pages["lp"] - 27} landing pages.</p></section>
-<section id="buckets"><h2>Keyword buckets</h2><p class="lead">Open a bucket to see its topics. Open a topic to see the target page and every keyword it targets, sorted by monthly searches. Topics marked "planned from research" come from SERP and buyer-question research where Ahrefs returned no volume yet.</p>
+</tbody></table></div>
+<p class="note" style="margin-top:10px">The 27 country pages are a wave-three option, only worth building once Paybooks can deliver EOR outside India. Without them, the plan is {pages["lp"] - 27} landing pages.</p></section>
+<section id="buckets"><h2>Keywords by topic</h2><p class="lead">Open the category to see its topics. Open a topic to see the target page and every keyword it targets, sorted by monthly searches. Topics marked "planned from research" come from SERP and buyer-question research where Ahrefs returned no volume yet.</p>
 {"".join(bucket_html)}</section>
-<section id="competitors"><h2>Competitor analysis</h2><p class="lead">From 60+ ranking pages opened and measured across 30 head queries, and 15 competitor sitemaps mapped into clusters.</p>
+<section id="competitors"><h2>Competitor analysis</h2><p class="lead">Ranking pages opened and measured for the EOR head queries, and competitor sitemaps mapped into India clusters.</p>
 <div class="cols" style="grid-template-columns:1fr 1.4fr;align-items:start"><div class="card"><h4 style="margin:0 0 10px;font:700 15px 'Instrument Sans'">Domain Rating (Ahrefs)</h4><table class="dr"><tbody>{dr_rows}</tbody></table>
 <p class="note">Depth beats authority on India terms: Wisemonk at DR 45 outranks Deel, Remote and Multiplier with a 40-URL India cluster. Authority decides only the global head terms.</p></div>
 <div>{"".join(comp_html)}</div></div></section>
