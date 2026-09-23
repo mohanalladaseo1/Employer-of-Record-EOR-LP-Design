@@ -9,12 +9,15 @@ exec(open(f"{H}/build_strategy.py").read(), ns)
 g = ns; E = html.escape; fmt = g["fmt"]
 agg, CL, serps, SERPQ, play = g["agg"], g["CL"], g["serps"], g["SERPQ"], g["play"]
 inv = {"__file__": f"{H}/inventory.py"}; exec(open(f"{H}/inventory.py").read(), inv)
-INV, REUSE, NEW, CC, CDEM, PGW = inv["INV"], inv["REUSE"], inv["NEW"], inv["COMPARE_COUNTS"], inv["COMPARE_DEMAND"], inv["W"]
+INV, REUSE, NEW, CC, CDEM, PGW, GAPV = inv["INV"], inv["REUSE"], inv["NEW"], inv["COMPARE_COUNTS"], inv["COMPARE_DEMAND"], inv["W"], inv["GAPV"]
+ct = {"__file__": f"{H}/comp_topics.py"}; exec(open(f"{H}/comp_topics.py").read(), ct)
+CT_ROWS, CT_COMP, CT_NP, CT_NT, CT_IN, CT_ADD, CT_LINK = ct["topic_rows"], ct["COMP_HTML"], ct["N_PAGES"], ct["N_TOPICS"], ct["N_IN"], ct["N_ADD"], ct["N_LINK"]
+CT_NOISE, CT_ZERO, CT_NC = len(ct["NOISE"]), " and ".join(ct["ZERO"]), ct["N_COMP"]
 
 # ---------- chart 1: the prize, searches by cluster ----------
 SHORT = {"C1": "EOR India (the commercial page)", "C2": "Hire employees in India", "C3": "PEO in India", "C4": "Best EOR providers",
          "C5": "Hire developers and other roles", "C6": "Employer guides", "C7": "What an EOR is", "C8": "Cost and entity tools"}
-prize = [(SHORT[c], agg[c][1], agg[c][0], c) for c in ["C5", "C1", "C4", "C3", "C2", "C7", "C6", "C8"]]
+prize = [(SHORT[c], agg[c][1] + (GAPV if c == "C6" else 0), agg[c][0], c) for c in ["C5", "C1", "C4", "C3", "C2", "C7", "C6", "C8"]]
 prize.insert(1, ("Competitor comparisons", CDEM, 11, "CMP"))
 RV, SV = 16350, 5800
 prize = [(("Hire [role] in India (programmatic)", RV, 95, "C5") if x[3] == "C5" else x) for x in prize]
@@ -86,10 +89,11 @@ for i, (n, w, t, c) in enumerate(BW):
 chart_page = f'<svg viewBox="0 0 980 {30+len(BW)*44}" class="chart" role="img" aria-label="Page depth of ranking pages">{"".join(bw)}</svg>'
 
 # ---------- page map: hub and spoke ----------
+_gr = sum(1 for x in REUSE if x[1] == "Refresh") + 2; _gn = sum(1 for x in NEW if x[0] == "Employer guides")
 cx, cy = 490, 250
 SP = [("Hire employees in India", "Guide · refresh", 1, -300, -150), ("PEO in India", "Page · refresh", 1, -100, -170), ("Best EOR providers", "List · refresh", 1, 100, -170),
       ("5 comparison pages", "Alternatives, vs, pricing · new", 1, 300, -150), ("Cost calculator", "Tool · new", 1, -345, 5), ("EOR vs entity calculator", "Tool · new", 2, 345, 5),
-      ("22 programmatic pages", "15 roles · 7 salary · new", 2, -240, 165), ("10 employer guides", "5 refresh · 5 new", 2, 0, 180), ("What is an EOR", "Glossary · refresh", 2, 240, 165)]
+      ("22 programmatic pages", "15 roles · 7 salary · new", 2, -240, 165), (f"{_gr + _gn} employer guides", f"{_gr} refresh · {_gn} new", 2, 0, 180), ("What is an EOR", "Glossary · refresh", 2, 240, 165)]
 sp = []
 for lab, sub, w, dx, dy in SP:
     x, y = cx + dx, cy + dy
@@ -108,7 +112,7 @@ chart_map = (f'<svg viewBox="0 0 980 520" class="chart map" role="img" aria-labe
              f'<g transform="translate(20,505)"><line x1="0" y1="0" x2="34" y2="0" stroke="#4F8A10" stroke-width="2.5"/><text x="42" y="5" class="ns">Wave 1: ships with the new site</text>'
              f'<line x1="270" y1="0" x2="304" y2="0" stroke="#8FB35E" stroke-width="1.5" stroke-dasharray="6 5"/><text x="312" y="5" class="ns">Wave 2: follows after launch</text></g></svg>')
 
-tgt_vol = sum(agg[c][1] for c in ["C1", "C2", "C3", "C4", "C6", "C7", "C8"]) + CDEM + RV + SV
+tgt_vol = sum(agg[c][1] for c in ["C1", "C2", "C3", "C4", "C6", "C7", "C8"]) + CDEM + RV + SV + GAPV
 tgt_n = sum(agg[c][0] for c in ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"])
 w1_vol = sum(agg[c][1] for c in ["C1", "C2", "C3", "C4"])
 
@@ -118,8 +122,9 @@ def vtag(v): return f'<span class="vt" style="--c:{VC[v]}">{v}</span>'
 inv_rows = "".join(f'<tr><td><code>{E(u)}</code><div class="mut">{fmt(PGW(u))} words</div></td><td>{vtag(v)}</td><td><b>{E(b)}</b><div class="mut">{E(r)}</div></td></tr>' for u, v, b, r in INV)
 reuse_rows = "".join(f'<tr><td><code>{E(u)}</code></td><td>{vtag(v)}</td><td><b>{E(b)}</b><div class="mut">{E(r)}</div></td></tr>' for u, v, b, r in REUSE)
 new_rows = "".join(f'<tr><td>{E(t)}</td><td><b>{E(n)}</b><div class="mut"><code>{E(u)}</code></div></td><td class="mut">{E(k)}</td><td class="n">{fmt(v) if v else "–"}</td></tr>' for t, n, u, k, v in NEW)
-nref = sum(1 for x in INV + REUSE if x[1] == "Refresh"); nmer = sum(1 for x in INV if x[1] in ("Merge", "Redirect")); nnew = len(NEW) + 14 + 6
+nref = sum(1 for x in INV + REUSE if x[1] == "Refresh"); nmer = sum(1 for x in INV + REUSE if x[1] in ("Merge", "Redirect")); nnew = len(NEW) + 14 + 6
 total_pages = nref + nnew
+g_ref = sum(1 for x in REUSE if x[1] == "Refresh") + 2; g_new = sum(1 for x in NEW if x[0] == "Employer guides"); w2_n = total_pages - 10
 eor_words = sum(PGW(u) for u, *_ in INV)
 
 # ---------- chart: comparison layer ----------
@@ -168,6 +173,7 @@ h2{font:700 clamp(28px,3.4vw,40px)/1.12 "Instrument Sans";letter-spacing:-.02em;
 .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--muted);margin-top:10px}.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px;background:var(--c)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px}.card b{display:block;font:700 18px/1.3 "Instrument Sans";margin-bottom:6px}.card p{margin:0;font-size:15px;color:var(--ink2)}
 .card.acc{border-left:5px solid var(--green)}
+.subh{{margin:26px 0 10px;font:700 20px "Instrument Sans"}}
 .waves{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}.wave{border-radius:18px;padding:22px 24px}.wave.w1{background:var(--forest);color:#fff}.wave.w2{background:#fff;border:1px solid var(--line)}
 .wave h3{margin:0 0 4px;font:700 20px "Instrument Sans"}.wave .m{font-size:13.5px;margin-bottom:12px}.wave.w1 .m{color:var(--lime)}.wave.w2 .m{color:var(--g600)}
 .wave ul{margin:0;padding-left:18px}.wave li{margin:6px 0;font-size:15px}.wave.w1 li{color:#DDE8D6}
@@ -200,7 +206,7 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <p class="sub">The top results are not held by the biggest brands. They are held by the deepest pages. {total_pages} well-built pages, in two waves, put Paybooks at the top of the searches that bring foreign companies hiring in India.</p>
 <div class="kp"><div><b>{fmt(tgt_vol)}</b><span>monthly searches the plan targets, USA and India</span></div><div><b>{total_pages}</b><span>pages: {nref} refreshed from what Paybooks has, {nnew} new</span></div>
 <div><b>DR 29</b><span>the lowest-authority site on page one today. Paybooks is DR 41</span></div><div><b>1,043</b><span>competitor India pages studied across 12 sites</span></div></div></div></header>
-<nav class="toc"><div class="wrap"><a href="#answer">Findings</a><a href="#prize">Topic potential</a><a href="#lesson">What works</a><a href="#today">Paybooks today</a><a href="#page">The winning page</a><a href="#plan">The plan</a><a href="#build">Refresh or create</a><a href="#pseo">Programmatic SEO</a><a href="#appendix">Evidence</a></div></nav>
+<nav class="toc"><div class="wrap"><a href="#answer">Findings</a><a href="#prize">Topic potential</a><a href="#lesson">What works</a><a href="#today">Paybooks today</a><a href="#topics">Competitor topics</a><a href="#page">The winning page</a><a href="#plan">The plan</a><a href="#build">Refresh or create</a><a href="#pseo">Programmatic SEO</a><a href="#appendix">Evidence</a></div></nav>
 <main class="wrap">
 <section id="answer"><span class="num">FINDINGS</span><h2>Three findings decide the strategy.</h2>
 <div class="take"><div><b>Authority is not what decides this category.</b><p>On "employer of record india", page one runs from DR 81 (Deel) down to DR 29 (Infotree). For "PEO India", sites at DR 12 to 37 hold #3 to #10. Paybooks at DR 41 is already strong enough to rank.</p></div>
@@ -223,27 +229,35 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="card"><b>The pages compete with each other.</b><p>Three near-identical startup articles, two "what is an EOR" articles, and a duplicate service page split the same searches.</p></div>
 <div class="card"><b>The page that sells hides the price.</b><p>/eor/ shows no price and no tables at 1,697 words. Skuad wins with $199 and 19 tables on the page.</p></div>
 <div class="card"><b>The best asset is not linked from the sale.</b><p>The 5,210-word hiring guide with 6 tables sits as a featured article, not connected to the service page.</p></div></div></section>
+<section id="topics"><span class="num">04 · COMPETITOR TOPICS</span><h2>Every topic that earns competitors traffic is now in the plan.</h2>
+<p class="lead">{CT_NP} competitor pages earn search traffic in this category, spread across {CT_NT} topics and {CT_NC} competitors. {CT_IN} topics were already in the plan. {CT_ADD} are added now as new or refreshed employer guides. {CT_LINK} belong to other Paybooks offers, so the EOR pages link to them.</p>
+<div class="rc"><div style="background:#4F8A10"><b>{CT_IN}</b><span>topics already in the plan</span></div><div style="background:#F26B1D"><b>{CT_ADD}</b><span>topics added now</span></div><div style="background:#8A94A0"><b>{CT_LINK}</b><span>topics linked to other Paybooks offers</span></div></div>
+<details class="blk" open><summary>Topics ranked by competitor visits</summary><div class="tw"><table><thead><tr><th>Topic</th><th>Competitors earning traffic</th><th class="n">USA visits / mo</th><th class="n">India visits / mo</th><th>Biggest search</th><th>Where it sits in the plan</th></tr></thead><tbody>{CT_ROWS}</tbody></table></div></details>
+<h3 class="subh">Each competitor's working pages</h3>
+{CT_COMP}
+<p class="note">Source: Ahrefs top pages, 20 Sep 2026. Google USA (top 15 India pages per site) and Google India (top 10), where the URL or the top search mentions India. Visits are Ahrefs estimates. {CT_NOISE} pages are left out: Indiana state pages, relocation, job listings, outsourcing and staffing services, and the competitors' own brand searches. {CT_ZERO} have no India page with traffic.</p></section>
 
 
 
-<section id="page"><span class="num">04 · THE WINNING PAGE</span><h2>One deep page per intent, built better than Skuad's.</h2><p class="lead">The page that wins the commercial search is long, answers questions in its headings, and shows its numbers in tables. The Paybooks page adds what none of them combine: a published price broken down line by line, a live calculator, and a written no-penalty guarantee.</p>
+
+<section id="page"><span class="num">05 · THE WINNING PAGE</span><h2>One deep page per intent, built better than Skuad's.</h2><p class="lead">The page that wins the commercial search is long, answers questions in its headings, and shows its numbers in tables. The Paybooks page adds what none of them combine: a published price broken down line by line, a live calculator, and a written no-penalty guarantee.</p>
 <div class="panel">{chart_page}</div></section>
 
-<section id="plan"><span class="num">05 · THE PLAN</span><h2>One page that sells, surrounded by pages that feed it.</h2><p class="lead">Every other page answers one kind of search and links to the Employer of Record India page. All URLs are proposed for the new site; each refreshed page redirects from its current address.</p>
+<section id="plan"><span class="num">06 · THE PLAN</span><h2>One page that sells, surrounded by pages that feed it.</h2><p class="lead">Every other page answers one kind of search and links to the Employer of Record India page. All URLs are proposed for the new site; each refreshed page redirects from its current address.</p>
 <div class="panel">{chart_map}</div>
 <div class="waves"><div class="wave w1"><h3>Wave 1 · the commercial core</h3><div class="m">10 pages · {fmt(w1_vol + CDEM)} searches a month · ships with the new site</div><ul>
 <li>Employer of Record India, the page that sells (refresh of /eor/, sample design built)</li><li>India employee cost calculator (built into the sample)</li><li>Hire employees in India, the step-by-step guide (refresh)</li><li>PEO in India, and why it means EOR (refresh)</li><li>Best EOR providers for India, with published prices (refresh)</li><li>5 comparison pages: Deel and Remote alternatives, Paybooks vs Deel, Deel vs Remote vs Rippling, EOR pricing compared (new)</li><li>7 overlapping pages merged in and redirected</li></ul></div>
-<div class="wave w2"><h3>Wave 2 · widening the net</h3><div class="m">34 pages · {fmt(RV+SV+agg["C6"][1]+agg["C7"][1]+agg["C8"][1])} searches a month · follows after launch</div><ul>
-<li>EOR vs own-entity calculator (new)</li><li>22 programmatic pages: 15 "hire [role] in India" pages and a 7-page India salary guide in USD, launched 5 at a time (new)</li><li>10 employer guides: 5 refreshed from existing Paybooks articles, 5 new</li><li>A short "what is an EOR" answer built for AI Overviews (refresh)</li></ul></div></div></section>
+<div class="wave w2"><h3>Wave 2 · widening the net</h3><div class="m">{w2_n} pages · {fmt(RV+SV+agg["C6"][1]+GAPV+agg["C7"][1]+agg["C8"][1])} searches a month · follows after launch</div><ul>
+<li>EOR vs own-entity calculator (new)</li><li>22 programmatic pages: 15 "hire [role] in India" pages and a 7-page India salary guide in USD, launched 5 at a time (new)</li><li>{g_ref + g_new} employer guides: {g_ref} refreshed from existing Paybooks articles, {g_new} new</li><li>A short "what is an EOR" answer built for AI Overviews (refresh)</li></ul></div></div></section>
 
-<section id="build"><span class="num">06 · REFRESH OR CREATE</span><h2>What to refresh, what to merge, what to create.</h2>
+<section id="build"><span class="num">07 · REFRESH OR CREATE</span><h2>What to refresh, what to merge, what to create.</h2>
 <p class="lead">Every existing EOR page has a decision. Refreshing keeps the URL history and the work already paid for; merging stops pages competing; new pages fill what no Paybooks page covers.</p>
 <div class="rc"><div style="background:#4F8A10"><b>{nref}</b><span>pages to refresh</span></div><div style="background:#8FB35E"><b>{nmer}</b><span>pages to merge and redirect</span></div><div style="background:#0B1F14"><b>{nnew}</b><span>pages to create</span></div></div>
 <details class="blk" open><summary>Existing EOR pages: the verdict on each</summary><div class="tw"><table><thead><tr><th>Current page</th><th>Verdict</th><th>Becomes · why</th></tr></thead><tbody>{inv_rows}</tbody></table></div></details>
 <details class="blk"><summary>Existing payroll articles to repurpose for EOR buyers</summary><div class="tw"><table><thead><tr><th>Current page</th><th>Verdict</th><th>Becomes · why</th></tr></thead><tbody>{reuse_rows}</tbody></table></div></details>
 <details class="blk"><summary>New pages to create</summary><div class="tw"><table><thead><tr><th>Type</th><th>Page · proposed URL</th><th>Target searches</th><th class="n">Searches / mo</th></tr></thead><tbody>{new_rows}</tbody></table></div><p class="note">The programmatic sets count as 15 and 7 pages. Search volumes are Google USA from Ahrefs; guides with no volume are drawn from buyer-question research.</p></details></section>
 
-<section id="pseo"><span class="num">07 · PROGRAMMATIC SEO</span><h2>One template, fifteen roles: the biggest demand in the category.</h2>
+<section id="pseo"><span class="num">08 · PROGRAMMATIC SEO</span><h2>One template, fifteen roles: the biggest demand in the category.</h2>
 <p class="lead">Buyers search by the job they need to fill: "hire react native developers india", "hire .NET developers india". Rippling's biggest India page is exactly this. One template, filled with real data per role, covers {fmt(RV)} searches a month across 95 keywords, most at keyword difficulty 0 to 16. Some of these searchers want an agency; each page wins them by showing why hiring your own full-time employee through an EOR costs less and keeps the IP.</p>
 <div class="panel">{chart_roles}<div class="legend"><span style="--c:#4F8A10">First 5 roles, launched in Wave 2</span><span style="--c:#9FC76A">Next 10, added once the first 5 rank</span></div></div>
 <div class="two" style="margin-top:18px"><div class="card acc"><b>Template 1 · Hire [role] in India</b><p>15 pages at /hire-in-india/[role]/. Each carries data no one else combines: the salary band in USD, the all-in monthly cost from the calculator at that salary, where the talent concentrates, notice periods, a 10-day hiring timeline, and an FAQ. Similar roles share a page (PHP, Laravel and CodeIgniter are one page), so no two pages compete.</p></div>

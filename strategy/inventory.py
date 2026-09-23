@@ -22,9 +22,12 @@ INV = [
 ]
 # existing payroll articles repurposed for EOR buyers
 REUSE = [
- ("/article/labour-code-implementation-in-india/", "Refresh", "Employer guide: Labour Codes for foreign employers", "Paybooks already covers the Labour Codes for Indian HR. Rewrite the angle for a foreign employer; nobody ranks with that angle."),
- ("/article/how-the-maternity-benefit-act-impacts-employers-and-employees-in-india/", "Refresh", "Employer guide: maternity and leave rules", "Maternity leave in India gets about 200 searches a month; Rippling ranks for it. Retarget for foreign employers."),
+ ("/article/labour-code-implementation-in-india/", "Refresh", "Employer guide: India labour laws for foreign employers", "Paybooks already covers the Labour Codes for Indian HR. Retarget to \"india labor laws\", where Oyster and Multiplier earn traffic, and write it for a foreign employer; nobody ranks with that angle."),
+ ("/article/how-the-maternity-benefit-act-impacts-employers-and-employees-in-india/", "Refresh", "Employer guide: maternity leave", "Maternity leave in India gets about 200 searches a month; Rippling ranks for it. Retarget for foreign employers."),
  ("/article/how-to-handle-gratuity-bonus-and-ff-settlement-without-getting-it-wrong/", "Refresh", "Employer guide: termination and final settlement", "Termination is a top buyer question. Reuse this gratuity and final-pay content for foreign employers."),
+ ("/article/leave-policy-in-india-complete-holiday-list-of-2025-in-india/", "Refresh", "Employer guide: public holidays and leave in India 2026, by state", "Dated 2025. Playroll, Wisemonk and Asanify earn traffic on holiday and leave-policy searches. Update to 2026, add a state-by-state table and the foreign-employer angle."),
+ ("/blog/a-quick-guide-to-leave-rules-in-india/", "Merge", "Employer guide: public holidays and leave in India", "Same leave intent as the holiday guide. Fold it in and redirect."),
+ ("/article/salary-structure-compliance-risk-india/", "Refresh", "Employer guide: salary structure under the Labour Codes", "Asanify earns traffic on salary-structure searches. Paybooks already explains the 50% wage rule; add a worked structure in rupees and dollars."),
 ]
 # new pages
 NEW = [
@@ -40,8 +43,15 @@ NEW = [
  ("Employer guides", "Employee benefits in India", "/guides/employee-benefits-india/", "india benefits · employee benefits in india", 280),
  ("Employer guides", "Background checks in India", "/guides/background-checks-india/", "india background check · background check in india", 190),
  ("Employer guides", "Contractors vs employees in India", "/guides/contractors-vs-employees-india/", "hiring independent contractors in india", 100),
+ ("Employer guides", "Working hours and overtime rules in India", "/guides/working-hours-overtime-india/", "working hours in india · overtime rules in india", 80),
+ ("Employer guides", "Minimum wage in India by state, in USD", "/guides/minimum-wage-india/", "minimum wage in india · minimum wage in india per month", 430),
+ ("Employer guides", "Employment contracts, offer letters and NDAs in India", "/guides/employment-contracts-india/", "offer letter format india · non disclosure agreement india", 30),
+ ("Employer guides", "Work permits and employment visas for foreign staff", "/guides/work-permits-india/", "employment visa india · work permit in india", 30),
  ("Employer guides", "Permanent establishment risk in India", "/guides/permanent-establishment-risk-india/", "buyer-question research", 0),
  ("Employer guides", "Moving from an EOR to your own entity", "/guides/eor-to-own-entity/", "buyer-question research", 0),
 ]
 COMPARE_COUNTS = [("Multiplier", 172), ("Asanify", 95), ("Deel", 108), ("Skuad", 118), ("Wisemonk", 114), ("Rippling", 76), ("G-P", 136), ("Paybooks", 1)]
 COMPARE_DEMAND = sum(v for t, _n, _u, _k, v in NEW if t == "Comparison")
+
+# USA searches newly covered by the competitor-topic gap pass (new guides + retargeted refreshes; excludes keywords already counted in C6)
+GAPV = 80 + 430 + 30 + 30 + 320 + 40 + 160 + 110
