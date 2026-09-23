@@ -155,7 +155,7 @@ section{padding:72px 0 16px}.num{font:700 13px "Instrument Sans";color:var(--gre
 h2{font:700 clamp(28px,3.4vw,40px)/1.12 "Instrument Sans";letter-spacing:-.02em;margin:8px 0 12px;max-width:820px}
 .lead{font-size:18px;color:var(--ink2);max-width:780px;margin:0 0 28px}
 .take{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.take div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
-.take i{font:700 13px "Instrument Sans";font-style:normal;color:#fff;background:var(--green);border-radius:8px;padding:3px 9px}.take b{display:block;font:700 20px/1.25 "Instrument Sans";margin:14px 0 8px}.take p{margin:0;color:var(--ink2);font-size:15px}
+.take i{font:700 13px "Instrument Sans";font-style:normal;color:#fff;background:var(--green);border-radius:8px;padding:3px 9px}.take b{display:block;font:700 20px/1.25 "Instrument Sans";margin:0 0 8px}.take p{margin:0;color:var(--ink2);font-size:15px}
 .panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 30px}
 .chart{width:100%;height:auto;display:block}.chart .lb{font:500 14px Inter;fill:#344054}.chart .vl{font:700 14px Inter;fill:#101828}.chart .ax{font:12px Inter;fill:#667085}
 .chart .hd{font:700 12px Inter;fill:#667085;letter-spacing:.06em;text-transform:uppercase}.chart .gl{stroke:#E4E9E1;stroke-width:1}.chart .pbl{font:700 13px Inter;fill:#0B1F14}.chart .mutt{fill:#98A2B3;font-size:12.5px}
@@ -197,10 +197,10 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div><b>DR 29</b><span>the lowest-authority site on page one today. Paybooks is DR 41</span></div><div><b>1,043</b><span>competitor India pages studied across 12 sites</span></div></div></div></header>
 <nav class="toc"><div class="wrap"><a href="#answer">The answer</a><a href="#prize">The prize</a><a href="#field">The field</a><a href="#lesson">What works</a><a href="#today">Paybooks today</a><a href="#gap">The missing layer</a><a href="#page">The winning page</a><a href="#plan">The plan</a><a href="#build">Refresh or create</a><a href="#pseo">Programmatic SEO</a><a href="#why">Why Paybooks</a><a href="#asks">What we need</a><a href="#appendix">Evidence</a></div></nav>
 <main class="wrap">
-<section id="answer"><span class="num">THE ANSWER</span><h2>Three findings, one strategy.</h2>
-<div class="take"><div><i>1</i><b>This category is winnable at Paybooks' authority.</b><p>A site rated DR 29 ranks on page one for "employer of record india". For "PEO india", sites rated 12 to 37 hold half the page.</p></div>
-<div><i>2</i><b>Depth wins. Volume does not.</b><p>Skuad ranks #1 for the cost search with one very deep page. Wisemonk published 666 India pages and earns almost no EOR traffic.</p></div>
-<div><i>3</i><b>Nobody owns every intent.</b><p>Five kinds of search, five different winners. Paybooks can be the one site that answers all five, at the lowest published price.</p></div></div></section>
+<section id="answer"><span class="num">THE ANSWER</span><h2>Three findings, one strategy.</h2><p class="lead">Three findings decide the strategy.</p>
+<div class="take"><div><b>Authority is not what decides this category.</b><p>On "employer of record india", page one runs from DR 81 (Deel) down to DR 29 (Infotree). For "PEO India", sites at DR 12 to 37 hold #3 to #10. Paybooks at DR 41 is already strong enough to rank.</p></div>
+<div><b>Depth on the right page decides it.</b><p>Skuad ranks #1 for the cost query with one 8,658-word page, 35 headings and 19 tables. Wisemonk published 666 India pages, and its EOR page reaches only #10 in India. One deep page per real intent beats hundreds of thin ones.</p></div>
+<div><b>No competitor covers all five India intents well.</b><p>The commercial page, hiring guide, PEO question, provider comparison and role-based hiring are each won by a different competitor. Paybooks can be the one site that answers all five, with the lowest published price and 12 years of India payroll behind it.</p></div></div></section>
 
 <section id="prize"><span class="num">01 · THE PRIZE</span><h2>{fmt(tgt_vol)} monthly searches from buyers hiring in India.</h2><p class="lead">Grouped by what the searcher wants. The dark-green groups are the commercial core and ship first; together they carry {fmt(w1_vol + CDEM)} searches a month.</p>
 <div class="panel">{chart_prize}</div>
