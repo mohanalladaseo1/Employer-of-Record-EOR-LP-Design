@@ -72,11 +72,15 @@ chart_depth = f'<svg viewBox="0 0 980 {34+len(DV)*50}" class="chart" role="img" 
 # ---------- chart 4: the winning page ----------
 BW = [("Skuad", 8658, 19, "#B8C7AE"), ("Wisemonk", 3921, 3, "#B8C7AE"), ("Deel", 3824, 2, "#B8C7AE"), ("Rippling", 3086, 3, "#B8C7AE"),
       ("Papaya", 2146, 1, "#B8C7AE"), ("Paybooks target", 5000, 10, "#F26B1D")]
+LNK = {"Skuad": "https://www.skuad.io/employer-of-record/india", "Wisemonk": "https://www.wisemonk.io/eor",
+       "Deel": "https://www.deel.com/blog/employer-of-record-india/", "Rippling": "https://www.rippling.com/blog/employer-of-record-guide-india",
+       "Papaya": "https://www.papayaglobal.com/blog/employer-of-record-in-india/", "Paybooks target": "https://employer-of-record-eor-lp-design-livid.vercel.app/"}
 bw = ['<text x="150" y="14" class="hd">Words on the page</text><text x="600" y="14" class="hd">HTML tables</text>']
 for i, (n, w, t, c) in enumerate(BW):
     y = 30 + i * 44; me = n.startswith("Paybooks")
     fw = ' font-weight="700"' if me else ""
-    bw.append(f'<text x="0" y="{y+19}" class="lb"{fw}>{E(n)}</text>'
+    lk = LNK[n]
+    bw.append(f'<a href="{lk}" target="_blank" rel="noopener"><text x="0" y="{y+19}" class="lb lnk"{fw}>{E(n)} \u2197</text></a>'
               f'<rect x="150" y="{y}" width="{360*w/8658:.0f}" height="26" rx="6" fill="{c}"/><text x="{150+360*w/8658+8:.0f}" y="{y+19}" class="vl">{fmt(w)}{"+" if me else ""}</text>'
               f'<rect x="600" y="{y}" width="{max(3,300*t/19):.0f}" height="26" rx="6" fill="{c}"/><text x="{600+max(3,300*t/19)+8:.0f}" y="{y+19}" class="vl">{t}{"+" if me else ""}</text>')
 chart_page = f'<svg viewBox="0 0 980 {30+len(BW)*44}" class="chart" role="img" aria-label="Page depth of ranking pages">{"".join(bw)}</svg>'
@@ -189,13 +193,14 @@ footer{background:var(--forest);color:#BFD3B9;padding:32px 0;font-size:13.5px;ma
 """
 
 PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EOR India Strategy</title><meta name="robots" content="noindex,nofollow">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>{CSS}</style></head><body>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>{CSS}.lnk{{text-decoration:underline;text-decoration-color:#9AA3AF;cursor:pointer}}a:hover .lnk{{fill:#F26B1D}}
+</style></head><body>
 <header class="hero"><div class="wrap"><span class="eyebrow">Employer of Record · Search strategy · Paybooks</span>
 <h1>Paybooks can own India's <em>Employer of Record</em> search.</h1>
 <p class="sub">The top results are not held by the biggest brands. They are held by the deepest pages. {total_pages} well-built pages, in two waves, put Paybooks at the top of the searches that bring foreign companies hiring in India.</p>
 <div class="kp"><div><b>{fmt(tgt_vol)}</b><span>monthly searches the plan targets, USA and India</span></div><div><b>{total_pages}</b><span>pages: {nref} refreshed from what Paybooks has, {nnew} new</span></div>
 <div><b>DR 29</b><span>the lowest-authority site on page one today. Paybooks is DR 41</span></div><div><b>1,043</b><span>competitor India pages studied across 12 sites</span></div></div></div></header>
-<nav class="toc"><div class="wrap"><a href="#answer">Findings</a><a href="#prize">Topic potential</a><a href="#lesson">What works</a><a href="#today">Paybooks today</a><a href="#page">The winning page</a><a href="#plan">The plan</a><a href="#build">Refresh or create</a><a href="#pseo">Programmatic SEO</a><a href="#why">Why Paybooks</a><a href="#asks">What we need</a><a href="#appendix">Evidence</a></div></nav>
+<nav class="toc"><div class="wrap"><a href="#answer">Findings</a><a href="#prize">Topic potential</a><a href="#lesson">What works</a><a href="#today">Paybooks today</a><a href="#page">The winning page</a><a href="#plan">The plan</a><a href="#build">Refresh or create</a><a href="#pseo">Programmatic SEO</a><a href="#appendix">Evidence</a></div></nav>
 <main class="wrap">
 <section id="answer"><span class="num">FINDINGS</span><h2>Three findings decide the strategy.</h2>
 <div class="take"><div><b>Authority is not what decides this category.</b><p>On "employer of record india", page one runs from DR 81 (Deel) down to DR 29 (Infotree). For "PEO India", sites at DR 12 to 37 hold #3 to #10. Paybooks at DR 41 is already strong enough to rank.</p></div>
@@ -256,18 +261,9 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <tr><td><b>Refreshed yearly</b></td><td>Salary and cost data updated each year, with the date shown on the page.</td></tr>
 </tbody></table></div></details></section>
 
-<section id="why"><span class="num">08 · WHY PAYBOOKS WINS</span><h2>Four advantages no competitor can copy quickly.</h2>
-<div class="two"><div class="card acc"><b>The lowest credible price</b><p>$199 a month against Deel's $599 and Remote's $699. Skuad ranks #1 for cost with $199 on the page. Paybooks can show every statutory cost line in dollars too.</p></div>
-<div class="card acc"><b>A guarantee nobody else offers</b><p>A written no-penalty guarantee. None of the eight competitors analyzed publishes one.</p></div>
-<div class="card acc"><b>Twelve years of proof</b><p>3,000+ customers and 1.5 million payslips a year: the evidence Google and buyers both look for.</p></div>
-<div class="card acc"><b>A parent with authority</b><p>Links from transperfect.com (DR 74) close the gap to Skuad (DR 60) and Multiplier (DR 68) on the hardest terms.</p></div></div></section>
 
-<section id="asks"><span class="num">09 · WHAT WE NEED FROM PAYBOOKS</span><h2>Five decisions to start Wave 1.</h2>
-<ol class="asks"><li><b>Confirm the published price and what it includes.</b>The $199 figure and the statutory cost lines shown on the page.</li>
-<li><b>Approve the no-penalty guarantee wording.</b>It is the page's strongest claim and must match the service agreement.</li>
-<li><b>Name two or three client references.</b>Logos and short quotes for the commercial page.</li>
-<li><b>Approve the consolidation.</b>{nmer} overlapping EOR pages merge into stronger ones and redirect, and /eor/ moves to the new Employer of Record India page.</li>
-<li><b>Assign a subject-matter reviewer.</b>A payroll or compliance lead to check every guide before it goes live.</li></ol></section>
+
+
 
 <section id="appendix" class="appx"><span class="num">APPENDIX · THE EVIDENCE</span><h2>Everything behind the numbers.</h2>
 <details><summary>Live search results, query by query</summary><div class="in">{"".join(g["serp_html"])}</div></details>
