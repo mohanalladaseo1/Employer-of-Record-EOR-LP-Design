@@ -195,7 +195,7 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <p class="sub">The top results are not held by the biggest brands. They are held by the deepest pages. {total_pages} well-built pages, in two waves, put Paybooks at the top of the searches that bring foreign companies hiring in India.</p>
 <div class="kp"><div><b>{fmt(tgt_vol)}</b><span>monthly searches the plan targets, USA and India</span></div><div><b>{total_pages}</b><span>pages: {nref} refreshed from what Paybooks has, {nnew} new</span></div>
 <div><b>DR 29</b><span>the lowest-authority site on page one today. Paybooks is DR 41</span></div><div><b>1,043</b><span>competitor India pages studied across 12 sites</span></div></div></div></header>
-<nav class="toc"><div class="wrap"><a href="#answer">Findings</a><a href="#prize">Topic potential</a><a href="#field">The field</a><a href="#lesson">What works</a><a href="#today">Paybooks today</a><a href="#gap">The missing layer</a><a href="#page">The winning page</a><a href="#plan">The plan</a><a href="#build">Refresh or create</a><a href="#pseo">Programmatic SEO</a><a href="#why">Why Paybooks</a><a href="#asks">What we need</a><a href="#appendix">Evidence</a></div></nav>
+<nav class="toc"><div class="wrap"><a href="#answer">Findings</a><a href="#prize">Topic potential</a><a href="#lesson">What works</a><a href="#today">Paybooks today</a><a href="#gap">The missing layer</a><a href="#page">The winning page</a><a href="#plan">The plan</a><a href="#build">Refresh or create</a><a href="#pseo">Programmatic SEO</a><a href="#why">Why Paybooks</a><a href="#asks">What we need</a><a href="#appendix">Evidence</a></div></nav>
 <main class="wrap">
 <section id="answer"><span class="num">FINDINGS</span><h2>Three findings decide the strategy.</h2>
 <div class="take"><div><b>Authority is not what decides this category.</b><p>On "employer of record india", page one runs from DR 81 (Deel) down to DR 29 (Infotree). For "PEO India", sites at DR 12 to 37 hold #3 to #10. Paybooks at DR 41 is already strong enough to rank.</p></div>
@@ -206,13 +206,12 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="panel">{chart_prize}</div>
 </section>
 
-<section id="field"><span class="num">02 · THE FIELD</span><h2>Page one is open to a DR 41 site.</h2><p class="lead">Every dot is one page-one result, placed by the site's authority. Orange dots are sites weaker than DR 45 that rank anyway. Paybooks already sits among them.</p>
-<div class="panel">{chart_serp}<div class="legend"><span style="--c:#F26B1D">Ranks on page one below DR 45</span><span style="--c:#B8C7AE">DR 45 and above</span></div></div></section>
 
-<section id="lesson"><span class="num">03 · WHAT WORKS</span><h2>Publishing more pages is not what wins.</h2><p class="lead">Wisemonk built 30 times more India pages than anyone else and earns almost nothing from EOR searches. Papaya built 17, each one a real answer, and earns the most.</p>
+
+<section id="lesson"><span class="num">02 · WHAT WORKS</span><h2>Publishing more pages is not what wins.</h2><p class="lead">Wisemonk built 30 times more India pages than anyone else and earns almost nothing from EOR searches. Papaya built 17, each one a real answer, and earns the most.</p>
 <div class="panel">{chart_depth}</div><p class="note">Visits are Ahrefs estimates for USA searches containing "employer of record", "EOR", "PEO" or "hire employees" plus "India", from each site's top 50 India keywords. Page counts come from each site's sitemap.</p></section>
 
-<section id="today"><span class="num">04 · PAYBOOKS TODAY</span><h2>Paybooks already wrote the content. Search can't find it.</h2>
+<section id="today"><span class="num">03 · PAYBOOKS TODAY</span><h2>Paybooks already wrote the content. Search can't find it.</h2>
 <p class="lead">Paybooks has {len(INV)} pages on Employer of Record, about {fmt(eor_words)} words in total. Together they rank for one keyword. The problem is not effort; it is structure.</p>
 <div class="big3"><div><b>{len(INV)}</b><span>EOR pages on paybooks.in today</span></div><div><b>{fmt(eor_words)}</b><span>words of EOR content</span></div><div class="bad"><b>1</b><span>keyword ranking, "eor solutions" at #8 in India. Nothing in Google USA</span></div></div>
 <div class="two"><div class="card"><b>The articles are buried.</b><p>Each of the 12 EOR articles has just 2 internal links pointing to it. The service page has 265 but links to almost none of them.</p></div>
@@ -220,29 +219,29 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="card"><b>The page that sells hides the price.</b><p>/eor/ shows no price and no tables at 1,697 words. Skuad wins with $199 and 19 tables on the page.</p></div>
 <div class="card"><b>The best asset is not linked from the sale.</b><p>The 5,210-word hiring guide with 6 tables sits as a featured article, not connected to the service page.</p></div></div></section>
 
-<section id="gap"><span class="num">05 · THE MISSING LAYER</span><h2>Every competitor has a comparison layer. Paybooks has none.</h2>
+<section id="gap"><span class="num">04 · THE MISSING LAYER</span><h2>Every competitor has a comparison layer. Paybooks has none.</h2>
 <p class="lead">Buyers close to a decision search "Deel alternatives", "Deel pricing" and "Deel vs Remote". Competitors publish dozens of these pages. Paybooks has a single outdated "top companies" list.</p>
 <div class="panel">{chart_cmp}</div>
 <div class="callout"><b>{fmt(CDEM)}</b><p>Monthly Google USA searches for competitor alternatives, "vs" and pricing terms, at keyword difficulty 0 to 8, with advertisers paying up to $90 a click. Five Paybooks pages can compete for all of it, and Paybooks' $199 price is the argument every one of them makes.</p></div></section>
 
-<section id="page"><span class="num">06 · THE WINNING PAGE</span><h2>One deep page per intent, built better than Skuad's.</h2><p class="lead">The page that wins the commercial search is long, answers questions in its headings, and shows its numbers in tables. The Paybooks page adds what none of them combine: a published price broken down line by line, a live calculator, and a written no-penalty guarantee.</p>
+<section id="page"><span class="num">05 · THE WINNING PAGE</span><h2>One deep page per intent, built better than Skuad's.</h2><p class="lead">The page that wins the commercial search is long, answers questions in its headings, and shows its numbers in tables. The Paybooks page adds what none of them combine: a published price broken down line by line, a live calculator, and a written no-penalty guarantee.</p>
 <div class="panel">{chart_page}</div></section>
 
-<section id="plan"><span class="num">07 · THE PLAN</span><h2>One page that sells, surrounded by pages that feed it.</h2><p class="lead">Every other page answers one kind of search and links to the Employer of Record India page. All URLs are proposed for the new site; each refreshed page redirects from its current address.</p>
+<section id="plan"><span class="num">06 · THE PLAN</span><h2>One page that sells, surrounded by pages that feed it.</h2><p class="lead">Every other page answers one kind of search and links to the Employer of Record India page. All URLs are proposed for the new site; each refreshed page redirects from its current address.</p>
 <div class="panel">{chart_map}</div>
 <div class="waves"><div class="wave w1"><h3>Wave 1 · the commercial core</h3><div class="m">10 pages · {fmt(w1_vol + CDEM)} searches a month · ships with the new site</div><ul>
 <li>Employer of Record India, the page that sells (refresh of /eor/, sample design built)</li><li>India employee cost calculator (built into the sample)</li><li>Hire employees in India, the step-by-step guide (refresh)</li><li>PEO in India, and why it means EOR (refresh)</li><li>Best EOR providers for India, with published prices (refresh)</li><li>5 comparison pages: Deel and Remote alternatives, Paybooks vs Deel, Deel vs Remote vs Rippling, EOR pricing compared (new)</li><li>7 overlapping pages merged in and redirected</li></ul></div>
 <div class="wave w2"><h3>Wave 2 · widening the net</h3><div class="m">34 pages · {fmt(RV+SV+agg["C6"][1]+agg["C7"][1]+agg["C8"][1])} searches a month · follows after launch</div><ul>
 <li>EOR vs own-entity calculator (new)</li><li>22 programmatic pages: 15 "hire [role] in India" pages and a 7-page India salary guide in USD, launched 5 at a time (new)</li><li>10 employer guides: 5 refreshed from existing Paybooks articles, 5 new</li><li>A short "what is an EOR" answer built for AI Overviews (refresh)</li></ul></div></div></section>
 
-<section id="build"><span class="num">08 · REFRESH OR CREATE</span><h2>What to refresh, what to merge, what to create.</h2>
+<section id="build"><span class="num">07 · REFRESH OR CREATE</span><h2>What to refresh, what to merge, what to create.</h2>
 <p class="lead">Every existing EOR page has a decision. Refreshing keeps the URL history and the work already paid for; merging stops pages competing; new pages fill what no Paybooks page covers.</p>
 <div class="rc"><div style="background:#4F8A10"><b>{nref}</b><span>pages to refresh</span></div><div style="background:#8FB35E"><b>{nmer}</b><span>pages to merge and redirect</span></div><div style="background:#0B1F14"><b>{nnew}</b><span>pages to create</span></div></div>
 <details class="blk" open><summary>Existing EOR pages: the verdict on each</summary><div class="tw"><table><thead><tr><th>Current page</th><th>Verdict</th><th>Becomes · why</th></tr></thead><tbody>{inv_rows}</tbody></table></div></details>
 <details class="blk"><summary>Existing payroll articles to repurpose for EOR buyers</summary><div class="tw"><table><thead><tr><th>Current page</th><th>Verdict</th><th>Becomes · why</th></tr></thead><tbody>{reuse_rows}</tbody></table></div></details>
 <details class="blk"><summary>New pages to create</summary><div class="tw"><table><thead><tr><th>Type</th><th>Page · proposed URL</th><th>Target searches</th><th class="n">Searches / mo</th></tr></thead><tbody>{new_rows}</tbody></table></div><p class="note">The programmatic sets count as 15 and 7 pages. Search volumes are Google USA from Ahrefs; guides with no volume are drawn from buyer-question research.</p></details></section>
 
-<section id="pseo"><span class="num">09 · PROGRAMMATIC SEO</span><h2>One template, fifteen roles: the biggest demand in the category.</h2>
+<section id="pseo"><span class="num">08 · PROGRAMMATIC SEO</span><h2>One template, fifteen roles: the biggest demand in the category.</h2>
 <p class="lead">Buyers search by the job they need to fill: "hire react native developers india", "hire .NET developers india". Rippling's biggest India page is exactly this. One template, filled with real data per role, covers {fmt(RV)} searches a month across 95 keywords, most at keyword difficulty 0 to 16. Some of these searchers want an agency; each page wins them by showing why hiring your own full-time employee through an EOR costs less and keeps the IP.</p>
 <div class="panel">{chart_roles}<div class="legend"><span style="--c:#4F8A10">First 5 roles, launched in Wave 2</span><span style="--c:#9FC76A">Next 10, added once the first 5 rank</span></div></div>
 <div class="two" style="margin-top:18px"><div class="card acc"><b>Template 1 · Hire [role] in India</b><p>15 pages at /hire-in-india/[role]/. Each carries data no one else combines: the salary band in USD, the all-in monthly cost from the calculator at that salary, where the talent concentrates, notice periods, a 10-day hiring timeline, and an FAQ. Similar roles share a page (PHP, Laravel and CodeIgniter are one page), so no two pages compete.</p></div>
@@ -260,13 +259,13 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <tr><td><b>Refreshed yearly</b></td><td>Salary and cost data updated each year, with the date shown on the page.</td></tr>
 </tbody></table></div></details></section>
 
-<section id="why"><span class="num">10 · WHY PAYBOOKS WINS</span><h2>Four advantages no competitor can copy quickly.</h2>
+<section id="why"><span class="num">09 · WHY PAYBOOKS WINS</span><h2>Four advantages no competitor can copy quickly.</h2>
 <div class="two"><div class="card acc"><b>The lowest credible price</b><p>$199 a month against Deel's $599 and Remote's $699. Skuad ranks #1 for cost with $199 on the page. Paybooks can show every statutory cost line in dollars too.</p></div>
 <div class="card acc"><b>A guarantee nobody else offers</b><p>A written no-penalty guarantee. None of the eight competitors analyzed publishes one.</p></div>
 <div class="card acc"><b>Twelve years of proof</b><p>3,000+ customers and 1.5 million payslips a year: the evidence Google and buyers both look for.</p></div>
 <div class="card acc"><b>A parent with authority</b><p>Links from transperfect.com (DR 74) close the gap to Skuad (DR 60) and Multiplier (DR 68) on the hardest terms.</p></div></div></section>
 
-<section id="asks"><span class="num">11 · WHAT WE NEED FROM PAYBOOKS</span><h2>Five decisions to start Wave 1.</h2>
+<section id="asks"><span class="num">10 · WHAT WE NEED FROM PAYBOOKS</span><h2>Five decisions to start Wave 1.</h2>
 <ol class="asks"><li><b>Confirm the published price and what it includes.</b>The $199 figure and the statutory cost lines shown on the page.</li>
 <li><b>Approve the no-penalty guarantee wording.</b>It is the page's strongest claim and must match the service agreement.</li>
 <li><b>Name two or three client references.</b>Logos and short quotes for the commercial page.</li>
