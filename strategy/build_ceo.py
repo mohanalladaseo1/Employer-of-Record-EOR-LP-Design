@@ -16,6 +16,9 @@ SHORT = {"C1": "EOR India (the commercial page)", "C2": "Hire employees in India
          "C5": "Hire developers and other roles", "C6": "Employer guides", "C7": "What an EOR is", "C8": "Cost and entity tools"}
 prize = [(SHORT[c], agg[c][1], agg[c][0], c) for c in ["C5", "C1", "C4", "C3", "C2", "C7", "C6", "C8"]]
 prize.insert(1, ("Competitor comparisons", CDEM, 11, "CMP"))
+RV, SV = 16350, 5800
+prize = [(("Hire [role] in India (programmatic)", RV, 95, "C5") if x[3] == "C5" else x) for x in prize]
+prize.insert(2, ("India salary guide (programmatic)", SV, 21, "SAL"))
 mx = max(v for _, v, _, _ in prize)
 rows = []
 for i, (lab, v, n, c) in enumerate(prize):
@@ -82,7 +85,7 @@ chart_page = f'<svg viewBox="0 0 980 {30+len(BW)*44}" class="chart" role="img" a
 cx, cy = 490, 250
 SP = [("Hire employees in India", "Guide · refresh", 1, -300, -150), ("PEO in India", "Page · refresh", 1, -100, -170), ("Best EOR providers", "List · refresh", 1, 100, -170),
       ("5 comparison pages", "Alternatives, vs, pricing · new", 1, 300, -150), ("Cost calculator", "Tool · new", 1, -345, 5), ("EOR vs entity calculator", "Tool · new", 2, 345, 5),
-      ("5 role pages", "Developers, finance… · new", 2, -240, 165), ("10 employer guides", "5 refresh · 5 new", 2, 0, 180), ("What is an EOR", "Glossary · refresh", 2, 240, 165)]
+      ("22 programmatic pages", "15 roles · 7 salary · new", 2, -240, 165), ("10 employer guides", "5 refresh · 5 new", 2, 0, 180), ("What is an EOR", "Glossary · refresh", 2, 240, 165)]
 sp = []
 for lab, sub, w, dx, dy in SP:
     x, y = cx + dx, cy + dy
@@ -101,7 +104,7 @@ chart_map = (f'<svg viewBox="0 0 980 520" class="chart map" role="img" aria-labe
              f'<g transform="translate(20,505)"><line x1="0" y1="0" x2="34" y2="0" stroke="#4F8A10" stroke-width="2.5"/><text x="42" y="5" class="ns">Wave 1: ships with the new site</text>'
              f'<line x1="270" y1="0" x2="304" y2="0" stroke="#8FB35E" stroke-width="1.5" stroke-dasharray="6 5"/><text x="312" y="5" class="ns">Wave 2: follows after launch</text></g></svg>')
 
-tgt_vol = sum(agg[c][1] for c in ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"]) + CDEM
+tgt_vol = sum(agg[c][1] for c in ["C1", "C2", "C3", "C4", "C6", "C7", "C8"]) + CDEM + RV + SV
 tgt_n = sum(agg[c][0] for c in ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"])
 w1_vol = sum(agg[c][1] for c in ["C1", "C2", "C3", "C4"])
 
@@ -111,7 +114,7 @@ def vtag(v): return f'<span class="vt" style="--c:{VC[v]}">{v}</span>'
 inv_rows = "".join(f'<tr><td><code>{E(u)}</code><div class="mut">{fmt(PGW(u))} words</div></td><td>{vtag(v)}</td><td><b>{E(b)}</b><div class="mut">{E(r)}</div></td></tr>' for u, v, b, r in INV)
 reuse_rows = "".join(f'<tr><td><code>{E(u)}</code></td><td>{vtag(v)}</td><td><b>{E(b)}</b><div class="mut">{E(r)}</div></td></tr>' for u, v, b, r in REUSE)
 new_rows = "".join(f'<tr><td>{E(t)}</td><td><b>{E(n)}</b><div class="mut"><code>{E(u)}</code></div></td><td class="mut">{E(k)}</td><td class="n">{fmt(v) if v else "–"}</td></tr>' for t, n, u, k, v in NEW)
-nref = sum(1 for x in INV + REUSE if x[1] == "Refresh"); nmer = sum(1 for x in INV if x[1] in ("Merge", "Redirect")); nnew = len(NEW) + 4
+nref = sum(1 for x in INV + REUSE if x[1] == "Refresh"); nmer = sum(1 for x in INV if x[1] in ("Merge", "Redirect")); nnew = len(NEW) + 14 + 6
 total_pages = nref + nnew
 eor_words = sum(PGW(u) for u, *_ in INV)
 
@@ -124,6 +127,17 @@ for i, (n, c) in enumerate(CC):
     cc.append(f'<text x="0" y="{y+18}" class="lb"{fw}>{E(n)}</text><rect x="170" y="{y}" width="{w:.0f}" height="24" rx="6" fill="{"#F26B1D" if me else "#B8C7AE"}"/>'
               f'<text x="{170+w+8:.0f}" y="{y+18}" class="vl">{c}</text>')
 chart_cmp = f'<svg viewBox="0 0 980 {30+len(CC)*40}" class="chart" role="img" aria-label="Comparison pages per competitor">{"".join(cc)}</svg>'
+
+# ---------- programmatic SEO ----------
+roles = json.load(open(f"{H}/pseo_roles.json"))
+rmx = max(r["vol"] for r in roles)
+rr = []
+for i, r in enumerate(roles):
+    y = i * 34; w = max(4, 400 * r["vol"] / rmx); wave = "#4F8A10" if i < 5 else "#9FC76A"
+    kd = f'KD {r["kdmin"]}–{r["kdmax"]}' if r["kdmin"] is not None else "KD –"
+    rr.append(f'<text x="0" y="{y+18}" class="lb">{E(r["name"])}</text><rect x="380" y="{y+4}" width="{w:.0f}" height="20" rx="5" fill="{wave}"/>'
+              f'<text x="{380+w+8:.0f}" y="{y+19}" class="vl">{fmt(r["vol"])}</text><text x="975" y="{y+19}" class="ax" text-anchor="end">{r["n"]} kw · {kd}</text>')
+chart_roles = f'<svg viewBox="0 0 980 {len(roles)*34}" class="chart" role="img" aria-label="Hire role in India demand by role">{"".join(rr)}</svg>'
 
 CSS = """
 :root{--ink:#101828;--ink2:#344054;--muted:#667085;--line:#E4E9E1;--bg:#F6F8F3;--green:#4F8A10;--g600:#3E6E0C;--g100:#E9F3DC;--forest:#0B1F14;--lime:#9FD35C;--orange:#F26B1D;--o100:#FDEBDD}
@@ -181,7 +195,7 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <p class="sub">The top results are not held by the biggest brands. They are held by the deepest pages. {total_pages} well-built pages, in two waves, put Paybooks at the top of the searches that bring foreign companies hiring in India.</p>
 <div class="kp"><div><b>{fmt(tgt_vol)}</b><span>monthly searches the plan targets, USA and India</span></div><div><b>{total_pages}</b><span>pages: {nref} refreshed from what Paybooks has, {nnew} new</span></div>
 <div><b>DR 29</b><span>the lowest-authority site on page one today. Paybooks is DR 41</span></div><div><b>1,043</b><span>competitor India pages studied across 12 sites</span></div></div></div></header>
-<nav class="toc"><div class="wrap"><a href="#answer">The answer</a><a href="#prize">The prize</a><a href="#field">The field</a><a href="#lesson">What works</a><a href="#today">Paybooks today</a><a href="#gap">The missing layer</a><a href="#page">The winning page</a><a href="#plan">The plan</a><a href="#build">Refresh or create</a><a href="#why">Why Paybooks</a><a href="#asks">What we need</a><a href="#appendix">Evidence</a></div></nav>
+<nav class="toc"><div class="wrap"><a href="#answer">The answer</a><a href="#prize">The prize</a><a href="#field">The field</a><a href="#lesson">What works</a><a href="#today">Paybooks today</a><a href="#gap">The missing layer</a><a href="#page">The winning page</a><a href="#plan">The plan</a><a href="#build">Refresh or create</a><a href="#pseo">Programmatic SEO</a><a href="#why">Why Paybooks</a><a href="#asks">What we need</a><a href="#appendix">Evidence</a></div></nav>
 <main class="wrap">
 <section id="answer"><span class="num">THE ANSWER</span><h2>Three findings, one strategy.</h2>
 <div class="take"><div><i>1</i><b>This category is winnable at Paybooks' authority.</b><p>A site rated DR 29 ranks on page one for "employer of record india". For "PEO india", sites rated 12 to 37 hold half the page.</p></div>
@@ -218,23 +232,41 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="panel">{chart_map}</div>
 <div class="waves"><div class="wave w1"><h3>Wave 1 · the commercial core</h3><div class="m">10 pages · {fmt(w1_vol + CDEM)} searches a month · ships with the new site</div><ul>
 <li>Employer of Record India, the page that sells (refresh of /eor/, sample design built)</li><li>India employee cost calculator (built into the sample)</li><li>Hire employees in India, the step-by-step guide (refresh)</li><li>PEO in India, and why it means EOR (refresh)</li><li>Best EOR providers for India, with published prices (refresh)</li><li>5 comparison pages: Deel and Remote alternatives, Paybooks vs Deel, Deel vs Remote vs Rippling, EOR pricing compared (new)</li><li>7 overlapping pages merged in and redirected</li></ul></div>
-<div class="wave w2"><h3>Wave 2 · widening the net</h3><div class="m">17 pages · {fmt(agg["C5"][1]+agg["C6"][1]+agg["C7"][1]+agg["C8"][1])} searches a month · follows after launch</div><ul>
-<li>EOR vs own-entity calculator (new)</li><li>5 role pages: software developers, data and AI, finance, support, sales (new)</li><li>10 employer guides: 5 refreshed from existing Paybooks articles, 5 new</li><li>A short "what is an EOR" answer built for AI Overviews (refresh)</li></ul></div></div></section>
+<div class="wave w2"><h3>Wave 2 · widening the net</h3><div class="m">34 pages · {fmt(RV+SV+agg["C6"][1]+agg["C7"][1]+agg["C8"][1])} searches a month · follows after launch</div><ul>
+<li>EOR vs own-entity calculator (new)</li><li>22 programmatic pages: 15 "hire [role] in India" pages and a 7-page India salary guide in USD, launched 5 at a time (new)</li><li>10 employer guides: 5 refreshed from existing Paybooks articles, 5 new</li><li>A short "what is an EOR" answer built for AI Overviews (refresh)</li></ul></div></div></section>
 
 <section id="build"><span class="num">08 · REFRESH OR CREATE</span><h2>What to refresh, what to merge, what to create.</h2>
 <p class="lead">Every existing EOR page has a decision. Refreshing keeps the URL history and the work already paid for; merging stops pages competing; new pages fill what no Paybooks page covers.</p>
 <div class="rc"><div style="background:#4F8A10"><b>{nref}</b><span>pages to refresh</span></div><div style="background:#8FB35E"><b>{nmer}</b><span>pages to merge and redirect</span></div><div style="background:#0B1F14"><b>{nnew}</b><span>pages to create</span></div></div>
 <details class="blk" open><summary>Existing EOR pages: the verdict on each</summary><div class="tw"><table><thead><tr><th>Current page</th><th>Verdict</th><th>Becomes · why</th></tr></thead><tbody>{inv_rows}</tbody></table></div></details>
 <details class="blk"><summary>Existing payroll articles to repurpose for EOR buyers</summary><div class="tw"><table><thead><tr><th>Current page</th><th>Verdict</th><th>Becomes · why</th></tr></thead><tbody>{reuse_rows}</tbody></table></div></details>
-<details class="blk"><summary>New pages to create</summary><div class="tw"><table><thead><tr><th>Type</th><th>Page · proposed URL</th><th>Target searches</th><th class="n">Searches / mo</th></tr></thead><tbody>{new_rows}</tbody></table></div><p class="note">Role pages count as 5 pages. Search volumes are Google USA from Ahrefs; guides with no volume are drawn from buyer-question research.</p></details></section>
+<details class="blk"><summary>New pages to create</summary><div class="tw"><table><thead><tr><th>Type</th><th>Page · proposed URL</th><th>Target searches</th><th class="n">Searches / mo</th></tr></thead><tbody>{new_rows}</tbody></table></div><p class="note">The programmatic sets count as 15 and 7 pages. Search volumes are Google USA from Ahrefs; guides with no volume are drawn from buyer-question research.</p></details></section>
 
-<section id="why"><span class="num">09 · WHY PAYBOOKS WINS</span><h2>Four advantages no competitor can copy quickly.</h2>
+<section id="pseo"><span class="num">09 · PROGRAMMATIC SEO</span><h2>One template, fifteen roles: the biggest demand in the category.</h2>
+<p class="lead">Buyers search by the job they need to fill: "hire react native developers india", "hire .NET developers india". Rippling's biggest India page is exactly this. One template, filled with real data per role, covers {fmt(RV)} searches a month across 95 keywords, most at keyword difficulty 0 to 16. Some of these searchers want an agency; each page wins them by showing why hiring your own full-time employee through an EOR costs less and keeps the IP.</p>
+<div class="panel">{chart_roles}<div class="legend"><span style="--c:#4F8A10">First 5 roles, launched in Wave 2</span><span style="--c:#9FC76A">Next 10, added once the first 5 rank</span></div></div>
+<div class="two" style="margin-top:18px"><div class="card acc"><b>Template 1 · Hire [role] in India</b><p>15 pages at /hire-in-india/[role]/. Each carries data no one else combines: the salary band in USD, the all-in monthly cost from the calculator at that salary, where the talent concentrates, notice periods, a 10-day hiring timeline, and an FAQ. Similar roles share a page (PHP, Laravel and CodeIgniter are one page), so no two pages compete.</p></div>
+<div class="card acc"><b>Template 2 · India salary guide in USD</b><p>A hub for "average salary in India" and "India average salary in USD" ({fmt(SV)} searches a month with its role pages), plus 6 role salary pages: software engineer, data analyst, data scientist, AI engineer, accountant, digital marketing. Every salary page links to its hire page and the calculator.</p></div></div>
+<details class="blk" style="margin-top:14px"><summary>Templates we checked and are not building</summary><div class="tw"><table><thead><tr><th>Template</th><th>Who runs it</th><th>Demand (Google USA)</th><th>Decision</th></tr></thead><tbody>
+<tr><td><b>Hire in [Indian city]</b></td><td>Wisemonk, 25 pages</td><td>"hire developers in bangalore": 0 a month</td><td>Not built. Cities go inside each role page instead.</td></tr>
+<tr><td><b>[Buyer country] company hiring in India</b></td><td>Wisemonk, 118 pages</td><td>"us company hiring employees in india": 90 a month; UK, Australia, Canada: no measurable volume</td><td>Not built as a set. One section on the hiring guide covers it.</td></tr>
+<tr><td><b>Cost to hire [role] in India</b></td><td>Wisemonk, Oyster</td><td>Every variant 10 a month or less</td><td>Not built. Cost sits on every role page.</td></tr>
+<tr><td><b>EOR in [other country]</b></td><td>Remote, 2,375 pages; Playroll, Skuad, Pebl, Multiplier</td><td>12,070 a month across 46 countries</td><td>Not built. Paybooks sells EOR in India only.</td></tr>
+</tbody></table></div><p class="note">Wisemonk built 143 city and buyer-country pages and earns almost no EOR traffic from them: the evidence that templates without demand or unique data do not pay back.</p></details>
+<details class="blk"><summary>Quality rules for every programmatic page</summary><div class="tw"><table><tbody>
+<tr><td><b>Unique data, not swapped words</b></td><td>Each page must carry its own salary band, cost and FAQ. A page without them stays unpublished.</td></tr>
+<tr><td><b>Launch in batches</b></td><td>5 roles first. Add the next 10 only when the first 5 are indexed and ranking.</td></tr>
+<tr><td><b>One hub, clear links</b></td><td>/hire-in-india/ lists every role and links to the Employer of Record India page, the calculator and the salary guide.</td></tr>
+<tr><td><b>Refreshed yearly</b></td><td>Salary and cost data updated each year, with the date shown on the page.</td></tr>
+</tbody></table></div></details></section>
+
+<section id="why"><span class="num">10 · WHY PAYBOOKS WINS</span><h2>Four advantages no competitor can copy quickly.</h2>
 <div class="two"><div class="card acc"><b>The lowest credible price</b><p>$199 a month against Deel's $599 and Remote's $699. Skuad ranks #1 for cost with $199 on the page. Paybooks can show every statutory cost line in dollars too.</p></div>
 <div class="card acc"><b>A guarantee nobody else offers</b><p>A written no-penalty guarantee. None of the eight competitors analyzed publishes one.</p></div>
 <div class="card acc"><b>Twelve years of proof</b><p>3,000+ customers and 1.5 million payslips a year: the evidence Google and buyers both look for.</p></div>
 <div class="card acc"><b>A parent with authority</b><p>Links from transperfect.com (DR 74) close the gap to Skuad (DR 60) and Multiplier (DR 68) on the hardest terms.</p></div></div></section>
 
-<section id="asks"><span class="num">10 · WHAT WE NEED FROM PAYBOOKS</span><h2>Five decisions to start Wave 1.</h2>
+<section id="asks"><span class="num">11 · WHAT WE NEED FROM PAYBOOKS</span><h2>Five decisions to start Wave 1.</h2>
 <ol class="asks"><li><b>Confirm the published price and what it includes.</b>The $199 figure and the statutory cost lines shown on the page.</li>
 <li><b>Approve the no-penalty guarantee wording.</b>It is the page's strongest claim and must match the service agreement.</li>
 <li><b>Name two or three client references.</b>Logos and short quotes for the commercial page.</li>
