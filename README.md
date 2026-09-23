@@ -15,6 +15,7 @@ Sample landing page built for the TransPerfect Paybooks SEO proposal. Locked on 
 | `assets/logos-t/` | 23 client logos with transparent backgrounds (City Union Bank is left out of the strip) |
 | `_source/` | Generator: `eor_page.py` (copy), `render_eor.py` (layout), `build.py`, and the stylesheet |
 | `design-options/logo-strip-options/` | The logo strip comparison page (options C, F to K) |
+| `design-options/chapter-style-options/` | Chapter background options (A to J); option F was chosen |
 
 ## Page structure
 
@@ -25,8 +26,9 @@ Hero with video holder, trust strip, then nine chapters: fit table, offer letter
 - Family health cover on the offer letter
 - Guarantee clause wording
 - The 2-minute EOR walkthrough video (holder only)
+- That a sample service agreement is sent with each quote (promised in the chapter 03 call to action)
 - Competitor fees in the comparison table (checked 23 Sep 2026)
 
 ## Rebuilding
 
-The generator lives in the session build tree. To edit, change `eor_page.py` (copy) or `render_eor.py` (layout), then run `python3 build.py standalone`.
+The generator is in `_source/`. Edit `eor_page.py` for copy or `render_eor.py` for layout, then run `python3 build.py standalone` from the full build tree. The files in this repo are the built output, so `index.html` opens directly in a browser.
