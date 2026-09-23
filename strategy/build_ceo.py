@@ -204,7 +204,7 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 <section id="prize"><span class="num">01 · THE PRIZE</span><h2>{fmt(tgt_vol)} monthly searches from buyers hiring in India.</h2><p class="lead">Grouped by what the searcher wants. The dark-green groups are the commercial core and ship first; together they carry {fmt(w1_vol + CDEM)} searches a month.</p>
 <div class="panel">{chart_prize}</div>
-<div class="callout"><b>$25 to $45</b><p>What advertisers pay per click for "employer of record india" in Google Ads. These are high-value buyers: ranking organically is worth far more than the search count suggests.</p></div></section>
+</section>
 
 <section id="field"><span class="num">02 · THE FIELD</span><h2>Page one is open to a DR 41 site.</h2><p class="lead">Every dot is one page-one result, placed by the site's authority. Orange dots are sites weaker than DR 45 that rank anyway. Paybooks already sits among them.</p>
 <div class="panel">{chart_serp}<div class="legend"><span style="--c:#F26B1D">Ranks on page one below DR 45</span><span style="--c:#B8C7AE">DR 45 and above</span></div></div></section>
