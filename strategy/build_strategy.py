@@ -128,7 +128,7 @@ BENCH = [
  ("safeguardglobal.com/country/india/eor", "Safeguard", "Country page", 1034, 5, 1, 0, False, "none on page"),
 ]
 bench_rows = "".join(f'<tr><td><b>{E(n)}</b><br><span class="mut">{E(u)}</span></td><td>{E(t)}</td><td class="n">{fmt(w)}</td><td class="n">{h}</td><td class="n">{q}</td><td class="n">{tb}</td><td>{"Yes" if f else "No"}</td><td>{E(pr)}</td></tr>' for u, n, t, w, h, q, tb, f, pr in BENCH)
-bench_rows += '<tr class="me"><td><b>Paybooks target</b><br><span class="mut">/employer-of-record-india/</span></td><td>Service page</td><td class="n">5,000+</td><td class="n">20+</td><td class="n">15+</td><td class="n">10+</td><td>Yes, with schema</td><td>$199, every line in USD</td></tr>'
+bench_rows += '<tr class="me"><td><b>Paybooks target (new page)</b><br><span class="mut">Replaces today's paybooks.in/eor/ and /eor-2/</span></td><td>Service page</td><td class="n">5,000+</td><td class="n">20+</td><td class="n">15+</td><td class="n">10+</td><td>Yes, with schema</td><td>$199, every line in USD</td></tr>'
 
 # ---------- competitor playbooks ----------
 PB = [
@@ -145,8 +145,8 @@ pb_html = "".join(f'<div class="pb"><div class="pbh"><b>{E(n)}</b><span class="d
 
 # ---------- page plan ----------
 PLAN = [
- ("Wave 1", "1", "EOR India: the commercial page", "/employer-of-record-india/", "C1", "Built as the sample"),
- ("Wave 1", "2", "India employee cost calculator", "/tools/india-employee-cost-calculator/", "C8", "Built into the sample"),
+ ("Wave 1", "1", "EOR India: the commercial page", "/employer-of-record-india/", "C1", "Sample design built; replaces paybooks.in/eor/ and /eor-2/, which redirect here"),
+ ("Wave 1", "2", "India employee cost calculator", "/tools/india-employee-cost-calculator/", "C8", "Built into the sample design"),
  ("Wave 1", "3", "Hire employees in India: the guide", "/hire-employees-in-india/", "C2", "To build"),
  ("Wave 1", "4", "PEO in India vs EOR", "/peo-india/", "C3", "To build"),
  ("Wave 1", "5", "Best EOR providers for India", "/best-employer-of-record-india/", "C4", "To build"),
@@ -166,7 +166,7 @@ cl_html = []
 for cid, name, pg, url, why, who, win in CL:
     n, v = agg[cid]
     cl_html.append(f'<details class="topic"><summary><span class="tag lp">{E(pg)}</span><span class="tt">{E(name)}</span><span class="cnt">{n} keyword{"s" if n != 1 else ""} · {fmt(v)} searches / mo</span></summary>'
-                   f'<div class="tbody"><div class="cl3"><div><h4>Why it is one cluster</h4><p>{E(why)}</p></div><div><h4>Who wins it today</h4><p>{E(who)}</p></div><div><h4>How Paybooks wins it</h4><p>{E(win)}</p><p><code>{E(url)}</code></p></div></div>'
+                   f'<div class="tbody"><div class="cl3"><div><h4>Why it is one cluster</h4><p>{E(why)}</p></div><div><h4>Who wins it today</h4><p>{E(who)}</p></div><div><h4>How Paybooks wins it</h4><p>{E(win)}</p><p class="mut">Proposed URL: <code>{E(url)}</code></p></div></div>'
                    f'<details class="inner"><summary>Target keywords</summary>{kw_table(cl_kws(cid))}</details></div></details>')
 glob = cl_kws("C7g") + cl_kws("C7")
 nopursue = cl_kws("C9")
@@ -230,7 +230,7 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <p class="note">The Paybooks target matches the deepest competitor and adds what none of them show together: a published price broken down line by line, a live calculator, and a written no-penalty guarantee.</p></section>
 <section id="playbooks"><h2>Competitor playbooks</h2><p class="lead">What each competitor built for India, from its sitemap, and what the rankings say about whether it works.</p><div class="pbs">{pb_html}</div></section>
 <section id="clusters"><h2>Keyword clusters</h2><p class="lead">Keywords are grouped by what Google shows for them, not by wording. Where two queries share page-one URLs, they are one intent and one page. Open a cluster for the evidence, the competitor to beat, and every target keyword.</p>{"".join(cl_html)}</section>
-<section id="plan"><h2>The page plan</h2><p class="lead">Twenty pages in two waves. Wave 1 takes the commercial queries that bring buyers. Wave 2 widens the net with role-based hiring and the guides that feed the commercial page.</p>
+<section id="plan"><h2>The page plan</h2><p class="lead">Twenty pages in two waves. Every URL here is proposed for the new site; none exists on paybooks.in yet. Paybooks today has one EOR page, paybooks.in/eor/, with a near-duplicate at /eor-2/. Wave 1 takes the commercial queries that bring buyers. Wave 2 widens the net with role-based hiring and the guides that feed the commercial page.</p>
 <div class="tw"><table><thead><tr><th>Wave</th><th class="n">#</th><th>Page</th><th class="n">Keywords</th><th class="n">Searches / mo</th><th>Status</th></tr></thead><tbody>{plan_rows}</tbody></table></div>
 <p class="note">Keyword and search counts are per cluster; pages sharing a cluster share its count. Each Wave 2 page links to the EOR India page, which stays the single page that sells.</p></section>
 <section id="confidence"><h2>Why Paybooks can win this</h2><div class="why">
