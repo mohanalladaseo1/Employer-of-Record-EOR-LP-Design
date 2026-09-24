@@ -26,7 +26,7 @@ def render_eor(p, r, C, video_id):
     hero_cards=('<div class="vidhold" role="img" aria-label="Video placeholder"><div class="vh-frame">'
                 '<span class="vh-mini"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span><span class="vh-cap"><b>How Paybooks EOR works</b><small>2-minute walkthrough</small></span><span class="vh-tag">Video</span></div></div>')
     hero=(f'<section class="hero v2"><div class="wrap"><div class="grid"><div><span class="cta2-tag hero-tag">Your first India hire, live within days</span><h1>{accent(p["h1"])}</h1><p class="sub">{p["sub"]}</p>'
-          f'<div class="btns"><a class="btn" href="{r}contact.html">{esc(p["cta"])}</a><a class="btn ghost" href="{r}contact.html">{esc(p["cta2"])}</a></div><ul class="cta2-ticks hero-ticks"><li>No entity setup cost</li><li>“No penalties ever” promise</li><li>$199 per employee a month</li></ul></div>'
+          f'<div class="btns"><a class="btn" href="{r}contact.html">{esc(p["cta"])}</a><a class="btn ghost" href="{r}contact.html">{esc(p["cta2"])}</a></div><ul class="cta2-ticks hero-ticks"><li>No entity setup cost</li><li>“No penalties ever” promise</li><li>From $199 per employee a month</li></ul></div>'
           f'{hero_cards}</div></div></section><div class="trust"><div class="wrap tr-sp tr-j"><p class="tr-lab">Trusted by<br><b>3,000+</b> companies</p><i class="tr-dv"></i><div class="tr-mq" aria-label="Paybooks clients"><div class="tr-track">{logo_imgs}{logo_imgs}</div></div></div></div>'
           f'')
     subnav=''
@@ -81,7 +81,7 @@ def render_eor(p, r, C, video_id):
     cta=(f'<section class="cta2"><div class="wrap"><div class="cta2-card"><div class="cta2-copy"><span class="cta2-tag">Get started</span><h2>Your first India hire, <em>live within days.</em></h2>'
          '<p>Tell us the role, city, and pay. You get the full monthly cost in dollars, the contract terms and a start date. No commitment.</p>'
          f'<div class="btns"><a class="btn" href="{r}contact.html">{esc(p["cta"])}</a><a class="btn ghost" href="{r}contact.html">{esc(p["cta2"])}</a></div>'
-         '<ul class="cta2-ticks"><li>No entity setup cost</li><li>“No penalties ever” promise</li><li>$199 per employee a month</li></ul></div>'
+         '<ul class="cta2-ticks"><li>No entity setup cost</li><li>“No penalties ever” promise</li><li>From $199 per employee a month</li></ul></div>'
          '<div class="cta2-quote" aria-hidden="true"><div class="q-head"><span>Your quote</span><em>Ready within days</em></div>'
          '<div class="q-role"><b>Senior Software Engineer</b><small>Bengaluru · $26,000 a year</small></div>'
          '<ul class="q-rows"><li><span>Monthly cost, all-in</span><b>$2,550</b></li><li><span>Government costs</span><b>$184</b></li><li><span>Paybooks fee</span><b>$199</b></li><li><span>Start date</span><b>Oct 13, 2026</b></li></ul>'
