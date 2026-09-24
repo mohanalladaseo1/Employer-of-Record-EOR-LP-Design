@@ -61,7 +61,7 @@ CL = [
  ("C1", "EOR India: the commercial core", "One page", "/employer-of-record/india/",
   "\"employer of record india\", \"eor india\" and the India-market query share 6 of 10 page-one URLs. Google treats them as one intent. The cost query's top results are the same India EOR pages, so cost is a section here, not a separate page.",
   "Papaya's guide (DR 72) earns the most traffic, about 240 visits a month from 960 searches. Skuad's 8,658-word country page is the deepest. Deel, Multiplier, Rippling and Safeguard follow. Infotree ranks #5 to #8 at DR 29.",
-  "Match Skuad's depth, beat everyone on proof: 5,000+ words, 20+ question headings, 10+ HTML tables, the $199 price with every statutory line in USD, a live calculator, and the no-penalty guarantee no competitor offers."),
+  "Match Skuad's depth, beat everyone on proof: 5,000+ words, 20+ question headings, 10+ HTML tables, the $199 price with every statutory line in USD, a live calculator, and the “no penalties ever” promise no competitor offers."),
  ("C2", "Hire employees in India", "One page", "/hire-employees-in-india/",
   "A different intent: the top results are how-to guides on different URLs (Papaya's how-to guide, Rippling's country-hiring page, Skuad's hire-a-team page), not EOR service pages.",
   "Papaya #2, Rippling #3, Skuad #4, then Indeed, Wise and India Briefing. Page one is guides of about 2,500 to 3,500 words.",
@@ -227,7 +227,7 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </section>
 <section id="bench"><h2>What a winning page looks like</h2><p class="lead">Every page-one result for the head term, opened and measured. Multiplier blocks crawlers, so it is counted from its sitemap only.</p>
 <div class="tw"><table><thead><tr><th>Page</th><th>Type</th><th class="n">Words</th><th class="n">Headings</th><th class="n">Question headings</th><th class="n">Tables</th><th>FAQ</th><th>Price shown</th></tr></thead><tbody>{bench_rows}</tbody></table></div>
-<p class="note">The Paybooks target matches the deepest competitor and adds what none of them show together: a published price broken down line by line, a live calculator, and a written no-penalty guarantee.</p></section>
+<p class="note">The Paybooks target matches the deepest competitor and adds what none of them show together: a published price broken down line by line, a live calculator, and a “no penalties ever” promise.</p></section>
 <section id="playbooks"><h2>Competitor playbooks</h2><p class="lead">What each competitor built for India, from its sitemap, and what the rankings say about whether it works.</p><div class="pbs">{pb_html}</div></section>
 <section id="clusters"><h2>Keyword clusters</h2><p class="lead">Keywords are grouped by what Google shows for them, not by wording. Where two queries share page-one URLs, they are one intent and one page. Open a cluster for the evidence, the competitor to beat, and every target keyword.</p>{"".join(cl_html)}</section>
 <section id="plan"><h2>The page plan</h2><p class="lead">Twenty pages in two waves. Every URL here is proposed for the new site; none exists on paybooks.in yet. Paybooks today has one EOR page, paybooks.in/eor/, with a near-duplicate at /eor-2/. Wave 1 takes the commercial queries that bring buyers. Wave 2 widens the net with role-based hiring and the guides that feed the commercial page.</p>
@@ -236,7 +236,7 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <section id="confidence"><h2>Why Paybooks can win this</h2><div class="why">
 <div><b>The price is a ranking asset.</b><p>$199 a month against Deel's $599 and Remote's $699. Skuad ranks #1 for cost with $199 on the page. Paybooks can publish the same price with every statutory line in dollars, which no ranking page does.</p></div>
 <div><b>Authority is already enough.</b><p>DR 41 sits above Infotree (29), Gloroots (38) and the PEO vendors (12 to 37) that already hold page one. Links from transperfect.com (DR 74) close the gap to Skuad (60) and Multiplier (68).</p></div>
-<div><b>Proof competitors cannot copy.</b><p>3,000+ customers, 1.5 million payslips a year, 12 years of India payroll, and a written no-penalty guarantee. None of the eight competitors analyzed publishes a guarantee.</p></div>
+<div><b>Proof competitors cannot copy.</b><p>3,000+ customers, 1.5 million payslips a year, 12 years of India payroll, and a “no penalties ever” promise. None of the eight competitors analyzed publishes a guarantee.</p></div>
 <div><b>AI answers are the next battleground.</b><p>Google's AI Overview for "employer of record india" cites ten sources, including a Reddit thread and a LinkedIn post. Answer-first pages with FAQ schema and clear tables are what those answers quote.</p></div></div></section>
 <section id="method"><h2>Method and sources</h2><p class="lead">Every figure on this page comes from one of these pulls, all on 23 to 24 September 2026.</p>
 <div class="tw"><table><tbody>

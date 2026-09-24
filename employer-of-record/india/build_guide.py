@@ -5,7 +5,7 @@ import json, os, re, html as H
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "index.html")
-FX = 88.0  # INR per USD, illustrative
+FX = 95.7  # INR per USD, September 23, 2026 (same rate as the landing page calculator)
 CANON = "https://www.paybooks.in/employer-of-record/india/"
 UPDATED = "September 24, 2026"
 PUBLISHED = "September 24, 2026"
@@ -112,7 +112,7 @@ def cost_table(lines, cap):
     for name, amt, note in lines:
         tot += amt
         rows.append([name, inr(amt) if amt else "₹0", usd(amt) if amt else "$0", note])
-    rows.append(["Paybooks EOR fee", inr(FEE_Y), "$2,388", "From $199 per employee a month, priced in USD."])
+    rows.append(["Paybooks EOR fee", inr(FEE_Y), "$2,388", "From $199 per employee a month, priced in USD. A one-time $50 onboarding fee is not included."])
     tot += FEE_Y
     rows.append(["!Total yearly cost", inr(tot), usd(tot), ""])
     return T(["Cost line", "Per year (INR)", "Per year (USD)", "What it is"], rows, cap, num=(1, 2)), tot
@@ -271,7 +271,7 @@ S.append(("onboarding", "Documents and contracts", "<h2>Onboarding documents and
 
 S.append(("cost", "EOR cost in India", "<h2>How much does an employer of record in India cost?</h2>" + P(
     "The total cost has three parts: gross salary, employer contributions and the EOR fee. For skilled staff, employer contributions add about 8 to 9% to salary. For staff earning ₹21,000 a month or less, ESI and statutory bonus push that to about 15%.",
-    "Here are two worked examples at an illustrative ₹" + str(int(FX)) + " to $1. Your quote uses the live exchange rate. Health insurance is optional and priced per plan, so it is left out. See our " + IL("state-by-state guide to PF, ESI, PT and LWF", "pf-esi-pt-and-lwf-a-state-by-state-compliance-guide-for-indian-payroll") + " for rates in every state.") +
+    "Here are two worked examples at ₹95.7 to $1 (September 23, 2026). Your quote uses the live exchange rate. Health insurance is optional and priced per plan, so it is left out. See our " + IL("state-by-state guide to PF, ESI, PT and LWF", "pf-esi-pt-and-lwf-a-state-by-state-compliance-guide-for-indian-payroll") + " for rates in every state.") +
     BAR("Example 1: senior engineer, ₹24 lakh", [("Salary", 2400000, "#0F2E1A"), ("Employer contributions", EX1_TOT - 2400000 - FEE_Y, "#7DB23A"), ("EOR fee", FEE_Y, "#F26B1D")], "Total a year") +
     EX1_T + CALL("<strong>Example 1 in one line.</strong> A ₹24 lakh salary (about " + usd(2400000) + ") costs about " + usd(EX1_TOT) + " a year in total. Employer costs beyond salary and the fee add about " + format(EX1_ON, ".1f") + "%.") +
     BAR("Example 2: support associate, ₹2.4 lakh", [("Salary", 240000, "#0F2E1A"), ("Employer contributions", EX2_TOT - 240000 - FEE_Y, "#7DB23A"), ("EOR fee", FEE_Y, "#F26B1D")], "Total a year") +
@@ -506,7 +506,7 @@ def text_of(h):
 TITLE = "Employer of Record India: EOR Costs, Laws and Hiring (2026)"
 DESC = ("Hire in India without an entity. See employer of record India costs in INR and USD, labor code rules, "
         "taxes, leave and exits. Paybooks EOR from $199 a month.")
-H1 = "Employer of Record India: the 2026 guide to EOR costs, laws and hiring"
+H1 = "Employer of Record India: 2026 Guide"
 
 schema = [
     {"@context": "https://schema.org", "@type": "Article", "headline": H1,
@@ -545,12 +545,12 @@ SNAP = ('<aside class="g-snap" aria-label="Cost example"><div class="g-snap-h"><
         '<div class="g-snap-row"><span>Paybooks EOR fee</span><b>$2,388</b></div>'
         '<div class="g-snap-tot"><span>Total a year</span><b>' + usd(EX1_TOT) + '</b></div>'
         '<div class="g-snap-bar"><span style="width:' + format(2400000 / EX1_TOT * 100, '.1f') + '%"></span><span style="width:' + format((EX1_TOT - 2400000 - FEE_Y) / EX1_TOT * 100, '.1f') + '%"></span><span style="width:' + format(FEE_Y / EX1_TOT * 100, '.1f') + '%"></span></div>'
-        '<p>At ₹' + str(int(FX)) + ' to $1. Full breakdown in the cost section.</p></aside>')
+        '<p>At ₹95.7 to $1 (September 23, 2026). Full breakdown in the cost section.</p></aside>')
 HERO = ('<div class="g-progress" id="gprog"></div><section class="g-hero"><div class="g-hero-in"><div>'
         '<nav class="g-crumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../../">Employer of Record</a><span>/</span>India</nav>'
         '<span class="g-pill">Employer of Record · India guide</span>'
-        '<h1>Employer of Record India: the 2026 guide to <em>EOR costs, laws and hiring</em></h1>'
-        '<p class="g-sub">How a company outside India can hire here legally: the cost in rupees and dollars, the new labor codes, tax, leave and exit rules, and what an employer of record handles for you.</p>' +
+        '<h1>Employer of Record India: <em>2026 Guide</em></h1>'
+        '<p class="g-sub">Hire in India without an entity. What it costs, which laws apply, and what an EOR handles for you.</p>' +
         BYLINE(round(words_est / 230)) +
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#cost">See EOR costs in India</a></div>'
         '<div class="g-hstats"><div><b>$199</b><span>starting EOR fee per employee a month</span></div><div><b>8–9%</b><span>employer contributions on salary</span></div><div><b>Days</b><span>to hire, no entity needed</span></div></div>'

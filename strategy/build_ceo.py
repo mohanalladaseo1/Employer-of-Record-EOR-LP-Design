@@ -256,7 +256,7 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 
 
-<section id="page"><span class="num">05 · THE WINNING PAGE</span><h2>One deep page per intent, built better than Skuad's.</h2><p class="lead">The page that wins the commercial search is long, answers questions in its headings, and shows its numbers in tables. The Paybooks page adds what none of them combine: a published price broken down line by line, a live calculator, and a written no-penalty guarantee.</p>
+<section id="page"><span class="num">05 · THE WINNING PAGE</span><h2>One deep page per intent, built better than Skuad's.</h2><p class="lead">The page that wins the commercial search is long, answers questions in its headings, and shows its numbers in tables. The Paybooks page adds what none of them combine: a published price broken down line by line, a live calculator, and Paybooks' "no penalties ever" promise.</p>
 <div class="panel">{chart_page}</div></section>
 
 <section id="plan"><span class="num">06 · THE PLAN</span><h2>One page that sells, surrounded by pages that feed it.</h2><p class="lead">Every other page answers one kind of search and links to the Employer of Record India page. All URLs are proposed for the new site; each refreshed page redirects from its current address.</p>
