@@ -538,20 +538,47 @@ HEADER = ('<header class="hdr"><div class="wrap"><a class="brand" href="../../">
           '<div class="btns"><a class="btn ghost" href="#quote">Book a call</a><a class="btn" href="#quote">Get a quote</a></div></div></header>')
 
 words_est = len(text_of(body).split())
-SNAP = ('<aside class="g-snap" aria-label="Cost example"><div class="g-snap-h"><small>Cost snapshot</small><em>Worked example</em></div>'
-        '<h3>Senior engineer, Bengaluru</h3>'
-        '<div class="g-snap-row"><span>Salary (₹24 lakh)</span><b>' + usd(2400000) + '</b></div>'
-        '<div class="g-snap-row"><span>Employer contributions</span><b>' + usd(EX1_TOT - 2400000 - FEE_Y) + '</b></div>'
-        '<div class="g-snap-row"><span>Paybooks EOR fee</span><b>$2,388</b></div>'
-        '<div class="g-snap-tot"><span>Total a year</span><b>' + usd(EX1_TOT) + '</b></div>'
-        '<div class="g-snap-bar"><span style="width:' + format(2400000 / EX1_TOT * 100, '.1f') + '%"></span><span style="width:' + format((EX1_TOT - 2400000 - FEE_Y) / EX1_TOT * 100, '.1f') + '%"></span><span style="width:' + format(FEE_Y / EX1_TOT * 100, '.1f') + '%"></span></div>'
-        '<p>At ₹95.7 to $1 (September 23, 2026). Full breakdown in the cost section.</p></aside>')
+ILLU = ('<figure class="g-illu" role="img" aria-label="How an employer of record works: your company manages the work and pays one invoice; Paybooks employs your staff in India, pays salary in rupees and files with the government.">'
+ '<svg viewBox="0 0 420 470" xmlns="http://www.w3.org/2000/svg">'
+ '<defs><marker id="ga" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#C5F04A"/></marker>'
+ '<linearGradient id="gpb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EEF6E3"/></linearGradient></defs>'
+ # connectors
+ '<path class="g-flow" d="M150 66 H268" stroke="#C5F04A" stroke-width="2" fill="none" marker-end="url(#ga)"/>'
+ '<path class="g-flow" d="M75 112 C75 170 120 200 150 228" stroke="#C5F04A" stroke-width="2" fill="none" marker-end="url(#ga)"/>'
+ '<path class="g-flow" d="M270 228 C300 200 345 170 345 114" stroke="#C5F04A" stroke-width="2" fill="none" marker-end="url(#ga)"/>'
+ '<path class="g-flow" d="M210 360 V396" stroke="#C5F04A" stroke-width="2" fill="none" marker-end="url(#ga)"/>'
+ # connector labels
+ '<text x="210" y="56" text-anchor="middle" class="g-il">Manages work</text>'
+ '<text x="6" y="178" class="g-il">One invoice</text><text x="6" y="194" class="g-il g-il2">in dollars</text>'
+ '<text x="414" y="178" text-anchor="end" class="g-il">Salary</text><text x="414" y="194" text-anchor="end" class="g-il g-il2">in rupees</text>'
+ '<text x="222" y="383" class="g-il">Files and pays</text>'
+ # company card
+ '<rect x="0" y="20" width="150" height="92" rx="18" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.16)"/>'
+ '<circle cx="32" cy="52" r="16" fill="#C5F04A"/><path d="M25 60V46l7-4 7 4v14M29 60v-5h6v5M28 49h2M34 49h2" stroke="#0F2E1A" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+ '<text x="16" y="88" class="g-nt">Your company</text><text x="16" y="104" class="g-ns">Outside India</text>'
+ # employee card
+ '<rect x="270" y="20" width="150" height="92" rx="18" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.16)"/>'
+ '<circle cx="302" cy="52" r="16" fill="#C5F04A"/><circle cx="302" cy="47" r="4.5" fill="none" stroke="#0F2E1A" stroke-width="1.8"/><path d="M294 60c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5" stroke="#0F2E1A" stroke-width="1.8" fill="none" stroke-linecap="round"/>'
+ '<text x="286" y="88" class="g-nt">Your employee</text><text x="286" y="104" class="g-ns">Works in India</text>'
+ # paybooks card
+ '<rect x="70" y="230" width="280" height="130" rx="22" fill="url(#gpb)"/>'
+ '<circle cx="104" cy="264" r="18" fill="#0F2E1A"/><text x="104" y="269" text-anchor="middle" class="g-pb">PB</text>'
+ '<text x="132" y="260" class="g-nt2">Paybooks</text><text x="132" y="277" class="g-ns2">Legal employer in India</text>'
+ '<rect x="90" y="298" width="112" height="24" rx="12" fill="#DDEFC6"/><text x="146" y="314" text-anchor="middle" class="g-chip">Contract</text>'
+ '<rect x="210" y="298" width="120" height="24" rx="12" fill="#DDEFC6"/><text x="270" y="314" text-anchor="middle" class="g-chip">Payroll in ₹</text>'
+ '<rect x="90" y="328" width="112" height="24" rx="12" fill="#DDEFC6"/><text x="146" y="344" text-anchor="middle" class="g-chip">Tax, PF, ESI</text>'
+ '<rect x="210" y="328" width="120" height="24" rx="12" fill="#DDEFC6"/><text x="270" y="344" text-anchor="middle" class="g-chip">Filings</text>'
+ # government card
+ '<rect x="120" y="400" width="180" height="62" rx="16" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.16)"/>'
+ '<path d="M142 418l12-6 12 6M144 420v14M150 420v14M158 420v14M164 420v14M141 436h26" stroke="#C5F04A" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+ '<text x="178" y="426" class="g-nt">Government</text><text x="178" y="443" class="g-ns">PF · ESI · Income tax</text>'
+ '</svg></figure>')
 HERO = ('<div class="g-progress" id="gprog"></div><section class="g-hero"><div class="g-hero-in"><div>'
         '<nav class="g-crumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../../">Employer of Record</a><span>/</span>India</nav>'
         '<h1>Employer of Record India: <em>2026 Guide</em></h1>'
         '<p class="g-sub">Hire in India without an entity. What it costs, which laws apply, and what an EOR handles for you.</p>' +
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#cost">See EOR costs in India</a></div>'
-        '</div>' + SNAP + '</div>'
+        '</div>' + ILLU + '</div>'
         '<div class="g-bystrip"><div class="g-bystrip-in">' + BYLINE(round(words_est / 230)) + '</div></div></section>')
 
 MTOC = '<details class="g-mtoc"><summary>On this page</summary><ol>' + toc + "</ol></details>"

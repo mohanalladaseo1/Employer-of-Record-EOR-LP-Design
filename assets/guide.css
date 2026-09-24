@@ -260,3 +260,18 @@ body{background:var(--g-paper)}
 .g-hero .g-bystrip .g-bybar em{color:#9FB2A5}
 .g-hero .g-bystrip .g-dot{background:#5E7466}
 .g-hero-in{padding-bottom:56px}
+/* hero vector illustration */
+.g-illu{margin:0;width:100%;max-width:420px;justify-self:end}
+.g-illu svg{width:100%;height:auto;display:block;overflow:visible}
+.g-illu .g-nt{font:600 14px Inter,sans-serif;fill:#F4F6F1}
+.g-illu .g-ns{font:400 12px Inter,sans-serif;fill:#9FB2A5}
+.g-illu .g-nt2{font:700 17px "Instrument Sans",Inter,sans-serif;fill:#0F2E1A}
+.g-illu .g-ns2{font:500 12.5px Inter,sans-serif;fill:#4B5550}
+.g-illu .g-pb{font:700 13px "Instrument Sans",Inter,sans-serif;fill:#C5F04A}
+.g-illu .g-chip{font:600 12px Inter,sans-serif;fill:#2F5A08}
+.g-illu .g-il{font:600 12px Inter,sans-serif;fill:#C5F04A}
+.g-illu .g-il2{font-weight:500;fill:#9FB2A5}
+.g-illu .g-flow{stroke-dasharray:6 6;animation:gflow 1.6s linear infinite}
+@keyframes gflow{to{stroke-dashoffset:-24}}
+@media (prefers-reduced-motion:reduce){.g-illu .g-flow{animation:none}}
+@media (max-width:1080px){.g-illu{justify-self:start;max-width:380px}}
