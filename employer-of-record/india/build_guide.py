@@ -10,8 +10,8 @@ CANON = "https://www.paybooks.in/employer-of-record/india/"
 UPDATED = "September 24, 2026"
 PUBLISHED = "September 24, 2026"
 # Bylines. Add real people here (name, job title, LinkedIn URL); leave None to credit the team.
-WRITER = None      # e.g. ("Full name", "Payroll Compliance Lead", "https://www.linkedin.com/in/...")
-REVIEWER = None    # e.g. ("Full name", "Head of Compliance", "https://www.linkedin.com/in/...")
+WRITER = ("Nawal Gazala", "", None)      # (name, job title, LinkedIn URL) e.g. ("Full name", "Payroll Compliance Lead", "https://www.linkedin.com/in/...")
+REVIEWER = ("Shubhangi Chauhan", "", None)    # e.g. ("Full name", "Head of Compliance", "https://www.linkedin.com/in/...")
 TEAM = "Paybooks Payroll and Compliance team"
 LI = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.5h2.6V18H7.1zM8.4 5.6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.3 9.5h2.5v1.2c.4-.7 1.3-1.4 2.7-1.4 2.8 0 3.3 1.8 3.3 4.2V18h-2.6v-4c0-1 0-2.2-1.4-2.2s-1.6 1.1-1.6 2.1V18h-2.6z"/></svg>'
 def person(role, who):
@@ -19,7 +19,7 @@ def person(role, who):
         return '<span class="g-by">' + role + ' <b>' + TEAM + '</b></span>'
     name, title, url = who
     link = ' <a class="g-li" href="' + url + '" target="_blank" rel="noopener" aria-label="' + name + ' on LinkedIn">' + LI + '</a>' if url else ''
-    return '<span class="g-by">' + role + ' <b>' + name + '</b> <em>' + title + '</em>' + link + '</span>'
+    return '<span class="g-by">' + role + ' <b>' + name + '</b>' + (' <em>' + title + '</em>' if title else '') + link + '</span>'
 def BYLINE(read_min):
     parts = [person("Written by", WRITER)]
     if REVIEWER: parts.append(person("Reviewed by", REVIEWER))
@@ -483,7 +483,9 @@ S.append(("faq", "FAQ", '<h2>Employer of record India: frequently asked question
     "<details><summary>" + q + "</summary><div><p>" + a + "</p></div></details>" for q, a in FAQ) + "</div>"))
 
 _w = WRITER[0] if WRITER else TEAM
-AUTHOR = ('<div class="g-author"><div class="g-av">PB</div><div><b>Written by ' + _w + '</b>'
+_ini = ''.join(x[0] for x in _w.split()[:2]).upper() if WRITER else 'PB'
+_rv = (', reviewed by ' + REVIEWER[0]) if REVIEWER else ''
+AUTHOR = ('<div class="g-author"><div class="g-av">' + _ini + '</div><div><b>Written by ' + _w + _rv + '</b>'
           '<p>Paybooks has run payroll and compliance for Indian employers since 2012. Published ' + PUBLISHED + ', last updated ' + UPDATED + '. This guide is general information, not legal or tax advice.</p></div></div>')
 RELATED = ('<h2 style="font-size:24px">Keep reading</h2><div class="g-rel">'
            '<a href="../../">Employer of Record India<small>Hire in India within days</small></a>'
@@ -510,7 +512,7 @@ H1 = "Employer of Record India: 2026 Guide"
 
 schema = [
     {"@context": "https://schema.org", "@type": "Article", "headline": H1,
-     "description": DESC, "dateModified": "2026-09-24", "author": ({"@type": "Person", "name": WRITER[0], "jobTitle": WRITER[1]} if WRITER else {"@type": "Organization", "name": TEAM}), "datePublished": "2026-09-24",
+     "description": DESC, "dateModified": "2026-09-24", "author": (dict({"@type": "Person", "name": WRITER[0]}, **({"jobTitle": WRITER[1]} if WRITER[1] else {})) if WRITER else {"@type": "Organization", "name": TEAM}), "datePublished": "2026-09-24",
      "publisher": {"@type": "Organization", "name": "Paybooks, a TransPerfect company", "url": "https://www.paybooks.in/"},
      "about": {"@type": "Thing", "name": "Employer of record in India"}, "mainEntityOfPage": CANON},
     {"@context": "https://schema.org", "@type": "Service", "name": "Employer of Record India", "serviceType": "Employer of record",

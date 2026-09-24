@@ -275,3 +275,4 @@ body{background:var(--g-paper)}
 @keyframes gflow{to{stroke-dashoffset:-24}}
 @media (prefers-reduced-motion:reduce){.g-illu .g-flow{animation:none}}
 @media (max-width:1080px){.g-illu{justify-self:start;max-width:380px}}
+.g-hero .g-bystrip .g-bybar span.g-by:nth-of-type(-n+2) b{text-decoration:underline;text-decoration-color:rgba(197,240,74,.7);text-underline-offset:4px;text-decoration-thickness:1.5px}
