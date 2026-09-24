@@ -65,11 +65,16 @@ body{display:flex;flex-direction:column;min-height:100vh}
 .dot.on{width:26px;background:var(--lime)}
 .count{font-size:13px;color:var(--mute);min-width:52px;text-align:center;font-variant-numeric:tabular-nums}
 .fs{font-size:13px;font-weight:500}
+.tip{display:none;text-align:center;color:var(--mute);font-size:12.5px;padding:10px 16px 0}
 @media (max-width:700px){.top{flex-direction:column;gap:10px;padding:12px 16px}.stage{padding:16px}.frame{width:100%;border-radius:10px}.dots{display:none}.bar{padding:0 16px 18px}}
+/* Phone, upright: every slide stacked at full width */
+@media (max-width:700px) and (orientation:portrait){.stage{display:block;padding:16px}.frame{aspect-ratio:auto;background:none;box-shadow:none;overflow:visible;border-radius:0}.slide{position:relative;inset:auto;opacity:1;visibility:visible;margin-bottom:14px;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}.slide img{height:auto}.bar{display:none}.tip{display:block}}
+/* Phone, sideways: the slide fills the screen; tap or swipe to move */
+@media (max-height:520px) and (orientation:landscape){.top,.bar{display:none}.stage{padding:0}.frame{width:min(100vw,calc(100vh * 16 / 9));border-radius:0;box-shadow:none}}
 </style></head><body>
 <header class="top"><div class="brand"><img src="../assets/mark.png" alt="">Paybooks SEO pitch <small>· September 2026</small></div>
 <nav class="links"><a href="../strategy/">Category 1 research</a><a href="../">Landing page</a><a href="../employer-of-record/india/">EOR India guide</a></nav></header>
-<main class="stage"><div class="frame" id="frame">''' + slides + '''</div></main>
+<p class="tip">Turn your phone sideways for a larger view.</p><main class="stage"><div class="frame" id="frame">''' + slides + '''</div></main>
 <div class="bar"><button class="nav" id="prev" aria-label="Previous slide">&#8592;</button><div class="dots">''' + dots + '''</div>
 <span class="count" id="count">1 / 10</span><button class="nav" id="next" aria-label="Next slide">&#8594;</button>
 <button class="nav fs" id="fs" aria-label="Full screen" title="Full screen">&#x26F6;</button></div>

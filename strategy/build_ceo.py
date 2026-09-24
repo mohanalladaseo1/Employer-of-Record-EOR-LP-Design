@@ -213,6 +213,7 @@ details.inner{border:1px dashed var(--line);border-radius:10px;margin-top:6px}de
 .rc{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}.rc div{border-radius:16px;padding:18px 20px;color:#fff}.rc b{display:block;font:600 34px/1 "Instrument Sans"}.rc span{font-size:14px}
 footer{background:var(--forest);color:#BFD3B9;padding:32px 0;font-size:13.5px;margin-top:40px}
 @media(max-width:820px){.big3,.rc,.kp,.take,.two,.waves,.cl3,.pbs{grid-template-columns:1fr}.panel{padding:18px}}
+@media(max-width:700px){.tw table{min-width:640px}svg.chart{min-width:620px}*:has(> svg.chart){overflow-x:auto;-webkit-overflow-scrolling:touch}}
 """
 
 PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EOR India Strategy</title><meta name="robots" content="noindex,nofollow">
