@@ -4,7 +4,7 @@ import json
 W, H = 1920, 1080
 TITLES = ["Dominate SERPs for 4 categories", "Where Paybooks stands", "The prize", "Category 1 research",
           "Diagnosis", "Category 1 strategy", "Proof of work", "Scope and ongoing support", "Deliverables and timeline",
-          "Who you get", "Quotation", "Next step"]
+          "Who you get", "In their words", "Quotation", "Next step"]
 S = "https://employer-of-record-eor-lp-design-livid.vercel.app/"
 LINKS = {
     4: [(S + "strategy/", [[642, 988, 662, 27]])],
@@ -15,13 +15,14 @@ LINKS = {
         ("https://paybooks.in/article/what-does-an-eor-in-india-actually-cost/", [[887, 828, 385, 28]])],
     7: [(S + "strategy/", [[169, 697, 241, 27]]), (S, [[733, 649, 197, 27]]), (S + "employer-of-record/india/", [[1297, 686, 205, 27]])],
     10: [("https://www.linkedin.com/in/mohankumarallada/", [[252, 988, 400, 27]])],
-    12: [("https://www.linkedin.com/in/mohankumarallada/", [[1325, 920, 467, 31]])],
+    11: [("https://www.linkedin.com/in/mohankumarallada/", [[392, 988, 99, 27]])],
+    13: [("https://www.linkedin.com/in/mohankumarallada/", [[1325, 920, 467, 31]])],
 }
 
 def pct(v, t): return f"{v / t * 100:.3f}%"
 
 slides = ""
-for i in range(1, 13):
+for i in range(1, 14):
     hot = ""
     for href, rects in LINKS.get(i, []):
         for x, y, w, h in rects:
@@ -32,7 +33,7 @@ for i in range(1, 13):
     slides += (f'<figure class="slide{" on" if i == 1 else ""}" data-i="{i}" aria-label="Slide {i}: {TITLES[i - 1]}">'
                f'<img src="slides/slide-{i:02d}.jpg" width="{W}" height="{H}" alt="Slide {i}: {TITLES[i - 1]}" loading="{load}" draggable="false">{hot}</figure>')
 
-dots = "".join(f'<button class="dot{" on" if i == 1 else ""}" data-go="{i}" aria-label="Go to slide {i}"></button>' for i in range(1, 13))
+dots = "".join(f'<button class="dot{" on" if i == 1 else ""}" data-go="{i}" aria-label="Go to slide {i}"></button>' for i in range(1, 14))
 
 page = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Paybooks SEO Pitch</title><meta name="robots" content="noindex,nofollow">
@@ -78,7 +79,7 @@ body{display:flex;flex-direction:column;min-height:100vh}
 <nav class="links"><a href="../strategy/">Category 1 research</a><a href="../">Landing page</a><a href="../employer-of-record/india/">EOR India guide</a></nav></header>
 <p class="tip">Turn your phone sideways for a larger view.</p><main class="stage"><div class="frame" id="frame">''' + slides + '''</div></main>
 <div class="bar"><button class="nav" id="prev" aria-label="Previous slide">&#8592;</button><div class="dots">''' + dots + '''</div>
-<span class="count" id="count">1 / 12</span><button class="nav" id="next" aria-label="Next slide">&#8594;</button>
+<span class="count" id="count">1 / 13</span><button class="nav" id="next" aria-label="Next slide">&#8594;</button>
 <button class="nav fs" id="fs" aria-label="Full screen" title="Full screen">&#x26F6;</button></div>
 <script>
 (function(){var s=[].slice.call(document.querySelectorAll('.slide')),d=[].slice.call(document.querySelectorAll('.dot')),n=s.length,c=0,
