@@ -1,4 +1,5 @@
-// Password gate for the whole site (Vercel Routing Middleware, runs before every request).
+// Password gate for the research, landing page and guide (Vercel Routing Middleware).
+// The deck at /deck/ stays open, with the two shared files it loads.
 // Only a salted PBKDF2 hash of the password is stored here, never the password itself.
 export const config = { matcher: '/:path*' };
 
@@ -7,6 +8,7 @@ const ITER = 150000;
 const HASH = 'b757aff1a61bd0cadd61194ff167758c93ef72ace34dbb6b071257455bed980c';
 const TOKEN = '3977826b07fca6ea50997dbfb3955c54656bbe05a20c756d2814ae6eb7eecac7';
 const COOKIE = 'pb_gate';
+const OPEN = [/^\/deck(\/|$)/, /^\/assets\/protect\.js$/, /^\/assets\/mark\.png$/];
 
 const hex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
 const bytes = (h) => new Uint8Array(h.match(/.{2}/g).map((x) => parseInt(x, 16)));
@@ -54,6 +56,9 @@ button:hover{background:#E05E12}
 
 export default async function middleware(request) {
   const url = new URL(request.url);
+  if (OPEN.some((r) => r.test(url.pathname))) {
+    return new Response(null, { headers: { 'x-middleware-next': '1' } });
+  }
   const cookie = request.headers.get('cookie') || '';
   const m = cookie.match(new RegExp('(?:^|;\\s*)' + COOKIE + '=([a-f0-9]{64})'));
   if (m && m[1] === TOKEN) {
