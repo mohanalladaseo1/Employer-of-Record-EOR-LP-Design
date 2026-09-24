@@ -252,3 +252,11 @@ body{background:var(--g-paper)}
 .g-bystrip .g-dot{background:#B8BFB9}
 @media (max-width:640px){.g-bystrip-in{padding:14px 16px}.g-bystrip .g-bybar{font-size:14px}}
 @media (min-width:1081px){.g-bystrip .g-bybar{flex-wrap:nowrap;white-space:nowrap}}
+/* byline inside the banner, bottom edge */
+.g-hero .g-bystrip{position:relative;background:rgba(0,0,0,.18);border-top:1px solid rgba(255,255,255,.1);border-bottom:none}
+.g-hero .g-bystrip .g-bybar{color:#9FB2A5}
+.g-hero .g-bystrip .g-bybar b{color:#F4F6F1}
+.g-hero .g-bystrip .g-bybar .g-by:first-child b{text-decoration-color:rgba(197,240,74,.7)}
+.g-hero .g-bystrip .g-bybar em{color:#9FB2A5}
+.g-hero .g-bystrip .g-dot{background:#5E7466}
+.g-hero-in{padding-bottom:56px}

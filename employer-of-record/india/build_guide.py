@@ -551,8 +551,8 @@ HERO = ('<div class="g-progress" id="gprog"></div><section class="g-hero"><div c
         '<h1>Employer of Record India: <em>2026 Guide</em></h1>'
         '<p class="g-sub">Hire in India without an entity. What it costs, which laws apply, and what an EOR handles for you.</p>' +
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#cost">See EOR costs in India</a></div>'
-        '</div>' + SNAP + '</div></section>'
-        '<div class="g-bystrip"><div class="g-bystrip-in">' + BYLINE(round(words_est / 230)) + '</div></div>')
+        '</div>' + SNAP + '</div>'
+        '<div class="g-bystrip"><div class="g-bystrip-in">' + BYLINE(round(words_est / 230)) + '</div></div></section>')
 
 MTOC = '<details class="g-mtoc"><summary>On this page</summary><ol>' + toc + "</ol></details>"
 TOC = ('<aside class="g-toc" aria-label="Contents"><h2>On this page</h2><ol>' + toc + '</ol>'
