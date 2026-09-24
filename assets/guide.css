@@ -242,3 +242,12 @@ body{background:var(--g-paper)}
 .g-bybar .g-li{display:inline-flex;vertical-align:-3px;margin-left:4px}
 .g-bybar b{text-decoration:underline;text-decoration-color:rgba(197,240,74,.5);text-underline-offset:4px}
 .g-bybar .g-by:nth-last-child(-n+5) b{text-decoration:none}
+/* byline strip under the banner (reference style) */
+.g-bystrip{background:#F8F9F7;border-bottom:1px solid var(--g-line)}
+.g-bystrip-in{max-width:1240px;margin:0 auto;padding:16px 32px}
+.g-bystrip .g-bybar{margin:0;font-size:15px;color:#4A524D;gap:8px 14px}
+.g-bystrip .g-bybar b{color:var(--g-ink);font-weight:600;text-decoration:none}
+.g-bystrip .g-bybar .g-by:first-child b{text-decoration:underline;text-decoration-color:var(--g-ink);text-underline-offset:4px;text-decoration-thickness:1.5px}
+.g-bystrip .g-bybar em{color:#4A524D}
+.g-bystrip .g-dot{background:#B8BFB9}
+@media (max-width:640px){.g-bystrip-in{padding:14px 16px}.g-bystrip .g-bybar{font-size:14px}}

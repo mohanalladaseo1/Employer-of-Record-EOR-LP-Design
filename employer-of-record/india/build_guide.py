@@ -23,8 +23,8 @@ def person(role, who):
 def BYLINE(read_min):
     parts = [person("Written by", WRITER)]
     if REVIEWER: parts.append(person("Reviewed by", REVIEWER))
-    parts.append('<span class="g-by">Published <b>' + PUBLISHED + '</b></span>')
-    parts.append('<span class="g-by">Last updated <b>' + UPDATED + '</b></span>')
+    parts.append('<span class="g-by">Published: <b>' + PUBLISHED + '</b></span>')
+    parts.append('<span class="g-by">Last updated: <b>' + UPDATED + '</b></span>')
     parts.append('<span class="g-by"><b>' + str(read_min) + ' min</b> read</span>')
     return '<div class="g-bybar">' + '<i class="g-dot"></i>'.join(parts) + '</div>'
 
@@ -548,14 +548,12 @@ SNAP = ('<aside class="g-snap" aria-label="Cost example"><div class="g-snap-h"><
         '<p>At ₹95.7 to $1 (September 23, 2026). Full breakdown in the cost section.</p></aside>')
 HERO = ('<div class="g-progress" id="gprog"></div><section class="g-hero"><div class="g-hero-in"><div>'
         '<nav class="g-crumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../../">Employer of Record</a><span>/</span>India</nav>'
-        '<span class="g-pill">Employer of Record · India guide</span>'
         '<h1>Employer of Record India: <em>2026 Guide</em></h1>'
         '<p class="g-sub">Hire in India without an entity. What it costs, which laws apply, and what an EOR handles for you.</p>' +
-        BYLINE(round(words_est / 230)) +
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#cost">See EOR costs in India</a></div>'
         '<div class="g-hstats"><div><b>$199</b><span>starting EOR fee per employee a month</span></div><div><b>8–9%</b><span>employer contributions on salary</span></div><div><b>Days</b><span>to hire, no entity needed</span></div></div>'
-        '<p class="g-note">Sample content prepared from a few hours of product knowledge. May contain errors.</p>'
-        '</div>' + SNAP + '</div></section>')
+        '</div>' + SNAP + '</div></section>'
+        '<div class="g-bystrip"><div class="g-bystrip-in">' + BYLINE(round(words_est / 230)) + '</div></div>')
 
 MTOC = '<details class="g-mtoc"><summary>On this page</summary><ol>' + toc + "</ol></details>"
 TOC = ('<aside class="g-toc" aria-label="Contents"><h2>On this page</h2><ol>' + toc + '</ol>'
