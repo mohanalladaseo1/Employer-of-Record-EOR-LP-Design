@@ -48,7 +48,7 @@ def T(head, rows, cap=None, num=()):
 SRC = {}
 def src(key, label, url):
     SRC[key] = (label, url)
-    return ' <a class="g-src" href="' + url + '" rel="nofollow noopener" target="_blank">[' + label + ']</a>'
+    return ' <a class="g-src" href="' + H.escape(url) + '" rel="nofollow noopener" target="_blank">[' + label + ']</a>'
 PB = "https://paybooks.in/article/"
 def IL(text, slug):
     return '<a href="' + PB + slug + '/">' + text + '</a>'
@@ -107,14 +107,14 @@ TI, TX, CESS = tax(2400000)
 # ---------------- sections ----------------
 S = []  # (id, toc label, html)
 
-LEAD = ('<div class="g-kt" style="background:#fff;border:1px solid var(--line)"><h2 style="color:var(--ink)">Quick answer</h2>'
-        '<p style="color:var(--ink-2)">An <strong style="color:var(--ink)">employer of record in India</strong> is an Indian company that legally employs your staff for you. '
+LEAD = ('<div class="g-tldr"><span class="g-tag">TL;DR</span>'
+        '<p>An <strong>employer of record in India</strong> is an Indian company that legally employs your staff for you. '
         'It issues the employment contract, pays salary in rupees, withholds income tax, pays Provident Fund and ESI, and files every return. '
         'You choose the person and manage their work. With an EOR, a company outside India can hire in India within days, without opening an Indian entity.</p>'
-        '<p style="color:var(--ink-2);margin-top:10px"><strong style="color:var(--ink)">Cost:</strong> salary, plus about 9 to 10% in employer contributions for skilled staff, plus the EOR fee. '
+        '<p><strong>Cost:</strong> salary, plus about 9 to 10% in employer contributions for skilled staff, plus the EOR fee. '
         'Paybooks charges from $199 per employee a month.</p></div>')
 
-KT = ('<div class="g-kt"><h2>Key takeaways</h2><ul>'
+KT = ('<div class="g-takeaways"><h2>Key takeaways</h2><ul>'
       '<li><strong>You do not need an Indian company to hire in India.</strong> An EOR is the legal employer and handles payroll, tax and filings.</li>'
       '<li><strong>Budget salary plus 9 to 10%, plus $199 a month</strong> for a skilled employee. Staff earning ₹21,000 a month or less cost a little more.</li>'
       '<li><strong>India\'s new labor codes took effect on November 21, 2025.</strong> Basic pay must be at least half of total pay, and fixed-term staff earn gratuity after one year.</li>'
@@ -457,19 +457,19 @@ S.append(("faq", "FAQ", '<h2>Employer of record India: frequently asked question
 
 AUTHOR = ('<div class="g-author"><div class="g-av">PB</div><div><b>Written by the Paybooks Payroll and Compliance team</b>'
           '<p>Paybooks has run payroll and compliance for Indian employers since 2012. Updated ' + UPDATED + '. This guide is general information, not legal or tax advice.</p></div></div>')
-RELATED = ('<h2 style="font-size:24px;margin-bottom:14px">Related</h2><div class="g-rel">'
+RELATED = ('<h2 style="font-size:24px">Keep reading</h2><div class="g-rel">'
            '<a href="../../">Employer of Record India<small>Hire in India within days</small></a>'
            '<a href="#cost">EOR cost in India<small>Worked examples in INR and USD</small></a>'
            '<a href="#peo">EOR vs PEO in India<small>Which one you need</small></a></div>')
 
-QUOTE = ('<section id="quote"><div class="g-kt" style="background:var(--green-600)"><h2>Get an EOR India quote</h2>'
-         '<p style="font-size:19px;color:#fff;margin-bottom:16px">Tell us the role, city and pay. Within two working days you get the full monthly cost in dollars, the contract terms, a start date and a sample offer letter.</p>'
+QUOTE = ('<section id="quote"><div class="g-final"><span class="g-tag">Ready to hire in India?</span><h2>Get your EOR India quote</h2>'
+         '<p>Tell us the role, city and pay. Within two working days you get the full monthly cost in dollars, the contract terms, a start date and a sample offer letter.</p>'
          '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></section>')
 
 # ---------------- page ----------------
 toc = "".join('<li><a href="#' + i + '">' + lbl + "</a></li>" for i, lbl, _ in S)
-SOURCES = '<section id="sources" class="g-sources"><h2>Sources</h2><ol>' + ''.join('<li>' + l + ': <a href="' + u + '" rel="nofollow noopener" target="_blank">' + u + '</a></li>' for l, u in dict.fromkeys(SRC.values())) + '</ol></section>'
-body = LEAD + KT + "".join('<section id="' + i + '">' + h + "</section>" for i, _l, h in S) + SOURCES + QUOTE + AUTHOR + RELATED
+SOURCES = '<section id="sources" class="g-sources"><h2>Sources</h2><ol>' + ''.join('<li>' + l + ': <a href="' + H.escape(u) + '" rel="nofollow noopener" target="_blank">' + H.escape(u) + '</a></li>' for l, u in dict.fromkeys(SRC.values())) + '</ol></section>'
+body = LEAD + KT + "".join('<section id="' + i + '"><span class="g-num">' + format(k + 1, '02d') + '</span>' + h + "</section>" for k, (i, _l, h) in enumerate(S)) + SOURCES + QUOTE + AUTHOR + RELATED
 
 def text_of(h):
     h = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", h, flags=re.S)
@@ -510,12 +510,22 @@ HEADER = ('<header class="hdr"><div class="wrap"><a class="brand" href="../../">
           '<div class="btns"><a class="btn ghost" href="#quote">Book a call</a><a class="btn" href="#quote">Get a quote</a></div></div></header>')
 
 words_est = len(text_of(body).split())
-HERO = ('<section class="g-hero"><div class="wrap"><nav class="g-crumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../../">Employer of Record</a><span>/</span>India</nav>'
+SNAP = ('<aside class="g-snap" aria-label="Cost example"><div class="g-snap-h"><small>Cost snapshot</small><em>Worked example</em></div>'
+        '<h3>Senior engineer, Bengaluru</h3>'
+        '<div class="g-snap-row"><span>Salary (₹24 lakh)</span><b>' + usd(2400000) + '</b></div>'
+        '<div class="g-snap-row"><span>Employer contributions</span><b>' + usd(EX1_TOT - 2400000 - FEE_Y) + '</b></div>'
+        '<div class="g-snap-row"><span>Paybooks EOR fee</span><b>$2,388</b></div>'
+        '<div class="g-snap-tot"><span>Total a year</span><b>' + usd(EX1_TOT) + '</b></div>'
+        '<p>At ₹' + str(int(FX)) + ' to $1. Full breakdown in the cost section.</p></aside>')
+HERO = ('<div class="g-progress" id="gprog"></div><section class="g-hero"><div class="g-hero-in"><div>'
+        '<nav class="g-crumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../../">Employer of Record</a><span>/</span>India</nav>'
+        '<span class="g-pill">Employer of Record · India guide</span>'
         '<h1>' + H1 + '</h1>'
-        '<p class="g-sub">How a company outside India can hire here legally: the cost in rupees and dollars, the new labor codes, tax, leave, notice and exit rules, and what an employer of record handles for you.</p>'
-        '<div class="g-meta"><span>Updated <b>' + UPDATED + '</b></span><span>By <b>Paybooks Payroll and Compliance</b></span><span><b>' + str(round(words_est / 230)) + ' min</b> read</span></div>'
+        '<p class="g-sub">How a company outside India can hire here legally: the cost in rupees and dollars, the new labor codes, tax, leave and exit rules, and what an employer of record handles for you.</p>'
+        '<div class="g-byline"><span class="g-av">PB</span><div><b>Paybooks Payroll and Compliance</b><span>Updated ' + UPDATED + ' · ' + str(round(words_est / 230)) + ' min read</span></div></div>'
+        '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#cost">See EOR costs in India</a></div>'
         '<p class="g-note">Sample content prepared from a few hours of product knowledge. May contain errors.</p>'
-        '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" style="color:var(--ink) !important;border-color:var(--line-2)" href="#cost">See EOR costs in India</a></div></div></section>')
+        '</div>' + SNAP + '</div></section>')
 
 MTOC = '<details class="g-mtoc"><summary>On this page</summary><ol>' + toc + "</ol></details>"
 TOC = ('<aside class="g-toc" aria-label="Contents"><h2>On this page</h2><ol>' + toc + '</ol>'
@@ -524,7 +534,7 @@ TOC = ('<aside class="g-toc" aria-label="Contents"><h2>On this page</h2><ol>' + 
 FOOTER = ('<footer class="ftr"><div class="wrap" style="grid-template-columns:1fr"><div><h4>Paybooks, a TransPerfect company</h4>'
           '<p>Employer of Record, Multi-Country Payroll, Managed India Office, and Global HCM for companies building teams in India and beyond.</p></div></div></footer>')
 
-SPY = ('<script>(function(){var l=[].slice.call(document.querySelectorAll(".g-toc a"));var m={};l.forEach(function(a){m[a.getAttribute("href").slice(1)]=a});'
+SPY = ('<script>(function(){var pb=document.getElementById("gprog");function pr(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;pb.style.width=(m>0?h.scrollTop/m*100:0)+"%"}window.addEventListener("scroll",pr,{passive:true});pr();})();(function(){var l=[].slice.call(document.querySelectorAll(".g-toc a"));var m={};l.forEach(function(a){m[a.getAttribute("href").slice(1)]=a});'
        'if(!("IntersectionObserver" in window))return;var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(a){a.classList.remove("on")});'
        'var a=m[e.target.id];if(a){a.classList.add("on");var ol=a.closest("ol");if(ol){var t=a.offsetTop-ol.offsetTop;if(t<ol.scrollTop||t>ol.scrollTop+ol.clientHeight-a.offsetHeight)ol.scrollTop=t-ol.clientHeight/2+a.offsetHeight/2}}}})},{rootMargin:"-10% 0px -80% 0px"});'
        'document.querySelectorAll(".g-body section[id]").forEach(function(s){o.observe(s)})})();</script>')
