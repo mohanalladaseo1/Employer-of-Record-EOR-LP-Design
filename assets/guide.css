@@ -251,3 +251,4 @@ body{background:var(--g-paper)}
 .g-bystrip .g-bybar em{color:#4A524D}
 .g-bystrip .g-dot{background:#B8BFB9}
 @media (max-width:640px){.g-bystrip-in{padding:14px 16px}.g-bystrip .g-bybar{font-size:14px}}
+@media (min-width:1081px){.g-bystrip .g-bybar{flex-wrap:nowrap;white-space:nowrap}}
