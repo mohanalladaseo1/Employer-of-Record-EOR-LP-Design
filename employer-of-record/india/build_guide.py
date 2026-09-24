@@ -8,6 +8,26 @@ OUT = os.path.join(HERE, "index.html")
 FX = 88.0  # INR per USD, illustrative
 CANON = "https://www.paybooks.in/employer-of-record/india/"
 UPDATED = "September 24, 2026"
+PUBLISHED = "September 24, 2026"
+# Bylines. Add real people here (name, job title, LinkedIn URL); leave None to credit the team.
+WRITER = None      # e.g. ("Full name", "Payroll Compliance Lead", "https://www.linkedin.com/in/...")
+REVIEWER = None    # e.g. ("Full name", "Head of Compliance", "https://www.linkedin.com/in/...")
+TEAM = "Paybooks Payroll and Compliance team"
+LI = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.5h2.6V18H7.1zM8.4 5.6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.3 9.5h2.5v1.2c.4-.7 1.3-1.4 2.7-1.4 2.8 0 3.3 1.8 3.3 4.2V18h-2.6v-4c0-1 0-2.2-1.4-2.2s-1.6 1.1-1.6 2.1V18h-2.6z"/></svg>'
+def person(role, who):
+    if not who:
+        return '<span class="g-by">' + role + ' <b>' + TEAM + '</b></span>'
+    name, title, url = who
+    link = ' <a class="g-li" href="' + url + '" target="_blank" rel="noopener" aria-label="' + name + ' on LinkedIn">' + LI + '</a>' if url else ''
+    return '<span class="g-by">' + role + ' <b>' + name + '</b> <em>' + title + '</em>' + link + '</span>'
+def BYLINE(read_min):
+    parts = [person("Written by", WRITER)]
+    if REVIEWER: parts.append(person("Reviewed by", REVIEWER))
+    parts.append('<span class="g-by">Published <b>' + PUBLISHED + '</b></span>')
+    parts.append('<span class="g-by">Last updated <b>' + UPDATED + '</b></span>')
+    parts.append('<span class="g-by"><b>' + str(read_min) + ' min</b> read</span>')
+    return '<div class="g-bybar">' + '<i class="g-dot"></i>'.join(parts) + '</div>'
+
 
 # Claims Paybooks must confirm before publishing. Not shown on the page.
 VERIFY = []
@@ -39,7 +59,7 @@ def T(head, rows, cap=None, num=()):
         first = r[0][1:] if tot else r[0]
         cells = ['<th scope="row">' + first + "</th>"]
         for i, c in enumerate(r[1:], 1):
-            cells.append('<td class="n">' + c + "</td>" if i in num else "<td>" + c + "</td>")
+            cells.append('<td class="n">' + c + "</td>" if i in num else "<td>" + cell(c) + "</td>")
         out.append('<tr class="tot">' if tot else "<tr>")
         out.append("".join(cells) + "</tr>")
     out.append("</tbody></table></div>")
@@ -52,6 +72,17 @@ def src(key, label, url):
 PB = "https://paybooks.in/article/"
 def IL(text, slug):
     return '<a href="' + PB + slug + '/">' + text + '</a>'
+PILL = {"Yes": "g-yes", "No": "g-no", "None": "g-na", "Not needed": "g-no", "Required": "g-yes"}
+def cell(c):
+    return '<span class="g-pill-s ' + PILL[c] + '">' + c + '</span>' if c in PILL else c
+def CARDS(items):
+    return '<div class="g-facts">' + "".join('<div class="g-fact"><small>' + k + '</small><p>' + v + '</p></div>' for k, v in items) + '</div>'
+def BAR(title, parts, total_label):
+    tot = sum(v for _l, v, _c in parts)
+    segs = "".join('<span style="width:' + format(v / tot * 100, ".2f") + '%;background:' + c + '"></span>' for _l, v, c in parts)
+    keys = "".join('<li><i style="background:' + c + '"></i>' + l + ' <b>' + usd(v) + '</b></li>' for l, v, c in parts)
+    return ('<div class="g-bar"><div class="g-bar-h"><b>' + title + '</b><span>' + total_label + ' <strong>' + usd(tot) + '</strong></span></div>'
+            '<div class="g-bar-t">' + segs + '</div><ul>' + keys + '</ul></div>')
 def P(*ps): return "".join("<p>" + p + "</p>" for p in ps)
 def UL(*xs): return "<ul>" + "".join("<li>" + x + "</li>" for x in xs) + "</ul>"
 def CALL(t): return '<div class="g-call"><p>' + t + "</p></div>"
@@ -81,7 +112,7 @@ def cost_table(lines, cap):
     for name, amt, note in lines:
         tot += amt
         rows.append([name, inr(amt) if amt else "₹0", usd(amt) if amt else "$0", note])
-    rows.append(["Paybooks EOR fee", inr(FEE_Y), "$2,388", "$199 per employee a month, billed in USD."])
+    rows.append(["Paybooks EOR fee", inr(FEE_Y), "$2,388", "From $199 per employee a month, priced in USD."])
     tot += FEE_Y
     rows.append(["!Total yearly cost", inr(tot), usd(tot), ""])
     return T(["Cost line", "Per year (INR)", "Per year (USD)", "What it is"], rows, cap, num=(1, 2)), tot
@@ -107,23 +138,17 @@ TI, TX, CESS = tax(2400000)
 # ---------------- sections ----------------
 S = []  # (id, toc label, html)
 
-LEAD = ('<div class="g-tldr"><span class="g-tag">TL;DR</span>'
-        '<p>An <strong>employer of record in India</strong> is an Indian company that legally employs your staff for you. '
-        'It issues the employment contract, pays salary in rupees, withholds income tax, pays Provident Fund and ESI, and files every return. '
-        'You choose the person and manage their work. With an EOR, a company outside India can hire in India within days, without opening an Indian entity.</p>'
-        '<p><strong>Cost:</strong> salary, plus about 9 to 10% in employer contributions for skilled staff, plus the EOR fee. '
-        'Paybooks charges from $199 per employee a month.</p></div>')
-
-KT = ('<div class="g-takeaways"><h2>Key takeaways</h2><ul>'
-      '<li><strong>You do not need an Indian company to hire in India.</strong> An EOR is the legal employer and handles payroll, tax and filings.</li>'
-      '<li><strong>Budget salary plus 9 to 10%, plus $199 a month</strong> for a skilled employee. Staff earning ₹21,000 a month or less cost a little more.</li>'
-      '<li><strong>India\'s new labor codes took effect on November 21, 2025.</strong> Basic pay must be at least half of total pay, and fixed-term staff earn gratuity after one year.</li>'
-      '<li><strong>Long-term contractors are risky.</strong> Courts judge how people actually work, not what the contract calls them.</li>'
-      '<li><strong>Start within days, not months.</strong> Move staff to your own entity later, with their service history intact.</li></ul></div>')
+LEAD = ('<div class="g-takeaways"><span class="g-tag">TL;DR</span>'
+        '<p class="g-ans">An <strong>employer of record in India</strong> is an Indian company that legally employs your staff for you. '
+        'It issues the contract, pays salary in rupees, withholds income tax, pays Provident Fund and ESI, and files every return. '
+        'You choose the person and manage their work. <strong>Budget salary, plus about 8 to 9% in employer contributions for skilled staff, plus the EOR fee</strong> (Paybooks: from $199 per employee a month).</p><ul>'
+        '<li><strong>No Indian company needed.</strong> Hire within days, and move staff to your own entity later with their service history intact.</li>'
+        '<li><strong>New labor codes since November 21, 2025.</strong> Basic pay must be at least half of total pay, and fixed-term staff earn gratuity after one year.</li>'
+        '<li><strong>Long-term contractors are risky.</strong> Courts judge how people actually work, not what the contract calls them.</li></ul></div>')
+KT = ""
 
 S.append(("glance", "India at a glance", "<h2>India employment facts at a glance</h2>" + P(
-    "India has a large skilled workforce and detailed employment rules. Rules come from both the national government and each state. The table covers what employers ask about first.") + T(
-    ["Item", "India"], [
+    "India has a large skilled workforce and detailed employment rules. Rules come from both the national government and each state. Here is what employers ask about first.") + CARDS([
         ["Currency", "Indian rupee (INR, ₹). Salary must be paid in rupees to an Indian bank account."],
         ["Tax year", "April 1 to March 31. The new Income-tax Act, 2025 applies from April 1, 2026." + src("it25","PIB","https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248005&reg=3&lang=1")],
         ["Pay frequency", "Monthly. Salary is due by the 7th of the next month."],
@@ -131,12 +156,12 @@ S.append(("glance", "India at a glance", "<h2>India employment facts at a glance
         ["Employer social security", "Provident Fund at 12% of basic pay, ESI at 3.25% for staff earning up to ₹21,000 a month, gratuity on exit."],
         ["Income tax", "0% to 30%, plus 4% cess, under the default new regime. The employer withholds it monthly."],
         ["Paid leave", "1 day of paid leave for every 20 days worked, after 180 days of work in a year, under the OSH Code."],
-        ["Public holidays", "3 national holidays plus state and festival holidays, usually 10 to 15 days in total."],
+        ["Public holidays", "3 national holidays plus state and festival holidays set by each state."],
         ["Probation", "Not set by law. 3 to 6 months is common."],
         ["Notice period", "Set by the contract. 30 to 90 days is common for skilled roles."],
-        ["Main laws", "Code on Wages 2019, Industrial Relations Code 2020, Code on Social Security 2020, Occupational Safety, Health and Working Conditions Code 2020."],
+        ["Main laws", "The four labor codes: Wages, Industrial Relations, Social Security, and Occupational Safety, Health and Working Conditions."],
         ["Time to hire with Paybooks", "Within days, with no entity to set up."],
-    ], "India employment facts")))
+    ])))
 
 S.append(("what", "What an EOR does", "<h2>What does an employer of record do in India?</h2>" + P(
     "An employer of record (EOR) is the legal employer on paper. In India, Paybooks signs the employment contract, pays salary in rupees, withholds income tax, pays Provident Fund and ESI, and files all returns. You choose the candidate, set their work and manage them every day.",
@@ -161,7 +186,7 @@ S.append(("peo", "EOR vs PEO", "<h2>EOR vs PEO in India: which do you need?</h2>
         ["Do you need an Indian entity?", "No", "Yes"],
         ["Who is the legal employer?", "Paybooks", "Your Indian company"],
         ["Who holds the government registrations?", "Paybooks (PF, ESI, professional tax, labor welfare)", "Your Indian company"],
-        ["Who carries compliance risk?", "Paybooks, backed by a written no-penalty guarantee", "Your company, with provider support"],
+        ["Who carries compliance risk?", "Paybooks, backed by its \u201cno penalties ever\u201d promise", "Your company, with provider support"],
         ["Best fit", "First hires, testing the market, teams under about 20 to 25 people", "Established teams with their own entity"],
     ], "EOR vs PEO in India")))
 
@@ -178,7 +203,7 @@ S.append(("entity", "EOR vs own entity", "<h2>EOR vs setting up your own entity 
         ["Exit", "Give notice; Paybooks handles final pay", "Closing a company is slow and costly"],
         ["Best fit", "Up to about 25 employees, or while you test India", "Large, long-term teams, or selling to Indian customers"],
     ], "EOR vs own entity in India") + CALL(
-    "<strong>Rule of thumb.</strong> Below about 20 to 25 employees, an EOR usually costs less than your own entity once audit, compliance staff and management time are counted. Above that, compare the full cost of both. We include that comparison with every quote.")))
+    "<strong>Rule of thumb.</strong> Below about 20 to 25 employees, an EOR usually costs less than your own entity once audit, compliance staff and management time are counted. Above that, compare the full cost of both.")))
 
 S.append(("contractor", "Contractors vs employees", "<h2>Can you hire contractors in India instead?</h2>" + P(
     "Yes, for genuine project work. But Indian courts look at how the person actually works, not what the contract says. A long-term, full-time contractor who works only for you, under your direction, is likely to count as an employee.",
@@ -200,7 +225,7 @@ S.append(("contractor", "Contractors vs employees", "<h2>Can you hire contractor
         ["Economic reality test", "Does the worker depend on this one company for a living, and who carries the business risk?"],
         ["Multiple factor test", "Who hires, pays and can fire the worker, and who supplies the tools?"],
     ], "Employment status tests") + CALL(
-    "<strong>Switching contractors to employees is simple.</strong> Paybooks can move your Indian contractors onto employment contracts, usually within one payroll cycle.")))
+    "<strong>Switching contractors to employees is simple.</strong> Paybooks can move your Indian contractors onto employment contracts.")))
 
 S.append(("routes", "How to hire in India", "<h2>How to hire employees in India</h2>" + P(
     "A foreign company has three ways to hire employees in India. The right one depends on team size, speed and how long you plan to stay. Our " + IL("step-by-step guide to hiring in India without a company", "featured-article/how-to-hire-employees-in-india-without-setting-up-a-company-2026-eor-guide") + " covers each route in detail.") + T(
@@ -210,12 +235,12 @@ S.append(("routes", "How to hire in India", "<h2>How to hire employees in India<
         ["Contractors", "Engage self-employed professionals for set projects", "Fast", "Genuinely short, project-based work"],
     ], "Ways to hire in India") +
     "<h3>Hiring through Paybooks, step by step</h3><ol>" +
-    "<li><strong>Share the role, city and pay.</strong> We send the full monthly cost in dollars within two working days.</li>" +
+    "<li><strong>Share the role, city and pay.</strong> We send the full monthly cost in dollars.</li>" +
     "<li><strong>Make the offer.</strong> We draft an offer letter that names your company, the manager and the role.</li>" +
     "<li><strong>Onboard.</strong> The employee uploads documents online. We run the background checks you choose and register them for PF and ESI.</li>" +
     "<li><strong>Sign.</strong> Paybooks issues the appointment letter and employment contract.</li>" +
     "<li><strong>First payroll.</strong> The employee is paid by the 7th of the next month, with a payslip and tax withheld.</li></ol>" +
-    CTA("See what your first India hire will cost", "Send the role, city and salary. Get the full monthly cost in dollars within two working days.")))
+    CTA("See what your first India hire will cost", "Send the role, city and salary. Get the full monthly cost in dollars.")))
 
 S.append(("onboarding", "Documents and contracts", "<h2>Onboarding documents and employment contracts</h2>" + P(
     "The OSH Code requires a written appointment letter for every employee in covered establishments, including existing staff." + src("osh","OSH Code","https://dgfasli.gov.in/public/Admin/Cms/AllPdf/OSH_Gazette.pdf") + " Paybooks issues it with a full employment contract, both in English.") + T(
@@ -245,10 +270,12 @@ S.append(("onboarding", "Documents and contracts", "<h2>Onboarding documents and
     ], "Employment contract types")))
 
 S.append(("cost", "EOR cost in India", "<h2>How much does an employer of record in India cost?</h2>" + P(
-    "The total cost has three parts: gross salary, employer contributions and the EOR fee. For skilled staff, employer contributions add about 9 to 10% to salary. For staff earning ₹21,000 a month or less, ESI and statutory bonus push that to about 15 to 20%.",
+    "The total cost has three parts: gross salary, employer contributions and the EOR fee. For skilled staff, employer contributions add about 8 to 9% to salary. For staff earning ₹21,000 a month or less, ESI and statutory bonus push that to about 15%.",
     "Here are two worked examples at an illustrative ₹" + str(int(FX)) + " to $1. Your quote uses the live exchange rate. Health insurance is optional and priced per plan, so it is left out. See our " + IL("state-by-state guide to PF, ESI, PT and LWF", "pf-esi-pt-and-lwf-a-state-by-state-compliance-guide-for-indian-payroll") + " for rates in every state.") +
+    BAR("Example 1: senior engineer, ₹24 lakh", [("Salary", 2400000, "#0F2E1A"), ("Employer contributions", EX1_TOT - 2400000 - FEE_Y, "#7DB23A"), ("EOR fee", FEE_Y, "#F26B1D")], "Total a year") +
     EX1_T + CALL("<strong>Example 1 in one line.</strong> A ₹24 lakh salary (about " + usd(2400000) + ") costs about " + usd(EX1_TOT) + " a year in total. Employer costs beyond salary and the fee add about " + format(EX1_ON, ".1f") + "%.") +
-    EX2_T + CALL("<strong>Example 2 in one line.</strong> At lower pay, ESI and statutory bonus apply, so employer costs add about " + format(EX2_ON, ".1f") + "% before the fee. The flat $199 fee is a bigger share of a small salary, so we quote every role separately.") +
+    BAR("Example 2: support associate, ₹2.4 lakh", [("Salary", 240000, "#0F2E1A"), ("Employer contributions", EX2_TOT - 240000 - FEE_Y, "#7DB23A"), ("EOR fee", FEE_Y, "#F26B1D")], "Total a year") +
+    EX2_T + CALL("<strong>Example 2 in one line.</strong> At lower pay, ESI and statutory bonus apply, so employer costs add about " + format(EX2_ON, ".1f") + "% before the fee. The $199 starting fee is a bigger share of a small salary, so we quote every role separately.") +
     "<h3>Employer contributions in India</h3>" + T(
     ["Contribution", "Employer pays", "Employee pays", "Who it covers"], [
         ["Provident Fund (EPF and EPS)", "12% of basic pay (8.33% to pension, 3.67% to EPF)", "12% of basic pay", "Required on pay up to ₹25,000 a month from September 17, 2026" + src("epf","BDO","https://www.bdo.in/en-gb/insights/alerts-updates/alert-new-epf-ceiling-hiked")],
@@ -305,7 +332,7 @@ S.append(("codes", "India's labor codes", "<h2>India's new labor codes: what cha
         ["Gig and platform workers", "Platforms pay into a welfare fund. Relevant if you hire through platforms."],
         ["Women at night", "Women may work night shifts with consent and safety measures."],
     ], "Key changes under India's labor codes") + CALL(
-    "<strong>What Paybooks did.</strong> We moved every client's pay structure to the new wage definition before the first payroll under the codes, and reissued appointment letters where needed. Employees did not have to do anything.")))
+    "<strong>What this means with an EOR.</strong> Paybooks sets pay structures to the new wage definition and issues the appointment letters, so you do not have to track the changes yourself.")))
 
 S.append(("compliance", "Compliance checklist", "<h2>Employer compliance checklist for India</h2>" + P(
     "An employer in India holds several registrations and files returns every month, quarter and year. With an EOR, Paybooks holds and files all of them. Our " + IL("EOR India compliance checklist", "eor-india-compliance-checklist") + " goes deeper.") + T(
@@ -324,8 +351,8 @@ S.append(("compliance", "Compliance checklist", "<h2>Employer compliance checkli
     ], "Employer compliance checklist for India") +
     "<h3>What happens if you get it wrong</h3>" + P(
     "Late Provident Fund payments carry 12% yearly interest plus damages that grow with the delay. Missed tax deposits bring interest and penalties, and can affect the employee's tax credit. Labor inspectors can fine employers under the codes, with higher fines for repeat offenses.",
-    "Paybooks backs every filing with a written no-penalty guarantee. If a penalty comes from our mistake, we pay it.") +
-    CTA("Read the no-penalty guarantee", "We share the wording with your quote, along with a sample service agreement.", "Get the guarantee")))
+    "Paybooks promises \u201cno penalties ever\u201d on the filings it handles.") +
+    CTA("See how Paybooks handles compliance", "Every registration, payment and filing in one monthly service.", "Get a quote for a role")))
 
 S.append(("payroll", "Payroll calendar", "<h2>How payroll works in India</h2>" + P(
     "Payroll in India is monthly. See our " + IL("India payroll compliance calendar 2026", "india-payroll-compliance-calendar-2026") + " for every date. Paybooks collects changes such as new joiners, leave and bonuses, calculates pay and deductions, pays staff by the 7th of the next month and makes every government payment on time. Employees get an online payslip and submit tax declarations in the Paybooks app.") + T(
@@ -337,7 +364,7 @@ S.append(("payroll", "Payroll calendar", "<h2>How payroll works in India</h2>" +
         ["June 15", "Form 130 (formerly Form 16) issued to every employee"],
         ["January 15 in Karnataka", "Labor Welfare Fund; other states use their own dates"],
     ], "India payroll calendar") + P(
-    "You get one invoice a month in USD, GBP or EUR, covering salary, employer contributions and the fee, line by line.")))
+    "You get one monthly invoice covering salary, employer contributions and the fee, line by line.")))
 
 S.append(("leave", "Leave and holidays", "<h2>Leave, holidays and working hours in India</h2>" + P(
     "Leave is set by the OSH Code and each state's Shops and Establishments Act. Paybooks applies the rules of the state where the employee works. Your own policy can be more generous.") + T(
@@ -426,7 +453,7 @@ S.append(("pricing", "Paybooks pricing", "<h2>Paybooks EOR India pricing</h2>" +
         ["Monthly payroll, payslips, tax withholding and filings", "Yes", "None"],
         ["PF, ESI, professional tax and welfare fund registration and filing", "Yes", "Contributions passed through at cost"],
         ["Employment contract and appointment letter", "Yes", "None"],
-        ["Written no-penalty guarantee", "Yes", "None"],
+        ["\"No penalties ever\" promise", "Yes", "None"],
         ["Onboarding a new hire", "No", "One-time fee from $50 per hire"],
         ["Offboarding and final settlement", "No", "One-time fee from $50 per exit, plus statutory dues"],
         ["Security deposit", "No", "Refundable; equal to each employee's notice-period pay"],
@@ -441,11 +468,11 @@ S.append(("transfer", "Moving to your own entity", "<h2>Moving from an EOR to yo
 FAQ = [
     ("What is an employer of record in India?", "An employer of record (EOR) in India is a local company that legally employs staff on behalf of another business. It handles the contract, payroll, tax withholding, Provident Fund, ESI and all filings, while the client manages the employee's daily work."),
     ("Is it legal to use an EOR in India?", "Yes. Paybooks is an Indian company that employs your staff under Indian law and provides their services to you. Employees get a full Indian employment contract with all statutory benefits."),
-    ("How much does an employer of record cost in India?", "Paybooks charges from $199 per employee a month, plus one-time onboarding and offboarding fees from $50. On top of salary, employer contributions add about 9 to 10% for skilled staff, and more for staff earning ₹21,000 a month or less."),
+    ("How much does an employer of record cost in India?", "Paybooks charges from $199 per employee a month, plus one-time onboarding and offboarding fees from $50. On top of salary, employer contributions add about 8 to 9% for skilled staff, and more for staff earning ₹21,000 a month or less."),
     ("Can a foreign company hire employees in India without an entity?", "Yes, through an employer of record. The EOR is the legal employer, so you do not need to register a company, branch or liaison office in India."),
     ("What is the difference between an EOR and a PEO in India?", "India has no co-employment model. A PEO needs you to have your own Indian entity. An EOR employs staff for you when you do not."),
     ("Should I use an EOR or set up a company in India?", "Use an EOR for first hires and teams of up to about 20 to 25 people, or while you test the market. Consider your own company when the team is larger or you sell to Indian customers."),
-    ("Are there hidden fees with an EOR in India?", "Ask about deposits, exchange-rate margins, insurance, background checks and exit fees. Paybooks publishes its onboarding and offboarding fees and deposit rule, and the no-penalty guarantee is included in the fee."),
+    ("Are there hidden fees with an EOR in India?", "Ask about deposits, exchange-rate margins, insurance, background checks and exit fees. Paybooks publishes its onboarding and offboarding fees and deposit rule, and its \u201cno penalties ever\u201d promise is part of the service."),
     ("How long does it take to hire through an EOR in India?", "With Paybooks, within days of an accepted offer, depending on the candidate's notice period and background checks. Setting up your own entity takes weeks to months."),
     ("Can I move employees from the EOR to my own Indian entity later?", "Yes. Paybooks transfers employees with their service history intact, so gratuity and leave carry over. Provident Fund moves through the employee's Universal Account Number."),
     ("How did India's 2025 labor codes change employment costs?", "Basic pay must now be at least 50% of total pay, which raises Provident Fund and gratuity for some pay structures. Fixed-term staff now earn gratuity after one year."),
@@ -455,15 +482,16 @@ FAQ = [
 S.append(("faq", "FAQ", '<h2>Employer of record India: frequently asked questions</h2><div class="g-faq">' + "".join(
     "<details><summary>" + q + "</summary><div><p>" + a + "</p></div></details>" for q, a in FAQ) + "</div>"))
 
-AUTHOR = ('<div class="g-author"><div class="g-av">PB</div><div><b>Written by the Paybooks Payroll and Compliance team</b>'
-          '<p>Paybooks has run payroll and compliance for Indian employers since 2012. Updated ' + UPDATED + '. This guide is general information, not legal or tax advice.</p></div></div>')
+_w = WRITER[0] if WRITER else TEAM
+AUTHOR = ('<div class="g-author"><div class="g-av">PB</div><div><b>Written by ' + _w + '</b>'
+          '<p>Paybooks has run payroll and compliance for Indian employers since 2012. Published ' + PUBLISHED + ', last updated ' + UPDATED + '. This guide is general information, not legal or tax advice.</p></div></div>')
 RELATED = ('<h2 style="font-size:24px">Keep reading</h2><div class="g-rel">'
            '<a href="../../">Employer of Record India<small>Hire in India within days</small></a>'
            '<a href="#cost">EOR cost in India<small>Worked examples in INR and USD</small></a>'
            '<a href="#peo">EOR vs PEO in India<small>Which one you need</small></a></div>')
 
 QUOTE = ('<section id="quote"><div class="g-final"><span class="g-tag">Ready to hire in India?</span><h2>Get your EOR India quote</h2>'
-         '<p>Tell us the role, city and pay. Within two working days you get the full monthly cost in dollars, the contract terms, a start date and a sample offer letter.</p>'
+         '<p>Tell us the role, city and pay. You get the full monthly cost in dollars, the contract terms and a start date.</p>'
          '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></section>')
 
 # ---------------- page ----------------
@@ -482,7 +510,7 @@ H1 = "Employer of Record India: the 2026 guide to EOR costs, laws and hiring"
 
 schema = [
     {"@context": "https://schema.org", "@type": "Article", "headline": H1,
-     "description": DESC, "dateModified": "2026-09-24", "author": {"@type": "Organization", "name": "Paybooks Payroll and Compliance team"},
+     "description": DESC, "dateModified": "2026-09-24", "author": ({"@type": "Person", "name": WRITER[0], "jobTitle": WRITER[1]} if WRITER else {"@type": "Organization", "name": TEAM}), "datePublished": "2026-09-24",
      "publisher": {"@type": "Organization", "name": "Paybooks, a TransPerfect company", "url": "https://www.paybooks.in/"},
      "about": {"@type": "Thing", "name": "Employer of record in India"}, "mainEntityOfPage": CANON},
     {"@context": "https://schema.org", "@type": "Service", "name": "Employer of Record India", "serviceType": "Employer of record",
@@ -516,14 +544,16 @@ SNAP = ('<aside class="g-snap" aria-label="Cost example"><div class="g-snap-h"><
         '<div class="g-snap-row"><span>Employer contributions</span><b>' + usd(EX1_TOT - 2400000 - FEE_Y) + '</b></div>'
         '<div class="g-snap-row"><span>Paybooks EOR fee</span><b>$2,388</b></div>'
         '<div class="g-snap-tot"><span>Total a year</span><b>' + usd(EX1_TOT) + '</b></div>'
+        '<div class="g-snap-bar"><span style="width:' + format(2400000 / EX1_TOT * 100, '.1f') + '%"></span><span style="width:' + format((EX1_TOT - 2400000 - FEE_Y) / EX1_TOT * 100, '.1f') + '%"></span><span style="width:' + format(FEE_Y / EX1_TOT * 100, '.1f') + '%"></span></div>'
         '<p>At ₹' + str(int(FX)) + ' to $1. Full breakdown in the cost section.</p></aside>')
 HERO = ('<div class="g-progress" id="gprog"></div><section class="g-hero"><div class="g-hero-in"><div>'
         '<nav class="g-crumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../../">Employer of Record</a><span>/</span>India</nav>'
         '<span class="g-pill">Employer of Record · India guide</span>'
-        '<h1>' + H1 + '</h1>'
-        '<p class="g-sub">How a company outside India can hire here legally: the cost in rupees and dollars, the new labor codes, tax, leave and exit rules, and what an employer of record handles for you.</p>'
-        '<div class="g-byline"><span class="g-av">PB</span><div><b>Paybooks Payroll and Compliance</b><span>Updated ' + UPDATED + ' · ' + str(round(words_est / 230)) + ' min read</span></div></div>'
+        '<h1>Employer of Record India: the 2026 guide to <em>EOR costs, laws and hiring</em></h1>'
+        '<p class="g-sub">How a company outside India can hire here legally: the cost in rupees and dollars, the new labor codes, tax, leave and exit rules, and what an employer of record handles for you.</p>' +
+        BYLINE(round(words_est / 230)) +
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#cost">See EOR costs in India</a></div>'
+        '<div class="g-hstats"><div><b>$199</b><span>starting EOR fee per employee a month</span></div><div><b>8–9%</b><span>employer contributions on salary</span></div><div><b>Days</b><span>to hire, no entity needed</span></div></div>'
         '<p class="g-note">Sample content prepared from a few hours of product knowledge. May contain errors.</p>'
         '</div>' + SNAP + '</div></section>')
 
