@@ -9,8 +9,14 @@
 .hero h1 em{font-style:normal;color:var(--lime)}.hero p.sub{font-size:19px;color:#C9D9C2;max-width:760px;margin:0}
 .kp{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);border-radius:18px;overflow:hidden;margin-top:40px}
 .kp div{background:#0F2A1B;padding:20px 22px}.kp b{display:block;font:600 34px/1.1 "Instrument Sans";color:var(--lime)}.kp span{font-size:13.5px;color:#BFD3B9}
-.toc{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}.toc .wrap{display:flex;gap:4px;overflow:auto}
-.toc a{padding:14px 12px;color:var(--ink2);text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap}.toc a:hover{color:var(--g600)}
+.toc{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:30;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.toc a{position:relative;display:flex;align-items:center;justify-content:flex-end;width:40px;height:20px;text-decoration:none}
+.toc a::after{content:"";display:block;width:16px;height:3px;border-radius:2px;background:#C9CED6;transition:width .2s,background .2s}
+.toc a:hover::after{width:24px;background:#8A94A0}
+.toc a.on::after{width:28px;background:#8A94A0}
+.toc a span{position:absolute;right:48px;top:50%;transform:translate(6px,-50%);opacity:0;pointer-events:none;white-space:nowrap;background:#fff;color:var(--ink);font:500 15px Inter,sans-serif;padding:8px 14px;border-radius:10px;box-shadow:0 8px 24px -8px rgba(20,26,31,.22),0 1px 2px rgba(20,26,31,.06);transition:opacity .15s,transform .15s}
+.toc a:hover span,.toc a:focus-visible span{opacity:1;transform:translate(0,-50%)}
+@media(max-width:900px){.toc{display:none}}
 section{padding:72px 0 16px}.num{font:600 13px "Instrument Sans";color:var(--green);letter-spacing:.08em}
 h2{font:600 clamp(30px,3.2vw,44px)/1.1 "Instrument Sans",sans-serif;letter-spacing:-.03em;margin:8px 0 12px;max-width:820px}
 .lead{font-size:17.5px;line-height:1.65;color:#5B6470;max-width:780px;margin:0 0 28px}
@@ -54,7 +60,7 @@ footer{background:var(--forest);color:#BFD3B9;padding:32px 0;font-size:13.5px;ma
 <p class="sub">The top results are not held by the biggest brands. They are held by the deepest pages. 50 well-built pages, in two waves, put Paybooks at the top of the searches that bring foreign companies hiring in India.</p>
 <div class="kp"><div><b>37,970</b><span>monthly searches the plan targets, USA and India</span></div><div><b>50</b><span>pages: 12 refreshed from what Paybooks has, 38 new</span></div>
 <div><b>DR 29</b><span>the lowest-authority site on page one today. Paybooks is DR 41</span></div><div><b>1,043</b><span>competitor India pages studied across 12 sites</span></div></div></div></header>
-<nav class="toc"><div class="wrap"><a href="#answer">Findings</a><a href="#prize">Topic potential</a><a href="#lesson">What works</a><a href="#today">Paybooks today</a><a href="#topics">Competitor topics</a><a href="#page">The winning page</a><a href="#plan">The plan</a><a href="#build">Refresh or create</a><a href="#pseo">Programmatic SEO</a><a href="#appendix">Evidence</a></div></nav>
+<nav class="toc" aria-label="Sections"><a href="#answer" aria-label="Findings"><span>Findings</span></a><a href="#prize" aria-label="Topic potential"><span>Topic potential</span></a><a href="#lesson" aria-label="What works"><span>What works</span></a><a href="#today" aria-label="Paybooks today"><span>Paybooks today</span></a><a href="#topics" aria-label="Competitor topics"><span>Competitor topics</span></a><a href="#page" aria-label="The winning page"><span>The winning page</span></a><a href="#plan" aria-label="The plan"><span>The plan</span></a><a href="#build" aria-label="Refresh or create"><span>Refresh or create</span></a><a href="#pseo" aria-label="Programmatic SEO"><span>Programmatic SEO</span></a><a href="#appendix" aria-label="Evidence"><span>Evidence</span></a></nav>
 <main class="wrap">
 <section id="answer"><span class="num">FINDINGS</span><h2>Three findings decide the strategy.</h2>
 <div class="take"><div><b>Authority is not what decides this category.</b><p>On "employer of record india", page one runs from DR 81 (Deel) down to DR 29 (Infotree). For "PEO India", sites at DR 12 to 37 hold #3 to #10. Paybooks at DR 41 is already strong enough to rank.</p></div>
@@ -139,4 +145,4 @@ footer{background:var(--forest);color:#BFD3B9;padding:32px 0;font-size:13.5px;ma
 <tr><td><b>Competitor keywords</b></td><td>Ahrefs organic keywords containing "india" for Deel, Papaya, Skuad and Rippling; 67 relevant keywords added to the original pull.</td></tr>
 <tr><td><b>Keyword pull</b></td><td>Ahrefs Keywords Explorer, 161 Employer of Record keywords, 23 September 2026; 146 targeted after clustering.</td></tr>
 </tbody></table></div></div></details></section>
-</main><footer><div class="wrap">Prepared by Mohan Kumar Allada for the TransPerfect Paybooks SEO proposal · 24 September 2026 · Data: Ahrefs, competitor sitemaps, live page measurement</div></footer></body></html>
+</main><footer><div class="wrap">Prepared by Mohan Kumar Allada for the TransPerfect Paybooks SEO proposal · 24 September 2026 · Data: Ahrefs, competitor sitemaps, live page measurement</div></footer><script>(function(){var L=[].slice.call(document.querySelectorAll('.toc a'));var S=L.map(function(a){return document.querySelector(a.getAttribute('href'))});function f(){var y=window.scrollY+window.innerHeight*0.35,k=0;S.forEach(function(e,i){if(e&&e.offsetTop<=y)k=i});L.forEach(function(a,i){a.classList.toggle('on',i===k)})}window.addEventListener('scroll',f,{passive:true});f()})();</script></body></html>
