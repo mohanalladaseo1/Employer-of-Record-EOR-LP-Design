@@ -13,9 +13,9 @@ LINKS = {
         ("https://paybooks.in/eor/", [[878, 580, 183, 28]]),
         ("https://paybooks.in/eor-2/", [[1117, 580, 206, 28]]),
         ("https://paybooks.in/article/what-does-an-eor-in-india-actually-cost/", [[887, 828, 385, 28]])],
-    7: [(S + "strategy/", [[169, 697, 241, 27]]), (S, [[733, 649, 197, 27]]), (S + "employer-of-record/india/", [[1297, 686, 205, 27]])],
+    7: [(S + "strategy/", [[169, 697, 241, 27]]), (S, [[733, 649, 197, 27]]), (S + "employer-of-record/india/", [[1297, 649, 205, 27]])],
     10: [("https://www.linkedin.com/in/mohankumarallada/", [[252, 988, 400, 27]])],
-    12: [("https://www.linkedin.com/in/mohankumarallada/", [[392, 988, 99, 27]])],
+    12: [("https://www.linkedin.com/in/mohankumarallada/", [[455, 988, 99, 27]])],
     14: [("https://www.linkedin.com/in/mohankumarallada/", [[1325, 920, 467, 31]])],
 }
 
