@@ -25,7 +25,6 @@ def BYLINE(read_min):
     if REVIEWER: parts.append(person("Reviewed by", REVIEWER))
     parts.append('<span class="g-by">Published: <b>Sep 24, 2026</b></span>')
     parts.append('<span class="g-by">Last updated: <b>Sep 24, 2026</b></span>')
-    parts.append('<span class="g-by"><b>' + str(read_min) + ' min</b> read</span>')
     return '<div class="g-bybar">' + '<i class="g-dot"></i>'.join(parts) + '</div>'
 
 
