@@ -519,7 +519,7 @@ HERO = ('<section class="g-hero"><div class="wrap"><nav class="g-crumbs" aria-la
 
 MTOC = '<details class="g-mtoc"><summary>On this page</summary><ol>' + toc + "</ol></details>"
 TOC = ('<aside class="g-toc" aria-label="Contents"><h2>On this page</h2><ol>' + toc + '</ol>'
-       '<div class="g-toc-cta"><p>Full monthly cost for your role, in dollars, in 2 working days.</p><a class="btn" href="#quote">Get a quote</a></div></aside>')
+       '<div class="g-toc-cta"><b>What will your India hire cost?</b><p>Salary, PF, ESI, gratuity and fees in dollars, for any role and city.</p><a class="btn" href="../../#cost">Open the cost calculator</a></div></aside>')
 
 FOOTER = ('<footer class="ftr"><div class="wrap" style="grid-template-columns:1fr"><div><h4>Paybooks, a TransPerfect company</h4>'
           '<p>Employer of Record, Multi-Country Payroll, Managed India Office, and Global HCM for companies building teams in India and beyond.</p></div></div></footer>')

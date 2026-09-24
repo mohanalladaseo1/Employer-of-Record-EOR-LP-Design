@@ -96,3 +96,7 @@
 .g-body{order:1}
 .g-toc ol{max-height:312px;overflow-y:auto;scrollbar-width:thin;scroll-behavior:smooth}
 }
+/* v2: TOC side box = cost calculator, dark green */
+.g-toc .g-toc-cta{background:var(--forest);border-color:var(--forest)}
+.g-toc .g-toc-cta b{display:block;font-family:var(--head);font-size:17px;color:#fff;margin-bottom:6px;letter-spacing:-.01em}
+.g-toc .g-toc-cta p{color:#C9D8CC}
