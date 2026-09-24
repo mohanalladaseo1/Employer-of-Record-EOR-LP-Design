@@ -246,7 +246,7 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <tr><td><b>Competitor keywords</b></td><td>Ahrefs organic keywords (US, containing "india") for Deel, Papaya, Skuad and Rippling: {gap_n} relevant keywords missing from the original pull.</td></tr>
 <tr><td><b>Original keyword pull</b></td><td>Ahrefs Keywords Explorer, 161 Employer of Record keywords.</td></tr>
 </tbody></table></div></section>
-</main><footer class="wrap">Prepared by Mohan Kumar Allada for the TransPerfect Paybooks SEO proposal · 24 September 2026</footer></body></html>'''
+</main><footer class="wrap">Prepared by Mohan Kumar Allada for the TransPerfect Paybooks SEO proposal · 24 September 2026</footer><script src="../assets/protect.js" defer></script></body></html>'''
 os.makedirs(f"{H}/out", exist_ok=True)
 open(f"{H}/out/index.html", "w", encoding="utf-8").write(PAGE)
 with open(f"{H}/out/eor-keyword-clusters.csv", "w", newline="", encoding="utf-8") as f:

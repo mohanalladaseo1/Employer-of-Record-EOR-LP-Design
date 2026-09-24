@@ -113,7 +113,7 @@ def page_html(p):
     cls="art" if p.get("type") in ("article","hub","contact") else ""
     return (f'<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(p["title"])}</title><meta name="description" content="{esc(p["description"])}"><link rel="canonical" href="{url}"><meta name="robots" content="noindex,nofollow">'
             f'<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Zilla+Slab:wght@300;400&display=swap" rel="stylesheet"><link rel="stylesheet" href="{r}assets/pb.css">{schema(p,url)}</head>'
-            f'<body class="{cls}">{header(d)}<main>{body}</main>{footer(d)}</body></html>')
+            f'<body class="{cls}">{header(d)}<main>{body}</main>{footer(d)}<script src="{r}assets/protect.js" defer></script></body></html>')
 def build():
     for p in C.PAGES:
         dd=OUT/p["slug"] if p["slug"] else OUT; dd.mkdir(parents=True,exist_ok=True); (dd/"index.html").write_text(page_html(p))

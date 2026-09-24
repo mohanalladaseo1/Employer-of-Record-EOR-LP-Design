@@ -434,7 +434,7 @@ footer{{padding:36px 0 50px;color:var(--muted);font-size:13px}}
 <section id="download"><h2>Download</h2><p class="lead">Every keyword with its bucket, topic, page type, target page, market, volume, KD and CPC, including excluded keywords and the reason.</p>
 <a class="dl" href="keyword-topic-map.csv" download>Download keyword-topic-map.csv</a></section>
 </main><footer class="wrap">Prepared by Mohan Kumar Allada for the TransPerfect Paybooks SEO proposal · Ahrefs data pulled 23 September 2026 · SERP research files in the proposal's research folder.</footer>
-</body></html>'''
+<script src="../assets/protect.js" defer></script></body></html>'''
 open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(HTML)
 print("raw", RAW, "exact", dups_exact, "cross", dups_cross, "kept", kept_all, "excluded", excl_all, "vol", vol_all, dict(pages))
 for c in ORDER:
