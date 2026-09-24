@@ -498,7 +498,7 @@ QUOTE = ('<section id="quote"><div class="g-final"><span class="g-tag">Ready to 
 # ---------------- page ----------------
 toc = "".join('<li><a href="#' + i + '">' + lbl + "</a></li>" for i, lbl, _ in S)
 SOURCES = '<section id="sources" class="g-sources"><h2>Sources</h2><ol>' + ''.join('<li>' + l + ': <a href="' + H.escape(u) + '" rel="nofollow noopener" target="_blank">' + H.escape(u) + '</a></li>' for l, u in dict.fromkeys(SRC.values())) + '</ol></section>'
-body = LEAD + KT + "".join('<section id="' + i + '"><span class="g-num">' + format(k + 1, '02d') + '</span>' + h + "</section>" for k, (i, _l, h) in enumerate(S)) + SOURCES + QUOTE + AUTHOR + RELATED
+body = LEAD + KT + "".join('<section id="' + i + '"><span class="g-num">' + format(k + 1, '02d') + '</span>' + h + "</section>" for k, (i, _l, h) in enumerate(S)) + QUOTE + RELATED
 
 def text_of(h):
     h = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", h, flags=re.S)
