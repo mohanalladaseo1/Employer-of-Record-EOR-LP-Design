@@ -78,3 +78,21 @@
  .hdr .btn.ghost{display:none}
 }
 .g-toc .g-toc-cta a.btn{display:flex;align-items:center;justify-content:center;margin-left:0;border:1px solid var(--orange);color:#fff}
+
+/* v2: dark green in-page CTAs */
+.g-cta{background:var(--forest);border-color:var(--forest)}
+.g-cta b{color:#fff}
+.g-cta p{color:#C9D8CC}
+.g-src{font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.g-src:hover{color:var(--green-600);text-decoration:underline}
+.g-sources ol{font-size:14px;color:var(--muted);padding-left:20px}
+.g-sources li{margin:4px 0}
+.g-sources a{word-break:break-word}
+
+/* v2: TOC on the right, scrolling list of about 6 items */
+@media (min-width:981px){
+.g-layout{grid-template-columns:minmax(0,760px) 250px}
+.g-toc{order:2;max-height:none;overflow:visible}
+.g-body{order:1}
+.g-toc ol{max-height:188px;overflow-y:auto;scrollbar-width:thin;scroll-behavior:smooth}
+}
