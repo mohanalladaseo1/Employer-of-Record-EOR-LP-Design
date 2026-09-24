@@ -138,7 +138,7 @@ TI, TX, CESS = tax(2400000)
 S = []  # (id, toc label, html)
 
 LEAD = ('<div class="g-takeaways"><span class="g-tag">TL;DR</span>'
-        '<p class="g-ans">An <strong>employer of record in India</strong> is an Indian company that legally employs your staff for you. '
+        '<p class="g-ans">An <strong>employer of record (EOR) in India</strong> is an Indian company that legally employs your staff for you. '
         'It issues the contract, pays salary in rupees, withholds income tax, pays Provident Fund and ESI, and files every return. '
         'You choose the person and manage their work. <strong>Budget salary, plus about 8 to 9% in employer contributions for skilled staff, plus the EOR fee</strong> (Paybooks: from $199 per employee a month).</p><ul>'
         '<li><strong>No Indian company needed.</strong> Hire within days, and move staff to your own entity later with their service history intact.</li>'
