@@ -94,5 +94,5 @@
 .g-layout{grid-template-columns:minmax(0,760px) 250px}
 .g-toc{order:2;max-height:none;overflow:visible}
 .g-body{order:1}
-.g-toc ol{max-height:188px;overflow-y:auto;scrollbar-width:thin;scroll-behavior:smooth}
+.g-toc ol{max-height:312px;overflow-y:auto;scrollbar-width:thin;scroll-behavior:smooth}
 }
