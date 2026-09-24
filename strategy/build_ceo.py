@@ -202,7 +202,7 @@ PAGE = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>{CSS}.lnk{{text-decoration:underline;text-decoration-color:#9AA3AF;cursor:pointer}}a:hover .lnk{{fill:#F26B1D}}
 </style></head><body>
 <header class="hero"><div class="wrap"><span class="eyebrow">Employer of Record · Search strategy · Paybooks</span>
-<h1>Paybooks can own India's <em>Employer of Record</em> search.</h1>
+<h1>Category 1: <em>Employer of Record (EOR)</em></h1>
 <p class="sub">The top results are not held by the biggest brands. They are held by the deepest pages. {total_pages} well-built pages, in two waves, put Paybooks at the top of the searches that bring foreign companies hiring in India.</p>
 <div class="kp"><div><b>{fmt(tgt_vol)}</b><span>monthly searches the plan targets, USA and India</span></div><div><b>{total_pages}</b><span>pages: {nref} refreshed from what Paybooks has, {nnew} new</span></div>
 <div><b>DR 29</b><span>the lowest-authority site on page one today. Paybooks is DR 41</span></div><div><b>1,043</b><span>competitor India pages studied across 12 sites</span></div></div></div></header>
