@@ -491,14 +491,14 @@ RELATED = ('<h2 style="font-size:24px">Keep reading</h2><div class="g-rel">'
            '<a href="#cost">EOR cost in India<small>Worked examples in INR and USD</small></a>'
            '<a href="#peo">EOR vs PEO in India<small>Which one you need</small></a></div>')
 
-QUOTE = ('<section id="quote"><div class="g-final"><span class="g-tag">Ready to hire in India?</span><h2>Get your EOR India quote</h2>'
+QUOTE_OLD = ('<section id="quoteold"><div class="g-final"><span class="g-tag">Ready to hire in India?</span><h2>Get your EOR India quote</h2>'
          '<p>Tell us the role, city and pay. You get the full monthly cost in dollars, the contract terms and a start date.</p>'
          '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></section>')
 
 # ---------------- page ----------------
 toc = "".join('<li><a href="#' + i + '">' + lbl + "</a></li>" for i, lbl, _ in S)
 SOURCES = '<section id="sources" class="g-sources"><h2>Sources</h2><ol>' + ''.join('<li>' + l + ': <a href="' + H.escape(u) + '" rel="nofollow noopener" target="_blank">' + H.escape(u) + '</a></li>' for l, u in dict.fromkeys(SRC.values())) + '</ol></section>'
-body = LEAD + KT + "".join('<section id="' + i + '"><span class="g-num">' + format(k + 1, '02d') + '</span>' + h + "</section>" for k, (i, _l, h) in enumerate(S)) + QUOTE + RELATED
+body = LEAD + KT + "".join('<section id="' + i + '"><span class="g-num">' + format(k + 1, '02d') + '</span>' + h + "</section>" for k, (i, _l, h) in enumerate(S)) + RELATED
 
 def text_of(h):
     h = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", h, flags=re.S)
@@ -595,6 +595,7 @@ SPY = ('<script>(function(){var pb=document.getElementById("gprog");function pr(
        'var a=m[e.target.id];if(a){a.classList.add("on");var ol=a.closest("ol");if(ol){var t=a.offsetTop-ol.offsetTop;if(t<ol.scrollTop||t>ol.scrollTop+ol.clientHeight-a.offsetHeight)ol.scrollTop=t-ol.clientHeight/2+a.offsetHeight/2}}}})},{rootMargin:"-10% 0px -80% 0px"});'
        'document.querySelectorAll(".g-body section[id]").forEach(function(s){o.observe(s)})})();</script>')
 
-page = HEAD + HEADER + HERO + '<div class="g-layout">' + TOC + '<main class="g-body">' + MTOC + body + "</main></div>" + FOOTER + SPY + "</body></html>"
+CTA2 = '<section id="quote" class="cta2"><div class="wrap"><div class="cta2-card"><div class="cta2-copy"><span class="cta2-tag">Get started</span><h2>Your first India hire, <em>live within days.</em></h2><p>Tell us the role, city, and pay. You get the full monthly cost in dollars, the contract terms and a start date. No commitment.</p><div class="btns"><a class="btn" href="../../#faq">Get a quote for a role</a><a class="btn ghost" href="../../#faq">Talk to an EOR expert</a></div><ul class="cta2-ticks"><li>No entity setup cost</li><li>“No penalties ever” promise</li><li>From $199 per employee a month</li></ul></div><div class="cta2-quote" aria-hidden="true"><div class="q-head"><span>Your quote</span><em>Ready within days</em></div><div class="q-role"><b>Senior Software Engineer</b><small>Bengaluru · $26,000 a year</small></div><ul class="q-rows"><li><span>Monthly cost, all-in</span><b>$2,550</b></li><li><span>Government costs</span><b>$184</b></li><li><span>Paybooks fee</span><b>$199</b></li><li><span>Start date</span><b>Oct 13, 2026</b></li></ul><div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>'
+page = HEAD + HEADER + HERO + '<div class="g-layout">' + TOC + '<main class="g-body">' + MTOC + body + "</main></div>" + CTA2 + FOOTER + SPY + "</body></html>"
 open(OUT, "w").write(page)
 print("words", words_est, "tables", page.count("<table"), "sources", len(SRC), "internal links", page.count('href="https://paybooks.in/article/'))
