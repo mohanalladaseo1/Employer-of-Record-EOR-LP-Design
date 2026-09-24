@@ -10,8 +10,8 @@ CANON = "https://www.paybooks.in/employer-of-record/india/"
 UPDATED = "September 24, 2026"
 PUBLISHED = "September 24, 2026"
 # Bylines. Add real people here (name, job title, LinkedIn URL); leave None to credit the team.
-WRITER = ("Nawal Gazala", "", None)      # (name, job title, LinkedIn URL) e.g. ("Full name", "Payroll Compliance Lead", "https://www.linkedin.com/in/...")
-REVIEWER = ("Shubhangi Chauhan", "", None)    # e.g. ("Full name", "Head of Compliance", "https://www.linkedin.com/in/...")
+WRITER = ("Nawal Gazala", "", "https://www.linkedin.com/search/results/people/?keywords=Nawal%20Gazala%20Paybooks")      # (name, job title, LinkedIn URL) e.g. ("Full name", "Payroll Compliance Lead", "https://www.linkedin.com/in/...")
+REVIEWER = ("Shubhangi Chauhan", "", "https://www.linkedin.com/search/results/people/?keywords=Shubhangi%20Chauhan%20Paybooks")    # e.g. ("Full name", "Head of Compliance", "https://www.linkedin.com/in/...")
 TEAM = "Paybooks Payroll and Compliance team"
 LI = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.5h2.6V18H7.1zM8.4 5.6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.3 9.5h2.5v1.2c.4-.7 1.3-1.4 2.7-1.4 2.8 0 3.3 1.8 3.3 4.2V18h-2.6v-4c0-1 0-2.2-1.4-2.2s-1.6 1.1-1.6 2.1V18h-2.6z"/></svg>'
 def person(role, who):
