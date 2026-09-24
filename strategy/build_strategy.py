@@ -58,7 +58,7 @@ def cluster(k):
 for k in KW.values(): k["c"] = cluster(k["kw"])
 
 CL = [
- ("C1", "EOR India: the commercial core", "One page", "/employer-of-record-india/",
+ ("C1", "EOR India: the commercial core", "One page", "/employer-of-record/india/",
   "\"employer of record india\", \"eor india\" and the India-market query share 6 of 10 page-one URLs. Google treats them as one intent. The cost query's top results are the same India EOR pages, so cost is a section here, not a separate page.",
   "Papaya's guide (DR 72) earns the most traffic, about 240 visits a month from 960 searches. Skuad's 8,658-word country page is the deepest. Deel, Multiplier, Rippling and Safeguard follow. Infotree ranks #5 to #8 at DR 29.",
   "Match Skuad's depth, beat everyone on proof: 5,000+ words, 20+ question headings, 10+ HTML tables, the $199 price with every statutory line in USD, a live calculator, and the no-penalty guarantee no competitor offers."),
@@ -145,7 +145,7 @@ pb_html = "".join(f'<div class="pb"><div class="pbh"><b>{E(n)}</b><span class="d
 
 # ---------- page plan ----------
 PLAN = [
- ("Wave 1", "1", "EOR India: the commercial page", "/employer-of-record-india/", "C1", "Sample design built; replaces paybooks.in/eor/ and /eor-2/, which redirect here"),
+ ("Wave 1", "1", "EOR India: the commercial page", "/employer-of-record/india/", "C1", "Sample design built; replaces paybooks.in/eor/ and /eor-2/, which redirect here"),
  ("Wave 1", "2", "India employee cost calculator", "/tools/india-employee-cost-calculator/", "C8", "Built into the sample design"),
  ("Wave 1", "3", "Hire employees in India: the guide", "/hire-employees-in-india/", "C2", "To build"),
  ("Wave 1", "4", "PEO in India vs EOR", "/peo-india/", "C3", "To build"),
