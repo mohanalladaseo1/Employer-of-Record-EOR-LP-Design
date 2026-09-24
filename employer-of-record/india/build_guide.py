@@ -551,7 +551,6 @@ HERO = ('<div class="g-progress" id="gprog"></div><section class="g-hero"><div c
         '<h1>Employer of Record India: <em>2026 Guide</em></h1>'
         '<p class="g-sub">Hire in India without an entity. What it costs, which laws apply, and what an EOR handles for you.</p>' +
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#cost">See EOR costs in India</a></div>'
-        '<div class="g-hstats"><div><b>$199</b><span>starting EOR fee per employee a month</span></div><div><b>8–9%</b><span>employer contributions on salary</span></div><div><b>Days</b><span>to hire, no entity needed</span></div></div>'
         '</div>' + SNAP + '</div></section>'
         '<div class="g-bystrip"><div class="g-bystrip-in">' + BYLINE(round(words_est / 230)) + '</div></div>')
 
