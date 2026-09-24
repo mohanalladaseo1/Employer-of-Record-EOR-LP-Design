@@ -6,7 +6,7 @@ export const config = { matcher: '/:path*' };
 const SALT = '2454a1b8e5f2e12c77d7199446f592c1';
 const ITER = 150000;
 const HASH = 'b757aff1a61bd0cadd61194ff167758c93ef72ace34dbb6b071257455bed980c';
-const TOKEN = '3977826b07fca6ea50997dbfb3955c54656bbe05a20c756d2814ae6eb7eecac7';
+const TOKEN = 'ce78dd56d749ca8df0b52f640ba0eeacddd922712f4a8b54babb8629338b6323';
 const COOKIE = 'pb_gate';
 const OPEN = [/^\/deck(\/|$)/, /^\/assets\/protect\.js$/, /^\/assets\/mark\.png$/];
 
