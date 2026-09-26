@@ -22,13 +22,13 @@ TOP = [
  ("overtime", "Working hours and overtime", "Added", "Working hours and overtime rules in India (new)"),
  ("minwage", "Minimum wage", "Added", "Minimum wage in India by state, in USD (new)"),
  ("leave", "Leave policy and public holidays", "Added", "Public holidays and leave in India 2026 (refresh of the 2025 holiday list)"),
- ("laws", "Labour and employment laws", "Added", "India labour laws for foreign employers (refresh of the Labour Codes article)"),
+ ("laws", "Labor and employment laws", "Added", "India labor laws for foreign employers (refresh of the Labour Codes article)"),
  ("salstruct", "Salary structure", "Added", "Salary structure under the Labour Codes (refresh)"),
  ("contracts", "Offer letters, contracts and NDAs", "Added", "Employment contracts, offer letters and NDAs in India (new)"),
  ("permits", "Work permits and visas", "Added", "Work permits and employment visas for foreign staff (new)"),
  ("payroll", "Payroll, payroll tax and compliance", "Linked", "Paybooks payroll pages already cover this; EOR pages link to the compliance calendar and the PF, ESI, PT and LWF guide"),
  ("entity", "Company registration and subsidiaries", "Linked", "Bridged by the EOR-to-own-entity guide; entity setup belongs to the Managed India Office offer"),
- ("offshore", "Offshore teams and development centres", "Linked", "Belongs to the Managed India Office and GCC offer; linked from the EOR page"),
+ ("offshore", "Offshore teams and development centers", "Linked", "Belongs to the Managed India Office and GCC offer; linked from the EOR page"),
 ]
 TOPN = {t[0]: t for t in TOP}
 RULES = [

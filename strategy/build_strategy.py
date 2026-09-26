@@ -79,7 +79,7 @@ CL = [
   "Rippling ranks #1 to #6 across developer terms. Skuad and Wisemonk publish role guides too.",
   "Five role pages built from one template: software developers, data and AI engineers, finance and accounting, customer support, sales. Each carries salary bands, the all-in EOR cost, and a hire-in-10-days path."),
  ("C6", "Employing in India: the guides foreign employers need", "16 guides", "/guides/",
-  "Supporting demand competitors monetize: benefits (about 270 searches), maternity leave (200), background checks (150), paying contractors (100), plus the Labour Codes and permanent establishment questions from buyer research. The competitor topic pass added working hours and overtime, minimum wage, holidays and leave, labour laws, salary structure, contracts and offer letters, and work permits.",
+  "Supporting demand competitors monetize: benefits (about 270 searches), maternity leave (200), background checks (150), paying contractors (100), plus the Labour Codes and permanent establishment questions from buyer research. The competitor topic pass added working hours and overtime, minimum wage, holidays and leave, labor laws, salary structure, contracts and offer letters, and work permits.",
   "Papaya and Rippling benefits guides, Rippling contractor and termination guides, Remote's 20-page India country explorer.",
   "Guides written for the foreign employer, each ending in the EOR page. Labour Codes and state-rule changes are the edge: nobody writes them for a foreign buyer."),
  ("C7", "What an EOR is", "Glossary entry + FAQ", "/glossary/employer-of-record/",

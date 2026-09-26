@@ -1,0 +1,89 @@
+{
+ "families": {
+  "deel.com": {
+   "Country hiring (employees)": 113,
+   "Country hiring (contractors)": 140,
+   "Glossary": 547,
+   "Comparison pages": 125
+  },
+  "remote.com": {
+   "Country hub": 181,
+   "Country x topic": 1157,
+   "Comparison pages": 32
+  },
+  "rippling.com": {
+   "Country hiring (employees)": 63,
+   "Country hiring (contractors)": 180,
+   "Glossary": 195,
+   "Comparison pages": 139
+  },
+  "g-p.com": {
+   "Country hub": 151,
+   "Country x topic": 948,
+   "Comparison pages": 20
+  },
+  "papayaglobal.com": {
+   "Country hub": 166,
+   "Glossary": 371,
+   "Comparison pages": 54
+  },
+  "skuad.io": {
+   "Country EOR page": 126,
+   "Country payroll page": 85,
+   "Country hiring page": 147,
+   "Country PEO page": 81,
+   "Country x topic": 143,
+   "Role pages": 338,
+   "Glossary": 85,
+   "Comparison pages": 82
+  },
+  "oysterhr.com": {
+   "Country hiring page": 55,
+   "Country cost page": 58,
+   "Glossary": 153,
+   "Comparison pages": 37
+  },
+  "velocityglobal.com": {
+   "Country EOR page": 149,
+   "Glossary": 351,
+   "Comparison pages": 36
+  },
+  "asanify.com": {
+   "Country EOR page": 128,
+   "Country x topic": 767,
+   "Glossary": 1342,
+   "Comparison pages": 62
+  },
+  "playroll.com": {
+   "Country EOR page": 164,
+   "Country payroll page": 164,
+   "Country cost page": 161,
+   "Country x topic": 816,
+   "Glossary": 225,
+   "Comparison pages": 31
+  },
+  "usemultiplier.com": {
+   "Country hub": 186,
+   "Glossary": 321,
+   "Comparison pages": 128
+  },
+  "wisemonk.io": {
+   "India role and city pages": 42,
+   "Glossary": 95,
+   "Comparison pages": 122
+  }
+ },
+ "country_coverage": {
+  "deel.com": 113,
+  "remote.com": 181,
+  "rippling.com": 63,
+  "g-p.com": 151,
+  "papayaglobal.com": 166,
+  "skuad.io": 152,
+  "oysterhr.com": 55,
+  "velocityglobal.com": 149,
+  "asanify.com": 128,
+  "playroll.com": 167,
+  "usemultiplier.com": 186
+ }
+}

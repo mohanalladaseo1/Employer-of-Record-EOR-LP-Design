@@ -7,7 +7,7 @@ TITLES = ["Dominate SERPs for 4 categories", "Where Paybooks stands", "The prize
           "Who you get", "In their words", "Quotation", "Next step"]
 S = "https://employer-of-record-eor-lp-design-livid.vercel.app/"
 LINKS = {
-    4: [(S + "strategy/", [[642, 988, 662, 27]])],
+    4: [(S + "strategy/", [[538, 988, 662, 27]])],
     5: [("https://paybooks.in/article/employer-of-record-in-india-fast-compliant-expansion-for-startups/", [[887, 456, 477, 28]]),
         ("https://paybooks.in/article/why-global-tech-startups-are-using-employer-of-record-india-in-2026/", [[1437, 456, 333, 28], [878, 491, 275, 28]]),
         ("https://paybooks.in/eor/", [[878, 580, 183, 28]]),

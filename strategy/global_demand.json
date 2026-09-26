@@ -1,0 +1,1345 @@
+{
+ "buckets": {
+  "core": [
+   {
+    "keyword": "employer of record",
+    "volume": 2800,
+    "kd": "17",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record services",
+    "volume": 1700,
+    "kd": "16",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services",
+    "volume": 1300,
+    "kd": "17",
+    "market": "us"
+   },
+   {
+    "keyword": "global employer of record",
+    "volume": 900,
+    "kd": "32",
+    "market": "us"
+   },
+   {
+    "keyword": "global eor services",
+    "volume": 700,
+    "kd": "31",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record service",
+    "volume": 500,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record payroll services",
+    "volume": 500,
+    "kd": "13",
+    "market": "us"
+   },
+   {
+    "keyword": "eor employer of record",
+    "volume": 350,
+    "kd": "21",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record company",
+    "volume": 300,
+    "kd": "14",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record eor services",
+    "volume": 250,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "leading hr software employer of record",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record guatemala",
+    "volume": 200,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record news today",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record in honduras",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "most reliable employer of record company for hr",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record pros and cons",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor global services",
+    "volume": 200,
+    "kd": "13",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services gcc",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services mena",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "ior eor services",
+    "volume": 150,
+    "kd": "25",
+    "market": "us"
+   },
+   {
+    "keyword": "eor switch services that handle the transition",
+    "volume": 100,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services krakow",
+    "volume": 90,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "fintech eor services",
+    "volume": 80,
+    "kd": "",
+    "market": "us"
+   }
+  ],
+  "best": [
+   {
+    "keyword": "employer of record companies",
+    "volume": 600,
+    "kd": "13",
+    "market": "us"
+   },
+   {
+    "keyword": "best employer of record",
+    "volume": 400,
+    "kd": "1",
+    "market": "us"
+   },
+   {
+    "keyword": "top employer of record companies",
+    "volume": 250,
+    "kd": "5",
+    "market": "us"
+   },
+   {
+    "keyword": "which hr software provides top employer of record",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "best eor services",
+    "volume": 200,
+    "kd": "3",
+    "market": "us"
+   },
+   {
+    "keyword": "best global eor services 2025",
+    "volume": 150,
+    "kd": "7",
+    "market": "us"
+   },
+   {
+    "keyword": "best eor provider for a digital services company",
+    "volume": 150,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "top eor services for contractor management",
+    "volume": 100,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "best eor services in hr software industry",
+    "volume": 100,
+    "kd": "",
+    "market": "us"
+   }
+  ],
+  "country": [
+   {
+    "keyword": "employer of record philippines",
+    "volume": 600,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record france",
+    "volume": 500,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record uk",
+    "volume": 500,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record australia",
+    "volume": 450,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record china",
+    "volume": 450,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record canada",
+    "volume": 400,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record singapore",
+    "volume": 400,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record germany",
+    "volume": 350,
+    "kd": "1",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record netherlands",
+    "volume": 350,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record vietnam",
+    "volume": 350,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record uae",
+    "volume": 350,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record services philippines",
+    "volume": 300,
+    "kd": "1",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record in switzerland",
+    "volume": 300,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record mexico",
+    "volume": 300,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record in poland",
+    "volume": 300,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services middle east",
+    "volume": 300,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "how do eor services work in the philippines",
+    "volume": 300,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record switzerland",
+    "volume": 250,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record in slovakia",
+    "volume": 250,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record brazil",
+    "volume": 250,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record turkey",
+    "volume": 250,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record thailand",
+    "volume": 250,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record czech republic",
+    "volume": 250,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record usa",
+    "volume": 250,
+    "kd": "1",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record in portugal",
+    "volume": 250,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record luxembourg",
+    "volume": 250,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record south korea",
+    "volume": 200,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record poland",
+    "volume": 200,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record in south korea",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record portugal",
+    "volume": 200,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "czech republic employer of record",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record in belgium",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "singapore employer of record",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record in denmark",
+    "volume": 200,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record in costa rica",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services poland",
+    "volume": 150,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services in germany",
+    "volume": 100,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services in singapore",
+    "volume": 100,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services germany",
+    "volume": 100,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services usa",
+    "volume": 90,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "best eor services in singapore",
+    "volume": 90,
+    "kd": "",
+    "market": "us"
+   }
+  ],
+  "what": [
+   {
+    "keyword": "what is an employer of record",
+    "volume": 600,
+    "kd": "24",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record meaning",
+    "volume": 500,
+    "kd": "31",
+    "market": "us"
+   },
+   {
+    "keyword": "what is employer of record",
+    "volume": 250,
+    "kd": "25",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services meaning",
+    "volume": 150,
+    "kd": "12",
+    "market": "us"
+   },
+   {
+    "keyword": "how do employer of record (eor) services work",
+    "volume": 90,
+    "kd": "",
+    "market": "us"
+   }
+  ],
+  "compare": [
+   {
+    "keyword": "employer of record vs peo",
+    "volume": 350,
+    "kd": "1",
+    "market": "us"
+   },
+   {
+    "keyword": "peo vs eor services",
+    "volume": 250,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record vs staffing agency",
+    "volume": 200,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "peo vs employer of record",
+    "volume": 200,
+    "kd": "1",
+    "market": "us"
+   }
+  ],
+  "india": [
+   {
+    "keyword": "employer of record services india",
+    "volume": 300,
+    "kd": "2",
+    "market": "us"
+   },
+   {
+    "keyword": "what's the best way to hire employees in india",
+    "volume": 300,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "how to legally hire someone in india from the us",
+    "volume": 300,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "best eor to hire in india",
+    "volume": 300,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "employer of record india",
+    "volume": 250,
+    "kd": "2",
+    "market": "us"
+   },
+   {
+    "keyword": "hire php developers in india",
+    "volume": 250,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services in india",
+    "volume": 250,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor services in india",
+    "volume": 200,
+    "kd": "1",
+    "market": "us"
+   },
+   {
+    "keyword": "hire app developers in india",
+    "volume": 200,
+    "kd": "12",
+    "market": "us"
+   },
+   {
+    "keyword": "hire angularjs developers in india",
+    "volume": 200,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "hire developers in india",
+    "volume": 200,
+    "kd": "3",
+    "market": "us"
+   },
+   {
+    "keyword": "hire ecommerce developers in india",
+    "volume": 200,
+    "kd": "2",
+    "market": "us"
+   },
+   {
+    "keyword": "hire seo expert in india",
+    "volume": 200,
+    "kd": "22",
+    "market": "us"
+   },
+   {
+    "keyword": "hire shopify developers in india",
+    "volume": 200,
+    "kd": "3",
+    "market": "us"
+   },
+   {
+    "keyword": "hire blockchain developers in india",
+    "volume": 200,
+    "kd": "14",
+    "market": "us"
+   },
+   {
+    "keyword": "hire software developer in india",
+    "volume": 200,
+    "kd": "6",
+    "market": "us"
+   },
+   {
+    "keyword": "hire app developer in india",
+    "volume": 200,
+    "kd": "11",
+    "market": "us"
+   },
+   {
+    "keyword": "hire dedicated python developers in india",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "hire web developers in india",
+    "volume": 200,
+    "kd": "13",
+    "market": "us"
+   },
+   {
+    "keyword": "hire certified laravel developers in india",
+    "volume": 200,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "hire flutter developers in india",
+    "volume": 200,
+    "kd": "3",
+    "market": "us"
+   },
+   {
+    "keyword": "eor india",
+    "volume": 200,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor services india",
+    "volume": 150,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "how to hire employees in india",
+    "volume": 150,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "hire employees in india",
+    "volume": 150,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "hire node js developer in india",
+    "volume": 150,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "hire java developers in india",
+    "volume": 150,
+    "kd": "2",
+    "market": "us"
+   },
+   {
+    "keyword": "hire a developer in india",
+    "volume": 150,
+    "kd": "4",
+    "market": "us"
+   },
+   {
+    "keyword": "hire react native developers in india",
+    "volume": 150,
+    "kd": "3",
+    "market": "us"
+   },
+   {
+    "keyword": "hire dedicated developers in india",
+    "volume": 150,
+    "kd": "14",
+    "market": "us"
+   },
+   {
+    "keyword": "hire android developer in india",
+    "volume": 150,
+    "kd": "1",
+    "market": "us"
+   },
+   {
+    "keyword": "hire django developers in india",
+    "volume": 150,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "hire ios developer in india",
+    "volume": 150,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "hire programmers in india",
+    "volume": 150,
+    "kd": "1",
+    "market": "us"
+   },
+   {
+    "keyword": "hire remote developers in india",
+    "volume": 150,
+    "kd": "0",
+    "market": "us"
+   },
+   {
+    "keyword": "eor services india",
+    "volume": 150,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor in india",
+    "volume": 150,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor service providers in india",
+    "volume": 150,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor companies in india",
+    "volume": 150,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "best way to hire employees in india",
+    "volume": 100,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "best eor in india",
+    "volume": 100,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor service provider in india",
+    "volume": 80,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "india eor",
+    "volume": 60,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "best eor services in india",
+    "volume": 60,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor company in india",
+    "volume": 60,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor solutions india",
+    "volume": 50,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "can a foreign company hire employees in india",
+    "volume": 40,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "top eor companies in india",
+    "volume": 40,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "remote eor employees in india",
+    "volume": 40,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "best eor services providers in india",
+    "volume": 40,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "hire employees in india without entity",
+    "volume": 30,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor service in india",
+    "volume": 30,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor provider in india",
+    "volume": 30,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "entity vs eor india",
+    "volume": 30,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "india eor services",
+    "volume": 30,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "best eor companies in india",
+    "volume": 30,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "hire employees in india without a legal entity",
+    "volume": 20,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "how to hire employees in india through eor",
+    "volume": 20,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor providers in india",
+    "volume": 20,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor and peo services india",
+    "volume": 20,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor service company in india",
+    "volume": 20,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "best eor services india",
+    "volume": 20,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor solutions in india",
+    "volume": 20,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "how to hire employees in india through an eor",
+    "volume": 10,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "how to hire remote employees in india",
+    "volume": 10,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "hire employees in india without legal entity",
+    "volume": 10,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "how do i hire employees in india?",
+    "volume": 10,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "eor companies india",
+    "volume": 10,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "employer of record eor in india",
+    "volume": 10,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "eor hiring in india",
+    "volume": 10,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "hire eor in india",
+    "volume": 10,
+    "kd": "",
+    "market": "in"
+   },
+   {
+    "keyword": "how to hire employees online in india",
+    "volume": 0,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "how to hire employees for small business in india",
+    "volume": 0,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "how much does it cost to hire employees in india",
+    "volume": 0,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "best website to hire employees in india",
+    "volume": 0,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "hire remote employees in india",
+    "volume": 0,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "how to hire employees for startup in india",
+    "volume": 0,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "best platform to hire employees in india",
+    "volume": 0,
+    "kd": "",
+    "market": "us"
+   },
+   {
+    "keyword": "how to hire employees in the us from india",
+    "volume": 0,
+    "kd": "0",
+    "market": "us"
+   }
+  ]
+ },
+ "bucket_totals": {
+  "core": 11520,
+  "best": 2150,
+  "country": 11180,
+  "what": 1590,
+  "compare": 1000,
+  "india": 8570
+ },
+ "countries": [
+  {
+   "country": "Philippines",
+   "volume": 1200,
+   "n": 3,
+   "keywords": [
+    {
+     "keyword": "employer of record philippines",
+     "volume": 600
+    },
+    {
+     "keyword": "employer of record services philippines",
+     "volume": 300
+    },
+    {
+     "keyword": "how do eor services work in the philippines",
+     "volume": 300
+    }
+   ]
+  },
+  {
+   "country": "Singapore",
+   "volume": 790,
+   "n": 4,
+   "keywords": [
+    {
+     "keyword": "employer of record singapore",
+     "volume": 400
+    },
+    {
+     "keyword": "singapore employer of record",
+     "volume": 200
+    },
+    {
+     "keyword": "eor services in singapore",
+     "volume": 100
+    },
+    {
+     "keyword": "best eor services in singapore",
+     "volume": 90
+    }
+   ]
+  },
+  {
+   "country": "Poland",
+   "volume": 650,
+   "n": 3,
+   "keywords": [
+    {
+     "keyword": "employer of record in poland",
+     "volume": 300
+    },
+    {
+     "keyword": "employer of record poland",
+     "volume": 200
+    },
+    {
+     "keyword": "eor services poland",
+     "volume": 150
+    }
+   ]
+  },
+  {
+   "country": "Germany",
+   "volume": 550,
+   "n": 3,
+   "keywords": [
+    {
+     "keyword": "employer of record germany",
+     "volume": 350
+    },
+    {
+     "keyword": "eor services in germany",
+     "volume": 100
+    },
+    {
+     "keyword": "eor services germany",
+     "volume": 100
+    }
+   ]
+  },
+  {
+   "country": "Switzerland",
+   "volume": 550,
+   "n": 2,
+   "keywords": [
+    {
+     "keyword": "employer of record in switzerland",
+     "volume": 300
+    },
+    {
+     "keyword": "employer of record switzerland",
+     "volume": 250
+    }
+   ]
+  },
+  {
+   "country": "France",
+   "volume": 500,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record france",
+     "volume": 500
+    }
+   ]
+  },
+  {
+   "country": "United Kingdom",
+   "volume": 500,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record uk",
+     "volume": 500
+    }
+   ]
+  },
+  {
+   "country": "Australia",
+   "volume": 450,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record australia",
+     "volume": 450
+    }
+   ]
+  },
+  {
+   "country": "China",
+   "volume": 450,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record china",
+     "volume": 450
+    }
+   ]
+  },
+  {
+   "country": "Czech Republic",
+   "volume": 450,
+   "n": 2,
+   "keywords": [
+    {
+     "keyword": "employer of record czech republic",
+     "volume": 250
+    },
+    {
+     "keyword": "czech republic employer of record",
+     "volume": 200
+    }
+   ]
+  },
+  {
+   "country": "Portugal",
+   "volume": 450,
+   "n": 2,
+   "keywords": [
+    {
+     "keyword": "employer of record in portugal",
+     "volume": 250
+    },
+    {
+     "keyword": "employer of record portugal",
+     "volume": 200
+    }
+   ]
+  },
+  {
+   "country": "Canada",
+   "volume": 400,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record canada",
+     "volume": 400
+    }
+   ]
+  },
+  {
+   "country": "South Korea",
+   "volume": 400,
+   "n": 2,
+   "keywords": [
+    {
+     "keyword": "employer of record south korea",
+     "volume": 200
+    },
+    {
+     "keyword": "employer of record in south korea",
+     "volume": 200
+    }
+   ]
+  },
+  {
+   "country": "Netherlands",
+   "volume": 350,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record netherlands",
+     "volume": 350
+    }
+   ]
+  },
+  {
+   "country": "Vietnam",
+   "volume": 350,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record vietnam",
+     "volume": 350
+    }
+   ]
+  },
+  {
+   "country": "UAE",
+   "volume": 350,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record uae",
+     "volume": 350
+    }
+   ]
+  },
+  {
+   "country": "United States",
+   "volume": 340,
+   "n": 2,
+   "keywords": [
+    {
+     "keyword": "employer of record usa",
+     "volume": 250
+    },
+    {
+     "keyword": "eor services usa",
+     "volume": 90
+    }
+   ]
+  },
+  {
+   "country": "Mexico",
+   "volume": 300,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record mexico",
+     "volume": 300
+    }
+   ]
+  },
+  {
+   "country": "Middle East (region)",
+   "volume": 300,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "eor services middle east",
+     "volume": 300
+    }
+   ]
+  },
+  {
+   "country": "Slovakia",
+   "volume": 250,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record in slovakia",
+     "volume": 250
+    }
+   ]
+  },
+  {
+   "country": "Brazil",
+   "volume": 250,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record brazil",
+     "volume": 250
+    }
+   ]
+  },
+  {
+   "country": "Turkey",
+   "volume": 250,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record turkey",
+     "volume": 250
+    }
+   ]
+  },
+  {
+   "country": "Thailand",
+   "volume": 250,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record thailand",
+     "volume": 250
+    }
+   ]
+  },
+  {
+   "country": "Luxembourg",
+   "volume": 250,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record luxembourg",
+     "volume": 250
+    }
+   ]
+  },
+  {
+   "country": "Belgium",
+   "volume": 200,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record in belgium",
+     "volume": 200
+    }
+   ]
+  },
+  {
+   "country": "Denmark",
+   "volume": 200,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record in denmark",
+     "volume": 200
+    }
+   ]
+  },
+  {
+   "country": "Costa Rica",
+   "volume": 200,
+   "n": 1,
+   "keywords": [
+    {
+     "keyword": "employer of record in costa rica",
+     "volume": 200
+    }
+   ]
+  }
+ ]
+}
