@@ -176,7 +176,7 @@ exits = ('<section class="sec" id="exits"><div class="wrap">' + head("06", "Exit
             ("Letting someone go", [("Decide", "You tell us. We confirm the notice and severance the country requires."), ("Notice", "We issue the termination under local law: notice, or pay in place of notice."), ("Last day", "Final pay: salary, unused leave and any severance due."), ("After", "Tax forms, documents and equipment return.")]),
             ("Moving to your own entity", [("Decide", "Usually once a country team is large enough to justify an entity. In India, Paybooks sets it up and runs it for you."), ("Set up", "Your entity is set up. New hires keep joining through us."), ("Switch day", "Contracts move to your entity. Service continues, same payslip app."), ("After", "Paybooks can keep running payroll for your entity.")])])
         + '</div></div></section>')
-service = ('<section class="sec alt" id="service"><div class="wrap">' + head("04", "Working with us", "How we work with you", "One team, one monthly report and one invoice for your whole international team.")
+service = ('<section class="dark" id="service"><div class="wrap">' + head("04", "Working with us", "How we work with you", "One team, one monthly report and one invoice for your whole international team.")
            + '<ul class="cards three">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in [
                ("One account manager", "With a payroll and compliance specialist for each country behind them."), ("Reply within one working day", "With overlap for calls across US, UK and Asia-Pacific hours."),
                ("One monthly report", "Payroll summary, filing proof and cost in your currency, every country on one page."), ("One invoice", "In USD, GBP or EUR at the bank rate. Salary, employer costs and our fee."),
@@ -214,6 +214,7 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
        '<div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>')
 
 EXTRA_CSS = '''<style>
+.dark .head p{color:#BFD3B9}#service .card .ic{background:rgba(159,211,92,.18);color:#9FD35C}
 #compare .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
 #proof .chips span{background:#fff;border:1px solid var(--line);color:var(--ink);font-weight:600}#proof .card{background:#fff}
 .cpick{padding:8px 0 40px}.cpick-card{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center;background:linear-gradient(135deg,#F3F8EA,#F8FBF2);border:1px solid #DDE8CF;border-radius:18px;padding:18px 22px}.cpick-card b{display:block;font-family:var(--head);font-size:18px;margin-bottom:4px}.cpick-card span{font-size:14px;color:var(--muted)}.cpick-form{display:flex;gap:10px;align-items:center}.cpick-form select{flex:1;height:46px;border:1px solid var(--line);border-radius:12px;background:#fff;font:500 15px Inter,sans-serif;padding:0 12px;color:var(--ink)}.cpick-form .btn{white-space:nowrap;padding:0 22px}.cpick-form select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(79,138,16,.15)}@media(max-width:860px){.cpick-card{grid-template-columns:1fr}.cpick-form{flex-direction:column;align-items:stretch}}
