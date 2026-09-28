@@ -29,8 +29,8 @@ hero = (f'<section class="hero v2"><div class="wrap"><div class="grid"><div><spa
 
 how = ('<section class="sec" id="how"><div class="wrap">' + head("01", "How it works", "What an Employer of Record does",
        "An Employer of Record (EOR) is a company that legally employs people on your behalf in a country where you have no entity. The work, the team and the results stay yours.")
-       + '<ul class="cparts"><li><span class="cp-n">1</span><div><b>You choose the person</b><p>Pick your hire and agree the role, pay and start date.</p></div></li>'
-       '<li><span class="cp-n">2</span><div><b>Paybooks employs them</b><p>We sign the local employment contract and run payroll, taxes and benefits under local law.</p></div></li>'
+       + '<ul class="cparts"><li><span class="cp-n">1</span><div><b>You choose the candidate</b><p>You pick who to hire and agree the role, pay and start date. Recruiting stays with you.</p></div></li>'
+       '<li><span class="cp-n">2</span><div><b>Paybooks employs them on its entity</b><p>We sign the local employment contract and run payroll, taxes and benefits under local law.</p></div></li>'
        '<li><span class="cp-n">3</span><div><b>They work for you</b><p>You manage their work. You get one monthly invoice for salary, employer costs and our fee.</p></div></li></ul>'
        '<div class="raci" style="margin-top:28px"><div class="col you"><h3>You decide</h3><ul>'
        + "".join(f'<li><div><b>{esc(a)}</b><span>{esc(b)}</span></div></li>' for a, b in [
