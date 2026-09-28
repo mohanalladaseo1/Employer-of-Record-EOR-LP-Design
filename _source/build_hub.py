@@ -27,6 +27,7 @@ hero = (f'<section class="hero v2"><div class="wrap"><div class="grid"><div><spa
         f'<ul class="cta2-ticks hero-ticks">{TICKS}</ul></div>{VID}</div></div></section>{TRUST}')
 
 # ---------- 01 lifecycle stepper ----------
+OUTCOME = ["The full cost and contract terms, before anyone signs", "A local contract, signed in days", "Registered and ready before day one", "Paid on the local date, every month", "Statutory benefits from day one, plus your extras", "Every filing done, and proven", "A clean exit, or the same job under your own name"]
 STAGES = [
  ("Offer", "You choose the candidate and agree the role, pay and start date. Recruiting stays with you.", "We confirm the full monthly cost for that country and send the contract terms within your quote.", "A clear offer, in their language, with your company, manager and role named."),
  ("Contract", "You approve the package.", "We sign the local employment contract on our entity: notice, probation, working hours and leave written the way the country requires. IP is assigned to you.", "A real local employment contract with a real local employer."),
@@ -36,11 +37,18 @@ STAGES = [
  ("Compliance", "You set policies within local law.", "We track every filing and rule change, keep proof of every filing, and flag roles that could create a taxable presence for you.", "An employer that never misses a filing."),
  ("Exit or transfer", "You decide when to part ways, or when to open your own entity.", "We issue the termination under local law with the notice and severance due, or move their contract to your new entity with service unbroken.", "A clean exit, or the same job under your own name."),
 ]
-tabs = "".join(f'<button class="lc-tab{" on" if i == 0 else ""}" data-i="{i}" type="button"><span>{i+1}</span>{esc(n)}</button>' for i, (n, *_ ) in enumerate(STAGES))
-panes = "".join(f'<div class="lc-pane{" on" if i == 0 else ""}" data-i="{i}"><div class="lc-col you"><small>You</small><p>{esc(y)}</p></div><div class="lc-col us"><small>Paybooks</small><p>{esc(u)}</p></div><div class="lc-col hire"><small>Your hire sees</small><p>{esc(h)}</p></div></div>' for i, (n, y, u, h) in enumerate(STAGES))
+ICON = {"you": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>',
+        "us": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+        "hire": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>'}
+track = "".join(f'<button class="lc-node{" on" if i == 0 else ""}" data-i="{i}" type="button" aria-label="Stage {i+1}: {esc(n)}"><span class="lc-dot">{i+1}</span><span class="lc-lab">{esc(n)}</span></button>' for i, (n, *_ ) in enumerate(STAGES))
+panes = "".join(f'<div class="lc-pane{" on" if i == 0 else ""}" data-i="{i}"><div class="lc-head"><span class="lc-k">Stage {i+1} of {len(STAGES)}</span><h3>{esc(n)}</h3><p class="lc-out">{esc(OUTCOME[i])}</p></div>'
+                f'<div class="lc-rows"><div class="lc-row you"><i>{ICON["you"]}</i><div><small>You</small><p>{esc(y)}</p></div></div>'
+                f'<div class="lc-row us"><i>{ICON["us"]}</i><div><small>Paybooks</small><p>{esc(u)}</p></div></div>'
+                f'<div class="lc-row hire"><i>{ICON["hire"]}</i><div><small>Your hire sees</small><p>{esc(h)}</p></div></div></div></div>' for i, (n, y, u, h) in enumerate(STAGES))
+nav = '<div class="lc-nav"><button type="button" class="lc-prev" aria-label="Previous stage">← Previous</button><span class="lc-pos"></span><button type="button" class="lc-next" aria-label="Next stage">Next stage →</button></div>'
 lifecycle = ('<section class="sec" id="how"><div class="wrap">' + head("01", "Pain point: setting up an entity takes months and a local team", "Who does what, from offer to exit",
              "An Employer of Record legally employs people on your behalf in a country where you have no entity, so you hire in days, not months. Click a stage to see what stays with you and what Paybooks takes on.")
-             + f'<div class="lc"><div class="lc-tabs">{tabs}</div>{panes}</div>'
+             + f'<div class="lc"><div class="lc-track"><span class="lc-line"><span class="lc-fill"></span></span>{track}</div><div class="lc-body">{panes}{nav}</div></div>'
              '<div class="midcta"><div><b>Want to see it in writing?</b><span>We will share a sample service agreement with your quote.</span></div><div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></div></section>')
 
 # ---------- 02 fit finder ----------
@@ -177,19 +185,29 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
 
 EXTRA_CSS = '''<style>
 .sec .head .eyebrow.pain,.dark .head .eyebrow.pain{display:inline-flex;text-transform:none;letter-spacing:0;font-size:14.5px;font-weight:600;color:#B4530F;margin-bottom:10px}.eyebrow.pain::before{background:#F26B1D}.dark .eyebrow.pain,#cost .eyebrow.pain,#compare .eyebrow.pain{color:#FFB08A}.dark .eyebrow.pain::before,#cost .eyebrow.pain::before,#compare .eyebrow.pain::before{background:#F26B1D}
-.lc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.lc-tabs{display:flex;overflow-x:auto;border-bottom:1px solid var(--line);scrollbar-width:none}.lc-tabs::-webkit-scrollbar{display:none}
-.lc-tab{flex:1 0 auto;display:flex;align-items:center;gap:10px;padding:16px 18px;border:0;border-bottom:3px solid transparent;background:none;font:600 14.5px Inter,sans-serif;color:var(--muted);cursor:pointer;white-space:nowrap}
-.lc-tab span{width:24px;height:24px;border-radius:50%;background:#EEF1EC;font-size:12px;display:grid;place-items:center;color:var(--ink)}
-.lc-tab.on{color:var(--ink);border-bottom-color:var(--green)}.lc-tab.on span{background:var(--green);color:#fff}
-.lc-pane{display:none;grid-template-columns:1fr 1fr 1fr;gap:0}.lc-pane.on{display:grid}
-.lc-col{padding:26px 26px 28px}.lc-col+.lc-col{border-left:1px solid var(--line)}.lc-col small{display:block;font:700 11.5px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.lc-col.us{background:#F5F9EF}.lc-col.us small{color:var(--g600)}.lc-col p{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink2)}
+.lc{display:grid;grid-template-columns:270px 1fr;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.lc-track{position:relative;display:flex;flex-direction:column;gap:6px;padding:24px 18px;border-right:1px solid var(--line);background:#FAFBF8}
+.lc-line{position:absolute;left:35px;top:44px;bottom:44px;width:3px;background:#E4E9E1;border-radius:2px}.lc-fill{display:block;width:100%;height:0;background:var(--green);border-radius:2px;transition:height .3s}
+.lc-node{position:relative;z-index:1;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:center;text-align:left;background:none;border:0;border-radius:12px;cursor:pointer;font:inherit;color:var(--muted);padding:8px 8px 8px 0}
+.lc-node:hover .lc-lab{color:var(--ink)}
+.lc-dot{width:36px;height:36px;border-radius:50%;background:#fff;border:2px solid #D5DBD2;display:grid;place-items:center;font:600 13px Inter,sans-serif;color:var(--ink);transition:all .2s}
+.lc-lab{font:600 15px Inter,sans-serif}
+.lc-node.done .lc-dot{background:var(--green);border-color:var(--green);color:#fff}.lc-node.on{background:#fff;box-shadow:0 1px 2px rgba(20,26,31,.06),0 0 0 1px var(--line)}.lc-node.on .lc-dot{background:var(--forest);border-color:var(--forest);color:#9FD35C;box-shadow:0 0 0 5px rgba(79,138,16,.15)}.lc-node.on .lc-lab{color:var(--ink)}
+.lc-node:focus-visible{outline:none}.lc-node:focus-visible .lc-dot{box-shadow:0 0 0 4px rgba(79,138,16,.35)}
+.lc-body{padding:28px 30px 22px;min-width:0}.lc-pane{display:none}.lc-pane.on{display:block;animation:lcin .25s ease}
+@keyframes lcin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.lc-head{margin-bottom:18px}.lc-k{display:inline-block;font:700 11.5px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);margin-bottom:8px}.lc-head h3{font-family:var(--head);font-size:30px;letter-spacing:-.02em;margin:0 0 8px}.lc-out{font-size:17px;color:var(--ink2);margin:0;line-height:1.5;border-left:3px solid #9FD35C;padding-left:14px}
+.lc-rows{display:grid;gap:10px}.lc-row{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:#fff}
+.lc-row i{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#F2F5EE;color:var(--ink2)}.lc-row i svg{width:20px;height:20px}
+.lc-row small{display:block;font:700 11px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}.lc-row p{margin:0;font-size:15px;line-height:1.5;color:var(--ink2)}
+.lc-row.us{background:var(--forest);border-color:var(--forest)}.lc-row.us i{background:rgba(159,211,92,.18);color:#9FD35C}.lc-row.us small{color:#9FD35C}.lc-row.us p{color:#EAF2E4}
+.lc-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}.lc-nav button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font:600 14px Inter,sans-serif;color:var(--ink);cursor:pointer}.lc-nav button:disabled{opacity:.4;cursor:default}.lc-pos{font-size:13px;color:var(--muted)}
+@media(max-width:900px){.lc{grid-template-columns:1fr}.lc-track{flex-direction:row;overflow-x:auto;gap:4px;padding:14px 12px;border-right:0;border-bottom:1px solid var(--line);scrollbar-width:none}.lc-track::-webkit-scrollbar{display:none}.lc-line{display:none}.lc-node{grid-template-columns:28px auto;gap:8px;padding:6px 10px 6px 4px;flex:0 0 auto}.lc-dot{width:28px;height:28px;font-size:12px}.lc-lab{font-size:13px;white-space:nowrap}.lc-head h3{font-size:24px}}
 .ff{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.ff-q{display:grid;gap:14px}.ff-step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px}.ff-step>b{display:block;font-family:var(--head);font-size:16.5px;margin-bottom:10px}
 .ff-opts{display:flex;flex-wrap:wrap;gap:8px}.ff-opts button{border:1px solid var(--line);background:#FAFBF8;border-radius:999px;padding:9px 14px;font:500 14px Inter,sans-serif;color:var(--ink);cursor:pointer}
 .ff-opts button.on{background:var(--forest);color:#fff;border-color:var(--forest)}
 .ff-a{background:var(--forest);color:#fff;border-radius:20px;padding:28px;position:sticky;top:90px;align-self:start;min-height:220px}.ff-a b{font-family:var(--head)}.ff-empty b{font-size:20px;display:block;margin-bottom:8px}.ff-empty p{color:#BFD3B9;margin:0;font-size:15px}
-.ff-r small{display:block;font:700 11.5px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);margin-bottom:8px}.ff-r h3{font-size:26px;margin:0 0 10px;color:#fff}.ff-r p{color:#DDE8D6;font-size:15px;line-height:1.55;margin:0 0 10px}.ff-r .no{color:#BFD3B9;font-size:13.5px;border-top:1px solid rgba(255,255,255,.14);padding-top:12px;margin-top:12px}.ff-r .btn{margin-top:14px}
+.ff-r small{display:block;font:700 11.5px Inter;letter-spacing:.1em;text-transform:uppercase;color:#9FD35C;margin-bottom:8px}.ff-r h3{font-size:26px;margin:0 0 10px;color:#fff}.ff-r p{color:#DDE8D6;font-size:15px;line-height:1.55;margin:0 0 10px}.ff-r .no{color:#BFD3B9;font-size:13.5px;border-top:1px solid rgba(255,255,255,.14);padding-top:12px;margin-top:12px}.ff-r .btn{margin-top:14px}
 .cs{display:flex;gap:14px;align-items:center;margin-bottom:16px}.cs input{flex:1;height:50px;border:1px solid var(--line);border-radius:12px;padding:0 16px;font:500 16px Inter,sans-serif;background:#fff}.cs input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(79,138,16,.15)}.cs span{font-size:13.5px;color:var(--muted);white-space:nowrap}
 .cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.cc{display:flex;flex-direction:column;gap:3px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;font:inherit;cursor:pointer}
 .cc b{font-family:var(--head);font-size:16px}.cc span{font-size:12.5px;color:var(--muted)}.cc.live{border-color:var(--green);box-shadow:0 10px 30px -18px rgba(79,138,16,.6)}.cc.live span{color:var(--green);font-weight:600}.cc.hide{display:none}.cc.pick{border-color:var(--orange);background:#FFF7F1}
@@ -203,8 +221,10 @@ EXTRA_CSS = '''<style>
 </style>'''
 
 JS = '''<script>(function(){
-var tabs=[].slice.call(document.querySelectorAll('.lc-tab')),panes=[].slice.call(document.querySelectorAll('.lc-pane'));
-tabs.forEach(function(t){t.onclick=function(){tabs.forEach(function(x){x.classList.toggle('on',x===t)});panes.forEach(function(p){p.classList.toggle('on',p.dataset.i===t.dataset.i)})}});
+var nodes=[].slice.call(document.querySelectorAll('.lc-node')),panes=[].slice.call(document.querySelectorAll('.lc-pane')),fill=document.querySelector('.lc-fill'),prev=document.querySelector('.lc-prev'),next=document.querySelector('.lc-next'),pos=document.querySelector('.lc-pos'),cur=0;
+function go(i){cur=Math.max(0,Math.min(nodes.length-1,i));nodes.forEach(function(n,k){n.classList.toggle('on',k===cur);n.classList.toggle('done',k<cur)});panes.forEach(function(p,k){p.classList.toggle('on',k===cur)});fill.style.height=(cur/(nodes.length-1)*100)+'%';prev.disabled=cur===0;next.disabled=cur===nodes.length-1;pos.textContent='Stage '+(cur+1)+' of '+nodes.length}
+nodes.forEach(function(n){n.onclick=function(){go(+n.dataset.i)}});prev.onclick=function(){go(cur-1)};next.onclick=function(){go(cur+1)};
+document.querySelector('.lc').addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});go(0);
 var ans={},A=document.getElementById('ffa');
 function rec(){if(!(ans.entity&&ans.size&&ans.goal))return;var r;
  if(ans.goal==='run'||(ans.entity==='own'&&ans.goal!=='convert'))r={t:'Multi-Country Payroll',w:'You already employ people through your own entity. What you need is one provider, one report and one standard for payroll in every country.',n:'An EOR, which is for hiring where you have no entity.'};
