@@ -18,12 +18,12 @@ def table(hd, rows, hl=1):
     tr = "".join("<tr>" + "".join(f'<td{" class=hl" if i == hl else ""}>{c}</td>' for i, c in enumerate(r)) + "</tr>" for r in rows)
     return f'<div class="t-wrap"><table class="tbl"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
 
-TITLE = "Employer of Record (EOR) Services | Hire Anywhere Without an Entity | Paybooks, a TransPerfect company"
-DESC = "Hire employees in other countries without setting up an entity. Paybooks becomes the legal employer and runs contracts, payroll, taxes and benefits under local law. Get a quote for a role."
+TITLE = "Employer of Record (EOR) Services | Hire in 42 Countries Without an Entity | Paybooks, a TransPerfect company"
+DESC = "Hire employees in 42 countries without setting up an entity. Paybooks becomes the legal employer and runs contracts, payroll, taxes and benefits under local law. Get a quote for a role."
 
 hero = (f'<section class="hero v2"><div class="wrap"><div class="grid"><div><span class="cta2-tag hero-tag">Global Employer of Record</span>'
-        '<h1>Hire anyone, anywhere. <em>No entity needed.</em></h1>'
-        '<p class="sub">Paybooks becomes the legal employer of your people in another country. We run the local contract, payroll, taxes and benefits under that country’s law. You choose the people and direct their work.</p>'
+        '<h1>Hire in 42 countries. <em>No entity needed.</em></h1>'
+        '<p class="sub">Paybooks becomes the legal employer of your people in any of 42 countries. We run the local contract, payroll, taxes and benefits under that country’s law. You choose the people and direct their work.</p>'
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div>'
         f'<ul class="cta2-ticks hero-ticks">{TICKS}</ul></div>{VID}</div></div></section>{TRUST}')
 
@@ -54,13 +54,12 @@ fit = ('<section class="sec alt" id="fit"><div class="wrap">' + head("02", "Star
            ["Running your own entities in several countries", "<b>Multi-Country Payroll</b>", "One provider and one report for payroll in every country.", "A different payroll vendor per country"],
        ]) + '</div></section>')
 
-COUNTRIES = [("India", "employer-of-record/india/", True), ("Philippines", "", False), ("Singapore", "", False), ("Poland", "", False),
-             ("Germany", "", False), ("Switzerland", "", False), ("France", "", False), ("United Kingdom", "", False), ("Australia", "", False)]
+COUNTRIES = [("India", "employer-of-record/india/", True)] + [(c, "", False) for c in ["United States", "United Kingdom", "Singapore", "Germany", "Australia", "Canada", "Netherlands", "Ireland", "Switzerland", "France", "Hong Kong", "Sweden", "UAE", "Denmark"]]
 cgrid = "".join(
     (f'<a class="cty live" href="{u}"><b>{c}</b><span>Employer costs, contracts and rules</span><em>Read the guide →</em></a>' if live else
      f'<div class="cty"><b>{c}</b><span>Employer costs, contracts and rules</span><em>Guide coming soon</em></div>') for c, u, live in COUNTRIES)
 countries = ('<section class="sec" id="countries"><div class="wrap">' + head("03", "Countries", "Hire in the country you need",
-             "Each country guide covers what it costs to employ someone there, the contract and benefits, notice and termination rules, and how long hiring takes.")
+             "42 countries, starting with these 15. Each country guide covers what it costs to employ someone there, the contract and benefits, notice and termination rules, and how long hiring takes.")
              + f'<div class="cgrid">{cgrid}</div></div></section>')
 
 hire = ('<section class="sec alt" id="experience"><div class="wrap">' + head("04", "Your hire", "What your hire gets", "A real local job with a real local employer, from day one.")
@@ -117,7 +116,7 @@ FAQ = [("What is an Employer of Record?", "A company that legally employs people
        ("Can EOR employees get our stock options?", "Yes, through your company’s equity plan."),
        ("Who owns the IP?", "You do. Every contract assigns it to your company."),
        ("What happens when we open our own entity?", "Your people move to your entity’s contracts. Paybooks can keep running their payroll."),
-       ("Which countries do you cover?", "See the country guides above, or send us the country you need with your quote request.")]
+       ("Which countries do you cover?", "42 countries across Europe, the Americas, the Middle East, Africa and Asia-Pacific, starting with the 15 above. Send us the country you need with your quote request.")]
 faq = ('<section class="sec" id="faq"><div class="wrap"><div class="faq"><div class="sticky"><span class="eyebrow">FAQ</span><h2>Your questions, answered</h2><p style="color:var(--muted);margin:14px 0 22px">What to know before you hire abroad.</p><a class="btn" href="#quote">Talk to an EOR expert</a></div><div>'
        + "".join(f"<details><summary>{esc(q)}</summary><p>{a}</p></details>" for q, a in FAQ) + '</div></div></div></section>')
 
@@ -135,12 +134,12 @@ EXTRA_CSS = ('<style>.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap
              '.cty.live{border-color:var(--green);box-shadow:0 10px 30px -18px rgba(79,138,16,.6)}.cty.live em{color:var(--green)}.cty.live:hover{transform:translateY(-2px);transition:transform .15s}'
              '@media(max-width:860px){.cgrid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.cgrid{grid-template-columns:1fr}}</style>')
 schema = [
-    {"@context": "https://schema.org", "@type": "Organization", "name": "Paybooks, a TransPerfect company", "url": "https://www.paybooks.in/", "parentOrganization": {"@type": "Organization", "name": "TransPerfect", "url": "https://www.transperfect.com/"}},
-    {"@context": "https://schema.org", "@type": "Service", "name": "Employer of Record services", "serviceType": "Employer of Record", "provider": {"@type": "Organization", "name": "Paybooks, a TransPerfect company"}},
-    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.paybooks.in/"}, {"@type": "ListItem", "position": 2, "name": "Employer of Record", "item": "https://www.paybooks.in/employer-of-record/"}]},
+    {"@context": "https://schema.org", "@type": "Organization", "name": "Paybooks, a TransPerfect company", "url": "https://paybooks.transperfect.com/", "parentOrganization": {"@type": "Organization", "name": "TransPerfect", "url": "https://www.transperfect.com/"}},
+    {"@context": "https://schema.org", "@type": "Service", "name": "Employer of Record services", "serviceType": "Employer of Record", "areaServed": "42 countries", "provider": {"@type": "Organization", "name": "Paybooks, a TransPerfect company"}},
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://paybooks.transperfect.com/"}, {"@type": "ListItem", "position": 2, "name": "Employer of Record", "item": "https://paybooks.transperfect.com/employer-of-record/"}]},
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}]
 HEAD = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-        f'<title>{esc(TITLE)}</title><meta name="description" content="{esc(DESC)}"><link rel="canonical" href="https://www.paybooks.in/employer-of-record/"><meta name="robots" content="noindex,nofollow">'
+        f'<title>{esc(TITLE)}</title><meta name="description" content="{esc(DESC)}"><link rel="canonical" href="https://paybooks.transperfect.com/employer-of-record/"><meta name="robots" content="noindex,nofollow">'
         '<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Zilla+Slab:wght@300;400&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/pb.css">'
         + "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in schema) + EXTRA_CSS + '</head>')
 FOOT = ('<footer class="ftr"><div class="wrap" style="grid-template-columns:1fr"><div><h4>Paybooks, a TransPerfect company</h4><p>Employer of Record, Multi-Country Payroll, Managed India Office and Global HCM for companies building teams across borders.</p></div></div></footer>'

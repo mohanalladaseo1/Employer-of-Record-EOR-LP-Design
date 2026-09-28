@@ -1,0 +1,370 @@
+{
+ "deel.com": {
+  "locales": 15,
+  "languages": [
+   "Chinese",
+   "Danish",
+   "Dutch",
+   "English",
+   "French",
+   "German",
+   "Italian",
+   "Japanese",
+   "Korean",
+   "Portuguese",
+   "Spanish",
+   "Swedish"
+  ],
+  "sample": [
+   [
+    "es",
+    2109
+   ],
+   [
+    "fr",
+    1496
+   ],
+   [
+    "pt",
+    1338
+   ],
+   [
+    "de",
+    1165
+   ],
+   [
+    "ja",
+    832
+   ],
+   [
+    "nl",
+    812
+   ],
+   [
+    "ko-kr",
+    776
+   ],
+   [
+    "sv-se",
+    768
+   ],
+   [
+    "da-dk",
+    730
+   ],
+   [
+    "zh-tw",
+    709
+   ],
+   [
+    "zh-cn",
+    688
+   ],
+   [
+    "es-es",
+    686
+   ]
+  ]
+ },
+ "remote.com": {
+  "locales": 24,
+  "languages": [
+   "Chinese",
+   "Dutch",
+   "English",
+   "French",
+   "German",
+   "Italian",
+   "Japanese",
+   "Korean",
+   "Portuguese",
+   "Spanish"
+  ],
+  "sample": [
+   [
+    "en-gb",
+    2241
+   ],
+   [
+    "en-in",
+    2240
+   ],
+   [
+    "en-ca",
+    2239
+   ],
+   [
+    "en-nz",
+    2239
+   ],
+   [
+    "en-ph",
+    2239
+   ],
+   [
+    "en-sg",
+    2239
+   ],
+   [
+    "en-za",
+    2239
+   ],
+   [
+    "en-au",
+    2238
+   ],
+   [
+    "en-hk",
+    2238
+   ],
+   [
+    "en-ie",
+    2238
+   ],
+   [
+    "fr-fr",
+    1381
+   ],
+   [
+    "de-de",
+    1380
+   ]
+  ]
+ },
+ "rippling.com": {
+  "locales": 12,
+  "languages": [
+   "Dutch",
+   "English",
+   "French",
+   "German",
+   "Spanish",
+   "lp"
+  ],
+  "sample": [
+   [
+    "en-au",
+    786
+   ],
+   [
+    "en-gb",
+    548
+   ],
+   [
+    "en-ie",
+    471
+   ],
+   [
+    "en-ca",
+    461
+   ],
+   [
+    "fr-fr",
+    422
+   ],
+   [
+    "de-de",
+    373
+   ],
+   [
+    "fr-ca",
+    205
+   ],
+   [
+    "nl-nl",
+    177
+   ],
+   [
+    "es-es",
+    96
+   ],
+   [
+    "lp",
+    45
+   ],
+   [
+    "en-sg",
+    23
+   ],
+   [
+    "en-in",
+    22
+   ]
+  ]
+ },
+ "papayaglobal.com": {
+  "locales": 3,
+  "languages": [
+   "French",
+   "German",
+   "Spanish"
+  ],
+  "sample": [
+   [
+    "es",
+    144
+   ],
+   [
+    "de",
+    92
+   ],
+   [
+    "fr",
+    91
+   ]
+  ]
+ },
+ "usemultiplier.com": {
+  "locales": 0,
+  "languages": [],
+  "sample": []
+ },
+ "pebl.com": {
+  "locales": 0,
+  "languages": [],
+  "sample": []
+ },
+ "velocityglobal.com": {
+  "locales": 0,
+  "languages": [],
+  "sample": []
+ },
+ "skuad.io": {
+  "locales": 0,
+  "languages": [],
+  "sample": []
+ },
+ "playroll.com": {
+  "locales": 3,
+  "languages": [
+   "French",
+   "German",
+   "Spanish"
+  ],
+  "sample": [
+   [
+    "de",
+    344
+   ],
+   [
+    "es",
+    343
+   ],
+   [
+    "fr",
+    343
+   ]
+  ]
+ },
+ "wisemonk.io": {
+  "locales": 3,
+  "languages": [
+   "French",
+   "German",
+   "Spanish"
+  ],
+  "sample": [
+   [
+    "de",
+    1071
+   ],
+   [
+    "fr",
+    874
+   ],
+   [
+    "es",
+    653
+   ]
+  ]
+ },
+ "oysterhr.com": {
+  "locales": 1,
+  "languages": [
+   "Spanish"
+  ],
+  "sample": [
+   [
+    "es",
+    373
+   ]
+  ]
+ },
+ "g-p.com": {
+  "locales": 17,
+  "languages": [
+   "Arabic",
+   "Chinese",
+   "Chinese (Hong Kong)",
+   "Chinese (Traditional)",
+   "Dutch",
+   "French",
+   "German",
+   "Hebrew",
+   "Hindi",
+   "Indonesian",
+   "Japanese",
+   "Korean",
+   "Polish",
+   "Portuguese",
+   "Spanish",
+   "Swedish",
+   "Thai"
+  ],
+  "sample": [
+   [
+    "ar",
+    2017
+   ],
+   [
+    "cn",
+    2017
+   ],
+   [
+    "de",
+    2017
+   ],
+   [
+    "es",
+    2017
+   ],
+   [
+    "fr",
+    2017
+   ],
+   [
+    "he",
+    2017
+   ],
+   [
+    "hi",
+    2017
+   ],
+   [
+    "hk",
+    2017
+   ],
+   [
+    "id",
+    2017
+   ],
+   [
+    "jp",
+    2017
+   ],
+   [
+    "kr",
+    2017
+   ],
+   [
+    "nl",
+    2017
+   ]
+  ]
+ },
+ "asanify.com": {
+  "locales": 0,
+  "languages": [],
+  "sample": []
+ }
+}

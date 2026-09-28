@@ -1,0 +1,244 @@
+[
+ {
+  "topic": "Country EOR pages",
+  "page": "/countries/[country]/employer-of-record/",
+  "n": 41,
+  "volume": 11180,
+  "kd_min": 0,
+  "kd_max": 1,
+  "top": [
+   [
+    "employer of record philippines",
+    600
+   ],
+   [
+    "employer of record france",
+    500
+   ],
+   [
+    "employer of record uk",
+    500
+   ],
+   [
+    "employer of record australia",
+    450
+   ],
+   [
+    "employer of record china",
+    450
+   ]
+  ]
+ },
+ {
+  "topic": "Core EOR service",
+  "page": "/employer-of-record/ (product home)",
+  "n": 19,
+  "volume": 9220,
+  "kd_min": 0,
+  "kd_max": 25,
+  "top": [
+   [
+    "employer of record",
+    2800
+   ],
+   [
+    "employer of record services",
+    1700
+   ],
+   [
+    "eor services",
+    1300
+   ],
+   [
+    "employer of record service",
+    500
+   ],
+   [
+    "eor employer of record",
+    350
+   ]
+  ]
+ },
+ {
+  "topic": "India: hire employees and roles",
+  "page": "/countries/india/hiring-guide/ and /countries/india/hire/[role]/",
+  "n": 48,
+  "volume": 5820,
+  "kd_min": 0,
+  "kd_max": 22,
+  "top": [
+   [
+    "what's the best way to hire employees in india",
+    300
+   ],
+   [
+    "how to legally hire someone in india from the us",
+    300
+   ],
+   [
+    "best eor to hire in india",
+    300
+   ],
+   [
+    "hire php developers in india",
+    250
+   ],
+   [
+    "hire app developers in india",
+    200
+   ]
+  ]
+ },
+ {
+  "topic": "India: EOR page",
+  "page": "/countries/india/employer-of-record/",
+  "n": 31,
+  "volume": 2750,
+  "kd_min": 1,
+  "kd_max": 2,
+  "top": [
+   [
+    "employer of record services india",
+    300
+   ],
+   [
+    "employer of record india",
+    250
+   ],
+   [
+    "eor services in india",
+    250
+   ],
+   [
+    "eor services in india",
+    200
+   ],
+   [
+    "eor india",
+    200
+   ]
+  ]
+ },
+ {
+  "topic": "Best EOR providers",
+  "page": "/resources/comparisons/best-eor-providers/",
+  "n": 9,
+  "volume": 2150,
+  "kd_min": 1,
+  "kd_max": 13,
+  "top": [
+   [
+    "employer of record companies",
+    600
+   ],
+   [
+    "best employer of record",
+    400
+   ],
+   [
+    "top employer of record companies",
+    250
+   ],
+   [
+    "which hr software provides top employer of record",
+    200
+   ],
+   [
+    "best eor services",
+    200
+   ]
+  ]
+ },
+ {
+  "topic": "Global EOR service",
+  "page": "/employer-of-record/ (product home)",
+  "n": 3,
+  "volume": 1800,
+  "kd_min": 13,
+  "kd_max": 32,
+  "top": [
+   [
+    "global employer of record",
+    900
+   ],
+   [
+    "global eor services",
+    700
+   ],
+   [
+    "eor global services",
+    200
+   ]
+  ]
+ },
+ {
+  "topic": "What an EOR is",
+  "page": "/resources/glossary/employer-of-record/ (explainer)",
+  "n": 5,
+  "volume": 1590,
+  "kd_min": 12,
+  "kd_max": 31,
+  "top": [
+   [
+    "what is an employer of record",
+    600
+   ],
+   [
+    "employer of record meaning",
+    500
+   ],
+   [
+    "what is employer of record",
+    250
+   ],
+   [
+    "eor services meaning",
+    150
+   ],
+   [
+    "how do employer of record (eor) services work",
+    90
+   ]
+  ]
+ },
+ {
+  "topic": "EOR vs PEO and staffing",
+  "page": "/resources/comparisons/eor-vs-peo/",
+  "n": 4,
+  "volume": 1000,
+  "kd_min": 0,
+  "kd_max": 1,
+  "top": [
+   [
+    "employer of record vs peo",
+    350
+   ],
+   [
+    "peo vs eor services",
+    250
+   ],
+   [
+    "employer of record vs staffing agency",
+    200
+   ],
+   [
+    "peo vs employer of record",
+    200
+   ]
+  ]
+ },
+ {
+  "topic": "EOR payroll services",
+  "page": "/employer-of-record/payroll-processing/ (module)",
+  "n": 1,
+  "volume": 500,
+  "kd_min": 13,
+  "kd_max": 13,
+  "top": [
+   [
+    "employer of record payroll services",
+    500
+   ]
+  ]
+ }
+]

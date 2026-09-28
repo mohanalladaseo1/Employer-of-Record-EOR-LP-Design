@@ -6,7 +6,7 @@ import json, os, re, html as H
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "index.html")
 FX = 95.7  # INR per USD, September 23, 2026 (same rate as the landing page calculator)
-CANON = "https://www.paybooks.in/employer-of-record/india/"
+CANON = "https://paybooks.transperfect.com/countries/india/employer-of-record/"
 UPDATED = "September 24, 2026"
 PUBLISHED = "September 24, 2026"
 # Bylines. Add real people here (name, job title, LinkedIn URL); leave None to credit the team.
@@ -512,15 +512,15 @@ H1 = "Employer of Record India: 2026 Guide"
 schema = [
     {"@context": "https://schema.org", "@type": "Article", "headline": H1,
      "description": DESC, "dateModified": "2026-09-24", "author": (dict({"@type": "Person", "name": WRITER[0]}, **({"jobTitle": WRITER[1]} if WRITER[1] else {})) if WRITER else {"@type": "Organization", "name": TEAM}), "datePublished": "2026-09-24",
-     "publisher": {"@type": "Organization", "name": "Paybooks, a TransPerfect company", "url": "https://www.paybooks.in/"},
+     "publisher": {"@type": "Organization", "name": "Paybooks, a TransPerfect company", "url": "https://paybooks.transperfect.com/"},
      "about": {"@type": "Thing", "name": "Employer of record in India"}, "mainEntityOfPage": CANON},
     {"@context": "https://schema.org", "@type": "Service", "name": "Employer of Record India", "serviceType": "Employer of record",
-     "provider": {"@type": "Organization", "name": "Paybooks, a TransPerfect company", "url": "https://www.paybooks.in/"},
+     "provider": {"@type": "Organization", "name": "Paybooks, a TransPerfect company", "url": "https://paybooks.transperfect.com/"},
      "areaServed": {"@type": "Country", "name": "India"},
      "offers": {"@type": "Offer", "price": "199", "priceCurrency": "USD", "description": "From, per employee per month"}},
     {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.paybooks.in/"},
-        {"@type": "ListItem", "position": 2, "name": "Employer of Record", "item": "https://www.paybooks.in/employer-of-record/"},
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://paybooks.transperfect.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Countries", "item": "https://paybooks.transperfect.com/countries/"},
         {"@type": "ListItem", "position": 3, "name": "India", "item": CANON}]},
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]},
@@ -575,7 +575,7 @@ ILLU = ('<figure class="g-illu" role="img" aria-label="How an employer of record
  '<text x="178" y="426" class="g-nt">Government</text><text x="178" y="443" class="g-ns">PF · ESI · Income tax</text>'
  '</svg></figure>')
 HERO = ('<div class="g-progress" id="gprog"></div><section class="g-hero"><div class="g-hero-in"><div>'
-        '<nav class="g-crumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../../">Employer of Record</a><span>/</span>India</nav>'
+        '<nav class="g-crumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../../#countries">Countries</a><span>/</span>India</nav>'
         '<h1>Employer of Record India: <em>2026 Guide</em></h1>'
         '<p class="g-sub">Hire in India without an entity. What it costs, which laws apply, and what an EOR handles for you.</p>' +
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div>'

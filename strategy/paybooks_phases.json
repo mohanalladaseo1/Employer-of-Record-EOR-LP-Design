@@ -1,0 +1,50 @@
+{
+ "6A": [
+  "India",
+  "United States",
+  "United Kingdom",
+  "Singapore",
+  "Germany",
+  "Australia",
+  "Canada",
+  "Netherlands",
+  "Ireland",
+  "Switzerland",
+  "France",
+  "Hong Kong",
+  "Sweden",
+  "UAE",
+  "Denmark"
+ ],
+ "6B": [
+  "Japan",
+  "South Korea",
+  "Finland",
+  "Norway",
+  "Belgium",
+  "Austria",
+  "Italy",
+  "Spain",
+  "Portugal",
+  "Czech Republic",
+  "Poland",
+  "Hungary",
+  "Romania",
+  "Brazil",
+  "Mexico"
+ ],
+ "6C": [
+  "South Africa",
+  "Saudi Arabia",
+  "Argentina",
+  "Colombia",
+  "Costa Rica",
+  "Turkey",
+  "China",
+  "Thailand",
+  "Dominican Republic",
+  "Kenya",
+  "Nigeria",
+  "Philippines"
+ ]
+}
