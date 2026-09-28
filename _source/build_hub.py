@@ -48,7 +48,7 @@ panes = "".join(f'<div class="lc-pane{" on" if i == 0 else ""}" data-i="{i}"><di
 nav = '<div class="lc-nav"><button type="button" class="lc-prev" aria-label="Previous stage">← Previous</button><span class="lc-pos"></span><button type="button" class="lc-next" aria-label="Next stage">Next stage →</button></div>'
 lifecycle = ('<section class="sec" id="how"><div class="wrap">' + head("01", "Pain point: setting up an entity takes months and a local team", "Who does what, from offer to exit",
              "An Employer of Record legally employs people on your behalf in a country where you have no entity, so you hire in days, not months. Click a stage to see what stays with you and what Paybooks takes on.")
-             + f'<div class="lc"><div class="lc-track"><span class="lc-line"><span class="lc-fill"></span></span>{track}</div><div class="lc-body">{panes}{nav}</div></div>'
+             + f'<div class="lc"><div class="lc-track"><span class="lc-line"><span class="lc-fill"></span></span>{track}</div><div class="lc-body">{panes}</div></div>'
              '<div class="midcta"><div><b>Want to see it in writing?</b><span>We will share a sample service agreement with your quote.</span></div><div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></div></section>')
 
 # ---------- 02 fit finder ----------
@@ -221,9 +221,9 @@ EXTRA_CSS = '''<style>
 </style>'''
 
 JS = '''<script>(function(){
-var nodes=[].slice.call(document.querySelectorAll('.lc-node')),panes=[].slice.call(document.querySelectorAll('.lc-pane')),fill=document.querySelector('.lc-fill'),prev=document.querySelector('.lc-prev'),next=document.querySelector('.lc-next'),pos=document.querySelector('.lc-pos'),cur=0;
-function go(i){cur=Math.max(0,Math.min(nodes.length-1,i));nodes.forEach(function(n,k){n.classList.toggle('on',k===cur);n.classList.toggle('done',k<cur)});panes.forEach(function(p,k){p.classList.toggle('on',k===cur)});fill.style.height=(cur/(nodes.length-1)*100)+'%';prev.disabled=cur===0;next.disabled=cur===nodes.length-1;pos.textContent='Stage '+(cur+1)+' of '+nodes.length}
-nodes.forEach(function(n){n.onclick=function(){go(+n.dataset.i)}});prev.onclick=function(){go(cur-1)};next.onclick=function(){go(cur+1)};
+var nodes=[].slice.call(document.querySelectorAll('.lc-node')),panes=[].slice.call(document.querySelectorAll('.lc-pane')),fill=document.querySelector('.lc-fill'),cur=0;
+function go(i){cur=Math.max(0,Math.min(nodes.length-1,i));nodes.forEach(function(n,k){n.classList.toggle('on',k===cur);n.classList.toggle('done',k<cur)});panes.forEach(function(p,k){p.classList.toggle('on',k===cur)});fill.style.height=(cur/(nodes.length-1)*100)+'%'}
+nodes.forEach(function(n){n.onclick=function(){go(+n.dataset.i)}});
 document.querySelector('.lc').addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});go(0);
 var ans={},A=document.getElementById('ffa');
 function rec(){if(!(ans.entity&&ans.size&&ans.goal))return;var r;
