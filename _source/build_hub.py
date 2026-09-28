@@ -302,6 +302,6 @@ HEAD = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="
         + "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in schema) + EXTRA_CSS + '</head>')
 FOOT = ('<footer class="ftr"><div class="wrap" style="grid-template-columns:1fr"><div><h4>Paybooks, a TransPerfect company</h4><p>Employer of Record, Multi-Country Payroll, Managed India Office and Global HCM for companies building teams across borders.</p></div></div></footer>'
         '<script src="assets/protect.js" defer></script></body></html>')
-page = HEAD + HEADER + "<main>" + hero + fit + hire + control + comp + cost + compare + exits + service + timeline + faq + cta + REVEAL + JS + "</main>" + FOOT
+page = HEAD + HEADER + "<main>" + hero + fit + hire + control + comp + cost + compare + exits + service + timeline + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
 open(OUT, "w", encoding="utf-8").write(page)
 print("hub v2 written", len(page))
