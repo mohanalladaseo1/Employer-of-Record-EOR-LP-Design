@@ -164,13 +164,13 @@ comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("06
             ("IP assigned to you", "Every contract assigns the work and the intellectual property to your company."), ("Tax risk flagged early", "Roles that could create a taxable presence are flagged before you hire.")]) + '</ul>'
         '<div class="clause" style="margin-top:22px"><b>In India:</b> Paybooks’ published promise of no penalties ever on the filings and payments it handles. <a href="employer-of-record/india/">See Employer of Record India</a>.</div></div></section>')
 
-exits = ('<section class="sec" id="exits"><div class="wrap">' + head("08", "Exits", "Clean exits, whenever you need them", "Letting one person go, or moving your team to your own entity. We handle both, under local law.")
+exits = ('<section class="sec" id="exits"><div class="wrap">' + head("09", "Exits", "Clean exits, whenever you need them", "Letting one person go, or moving your team to your own entity. We handle both, under local law.")
         + '<div class="split" style="grid-template-columns:1fr 1fr">'
         + "".join(f'<div><h3 style="margin-bottom:12px">{h3}</h3><ul class="tl">' + "".join(f'<li><span class="d">{esc(a)}</span><div><p>{b}</p></div></li>' for a, b in items) + '</ul></div>' for h3, items in [
             ("Letting someone go", [("Decide", "You tell us. We confirm the notice and severance the country requires."), ("Notice", "We issue the termination under local law: notice, or pay in place of notice."), ("Last day", "Final pay: salary, unused leave and any severance due."), ("After", "Tax forms, documents and equipment return.")]),
             ("Moving to your own entity", [("Decide", "Usually once a country team is large enough to justify an entity. In India, Paybooks sets it up and runs it for you."), ("Set up", "Your entity is set up. New hires keep joining through us."), ("Switch day", "Contracts move to your entity. Service continues, same payslip app."), ("After", "Paybooks can keep running payroll for your entity.")])])
         + '</div></div></section>')
-service = ('<section class="sec alt" id="service"><div class="wrap">' + head("09", "Working with us", "How we work with you", "One team, one monthly report and one invoice for your whole international team.")
+service = ('<section class="sec alt" id="service"><div class="wrap">' + head("08", "Working with us", "How we work with you", "One team, one monthly report and one invoice for your whole international team.")
            + '<ul class="cards three">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in [
                ("One account manager", "With a payroll and compliance specialist for each country behind them."), ("Reply within one working day", "With overlap for calls across US, UK and Asia-Pacific hours."),
                ("One monthly report", "Payroll summary, filing proof and cost in your currency, every country on one page."), ("One invoice", "In USD, GBP or EUR at the bank rate. Salary, employer costs and our fee."),
@@ -303,6 +303,6 @@ HEAD = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="
         + "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in schema) + EXTRA_CSS + '</head>')
 FOOT = ('<footer class="ftr"><div class="wrap" style="grid-template-columns:1fr"><div><h4>Paybooks, a TransPerfect company</h4><p>Employer of Record, Multi-Country Payroll, Managed India Office and Global HCM for companies building teams across borders.</p></div></div></footer>'
         '<script src="assets/protect.js" defer></script></body></html>')
-page = HEAD + HEADER + "<main>" + hero + fit + countries + hire + control + cost + comp + compare + exits + service + timeline + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
+page = HEAD + HEADER + "<main>" + hero + fit + countries + hire + control + cost + comp + compare + service + exits + timeline + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
 open(OUT, "w", encoding="utf-8").write(page)
 print("hub v2 written", len(page))
