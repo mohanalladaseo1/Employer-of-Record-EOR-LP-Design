@@ -126,8 +126,8 @@ RATES = {
 }
 QUOTE_ONLY = [c for c in ALL42 if c not in {v["name"] for v in RATES.values()}]
 opts = "".join(f'<option value="{k}">{esc(v["name"])}</option>' for k, v in RATES.items()) + "".join(f'<option value="Q:{esc(c)}">{esc(c)} · in your quote</option>' for c in QUOTE_ONLY)
-cost = ('<section class="sec" id="cost"><div class="wrap">' + head("04", "Cost", "What it costs, line by line",
-        "Salary, the employer contributions the country's law requires, and our fee, in the open. Statutory rates come from each country's official source, linked below the result.")
+cost = ('<section class="sec" id="cost"><div class="wrap">' + head("04", "Cost", "What an employee costs, country by country",
+        "Salary, the employer contributions the country's law requires, and our fee. Statutory rates come from each country's official source, linked below the result.")
         + '<ul class="cparts"><li><span class="cp-n">1</span><div><b>Salary</b><p>The pay you agree with your hire, paid in their local currency on the local payroll date.</p></div></li>'
         '<li><span class="cp-n">2</span><div><b>Employer costs</b><p>Social security, pension and other contributions the law requires. They vary by country and are the same with any provider.</p></div></li>'
         '<li><span class="cp-n">3</span><div><b>Our fee</b><p>A monthly fee per employee, set by country. In India, from $199 a month plus a one-time $50 onboarding fee.</p></div></li></ul>'
