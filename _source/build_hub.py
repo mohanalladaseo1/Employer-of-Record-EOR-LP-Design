@@ -157,15 +157,13 @@ compare = ('<section class="sec alt" id="compare"><div class="wrap">' + head("06
            + ctable() + '<p class="fine">Fees published September 23, 2026: <a href="https://www.deel.com/pricing/" rel="nofollow" target="_blank">Deel</a>, <a href="https://remote.com/pricing" rel="nofollow" target="_blank">Remote</a>, <a href="https://remotepeople.com/blog/employer-of-record-cost/" rel="nofollow" target="_blank">Multiplier</a>; Paybooks from <a href="https://paybooks.in/eor/" rel="nofollow" target="_blank">paybooks.in/eor</a>. Country pages and languages counted from each site’s sitemap, September 2026. “Not published” means the company does not state it publicly.</p></div></section>')
 
 # ---------- 05 compliance strip, timeline, proof, faq, cta ----------
-comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("04", "No surprises", "Compliance as a clause", "What we file and pay in your country is written into your service agreement, so you are never chasing it.")
-        + '<div class="clause"><b>Every filing, in writing.</b> Your service agreement lists the taxes, contributions and registrations Paybooks handles in your country, and the proof you get each month. In India, that comes with Paybooks’ published promise of no penalties ever on the filings it handles.</div>'
-        + '<ul class="cards three" style="margin-top:24px">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in [
-            ("Every employment law, covered", "Contracts, notice, probation, working hours, leave and termination written the way the country requires."),
-            ("Filed on time, by local specialists", "A named payroll and compliance specialist for your country owns every deadline. Deductions follow the latest rules."),
-            ("We pay the government directly", "Taxes and social contributions withheld, filed and paid. You never receive a tax bill to pay."),
-            ("Monthly proof", "What was filed, when, with receipt numbers. Your auditor can use it."),
-            ("Registrations and inspections", "We register your people with the local authorities and handle inspections and queries."),
-            ("Tax risk and IP", "We flag roles that could create a taxable presence before you hire. IP is assigned to you in every contract.")]) + '</ul></div></section>')
+comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("04", "Compliance", "Local law, handled in every country", "Employment rules differ in every country. Getting them right is our job, not yours.")
+        + '<ul class="chk">' + "".join(f'<li><b>{esc(a)}</b><span>{esc(b)}</span></li>' for a, b in [
+            ("Contracts under local law", "Notice, probation, hours and leave written as the country requires."), ("Taxes and social security", "Withheld, filed and paid on time, with proof of every filing."),
+            ("Misclassification risk removed", "Full-time workers employed properly, not paid as contractors."), ("Exits done right", "Notice, severance and final pay under local rules."),
+            ("IP assigned to you", "Every contract assigns the work and the intellectual property to your company."), ("Tax risk flagged early", "Roles that could create a taxable presence are flagged before you hire.")]) + '</ul>'
+        '<div class="clause" style="margin-top:22px"><b>In India:</b> Paybooks’ published promise of no penalties ever on the filings and payments it handles. <a href="employer-of-record/india/">See Employer of Record India</a>.</div></div></section>')
+
 exits = ('<section class="sec" id="exits"><div class="wrap">' + head("07", "Exits", "Clean exits, whenever you need them", "Letting one person go, or moving your team to your own entity. We handle both, under local law.")
         + '<div class="split" style="grid-template-columns:1fr 1fr">'
         + "".join(f'<div><h3 style="margin-bottom:12px">{h3}</h3><ul class="tl">' + "".join(f'<li><span class="d">{esc(a)}</span><div><p>{b}</p></div></li>' for a, b in items) + '</ul></div>' for h3, items in [
