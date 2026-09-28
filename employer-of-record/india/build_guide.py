@@ -493,7 +493,7 @@ RELATED = ('<h2 style="font-size:24px">Keep reading</h2><div class="g-rel">'
 
 QUOTE_OLD = ('<section id="quoteold"><div class="g-final"><span class="g-tag">Ready to hire in India?</span><h2>Get your EOR India quote</h2>'
          '<p>Tell us the role, city and pay. You get the full monthly cost in dollars, the contract terms and a start date.</p>'
-         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></section>')
+         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to our EOR experts</a></div></div></section>')
 
 # ---------------- page ----------------
 toc = "".join('<li><a href="#' + i + '">' + lbl + "</a></li>" for i, lbl, _ in S)
@@ -578,7 +578,7 @@ HERO = ('<div class="g-progress" id="gprog"></div><section class="g-hero"><div c
         '<nav class="g-crumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../../#countries">Countries</a><span>/</span>India</nav>'
         '<h1>Employer of Record India: <em>2026 Guide</em></h1>'
         '<p class="g-sub">Hire in India without an entity. What it costs, which laws apply, and what an EOR handles for you.</p>' +
-        '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div>'
+        '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to our EOR experts</a></div>'
         '<ul class="cta2-ticks hero-ticks"><li>No entity setup cost</li><li>“No penalties ever” promise</li><li>From $199 per employee a month</li></ul>'
         '</div>' + ILLU + '</div>'
         '<div class="g-bystrip"><div class="g-bystrip-in">' + BYLINE(round(words_est / 230)) + '</div></div></section>')
@@ -595,7 +595,7 @@ SPY = ('<script>(function(){var pb=document.getElementById("gprog");function pr(
        'var a=m[e.target.id];if(a){a.classList.add("on");var ol=a.closest("ol");if(ol){var t=a.offsetTop-ol.offsetTop;if(t<ol.scrollTop||t>ol.scrollTop+ol.clientHeight-a.offsetHeight)ol.scrollTop=t-ol.clientHeight/2+a.offsetHeight/2}}}})},{rootMargin:"-10% 0px -80% 0px"});'
        'document.querySelectorAll(".g-body section[id]").forEach(function(s){o.observe(s)})})();</script>')
 
-CTA2 = '<section id="quote" class="cta2"><div class="wrap"><div class="cta2-card"><div class="cta2-copy"><span class="cta2-tag">Get started</span><h2>Your first India hire, <em>live within days.</em></h2><p>Tell us the role, city, and pay. You get the full monthly cost in dollars, the contract terms and a start date. No commitment.</p><div class="btns"><a class="btn" href="../../#quote">Get a quote for a role</a><a class="btn ghost" href="../../#quote">Talk to an EOR expert</a></div><ul class="cta2-ticks"><li>No entity setup cost</li><li>“No penalties ever” promise</li><li>From $199 per employee a month</li></ul></div><div class="cta2-quote" aria-hidden="true"><div class="q-head"><span>Your quote</span><em>Ready within days</em></div><div class="q-role"><b>Senior Software Engineer</b><small>Bengaluru · $26,000 a year</small></div><ul class="q-rows"><li><span>Monthly cost, all-in</span><b>$2,550</b></li><li><span>Government costs</span><b>$184</b></li><li><span>Paybooks fee</span><b>$199</b></li><li><span>Start date</span><b>Oct 13, 2026</b></li></ul><div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>'
+CTA2 = '<section id="quote" class="cta2"><div class="wrap"><div class="cta2-card"><div class="cta2-copy"><span class="cta2-tag">Get started</span><h2>Your first India hire, <em>live within days.</em></h2><p>Tell us the role, city, and pay. You get the full monthly cost in dollars, the contract terms and a start date. No commitment.</p><div class="btns"><a class="btn" href="../../#quote">Get a quote for a role</a><a class="btn ghost" href="../../#quote">Talk to our EOR experts</a></div><ul class="cta2-ticks"><li>No entity setup cost</li><li>“No penalties ever” promise</li><li>From $199 per employee a month</li></ul></div><div class="cta2-quote" aria-hidden="true"><div class="q-head"><span>Your quote</span><em>Ready within days</em></div><div class="q-role"><b>Senior Software Engineer</b><small>Bengaluru · $26,000 a year</small></div><ul class="q-rows"><li><span>Monthly cost, all-in</span><b>$2,550</b></li><li><span>Government costs</span><b>$184</b></li><li><span>Paybooks fee</span><b>$199</b></li><li><span>Start date</span><b>Oct 13, 2026</b></li></ul><div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>'
 page = HEAD + HEADER + HERO + '<div class="g-layout">' + TOC + '<main class="g-body">' + MTOC + body + "</main></div>" + CTA2 + FOOTER + SPY + '<script src="../../assets/protect.js" defer></script></body></html>'
 open(OUT, "w").write(page)
 print("words", words_est, "tables", page.count("<table"), "sources", len(SRC), "internal links", page.count('href="https://paybooks.in/article/'))
