@@ -139,7 +139,7 @@ cost = ('<section class="sec" id="cost"><div class="wrap">' + head("04", "Cost",
         '<div class="calc-row"><label>Our fee</label><span class="fee-pill" id="feepill"></span></div><p class="fine" id="cenote"></p></div>'
         '<div class="calc-out" id="ceout"><div class="kpis"><div class="kpi"><b id="ce_total"></b><span>per employee per month</span></div><div class="kpi"><b id="ce_year"></b><span id="ce_year_l">a year for your team</span></div><div class="kpi"><b id="ce_stat"></b><span>employer costs on top of salary</span></div></div>'
         '<ul class="lines" id="ce_rows"></ul><p class="fine" id="ce_src"></p></div></div>'
-        '<p class="fine">Headline statutory rates. Thresholds noted in each line are applied; other caps, regional rates and any benefits you add are applied in your written quote, which is final. Professional tax in India is withheld from the employee’s pay and shown for completeness. Paybooks’ fee outside India is set by country and shown in your quote.</p></div></section>')
+        '</div></section>')
 
 # ---------- 06 compare ----------
 CMP_HEAD = ["", "Paybooks", "Deel", "Remote", "Multiplier"]
