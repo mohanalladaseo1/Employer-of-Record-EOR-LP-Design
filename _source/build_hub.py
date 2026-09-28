@@ -98,8 +98,8 @@ countries = ('<section class="sec alt" id="countries"><div class="wrap">' + head
 
 # ---------- country picker strip ----------
 copts = '<option value="" selected disabled>Choose a country</option>' + "".join(f'<option value="{esc(c)}">{esc(c)}</option>' for c in sorted(ALL42))
-cstrip = ('<section class="cpick" id="country"><div class="wrap"><div class="cpick-card"><div><b>Where do you want to hire?</b><span>Pick a country to see what an employee costs there, the contract rules, and how fast they can start.</span></div>'
-          f'<form class="cpick-form" onsubmit="return false"><select id="cpsel" aria-label="Choose a country">{copts}</select><a class="btn" id="cpgo" href="#quote">See costs, rules and timelines</a></form></div></div></section>')
+cstrip = ('<section class="cpick" id="country"><div class="wrap"><div class="cpick-card"><div><b>Know the cost before the offer</b><span>See what an employee costs in the country you’re hiring in, before you make the offer.</span></div>'
+          f'<form class="cpick-form" onsubmit="return false"><select id="cpsel" aria-label="Choose a country">{copts}</select><a class="btn" id="cpgo" href="#quote">See employee cost →</a></form></div></div></section>')
 
 HIRE_CARDS = [("Your name on the letter", "Paybooks is the employer. Your company, manager and role are on page one."),
               ("Real benefits from day one", "The statutory benefits of the country, plus any extras you choose. Payslips and tax forms in one app."),
@@ -265,7 +265,7 @@ if(document.querySelector('.lc')){var nodes=[].slice.call(document.querySelector
 function go(i){cur=Math.max(0,Math.min(nodes.length-1,i));nodes.forEach(function(n,k){n.classList.toggle('on',k===cur);n.classList.toggle('done',k<cur)});panes.forEach(function(p,k){p.classList.toggle('on',k===cur)});fill.style.height=(cur/(nodes.length-1)*100)+'%'}
 nodes.forEach(function(n){n.onclick=function(){go(+n.dataset.i)}});
 document.querySelector('.lc').addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});go(0);}
-var cps=document.getElementById('cpsel'),cpg=document.getElementById('cpgo');if(cps){cps.onchange=function(){var c=cps.value;cpg.href=c==='India'?'employer-of-record/india/':'#quote';cpg.textContent='See hiring in '+c}}
+var cps=document.getElementById('cpsel'),cpg=document.getElementById('cpgo');if(cps){cps.onchange=function(){var c=cps.value;cpg.href=c==='India'?'employer-of-record/india/':'#quote';cpg.textContent='Employee cost in '+c+' →'}}
 var RR,CALC;var q=document.getElementById('csq')||{addEventListener:function(){}},pills=[].slice.call(document.querySelectorAll('.cp')),cn=document.getElementById('csn'),panel=document.getElementById('cpanel');
 var KEY={'India':'IN','United States':'US','United Kingdom':'UK','Singapore':'SG','Canada':'CA'};
 function pct(k){var r=RR[k];if(!r)return null;var s=r['default'],L=CALC(k,s);return (L.reduce(function(a,x){return a+x[2]},0)/s*100).toFixed(1)}
