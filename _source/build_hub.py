@@ -23,7 +23,7 @@ DESC = "Hire employees in 42 countries without setting up an entity. Paybooks be
 hero = (f'<section class="hero v2"><div class="wrap"><div class="grid"><div><span class="cta2-tag hero-tag">Your first international hire, live within days</span>'
         '<h1>Hire from any country. <em>No entity needed.</em></h1>'
         '<p class="sub">Wherever your company is based, Paybooks becomes the legal employer of your people in any of 42 countries. We run the local contract, payroll, taxes and benefits under that country’s law. You choose the people and direct their work.</p>'
-        '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div>'
+        '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to our EOR experts</a></div>'
         f'<ul class="cta2-ticks hero-ticks">{TICKS}</ul></div>{VID}</div></div></section>{TRUST}')
 
 # ---------- 01 lifecycle stepper ----------
@@ -49,7 +49,7 @@ nav = '<div class="lc-nav"><button type="button" class="lc-prev" aria-label="Pre
 lifecycle = ('<section class="sec" id="how"><div class="wrap">' + head("01", "Pain point: setting up an entity takes months and a local team", "Who does what, from offer to exit",
              "An Employer of Record legally employs people on your behalf in a country where you have no entity, so you hire in days, not months. Click a stage to see what stays with you and what Paybooks takes on.")
              + f'<div class="lc"><div class="lc-track"><span class="lc-line"><span class="lc-fill"></span></span>{track}</div><div class="lc-body">{panes}</div></div>'
-             '<div class="midcta"><div><b>Want to see it in writing?</b><span>We will share a sample service agreement with your quote.</span></div><div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></div></section>')
+             '<div class="midcta"><div><b>Want to see it in writing?</b><span>We will share a sample service agreement with your quote.</span></div><div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to our EOR experts</a></div></div></div></section>')
 
 # ---------- 02 fit finder ----------
 fit = ('<section class="sec alt" id="fit"><div class="wrap">' + head("02", "Pain point: EOR, PEO, entity or contractors, and every vendor says theirs", "Is an Employer of Record right for you?", "Three questions. The answer names the right Paybooks service, and says when it is not us.")
@@ -81,7 +81,7 @@ control = ('<section class="sec" id="control"><div class="wrap">' + head("03", "
                ("Work hours, leave and remote rules", "Your policies, within local law"), ("Raises, bonuses, equity", "Processed in the next payroll, no fee"), ("When to part ways", "We handle it under local law"), ("When to own your entity", "Your team moves over. Nothing restarts.")])
            + col("us", "We take care of", [("The employment contract and legal liability", "Under the country’s labor law"), ("Payroll and every government payment", "Taxes and social contributions: we calculate, file and pay"),
                ("Registrations and inspections", "With the local authorities"), ("Benefits", "Statutory benefits, plus any extras you choose"), ("Exits and final pay", "Notice, severance and documents"), ("Data security", "ISO 27001:2022. SOC 2 Type II. GDPR.")]) + '</div>'
-           + '<div class="midcta"><div><b>Want to see it in writing?</b><span>We will share a sample service agreement with your quote.</span></div><div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></div></section>')
+           + '<div class="midcta"><div><b>Want to see it in writing?</b><span>We will share a sample service agreement with your quote.</span></div><div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to our EOR experts</a></div></div></div></section>')
 
 # ---------- countries by region (unused in v4 flow) ----------
 REGIONS = [("Europe", ["United Kingdom", "Germany", "Netherlands", "Ireland", "Switzerland", "France", "Sweden", "Denmark", "Finland", "Norway", "Belgium", "Austria", "Italy", "Spain", "Portugal", "Czech Republic", "Poland", "Hungary", "Romania", "Turkey"]),
@@ -145,7 +145,7 @@ cost = ('<section class="sec" id="cost"><div class="wrap">' + head("07", "Cost",
         '<div class="calc-row"><label>Our fee</label><span class="fee-pill" id="feepill"></span></div><p class="fine" id="cenote"></p></div>'
         '<div class="calc-out" id="ceout"><div class="kpis"><div class="kpi"><b id="ce_total"></b><span>per employee per month</span></div><div class="kpi"><b id="ce_year"></b><span id="ce_year_l">a year for your team</span></div><div class="kpi"><b id="ce_stat"></b><span>employer costs on top of salary</span></div></div>'
         '<ul class="lines" id="ce_rows"></ul><p class="fine" id="ce_src"></p></div></div>'
-        '<div class="btns" style="margin-top:26px"><a class="btn" href="#quote">Talk to an EOR expert</a></div></div></section>')
+        '<div class="btns" style="margin-top:26px"><a class="btn" href="#quote">Talk to our EOR experts</a></div></div></section>')
 
 # ---------- 06 compare ----------
 CMP_HEAD = ["", "Paybooks", "Deel", "Remote", "Multiplier"]
@@ -202,11 +202,11 @@ FAQ = [("What is an Employer of Record?", "A company that legally employs people
        ("Who owns the IP?", "You do. Every contract assigns it to your company."),
        ("What happens when we open our own entity?", "Your people move to your entity’s contracts with service unbroken. Paybooks can keep running their payroll."),
        ("Which countries do you cover?", "42 countries across Europe, the Americas, the Middle East, Africa and Asia-Pacific. Use the country finder above, or send us the country you need with your quote request.")]
-faq = ('<section class="sec alt" id="faq"><div class="wrap"><div class="faq"><div class="sticky"><span class="eyebrow">FAQ</span><h2>Your questions, answered</h2><p style="color:var(--muted);margin:14px 0 22px">What to know before you hire in another country.</p><a class="btn" href="#quote">Talk to an EOR expert</a></div><div>'
+faq = ('<section class="sec alt" id="faq"><div class="wrap"><div class="faq"><div class="sticky"><span class="eyebrow">FAQ</span><h2>Your questions, answered</h2><p style="color:var(--muted);margin:14px 0 22px">What to know before you hire in another country.</p><a class="btn" href="#quote">Talk to our EOR experts</a></div><div>'
        + "".join(f"<details><summary>{esc(q)}</summary><p>{a}</p></details>" for q, a in FAQ) + '</div></div></div></section>')
 cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card"><div class="cta2-copy"><span class="cta2-tag">Get a quote</span><h2>Your next hire could start <em>within days.</em></h2>'
        '<p>Setting up an entity takes months. Tell us the country, the role and the pay, and you get the full monthly cost, the contract terms and a start date in writing. No entity, no retainer, no commitment until you say go.</p>'
-       '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div>'
+       '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to our EOR experts</a></div>'
        '<ul class="cta2-ticks"><li>Written quote, no obligation</li><li>Local contract ready to sign</li><li>One invoice, in your currency</li></ul></div>'
        '<div class="cta2-quote" aria-hidden="true"><div class="q-head"><span>Example quote</span><em>India</em></div>'
        '<div class="q-role"><b>Senior Software Engineer</b><small>Bengaluru · $26,000 a year</small></div>'
