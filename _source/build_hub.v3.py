@@ -14,16 +14,16 @@ PH = json.load(open(os.path.join(H, "..", "strategy", "paybooks_phases.json")))
 i0 = T.find('<div class="letter">'); i1 = T.find('</div><ul class="cards"', i0)
 LETTER = T[i0:i1]
 def head(n, eyebrow, h2, sub):
-    cls = "eyebrow"
+    cls = "eyebrow pain" if eyebrow.startswith("Pain point") else "eyebrow"
     return f'<div class="head rv"><span class="num">{n}</span><div><span class="{cls}">{eyebrow}</span><h2>{esc(h2)}</h2><p>{sub}</p></div></div>'
 
 TITLE = "Employer of Record (EOR) Services | Hire in 42 Countries Without an Entity | Paybooks, a TransPerfect company"
 DESC = "Hire employees in 42 countries without setting up an entity. Paybooks becomes the legal employer and runs contracts, payroll, taxes and benefits under local law. Estimate the cost, check your fit, get a quote."
 
-hero = (f'<section class="hero v2"><div class="wrap"><div class="grid"><div><span class="cta2-tag hero-tag">Your first international hire, live within days</span>'
+hero = (f'<section class="hero v2"><div class="wrap"><div class="grid"><div><span class="cta2-tag hero-tag">Global Employer of Record</span>'
         '<h1>Hire in 42 countries. <em>No entity needed.</em></h1>'
         '<p class="sub">Paybooks becomes the legal employer of your people in any of 42 countries. We run the local contract, payroll, taxes and benefits under that country’s law. You choose the people and direct their work.</p>'
-        '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div>'
+        '<div class="btns"><a class="btn" href="#cost">Estimate the cost</a><a class="btn ghost" href="#countries">Find your country</a></div>'
         f'<ul class="cta2-ticks hero-ticks">{TICKS}</ul></div>{VID}</div></div></section>{TRUST}')
 
 # ---------- 01 lifecycle stepper ----------
@@ -62,28 +62,7 @@ fit = ('<section class="sec alt" id="fit"><div class="wrap">' + head("02", "Pain
 <div class="ff-a" id="ffa"><div class="ff-empty"><b>Answer the three questions</b><p>Your recommendation appears here, with the reason and the option we would not suggest.</p></div></div></div>'''
        + '</div></section>')
 
-
-def table(hd, rows, hl=1):
-    th = "".join(f'<th{" class=hl" if i == hl else ""}>{esc(h)}</th>' for i, h in enumerate(hd))
-    tr = "".join("<tr>" + "".join(f'<td{" class=hl" if i == hl else ""}>{c}</td>' for i, c in enumerate(r)) + "</tr>" for r in rows)
-    return f'<div class="t-wrap"><table class="tbl"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
-fit = ('<section class="sec" id="fit"><div class="wrap">' + head("01", "Start here", "Is an Employer of Record right for you?", "Find your situation below to see which way of hiring fits you best.")
-       + table(["If you have", "Best option", "Why it fits", "Not recommended"], [
-           ["1 to 20 hires in a country where you have no entity", "<b>Employer of Record</b>", "Live within days. No entity to set up or close.", "Opening an entity first"],
-           ["A new market to test", "<b>Employer of Record</b>", "Hire now; decide on an entity once the market proves itself.", "Committing to an entity too early"],
-           ["Contractors working full time for you", "<b>EOR conversion</b>", "Removes the risk of treating employees as contractors.", "Leaving them as contractors"],
-           ["A large team in one country, or IP-heavy work", "<b>Your own entity, with Paybooks payroll</b>", "At scale, owning an entity usually costs less per person.", "EOR at any size"],
-           ["A team to build in India", "<b>EOR now, Managed India Office later</b>", "Start on EOR. Move to your own India entity, run by Paybooks, as the team grows.", "Waiting to hire until an entity is ready"],
-           ["Your own entities in several countries", "<b>Multi-Country Payroll</b>", "One provider and one report for payroll in every country.", "A different payroll vendor per country"]]) + '</div></section>')
-def col(cls, h3, items): return f'<div class="col {cls}"><h3>{esc(h3)}</h3><ul>' + "".join(f'<li><div><b>{esc(a)}</b><span>{esc(b)}</span></div></li>' for a, b in items) + '</ul></div>'
-control = ('<section class="sec" id="control"><div class="wrap">' + head("03", "Who does what", "You manage the work. We handle the employer duties.", "Exactly who handles what, as written in your service agreement.")
-           + '<div class="raci">' + col("you", "You decide", [("Who to hire and what to pay", "We quote the full monthly cost first"), ("Day-to-day work, reviews, promotions", "Managers are yours"),
-               ("Work hours, leave and remote rules", "Your policies, within local law"), ("Raises, bonuses, equity", "Processed in the next payroll, no fee"), ("When to part ways", "We handle it under local law"), ("When to own your entity", "Your team moves over. Nothing restarts.")])
-           + col("us", "We take care of", [("The employment contract and legal liability", "Under the country’s labor law"), ("Payroll and every government payment", "Taxes and social contributions: we calculate, file and pay"),
-               ("Registrations and inspections", "With the local authorities"), ("Benefits", "Statutory benefits, plus any extras you choose"), ("Exits and final pay", "Notice, severance and documents"), ("Data security", "ISO 27001:2022. SOC 2 Type II. GDPR.")]) + '</div>'
-           + '<div class="midcta"><div><b>Want to see it in writing?</b><span>We will share a sample service agreement with your quote.</span></div><div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></div></section>')
-
-# ---------- countries by region (unused in v4 flow) ----------
+# ---------- 02 countries by region ----------
 REGIONS = [("Europe", ["United Kingdom", "Germany", "Netherlands", "Ireland", "Switzerland", "France", "Sweden", "Denmark", "Finland", "Norway", "Belgium", "Austria", "Italy", "Spain", "Portugal", "Czech Republic", "Poland", "Hungary", "Romania", "Turkey"]),
            ("Americas", ["United States", "Canada", "Brazil", "Mexico", "Argentina", "Colombia", "Costa Rica", "Dominican Republic"]),
            ("Asia-Pacific", ["India", "Singapore", "Australia", "Hong Kong", "Japan", "South Korea", "China", "Thailand", "Philippines"]),
@@ -102,7 +81,7 @@ HIRE_CARDS = [("Your name on the letter", "Paybooks is the employer. Your compan
               ("Their LinkedIn profile", "They list your company as their employer. We explain how Paybooks shows up before the offer."),
               ("People to ask", "Our HR team answers their payslip, insurance and leave questions.")]
 CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>'
-hire = ('<section class="sec alt" id="experience"><div class="wrap">' + head("02", "Your hire", "What your hire sees", "The offer letter, benefits and support your new hire gets from day one, in their country.")
+hire = ('<section class="sec alt" id="experience"><div class="wrap">' + head("03", "Pain point: good candidates turn down contracts from a company they have never heard of", "What your hire gets", "A real local job with a real local employer, from day one. Your name stays on the letter.")
         + '<div class="split"><div class="sticky"><p class="fine" style="margin:0 0 10px;color:var(--g600);font-weight:600">Example offer letter · India</p>' + LETTER + '</div>'
         + '<ul class="cards" style="grid-template-columns:1fr 1fr">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in HIRE_CARDS) + '</ul></div></div></section>')
 
@@ -126,7 +105,7 @@ RATES = {
 }
 QUOTE_ONLY = [c for c in ALL42 if c not in {v["name"] for v in RATES.values()}]
 opts = "".join(f'<option value="{k}">{esc(v["name"])}</option>' for k, v in RATES.items()) + "".join(f'<option value="Q:{esc(c)}">{esc(c)} · in your quote</option>' for c in QUOTE_ONLY)
-cost = ('<section class="sec" id="cost"><div class="wrap">' + head("05", "Cost", "What it costs, line by line",
+cost = ('<section class="sec" id="cost"><div class="wrap">' + head("04", "Pain point: hidden employer costs and fees that surface after you sign", "What it costs, line by line",
         "Salary, the employer contributions the country's law requires, and our fee, in the open. Statutory rates come from each country's official source, linked below the result.")
         + '<ul class="cparts"><li><span class="cp-n">1</span><div><b>Salary</b><p>The pay you agree with your hire, paid in their local currency on the local payroll date.</p></div></li>'
         '<li><span class="cp-n">2</span><div><b>Employer costs</b><p>Social security, pension and other contributions the law requires. They vary by country and are the same with any provider.</p></div></li>'
@@ -153,31 +132,29 @@ def ctable():
     th = "".join(f'<th{" class=hl" if i == 1 else ""}>{esc(h)}</th>' for i, h in enumerate(CMP_HEAD))
     tr = "".join("<tr>" + "".join(f'<td{" class=hl" if i == 1 else ""}>{c}</td>' for i, c in enumerate(r)) + "</tr>" for r in CMP_ROWS)
     return f'<div class="t-wrap"><table class="tbl"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
-compare = ('<section class="sec alt" id="compare"><div class="wrap">' + head("06", "Compare", "Compare EOR providers: choose the best", "How Paybooks compares with the platforms you will be quoted by. Prices are the published India rates; fees for other countries come in your quote.")
+compare = ('<section class="sec alt" id="compare"><div class="wrap">' + head("05", "Pain point: the big platforms charge $599 to $699 a month before salary", "Compare EOR providers", "How Paybooks compares with the platforms you will be quoted by. Prices are the published India rates; fees for other countries come in your quote.")
            + ctable() + '<p class="fine">Fees published September 23, 2026: <a href="https://www.deel.com/pricing/" rel="nofollow" target="_blank">Deel</a>, <a href="https://remote.com/pricing" rel="nofollow" target="_blank">Remote</a>, <a href="https://remotepeople.com/blog/employer-of-record-cost/" rel="nofollow" target="_blank">Multiplier</a>; Paybooks from <a href="https://paybooks.in/eor/" rel="nofollow" target="_blank">paybooks.in/eor</a>. Country pages and languages counted from each site’s sitemap, September 2026. “Not published” means the company does not state it publicly.</p></div></section>')
 
 # ---------- 05 compliance strip, timeline, proof, faq, cta ----------
-comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("04", "No surprises", "Compliance as a clause", "What we file and pay in your country is written into your service agreement, so you are never chasing it.")
-        + '<div class="clause"><b>Every filing, in writing.</b> Your service agreement lists the taxes, contributions and registrations Paybooks handles in your country, and the proof you get each month. In India, that comes with Paybooks’ published promise of no penalties ever on the filings it handles.</div>'
-        + '<ul class="cards three" style="margin-top:24px">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in [
-            ("Every employment law, covered", "Contracts, notice, probation, working hours, leave and termination written the way the country requires."),
-            ("Filed on time, by local specialists", "A named payroll and compliance specialist for your country owns every deadline. Deductions follow the latest rules."),
-            ("We pay the government directly", "Taxes and social contributions withheld, filed and paid. You never receive a tax bill to pay."),
-            ("Monthly proof", "What was filed, when, with receipt numbers. Your auditor can use it."),
-            ("Registrations and inspections", "We register your people with the local authorities and handle inspections and queries."),
-            ("Tax risk and IP", "We flag roles that could create a taxable presence before you hire. IP is assigned to you in every contract.")]) + '</ul></div></section>')
-exits = ('<section class="sec" id="exits"><div class="wrap">' + head("07", "Exits", "Clean exits, whenever you need them", "Letting one person go, or moving your team to your own entity. We handle both, under local law.")
+comp = ('<section class="sec" id="compliance"><div class="wrap">' + head("06", "Pain point: one missed filing becomes a penalty, and a contractor becomes a lawsuit", "Local law, handled in every country", "Employment rules differ in every country. Getting them right, and proving it, is our job, not yours.")
+        + '<ul class="chk">' + "".join(f'<li><b>{esc(a)}</b><span>{esc(b)}</span></li>' for a, b in [
+            ("Contracts under local law", "Notice, probation, hours and leave written as the country requires."), ("Taxes and social security", "Withheld, filed and paid on time, with proof of every filing."),
+            ("Misclassification risk removed", "Full-time workers employed properly, not paid as contractors."), ("Exits done right", "Notice, severance and final pay under local rules."),
+            ("IP assigned to you", "Every contract assigns the work and the intellectual property to your company."), ("Tax risk flagged early", "Roles that could create a taxable presence are flagged before you hire.")]) + '</ul>'
+        '<div class="clause" style="margin-top:22px"><b>In India:</b> Paybooks’ published promise of no penalties ever on the filings and payments it handles. <a href="employer-of-record/india/">See Employer of Record India</a>.</div></div></section>')
+
+exits = ('<section class="sec" id="exits"><div class="wrap">' + head("07", "Pain point: getting out is where hidden costs and legal risk live", "Clean exits, whenever you need them", "Letting one person go, or moving your team to your own entity. We handle both, under local law.")
         + '<div class="split" style="grid-template-columns:1fr 1fr">'
         + "".join(f'<div><h3 style="margin-bottom:12px">{h3}</h3><ul class="tl">' + "".join(f'<li><span class="d">{esc(a)}</span><div><p>{b}</p></div></li>' for a, b in items) + '</ul></div>' for h3, items in [
             ("Letting someone go", [("Decide", "You tell us. We confirm the notice and severance the country requires."), ("Notice", "We issue the termination under local law: notice, or pay in place of notice."), ("Last day", "Final pay: salary, unused leave and any severance due."), ("After", "Tax forms, documents and equipment return.")]),
             ("Moving to your own entity", [("Decide", "Usually once a country team is large enough to justify an entity. In India, Paybooks sets it up and runs it for you."), ("Set up", "Your entity is set up. New hires keep joining through us."), ("Switch day", "Contracts move to your entity. Service continues, same payslip app."), ("After", "Paybooks can keep running payroll for your entity.")])])
         + '</div></div></section>')
-service = ('<section class="sec alt" id="service"><div class="wrap">' + head("08", "Working with us", "How we work with you", "One team, one monthly report and one invoice for your whole international team.")
+service = ('<section class="sec alt" id="service"><div class="wrap">' + head("08", "Pain point: a different vendor, report and invoice in every country", "How we work with you", "One team, one monthly report and one invoice for your whole international team.")
            + '<ul class="cards three">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in [
                ("One account manager", "With a payroll and compliance specialist for each country behind them."), ("Reply within one working day", "With overlap for calls across US, UK and Asia-Pacific hours."),
                ("One monthly report", "Payroll summary, filing proof and cost in your currency, every country on one page."), ("One invoice", "In USD, GBP or EUR at the bank rate. Salary, employer costs and our fee."),
                ("Integrations", "Employee and cost data flows to your HR or finance system. Single sign-on for the employee app."), ("Security", "ISO 27001:2022. SOC 2 Type II. GDPR.")]) + '</ul></div></section>')
-timeline = ('<section class="sec tight" id="timeline"><div class="wrap"><div class="split">' + head("09", "Timeline", "From offer to first day, within days", "In India it is days, not months. Elsewhere your quote confirms the start date.")
+timeline = ('<section class="sec tight" id="timeline"><div class="wrap"><div class="split">' + head("09", "Pain point: no one tells you how long it will take", "From offer to first day", "How long it takes depends on the country. Your quote confirms the start date; in India it is days, not months.")
             + '<ul class="tl">' + "".join(f'<li><span class="d">{esc(a)}</span><div><p>{b}</p></div></li>' for a, b in [
                 ("Step 1", "You send the role, country and pay. We send the full cost and the contract terms."), ("Step 2", "You approve. We issue the local contract and your hire signs."),
                 ("Step 3", "We collect documents and complete the registrations."), ("Step 4", "Any background checks you choose are completed."), ("Step 5", "First day."),
@@ -198,7 +175,7 @@ FAQ = [("What is an Employer of Record?", "A company that legally employs people
        ("Who owns the IP?", "You do. Every contract assigns it to your company."),
        ("What happens when we open our own entity?", "Your people move to your entity’s contracts with service unbroken. Paybooks can keep running their payroll."),
        ("Which countries do you cover?", "42 countries across Europe, the Americas, the Middle East, Africa and Asia-Pacific. Use the country finder above, or send us the country you need with your quote request.")]
-faq = ('<section class="sec alt" id="faq"><div class="wrap"><div class="faq"><div class="sticky"><span class="eyebrow">FAQ</span><h2>Your questions, answered</h2><p style="color:var(--muted);margin:14px 0 22px">What to know before you hire in another country.</p><a class="btn" href="#quote">Talk to an EOR expert</a></div><div>'
+faq = ('<section class="sec alt" id="faq"><div class="wrap"><div class="faq"><div class="sticky"><span class="eyebrow">FAQ</span><h2>Your questions, answered</h2><p style="color:var(--muted);margin:14px 0 22px">What to know before you hire abroad.</p><a class="btn" href="#quote">Talk to an EOR expert</a></div><div>'
        + "".join(f"<details><summary>{esc(q)}</summary><p>{a}</p></details>" for q, a in FAQ) + '</div></div></div></section>')
 cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card"><div class="cta2-copy"><span class="cta2-tag">Get started</span><h2>Send us one role. <em>Get the full cost back.</em></h2>'
        '<p>Tell us the country, the role and the pay. You get the full monthly cost, the contract terms and a start date. No commitment.</p>'
@@ -251,11 +228,11 @@ EXTRA_CSS = '''<style>
 </style>'''
 
 JS = '''<script>(function(){
-if(document.querySelector('.lc')){var nodes=[].slice.call(document.querySelectorAll('.lc-node')),panes=[].slice.call(document.querySelectorAll('.lc-pane')),fill=document.querySelector('.lc-fill'),cur=0;
+var nodes=[].slice.call(document.querySelectorAll('.lc-node')),panes=[].slice.call(document.querySelectorAll('.lc-pane')),fill=document.querySelector('.lc-fill'),cur=0;
 function go(i){cur=Math.max(0,Math.min(nodes.length-1,i));nodes.forEach(function(n,k){n.classList.toggle('on',k===cur);n.classList.toggle('done',k<cur)});panes.forEach(function(p,k){p.classList.toggle('on',k===cur)});fill.style.height=(cur/(nodes.length-1)*100)+'%'}
 nodes.forEach(function(n){n.onclick=function(){go(+n.dataset.i)}});
-document.querySelector('.lc').addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});go(0);}
-var RR,CALC;var q=document.getElementById('csq')||{addEventListener:function(){}},pills=[].slice.call(document.querySelectorAll('.cp')),cn=document.getElementById('csn'),panel=document.getElementById('cpanel');
+document.querySelector('.lc').addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});go(0);
+var RR,CALC;var q=document.getElementById('csq'),pills=[].slice.call(document.querySelectorAll('.cp')),cn=document.getElementById('csn'),panel=document.getElementById('cpanel');
 var KEY={'India':'IN','United States':'US','United Kingdom':'UK','Singapore':'SG','Canada':'CA'};
 function pct(k){var r=RR[k];if(!r)return null;var s=r['default'],L=CALC(k,s);return (L.reduce(function(a,x){return a+x[2]},0)/s*100).toFixed(1)}
 function show(n,rg){pills.forEach(function(p){p.classList.toggle('on',p.dataset.n===n)});var k=KEY[n],pc=k?pct(k):null;
@@ -290,7 +267,7 @@ function draw(){var k=sel.value,n=+N.value;NV.textContent=n;
  document.getElementById('ce_rows').innerHTML=rows;document.getElementById('ce_total').textContent=money(r.cur,(s+stat+fee)/12);document.getElementById('ce_stat').textContent=(stat/s*100).toFixed(1)+'%';document.getElementById('ce_year').textContent=money(r.cur,(s+stat+fee)*n);document.getElementById('ce_year_l').textContent='a year for '+n+(n===1?' hire':' hires');
  document.getElementById('ce_src').innerHTML=(r.extra?r.extra+' ':'')+(r.yearNote?r.yearNote+'. ':'')+'Sources: '+r.src.map(function(x){return '<a href="'+x[1]+'"'+(x[1].indexOf('http')===0?' rel="nofollow" target="_blank"':'')+'>'+x[0]+'</a>'}).join(', ')+'.';
  note.textContent=k==='IN'?'About $'+Math.round(s/r.usd).toLocaleString('en-US')+' a year at ₹95.7 per $1.':''}
-N.oninput=draw;ST.onchange=draw;RR=R;CALC=calc;if(panel)show('India','Asia-Pacific');sel.onchange=draw;sl.oninput=draw;draw();
+N.oninput=draw;ST.onchange=draw;RR=R;CALC=calc;show('India','Asia-Pacific');sel.onchange=draw;sl.oninput=draw;draw();
 })();</script>'''
 
 schema = [
@@ -304,6 +281,6 @@ HEAD = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="
         + "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in schema) + EXTRA_CSS + '</head>')
 FOOT = ('<footer class="ftr"><div class="wrap" style="grid-template-columns:1fr"><div><h4>Paybooks, a TransPerfect company</h4><p>Employer of Record, Multi-Country Payroll, Managed India Office and Global HCM for companies building teams across borders.</p></div></div></footer>'
         '<script src="assets/protect.js" defer></script></body></html>')
-page = HEAD + HEADER + "<main>" + hero + fit + hire + control + comp + cost + compare + exits + service + timeline + faq + cta + REVEAL + JS + "</main>" + FOOT
+page = HEAD + HEADER + "<main>" + hero + lifecycle + countries + hire + cost + compare + comp + exits + service + timeline + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
 open(OUT, "w", encoding="utf-8").write(page)
 print("hub v2 written", len(page))
