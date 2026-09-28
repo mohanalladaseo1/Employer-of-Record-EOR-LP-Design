@@ -215,7 +215,7 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
 
 EXTRA_CSS = '''<style>
 @media(min-width:1000px){.hero.v2 .grid{grid-template-columns:3fr 2fr!important;gap:48px!important}.hero.v2 h1{max-width:none}.hero.v2 .sub{max-width:none}}
-.hero.v2 h1{font-size:clamp(32px,3.2vw,46px);letter-spacing:-.035em;line-height:1.08}@media(min-width:1000px){.hero.v2 h1 em{white-space:nowrap}}@media(max-width:700px){.hero.v2 h1 br{display:none}}
+.hero.v2 h1{font-size:clamp(34px,3.9vw,54px);letter-spacing:-.03em}@media(max-width:700px){.hero.v2 h1 br{display:none}}
 .dark .head p{color:#BFD3B9}#service .card .ic{background:rgba(159,211,92,.18);color:#9FD35C}
 #compare .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
 #proof .chips span{background:#fff;border:1px solid var(--line);color:var(--ink);font-weight:600}#proof .card{background:#fff;border-color:var(--sage);box-shadow:var(--sh)}#proof .card:hover{transform:none}
