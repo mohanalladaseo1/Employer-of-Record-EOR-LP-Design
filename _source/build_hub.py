@@ -208,6 +208,7 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
        '<div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>')
 
 EXTRA_CSS = '''<style>
+.calc .calc-row select{background:#F2F1EC!important;color:#0E1411!important;border:1px solid #DAD8CF!important;padding:8px 10px;font-size:13.5px;border-radius:10px}.calc .calc-row select:focus{outline:none;box-shadow:0 0 0 3px rgba(159,211,92,.35)}
 .sec .head .eyebrow.pain,.dark .head .eyebrow.pain{display:inline-flex;text-transform:none;letter-spacing:0;font-size:14.5px;font-weight:600;color:#B4530F;margin-bottom:10px}.eyebrow.pain::before{background:#F26B1D}.dark .eyebrow.pain,#cost .eyebrow.pain,#compare .eyebrow.pain{color:#FFB08A}.dark .eyebrow.pain::before,#cost .eyebrow.pain::before,#compare .eyebrow.pain::before{background:#F26B1D}
 .lc{display:grid;grid-template-columns:270px 1fr;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
 .lc-track{position:relative;display:flex;flex-direction:column;gap:6px;padding:24px 18px;border-right:1px solid var(--line);background:#FAFBF8}
