@@ -11,11 +11,7 @@ VID = ('<div class="vidhold" role="img" aria-label="Video placeholder"><div clas
        '<span class="vh-cap"><b>How Paybooks EOR works</b><small>2-minute walkthrough</small></span><span class="vh-tag">Video</span></div></div>')
 TICKS = '<li>No entity to set up</li><li>Local contracts and payroll</li><li>One monthly invoice</li>'
 PH = json.load(open(os.path.join(H, "..", "strategy", "paybooks_phases.json")))
-i0 = T.find('<div class="letter">'); i1 = T.find('</div><ul class="cards"', i0)
-LETTER = T[i0:i1]
-def head(n, eyebrow, h2, sub):
-    cls = "eyebrow pain" if eyebrow.startswith("Pain point") else "eyebrow"
-    return f'<div class="head rv"><span class="num">{n}</span><div><span class="{cls}">{eyebrow}</span><h2>{esc(h2)}</h2><p>{sub}</p></div></div>'
+def head(n, eyebrow, h2, sub): return f'<div class="head rv"><span class="num">{n}</span><div><span class="eyebrow">{eyebrow}</span><h2>{esc(h2)}</h2><p>{sub}</p></div></div>'
 
 TITLE = "Employer of Record (EOR) Services | Hire in 42 Countries Without an Entity | Paybooks, a TransPerfect company"
 DESC = "Hire employees in 42 countries without setting up an entity. Paybooks becomes the legal employer and runs contracts, payroll, taxes and benefits under local law. Estimate the cost, check your fit, get a quote."
@@ -38,13 +34,12 @@ STAGES = [
 ]
 tabs = "".join(f'<button class="lc-tab{" on" if i == 0 else ""}" data-i="{i}" type="button"><span>{i+1}</span>{esc(n)}</button>' for i, (n, *_ ) in enumerate(STAGES))
 panes = "".join(f'<div class="lc-pane{" on" if i == 0 else ""}" data-i="{i}"><div class="lc-col you"><small>You</small><p>{esc(y)}</p></div><div class="lc-col us"><small>Paybooks</small><p>{esc(u)}</p></div><div class="lc-col hire"><small>Your hire sees</small><p>{esc(h)}</p></div></div>' for i, (n, y, u, h) in enumerate(STAGES))
-lifecycle = ('<section class="sec" id="how"><div class="wrap">' + head("01", "Pain point: setting up an entity takes months and a local team", "Who does what, from offer to exit",
-             "An Employer of Record legally employs people on your behalf in a country where you have no entity, so you hire in days, not months. Click a stage to see what stays with you and what Paybooks takes on.")
-             + f'<div class="lc"><div class="lc-tabs">{tabs}</div>{panes}</div>'
-             '<div class="midcta"><div><b>Want to see it in writing?</b><span>We will share a sample service agreement with your quote.</span></div><div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></div></section>')
+lifecycle = ('<section class="sec" id="how"><div class="wrap">' + head("01", "How it works", "Who does what, from offer to exit",
+             "An Employer of Record legally employs people on your behalf in a country where you have no entity. Click a stage to see what stays with you and what Paybooks takes on.")
+             + f'<div class="lc"><div class="lc-tabs">{tabs}</div>{panes}</div></div></section>')
 
 # ---------- 02 fit finder ----------
-fit = ('<section class="sec alt" id="fit"><div class="wrap">' + head("02", "Pain point: EOR, PEO, entity or contractors, and every vendor says theirs", "Is an Employer of Record right for you?", "Three questions. The answer names the right Paybooks service, and says when it is not us.")
+fit = ('<section class="sec alt" id="fit"><div class="wrap">' + head("02", "Fit finder", "Is an Employer of Record right for you?", "Three questions. The answer names the right Paybooks service, and when it is not us.")
        + '''<div class="ff"><div class="ff-q"><div class="ff-step"><b>1 · Where do you stand in the country you want to hire in?</b><div class="ff-opts" data-q="entity">
 <button type="button" data-v="none">No entity there</button><button type="button" data-v="own">We have our own entity</button><button type="button" data-v="india">We have an entity in India</button></div></div>
 <div class="ff-step"><b>2 · How many people, in that country?</b><div class="ff-opts" data-q="size">
@@ -58,23 +53,11 @@ fit = ('<section class="sec alt" id="fit"><div class="wrap">' + head("02", "Pain
 COUNTRIES = [(c, "6A") for c in PH["6A"]] + [(c, "6B") for c in PH["6B"]] + [(c, "6C") for c in PH["6C"]]
 chips = "".join((f'<a class="cc live" href="employer-of-record/india/" data-n="{esc(c)}"><b>{esc(c)}</b><span>Country guide live →</span></a>' if c == "India" else
                  f'<button type="button" class="cc" data-n="{esc(c)}"><b>{esc(c)}</b><span>Guide coming · get a quote</span></button>') for c, ph in COUNTRIES)
-countries = ('<section class="sec" id="countries"><div class="wrap">' + head("03", "Pain point: every country has its own rules, and the wrong one costs you", "Find your country", "42 countries, each with local contracts, payroll and compliance handled. Type a country to check it, or pick one below.")
+countries = ('<section class="sec" id="countries"><div class="wrap">' + head("03", "Countries", "Find your country", "42 countries. Type a country to check it, or pick one below.")
              + f'<div class="cs"><input id="csq" type="search" placeholder="Type a country, for example Germany" autocomplete="off" aria-label="Find your country"><span id="csn">42 countries</span></div>'
              f'<div class="cgrid" id="cgrid">{chips}</div><p class="fine" id="csmsg"></p></div></section>')
 
-
-HIRE_CARDS = [("Your name on the letter", "Paybooks is the employer. Your company, manager and role are on page one."),
-              ("Real benefits from day one", "The statutory benefits of the country, plus any extras you choose. Payslips and tax forms in one app."),
-              ("Ready on day one", "Contract, documents and registrations done before the start date. A welcome call with you and our HR team."),
-              ("Stock options and raises", "Your equity plan can cover them. Raises and bonuses go through in the next payroll, no fee."),
-              ("Their LinkedIn profile", "They list your company as their employer. We explain how Paybooks shows up before the offer."),
-              ("People to ask", "Our HR team answers their payslip, insurance and leave questions.")]
-CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>'
-hire = ('<section class="sec alt" id="experience"><div class="wrap">' + head("04", "Pain point: good candidates turn down contracts from a company they have never heard of", "What your hire gets", "A real local job with a real local employer, from day one. Your name stays on the letter.")
-        + '<div class="split"><div class="sticky"><p class="fine" style="margin:0 0 10px;color:var(--g600);font-weight:600">Example offer letter · India</p>' + LETTER + '</div>'
-        + '<ul class="cards" style="grid-template-columns:1fr 1fr">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in HIRE_CARDS) + '</ul></div></div></section>')
-
-# ---------- 05 cost calculator ----------
+# ---------- 04 cost estimator ----------
 RATES = {
  "IN": {"name": "India", "cur": "₹", "code": "INR", "default": 1500000, "min": 300000, "max": 6000000, "step": 50000, "fee": 199, "feeCur": "$", "usd": 95.7, "yearNote": "Converted at ₹95.7 per $1 (Sep 23, 2026)",
         "lines": [["Provident fund", "12% of basic pay (basic is half of gross)"], ["Gratuity", "4.81% of basic pay, due after one year"], ["State insurance (ESI)", "3.25% of gross when gross is ₹21,000 a month or less"]],
@@ -94,62 +77,22 @@ RATES = {
 }
 QUOTE_ONLY = [c for c, _ in COUNTRIES if c not in {v["name"] for v in RATES.values()}]
 opts = "".join(f'<option value="{k}">{esc(v["name"])}</option>' for k, v in RATES.items()) + "".join(f'<option value="Q:{esc(c)}">{esc(c)} · in your quote</option>' for c in QUOTE_ONLY)
-cost = ('<section class="sec" id="cost"><div class="wrap">' + head("05", "Pain point: hidden employer costs and fees that surface after you sign", "What it costs, line by line",
-        "Salary, the employer contributions the country's law requires, and our fee, in the open. Statutory rates come from each country's official source, linked below the result.")
-        + '<ul class="cparts"><li><span class="cp-n">1</span><div><b>Salary</b><p>The pay you agree with your hire, paid in their local currency on the local payroll date.</p></div></li>'
-        '<li><span class="cp-n">2</span><div><b>Employer costs</b><p>Social security, pension and other contributions the law requires. They vary by country and are the same with any provider.</p></div></li>'
-        '<li><span class="cp-n">3</span><div><b>Our fee</b><p>A monthly fee per employee, set by country. In India, from $199 a month plus a one-time $50 onboarding fee.</p></div></li></ul>'
-        + f'<div class="calc calc2"><div class="calc-in"><h3>Employee cost calculator</h3><p class="calc-note">Based on September 2026 rules. This is an estimate. Your written quote is final.</p>'
-        f'<div class="calc-row"><label for="cec">Hiring country</label><select id="cec">{opts}</select></div>'
-        '<label>Annual pay <span id="cesv"></span></label><input id="ces" type="range">'
-        '<label>Employees <span id="nv"></span></label><input id="n" type="range" min="1" max="100" step="1" value="5">'
-        '<div class="calc-row" id="strow"><label>State</label><select id="st"><option value="200">Karnataka (about $2 professional tax)</option><option value="200">Maharashtra (about $2 professional tax)</option><option value="0">Delhi / Haryana (no professional tax)</option><option value="200">Telangana (about $2 professional tax)</option><option value="208">Tamil Nadu (about $2 professional tax)</option></select></div>'
-        '<div class="calc-row"><label>Our fee</label><span class="fee-pill" id="feepill"></span></div><p class="fine" id="cenote"></p></div>'
-        '<div class="calc-out" id="ceout"><div class="kpis"><div class="kpi"><b id="ce_total"></b><span>per employee per month</span></div><div class="kpi"><b id="ce_year"></b><span id="ce_year_l">a year for your team</span></div><div class="kpi"><b id="ce_stat"></b><span>employer costs on top of salary</span></div></div>'
-        '<ul class="lines" id="ce_rows"></ul><p class="fine" id="ce_src"></p></div></div>'
-        '<p class="fine">Headline statutory rates. Thresholds noted in each line are applied; other caps, regional rates and any benefits you add are applied in your written quote, which is final. Professional tax in India is withheld from the employee’s pay and shown for completeness. Paybooks’ fee outside India is set by country and shown in your quote.</p></div></section>')
-
-# ---------- 06 compare ----------
-CMP_HEAD = ["", "Paybooks", "Deel", "Remote", "Multiplier"]
-CMP_ROWS = [["Monthly fee per employee, India", "<b>From $199</b>", "$599", "$699", "about $459 to $499"],
-            ["One-time onboarding fee, India", "<b>$50</b>", "Not published", "Not published", "Not published"],
-            ["Countries with a hiring page on their site", "<b>42 planned</b>", "113", "181", "186"],
-            ["Parent company", "<b>TransPerfect, $1.32B revenue</b>", "Venture-backed", "Venture-backed", "Venture-backed"],
-            ["Sets up and runs your own entity", "<b>Yes, in India (Managed India Office)</b>", "Not published", "Not published", "Not published"],
-            ["Pages in the buyer’s language", "<b>In-house: localization is TransPerfect’s core business</b>", "12 languages", "10 languages", "English only"]]
-def ctable():
-    th = "".join(f'<th{" class=hl" if i == 1 else ""}>{esc(h)}</th>' for i, h in enumerate(CMP_HEAD))
-    tr = "".join("<tr>" + "".join(f'<td{" class=hl" if i == 1 else ""}>{c}</td>' for i, c in enumerate(r)) + "</tr>" for r in CMP_ROWS)
-    return f'<div class="t-wrap"><table class="tbl"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
-compare = ('<section class="sec alt" id="compare"><div class="wrap">' + head("06", "Pain point: the big platforms charge $599 to $699 a month before salary", "Compare EOR providers", "How Paybooks compares with the platforms you will be quoted by. Prices are the published India rates; fees for other countries come in your quote.")
-           + ctable() + '<p class="fine">Fees published September 23, 2026: <a href="https://www.deel.com/pricing/" rel="nofollow" target="_blank">Deel</a>, <a href="https://remote.com/pricing" rel="nofollow" target="_blank">Remote</a>, <a href="https://remotepeople.com/blog/employer-of-record-cost/" rel="nofollow" target="_blank">Multiplier</a>; Paybooks from <a href="https://paybooks.in/eor/" rel="nofollow" target="_blank">paybooks.in/eor</a>. Country pages and languages counted from each site’s sitemap, September 2026. “Not published” means the company does not state it publicly.</p></div></section>')
+cost = ('<section class="sec alt" id="cost"><div class="wrap">' + head("04", "Cost estimator", "What an employee costs, country by country",
+        "Salary, the employer contributions the country's law requires, and our fee. Statutory rates come from each country's official source, linked below the result.")
+        + f'''<div class="ce"><div class="ce-in"><label for="cec">Country</label><select id="cec">{opts}</select>
+<label for="ces">Annual salary <span id="cesv"></span></label><input id="ces" type="range"><p class="fine" id="cenote"></p></div>
+<div class="ce-out"><div class="kpis"><div class="kpi"><b id="ce_total"></b><span>all-in per month</span></div><div class="kpi"><b id="ce_stat"></b><span>employer costs on top of salary</span></div><div class="kpi"><b id="ce_year"></b><span>all-in per year</span></div></div>
+<ul class="lines" id="ce_rows"></ul><p class="fine" id="ce_src"></p></div></div>
+<p class="fine">Headline statutory rates. Thresholds noted in each line are applied; other caps, regional rates and any benefits you add are applied in your written quote, which is final. Paybooks’ fee for countries other than India is set by country and shown in your quote.</p></div></section>''')
 
 # ---------- 05 compliance strip, timeline, proof, faq, cta ----------
-comp = ('<section class="sec" id="compliance"><div class="wrap">' + head("07", "Pain point: one missed filing becomes a penalty, and a contractor becomes a lawsuit", "Local law, handled in every country", "Employment rules differ in every country. Getting them right, and proving it, is our job, not yours.")
+comp = ('<section class="sec" id="compliance"><div class="wrap">' + head("05", "Compliance", "Local law, handled in every country", "Employment rules differ in every country. Getting them right is our job, not yours.")
         + '<ul class="chk">' + "".join(f'<li><b>{esc(a)}</b><span>{esc(b)}</span></li>' for a, b in [
             ("Contracts under local law", "Notice, probation, hours and leave written as the country requires."), ("Taxes and social security", "Withheld, filed and paid on time, with proof of every filing."),
             ("Misclassification risk removed", "Full-time workers employed properly, not paid as contractors."), ("Exits done right", "Notice, severance and final pay under local rules."),
             ("IP assigned to you", "Every contract assigns the work and the intellectual property to your company."), ("Tax risk flagged early", "Roles that could create a taxable presence are flagged before you hire.")]) + '</ul>'
         '<div class="clause" style="margin-top:22px"><b>In India:</b> Paybooks’ published promise of no penalties ever on the filings and payments it handles. <a href="employer-of-record/india/">See Employer of Record India</a>.</div></div></section>')
-
-exits = ('<section class="sec" id="exits"><div class="wrap">' + head("08", "Pain point: getting out is where hidden costs and legal risk live", "Clean exits, whenever you need them", "Letting one person go, or moving your team to your own entity. We handle both, under local law.")
-        + '<div class="split" style="grid-template-columns:1fr 1fr">'
-        + "".join(f'<div><h3 style="margin-bottom:12px">{h3}</h3><ul class="tl">' + "".join(f'<li><span class="d">{esc(a)}</span><div><p>{b}</p></div></li>' for a, b in items) + '</ul></div>' for h3, items in [
-            ("Letting someone go", [("Decide", "You tell us. We confirm the notice and severance the country requires."), ("Notice", "We issue the termination under local law: notice, or pay in place of notice."), ("Last day", "Final pay: salary, unused leave and any severance due."), ("After", "Tax forms, documents and equipment return.")]),
-            ("Moving to your own entity", [("Decide", "Usually once a country team is large enough to justify an entity. In India, Paybooks sets it up and runs it for you."), ("Set up", "Your entity is set up. New hires keep joining through us."), ("Switch day", "Contracts move to your entity. Service continues, same payslip app."), ("After", "Paybooks can keep running payroll for your entity.")])])
-        + '</div></div></section>')
-service = ('<section class="sec alt" id="service"><div class="wrap">' + head("09", "Pain point: a different vendor, report and invoice in every country", "How we work with you", "One team, one monthly report and one invoice for your whole international team.")
-           + '<ul class="cards three">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in [
-               ("One account manager", "With a payroll and compliance specialist for each country behind them."), ("Reply within one working day", "With overlap for calls across US, UK and Asia-Pacific hours."),
-               ("One monthly report", "Payroll summary, filing proof and cost in your currency, every country on one page."), ("One invoice", "In USD, GBP or EUR at the bank rate. Salary, employer costs and our fee."),
-               ("Integrations", "Employee and cost data flows to your HR or finance system. Single sign-on for the employee app."), ("Security", "ISO 27001:2022. SOC 2 Type II. GDPR.")]) + '</ul></div></section>')
-timeline = ('<section class="sec tight" id="timeline"><div class="wrap"><div class="split">' + head("10", "Pain point: no one tells you how long it will take", "From offer to first day", "How long it takes depends on the country. Your quote confirms the start date; in India it is days, not months.")
-            + '<ul class="tl">' + "".join(f'<li><span class="d">{esc(a)}</span><div><p>{b}</p></div></li>' for a, b in [
-                ("Step 1", "You send the role, country and pay. We send the full cost and the contract terms."), ("Step 2", "You approve. We issue the local contract and your hire signs."),
-                ("Step 3", "We collect documents and complete the registrations."), ("Step 4", "Any background checks you choose are completed."), ("Step 5", "First day."),
-                ("Monthly", "Salary paid on the local date, filings done, and one invoice to you.")]) + '</ul></div></div></section>')
-
-proof = ('<section class="dark" id="proof"><div class="wrap"><div class="head rv"><span class="num">11</span><div><span class="eyebrow">Why Paybooks</span><h2>Payroll depth. A global parent.</h2></div></div>'
+proof = ('<section class="dark" id="proof"><div class="wrap"><div class="head rv"><span class="num">06</span><div><span class="eyebrow">Why Paybooks</span><h2>Payroll depth. A global parent.</h2></div></div>'
          '<ul class="cards">' + "".join(f'<li class="card"><h3>{esc(a)}</h3><p>{b}</p><div class="chips">' + "".join(f"<span>{esc(z)}</span>" for z in ch) + '</div></li>' for a, b, ch in [
              ("Payroll since 2012", "3,000+ employers. 1.5 million paychecks a year. $1B+ in salaries paid a year.", ["Payroll", "Taxes", "Benefits", "Compliance"]),
              ("A $1.32 billion parent", "TransPerfect bought Paybooks in 2024. 150+ cities on six continents. Trusted by 90% of the Fortune 500.", ["ISO 27001:2022", "SOC 2 Type II", "GDPR"])]) + '</ul></div></section>')
@@ -176,7 +119,6 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
        '<div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>')
 
 EXTRA_CSS = '''<style>
-.sec .head .eyebrow.pain,.dark .head .eyebrow.pain{display:inline-flex;text-transform:none;letter-spacing:0;font-size:14.5px;font-weight:600;color:#B4530F;margin-bottom:10px}.eyebrow.pain::before{background:#F26B1D}.dark .eyebrow.pain,#cost .eyebrow.pain,#compare .eyebrow.pain{color:#FFB08A}.dark .eyebrow.pain::before,#cost .eyebrow.pain::before,#compare .eyebrow.pain::before{background:#F26B1D}
 .lc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
 .lc-tabs{display:flex;overflow-x:auto;border-bottom:1px solid var(--line);scrollbar-width:none}.lc-tabs::-webkit-scrollbar{display:none}
 .lc-tab{flex:1 0 auto;display:flex;align-items:center;gap:10px;padding:16px 18px;border:0;border-bottom:3px solid transparent;background:none;font:600 14.5px Inter,sans-serif;color:var(--muted);cursor:pointer;white-space:nowrap}
@@ -219,30 +161,28 @@ var q=document.getElementById('csq'),chips=[].slice.call(document.querySelectorA
 function filt(){var v=(q.value||'').trim().toLowerCase(),k=0;chips.forEach(function(c){var h=c.dataset.n.toLowerCase().indexOf(v)>-1;c.classList.toggle('hide',!h);if(h)k++});n.textContent=k+(k===1?' country':' countries');msg.textContent=(v&&!k)?'Not on the 42-country list yet. Send us the country with your quote request and we will confirm.':''}
 q.addEventListener('input',filt);
 chips.forEach(function(c){if(c.tagName==='BUTTON')c.onclick=function(){chips.forEach(function(x){x.classList.toggle('pick',x===c)});msg.textContent=c.dataset.n+': the country guide is on its way. Get a quote for a role there and we will send the full cost and contract terms.'}});
-var R='''+json.dumps(RATES)+''',sel=document.getElementById('cec'),sl=document.getElementById('ces'),sv=document.getElementById('cesv'),note=document.getElementById('cenote'),N=document.getElementById('n'),NV=document.getElementById('nv'),ST=document.getElementById('st'),SR=document.getElementById('strow'),FP=document.getElementById('feepill'),OUT=document.getElementById('ceout');
-var OUTHTML=OUT.innerHTML;
+var R='''+json.dumps(RATES)+''',sel=document.getElementById('cec'),sl=document.getElementById('ces'),sv=document.getElementById('cesv'),note=document.getElementById('cenote');
 function money(c,x){return c+Math.round(x).toLocaleString('en-US')}
 function calc(k,s){var L=[];
- if(k==='IN'){var b=s/2,g=s/12;L.push(['Provident fund (employer share)','12% of basic pay, basic is half of gross',b*.12]);L.push(['Gratuity set aside','4.81% of basic pay, due after one year',b*.0481]);L.push(['State insurance (ESI)',g<=21000?'3.25% of gross, gross is ₹21,000 a month or less':'Not due above ₹21,000 a month',g<=21000?s*.0325:0]);}
+ if(k==='IN'){var b=s/2,g=s/12;L.push(['Provident fund','12% of basic pay',b*.12]);L.push(['Gratuity','4.81% of basic pay',b*.0481]);if(g<=21000)L.push(['State insurance (ESI)','3.25% of gross, gross is ₹21,000 a month or less',s*.0325]);}
  if(k==='US'){L.push(['Social Security','6.2% up to $184,500',Math.min(s,184500)*.062]);L.push(['Medicare','1.45% of pay',s*.0145]);L.push(['Federal unemployment (FUTA)','0.6% of the first $7,000',Math.min(s,7000)*.006]);}
  if(k==='UK'){L.push(['Employer National Insurance','15% above £5,000',Math.max(0,s-5000)*.15]);L.push(['Workplace pension, employer minimum','3% of £6,240 to £50,270',Math.max(0,Math.min(s,50270)-6240)*.03]);}
  if(k==='SG'){L.push(['CPF, employer share','17% of wages, citizens and permanent residents',s*.17]);}
  if(k==='CA'){L.push(['Canada Pension Plan','5.95% of $3,500 to $74,600',Math.max(0,Math.min(s,74600)-3500)*.0595]);L.push(['Employment Insurance, employer share','2.282% up to $68,900',Math.min(s,68900)*.02282]);}
  return L}
-function draw(){var k=sel.value,n=+N.value;NV.textContent=n;
- if(k.indexOf('Q:')===0){sl.disabled=true;sv.textContent='';note.textContent='';SR.style.display='none';FP.textContent='In your quote';OUT.innerHTML='<div class="ff-r" style="padding:6px 0"><small>'+k.slice(2)+'</small><h3>Costed in your quote</h3><p style="color:#DDE8D6">We have not published '+k.slice(2)+'\\'s statutory rates here yet. Send us the role and pay and you get the full monthly cost, the contract terms and a start date.</p><a class="btn" href="#quote">Get a quote for '+k.slice(2)+'</a></div>';return}
- var r=R[k];if(sl.dataset.k!==k){sl.min=r.min;sl.max=r.max;sl.step=r.step;sl.value=r['default'];sl.dataset.k=k;sl.disabled=false;OUT.innerHTML=OUTHTML}
- SR.style.display=k==='IN'?'':'none';FP.textContent=r.fee?'$'+r.fee+' per employee a month':'Set by country, in your quote';
- var s=+sl.value,L=calc(k,s),stat=L.reduce(function(a,x){return a+x[2]},0),fee=r.fee?r.fee*(r.usd||1)*12:0,pt=k==='IN'?(+ST.value)*12:0;
+function draw(){var k=sel.value;var out=document.querySelector('.ce-out');
+ if(k.indexOf('Q:')===0){sl.disabled=true;sv.textContent='';note.textContent='';out.innerHTML='<div class="ff-r" style="padding:6px 0"><small>'+k.slice(2)+'</small><h3>Costed in your quote</h3><p style="color:#DDE8D6">We have not published '+k.slice(2)+'\\'s statutory rates here yet. Send us the role and pay and you get the full monthly cost, the contract terms and a start date.</p><a class="btn" href="#quote">Get a quote for '+k.slice(2)+'</a></div>';return}
+ var r=R[k];if(sl.dataset.k!==k){sl.min=r.min;sl.max=r.max;sl.step=r.step;sl.value=r['default'];sl.dataset.k=k;sl.disabled=false;
+  out.innerHTML='<div class="kpis"><div class="kpi"><b id="ce_total"></b><span>all-in per month</span></div><div class="kpi"><b id="ce_stat"></b><span>employer costs on top of salary</span></div><div class="kpi"><b id="ce_year"></b><span>all-in per year</span></div></div><ul class="lines" id="ce_rows"></ul><p class="fine" id="ce_src"></p>'}
+ var s=+sl.value,L=calc(k,s),stat=L.reduce(function(a,x){return a+x[2]},0),fee=r.fee?r.fee*(r.usd||1)*12:0;
  sv.textContent=money(r.cur,s)+' '+r.code;
- var rows='<li><span>Gross salary<small>per month</small></span><b>'+money(r.cur,s/12)+'</b></li>'+L.map(function(x){return '<li><span>'+x[0]+'<small>'+x[1]+'</small></span><b>'+money(r.cur,x[2]/12)+'</b></li>'}).join('');
- if(k==='IN')rows+='<li><span>Professional tax<small>withheld from the employee\\'s pay</small></span><b>'+money(r.cur,pt/12)+'</b></li>';
+ var rows='<li><span>Salary<small>per month</small></span><b>'+money(r.cur,s/12)+'</b></li>'+L.map(function(x){return '<li><span>'+x[0]+'<small>'+x[1]+'</small></span><b>'+money(r.cur,x[2]/12)+'</b></li>'}).join('');
  rows+=r.fee?'<li><span>Paybooks fee<small>$'+r.fee+' per employee a month'+(r.usd>1?', shown in '+r.code:'')+'</small></span><b>'+money(r.cur,fee/12)+'</b></li>':'<li><span>Paybooks fee<small>set by country</small></span><b>In your quote</b></li>';
- rows+='<li class="tot"><span>Total per employee, per month</span><b>'+money(r.cur,(s+stat+fee)/12)+'</b></li>';
- document.getElementById('ce_rows').innerHTML=rows;document.getElementById('ce_total').textContent=money(r.cur,(s+stat+fee)/12);document.getElementById('ce_stat').textContent=(stat/s*100).toFixed(1)+'%';document.getElementById('ce_year').textContent=money(r.cur,(s+stat+fee)*n);document.getElementById('ce_year_l').textContent='a year for '+n+(n===1?' hire':' hires');
+ rows+='<li class="tot"><span>All-in per month</span><b>'+money(r.cur,(s+stat+fee)/12)+'</b></li>';
+ document.getElementById('ce_rows').innerHTML=rows;document.getElementById('ce_total').textContent=money(r.cur,(s+stat+fee)/12);document.getElementById('ce_stat').textContent=(stat/s*100).toFixed(1)+'%';document.getElementById('ce_year').textContent=money(r.cur,s+stat+fee);
  document.getElementById('ce_src').innerHTML=(r.extra?r.extra+' ':'')+(r.yearNote?r.yearNote+'. ':'')+'Sources: '+r.src.map(function(x){return '<a href="'+x[1]+'"'+(x[1].indexOf('http')===0?' rel="nofollow" target="_blank"':'')+'>'+x[0]+'</a>'}).join(', ')+'.';
  note.textContent=k==='IN'?'About $'+Math.round(s/r.usd).toLocaleString('en-US')+' a year at ₹95.7 per $1.':''}
-N.oninput=draw;ST.onchange=draw;sel.onchange=draw;sl.oninput=draw;draw();
+sel.onchange=draw;sl.oninput=draw;draw();
 })();</script>'''
 
 schema = [
@@ -256,6 +196,6 @@ HEAD = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="
         + "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in schema) + EXTRA_CSS + '</head>')
 FOOT = ('<footer class="ftr"><div class="wrap" style="grid-template-columns:1fr"><div><h4>Paybooks, a TransPerfect company</h4><p>Employer of Record, Multi-Country Payroll, Managed India Office and Global HCM for companies building teams across borders.</p></div></div></footer>'
         '<script src="assets/protect.js" defer></script></body></html>')
-page = HEAD + HEADER + "<main>" + hero + lifecycle + fit + countries + hire + cost + compare + comp + exits + service + timeline + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
+page = HEAD + HEADER + "<main>" + hero + lifecycle + fit + countries + cost + comp + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
 open(OUT, "w", encoding="utf-8").write(page)
 print("hub v2 written", len(page))
