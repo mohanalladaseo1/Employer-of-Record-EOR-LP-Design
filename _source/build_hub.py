@@ -126,7 +126,7 @@ RATES = {
 }
 QUOTE_ONLY = [c for c in ALL42 if c not in {v["name"] for v in RATES.values()}]
 opts = "".join(f'<option value="{k}">{esc(v["name"])}</option>' for k, v in RATES.items()) + "".join(f'<option value="Q:{esc(c)}">{esc(c)} · in your quote</option>' for c in QUOTE_ONLY)
-cost = ('<section class="sec" id="cost"><div class="wrap">' + head("06", "Cost", "What it costs, line by line",
+cost = ('<section class="sec" id="cost"><div class="wrap">' + head("05", "Cost", "What it costs, line by line",
         "Salary, the employer contributions the country's law requires, and our fee, in the open. Statutory rates come from each country's official source, linked below the result.")
         + '<ul class="cparts"><li><span class="cp-n">1</span><div><b>Salary</b><p>The pay you agree with your hire, paid in their local currency on the local payroll date.</p></div></li>'
         '<li><span class="cp-n">2</span><div><b>Employer costs</b><p>Social security, pension and other contributions the law requires. They vary by country and are the same with any provider.</p></div></li>'
@@ -157,7 +157,7 @@ compare = ('<section class="sec alt" id="compare"><div class="wrap">' + head("07
            + ctable() + '<p class="fine">Fees published September 23, 2026: <a href="https://www.deel.com/pricing/" rel="nofollow" target="_blank">Deel</a>, <a href="https://remote.com/pricing" rel="nofollow" target="_blank">Remote</a>, <a href="https://remotepeople.com/blog/employer-of-record-cost/" rel="nofollow" target="_blank">Multiplier</a>; Paybooks from <a href="https://paybooks.in/eor/" rel="nofollow" target="_blank">paybooks.in/eor</a>. Country pages and languages counted from each site’s sitemap, September 2026. “Not published” means the company does not state it publicly.</p></div></section>')
 
 # ---------- 05 compliance strip, timeline, proof, faq, cta ----------
-comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("05", "Compliance", "Local law, handled in every country", "Employment rules differ in every country. Getting them right is our job, not yours.")
+comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("06", "Compliance", "Local law, handled in every country", "Employment rules differ in every country. Getting them right is our job, not yours.")
         + '<ul class="chk">' + "".join(f'<li><b>{esc(a)}</b><span>{esc(b)}</span></li>' for a, b in [
             ("Contracts under local law", "Notice, probation, hours and leave written as the country requires."), ("Taxes and social security", "Withheld, filed and paid on time, with proof of every filing."),
             ("Misclassification risk removed", "Full-time workers employed properly, not paid as contractors."), ("Exits done right", "Notice, severance and final pay under local rules."),
@@ -303,6 +303,6 @@ HEAD = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="
         + "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in schema) + EXTRA_CSS + '</head>')
 FOOT = ('<footer class="ftr"><div class="wrap" style="grid-template-columns:1fr"><div><h4>Paybooks, a TransPerfect company</h4><p>Employer of Record, Multi-Country Payroll, Managed India Office and Global HCM for companies building teams across borders.</p></div></div></footer>'
         '<script src="assets/protect.js" defer></script></body></html>')
-page = HEAD + HEADER + "<main>" + hero + fit + countries + hire + control + comp + cost + compare + exits + service + timeline + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
+page = HEAD + HEADER + "<main>" + hero + fit + countries + hire + control + cost + comp + compare + exits + service + timeline + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
 open(OUT, "w", encoding="utf-8").write(page)
 print("hub v2 written", len(page))
