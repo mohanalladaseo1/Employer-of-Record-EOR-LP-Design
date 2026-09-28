@@ -95,6 +95,12 @@ countries = ('<section class="sec alt" id="countries"><div class="wrap">' + head
              + f'<div class="cw"><div><div class="cs"><input id="csq" type="search" placeholder="Search a country" autocomplete="off" aria-label="Search a country"><span id="csn">42 countries</span></div><div class="rgs">{regions}</div></div>'
              '<aside class="cpanel" id="cpanel"></aside></div></div></section>')
 
+
+# ---------- country picker strip ----------
+copts = "".join(f'<option value="{esc(c)}">{esc(c)}</option>' for c in ["India"] + [c for c in sorted(ALL42) if c != "India"])
+cstrip = ('<section class="cpick" id="country"><div class="wrap"><div class="cpick-card"><div><b>Hiring in a specific country?</b><span>Open the Employer of Record page for that country: employer costs, contract rules, benefits and timelines.</span></div>'
+          f'<form class="cpick-form" onsubmit="return false"><select id="cpsel" aria-label="Choose a country">{copts}</select><a class="btn" id="cpgo" href="employer-of-record/india/">Open Employer of Record India</a></form></div></div></section>')
+
 HIRE_CARDS = [("Your name on the letter", "Paybooks is the employer. Your company, manager and role are on page one."),
               ("Real benefits from day one", "The statutory benefits of the country, plus any extras you choose. Payslips and tax forms in one app."),
               ("Ready on day one", "Contract, documents and registrations done before the start date. A welcome call with you and our HR team."),
@@ -162,7 +168,7 @@ comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("05
             ("Contracts under local law", "Notice, probation, hours and leave written as the country requires."), ("Taxes and social security", "Withheld, filed and paid on time, with proof of every filing."),
             ("Misclassification risk removed", "Full-time workers employed properly, not paid as contractors."), ("Exits done right", "Notice, severance and final pay under local rules."),
             ("IP assigned to you", "Every contract assigns the work and the intellectual property to your company."), ("Tax risk flagged early", "Roles that could create a taxable presence are flagged before you hire.")]) + '</ul>'
-        '<div class="clause" style="margin-top:22px"><b>In India:</b> Paybooks’ published promise of no penalties ever on the filings and payments it handles. <a href="employer-of-record/india/">See Employer of Record India</a>.</div></div></section>')
+        '</div></section>')
 
 exits = ('<section class="sec" id="exits"><div class="wrap">' + head("07", "Exits", "Clean exits, whenever you need them", "Letting one person go, or moving your team to your own entity. We handle both, under local law.")
         + '<div class="split" style="grid-template-columns:1fr 1fr">'
@@ -208,6 +214,7 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
        '<div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>')
 
 EXTRA_CSS = '''<style>
+.cpick{padding:26px 0 0}.cpick-card{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 22px}.cpick-card b{display:block;font-family:var(--head);font-size:18px;margin-bottom:4px}.cpick-card span{font-size:14px;color:var(--muted)}.cpick-form{display:flex;gap:10px;align-items:center}.cpick-form select{flex:1;height:46px;border:1px solid var(--line);border-radius:12px;background:#F8F9F7;font:500 15px Inter,sans-serif;padding:0 12px;color:var(--ink)}.cpick-form .btn{white-space:nowrap}@media(max-width:860px){.cpick-card{grid-template-columns:1fr}.cpick-form{flex-direction:column;align-items:stretch}}
 .dark .head{display:grid;grid-template-columns:72px 1fr;gap:20px;max-width:900px;align-items:start;margin-bottom:34px}.dark .head .num{font-family:var(--head);font-size:13px;font-weight:600;padding-top:6px;letter-spacing:.06em}.dark .head .num::after{content:"";display:block;width:36px;height:2px;margin-top:10px}.dark .head h2{font-size:clamp(30px,3vw,42px)}
 .calc .calc-row select{background:#F2F1EC!important;color:#0E1411!important;border:1px solid #DAD8CF!important;padding:8px 10px;font-size:13.5px;border-radius:10px}.calc .calc-row select:focus{outline:none;box-shadow:0 0 0 3px rgba(159,211,92,.35)}
 .sec .head .eyebrow.pain,.dark .head .eyebrow.pain{display:inline-flex;text-transform:none;letter-spacing:0;font-size:14.5px;font-weight:600;color:#B4530F;margin-bottom:10px}.eyebrow.pain::before{background:#F26B1D}.dark .eyebrow.pain,#cost .eyebrow.pain,#compare .eyebrow.pain{color:#FFB08A}.dark .eyebrow.pain::before,#cost .eyebrow.pain::before,#compare .eyebrow.pain::before{background:#F26B1D}
@@ -255,6 +262,7 @@ if(document.querySelector('.lc')){var nodes=[].slice.call(document.querySelector
 function go(i){cur=Math.max(0,Math.min(nodes.length-1,i));nodes.forEach(function(n,k){n.classList.toggle('on',k===cur);n.classList.toggle('done',k<cur)});panes.forEach(function(p,k){p.classList.toggle('on',k===cur)});fill.style.height=(cur/(nodes.length-1)*100)+'%'}
 nodes.forEach(function(n){n.onclick=function(){go(+n.dataset.i)}});
 document.querySelector('.lc').addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});go(0);}
+var cps=document.getElementById('cpsel'),cpg=document.getElementById('cpgo');if(cps){cps.onchange=function(){var c=cps.value;if(c==='India'){cpg.href='employer-of-record/india/';cpg.textContent='Open Employer of Record India'}else{cpg.href='#quote';cpg.textContent='Employer of Record '+c+': get a quote'}}}
 var RR,CALC;var q=document.getElementById('csq')||{addEventListener:function(){}},pills=[].slice.call(document.querySelectorAll('.cp')),cn=document.getElementById('csn'),panel=document.getElementById('cpanel');
 var KEY={'India':'IN','United States':'US','United Kingdom':'UK','Singapore':'SG','Canada':'CA'};
 function pct(k){var r=RR[k];if(!r)return null;var s=r['default'],L=CALC(k,s);return (L.reduce(function(a,x){return a+x[2]},0)/s*100).toFixed(1)}
@@ -304,6 +312,6 @@ HEAD = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="
         + "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in schema) + EXTRA_CSS + '</head>')
 FOOT = ('<footer class="ftr"><div class="wrap" style="grid-template-columns:1fr"><div><h4>Paybooks, a TransPerfect company</h4><p>Employer of Record, Multi-Country Payroll, Managed India Office and Global HCM for companies building teams across borders.</p></div></div></footer>'
         '<script src="assets/protect.js" defer></script></body></html>')
-page = HEAD + HEADER + "<main>" + hero + fit + hire + control + cost + comp + service + exits + timeline + compare + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
+page = HEAD + HEADER + "<main>" + hero + cstrip + fit + hire + control + cost + comp + service + exits + timeline + compare + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
 open(OUT, "w", encoding="utf-8").write(page)
 print("hub v2 written", len(page))
