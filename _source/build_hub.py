@@ -214,7 +214,7 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
        '<div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>')
 
 EXTRA_CSS = '''<style>
-@media(min-width:1000px){.hero.v2 .grid{grid-template-columns:3fr 2fr!important;gap:48px!important}.hero.v2 h1{max-width:none}}
+@media(min-width:1000px){.hero.v2 .grid{grid-template-columns:3fr 2fr!important;gap:48px!important}.hero.v2 h1{max-width:none}.hero.v2 .sub{max-width:none}}
 .hero.v2 h1{font-size:clamp(34px,3.9vw,54px);letter-spacing:-.03em}
 .dark .head p{color:#BFD3B9}#service .card .ic{background:rgba(159,211,92,.18);color:#9FD35C}
 #compare .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
