@@ -181,7 +181,7 @@ service = ('<section class="sec alt" id="service"><div class="wrap">' + head("05
                ("One account manager", "With a payroll and compliance specialist for each country behind them."), ("Reply within one working day", "With overlap for calls across US, UK and Asia-Pacific hours."),
                ("One monthly report", "Payroll summary, filing proof and cost in your currency, every country on one page."), ("One invoice", "In USD, GBP or EUR at the bank rate. Salary, employer costs and our fee."),
                ("Integrations", "Employee and cost data flows to your HR or finance system. Single sign-on for the employee app."), ("Security", "ISO 27001:2022. SOC 2 Type II. GDPR.")]) + '</ul></div></section>')
-timeline = ('<section class="sec tight" id="timeline"><div class="wrap"><div class="split">' + head("08", "Timeline", "From offer to first day, within days", "In India it is days, not months. Elsewhere your quote confirms the start date.")
+timeline = ('<section class="sec tight" id="timeline"><div class="wrap"><div class="split">' + head("08", "Timeline", "From offer to first day, within a week", "In India it is days, not months. Elsewhere your quote confirms the start date.")
             + '<ul class="tl">' + "".join(f'<li><span class="d">{esc(a)}</span><div><p>{b}</p></div></li>' for a, b in [
                 ("Step 1", "You send the role, country and pay. We send the full cost and the contract terms."), ("Step 2", "You approve. We issue the local contract and your hire signs."),
                 ("Step 3", "We collect documents and complete the registrations."), ("Step 4", "Any background checks you choose are completed."), ("Step 5", "First day."),
