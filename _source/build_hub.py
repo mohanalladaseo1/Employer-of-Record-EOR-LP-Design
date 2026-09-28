@@ -21,7 +21,7 @@ TITLE = "Employer of Record Services | Hire From Any Country Without an Entity |
 DESC = "Hire employees in 42 countries without setting up an entity. Paybooks becomes the legal employer and runs contracts, payroll, taxes and benefits under local law. Estimate the cost, check your fit, get a quote."
 
 hero = (f'<section class="hero v2"><div class="wrap"><div class="grid"><div><span class="cta2-tag hero-tag">Your first international hire, live within days</span>'
-        '<h1>Employer of Record services. <em>Hire from any country, no entity needed.</em></h1>'
+        '<h1>Employer of Record services.<br><em>Hire from any country, no entity needed.</em></h1>'
         '<p class="sub">Wherever your company is based, Paybooks becomes the legal employer of your people in any of 42 countries. We run the local contract, payroll, taxes and benefits under that country’s law. You choose the people and direct their work.</p>'
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to our EOR experts</a></div>'
         f'<ul class="cta2-ticks hero-ticks">{TICKS}</ul></div>{VID}</div></div></section>{TRUST}')
@@ -214,7 +214,7 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
        '<div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>')
 
 EXTRA_CSS = '''<style>
-.hero.v2 h1{font-size:clamp(34px,3.9vw,54px);letter-spacing:-.03em}
+@media(min-width:1000px){.hero.v2 .grid{grid-template-columns:1.45fr 1fr!important;gap:44px!important}}.hero.v2 h1{font-size:clamp(28px,2.6vw,38px);letter-spacing:-.035em;max-width:none;line-height:1.12}.hero.v2 h1 em{display:block;white-space:nowrap}@media(max-width:1000px){.hero.v2 h1 em{white-space:normal}.hero.v2 h1 br{display:none}}
 .dark .head p{color:#BFD3B9}#service .card .ic{background:rgba(159,211,92,.18);color:#9FD35C}
 #compare .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
 #proof .chips span{background:#fff;border:1px solid var(--line);color:var(--ink);font-weight:600}#proof .card{background:#fff;border-color:var(--sage);box-shadow:var(--sh)}#proof .card:hover{transform:none}
