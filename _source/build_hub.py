@@ -208,6 +208,7 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
        '<div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>')
 
 EXTRA_CSS = '''<style>
+.dark .head{display:grid;grid-template-columns:72px 1fr;gap:20px;max-width:900px;align-items:start;margin-bottom:34px}.dark .head .num{font-family:var(--head);font-size:13px;font-weight:600;padding-top:6px;letter-spacing:.06em}.dark .head .num::after{content:"";display:block;width:36px;height:2px;margin-top:10px}.dark .head h2{font-size:clamp(30px,3vw,42px)}
 .calc .calc-row select{background:#F2F1EC!important;color:#0E1411!important;border:1px solid #DAD8CF!important;padding:8px 10px;font-size:13.5px;border-radius:10px}.calc .calc-row select:focus{outline:none;box-shadow:0 0 0 3px rgba(159,211,92,.35)}
 .sec .head .eyebrow.pain,.dark .head .eyebrow.pain{display:inline-flex;text-transform:none;letter-spacing:0;font-size:14.5px;font-weight:600;color:#B4530F;margin-bottom:10px}.eyebrow.pain::before{background:#F26B1D}.dark .eyebrow.pain,#cost .eyebrow.pain,#compare .eyebrow.pain{color:#FFB08A}.dark .eyebrow.pain::before,#cost .eyebrow.pain::before,#compare .eyebrow.pain::before{background:#F26B1D}
 .lc{display:grid;grid-template-columns:270px 1fr;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
