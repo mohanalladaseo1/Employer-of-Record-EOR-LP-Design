@@ -198,10 +198,10 @@ FAQ = [("What is an Employer of Record?", "A company that legally employs people
        ("Which countries do you cover?", "42 countries across Europe, the Americas, the Middle East, Africa and Asia-Pacific. Use the country finder above, or send us the country you need with your quote request.")]
 faq = ('<section class="sec alt" id="faq"><div class="wrap"><div class="faq"><div class="sticky"><span class="eyebrow">FAQ</span><h2>Your questions, answered</h2><p style="color:var(--muted);margin:14px 0 22px">What to know before you hire in another country.</p><a class="btn" href="#quote">Talk to an EOR expert</a></div><div>'
        + "".join(f"<details><summary>{esc(q)}</summary><p>{a}</p></details>" for q, a in FAQ) + '</div></div></div></section>')
-cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card"><div class="cta2-copy"><span class="cta2-tag">Get started</span><h2>Send us one role. <em>Get the full cost back.</em></h2>'
-       '<p>Tell us the country, the role and the pay. You get the full monthly cost, the contract terms and a start date. No commitment.</p>'
+cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card"><div class="cta2-copy"><span class="cta2-tag">Get a quote</span><h2>Your next hire could start <em>within days.</em></h2>'
+       '<p>Setting up an entity takes months. Tell us the country, the role and the pay, and you get the full monthly cost, the contract terms and a start date in writing. No entity, no retainer, no commitment until you say go.</p>'
        '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div>'
-       f'<ul class="cta2-ticks">{TICKS}</ul></div>'
+       '<ul class="cta2-ticks"><li>Written quote, no obligation</li><li>Local contract ready to sign</li><li>One invoice, in your currency</li></ul></div>'
        '<div class="cta2-quote" aria-hidden="true"><div class="q-head"><span>Example quote</span><em>India</em></div>'
        '<div class="q-role"><b>Senior Software Engineer</b><small>Bengaluru · $26,000 a year</small></div>'
        '<ul class="q-rows"><li><span>Monthly cost, all-in</span><b>$2,550</b></li><li><span>Employer costs</span><b>$184</b></li><li><span>Paybooks fee</span><b>$199</b></li><li><span>Start date</span><b>Confirmed in your quote</b></li></ul>'
