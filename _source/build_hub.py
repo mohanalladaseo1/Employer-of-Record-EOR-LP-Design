@@ -154,7 +154,7 @@ def ctable():
     tr = "".join("<tr>" + "".join(f'<td{" class=hl" if i == 1 else ""}>{c}</td>' for i, c in enumerate(r)) + "</tr>" for r in CMP_ROWS)
     return f'<div class="t-wrap"><table class="tbl"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
 compare = ('<section class="sec alt" id="compare"><div class="wrap">' + head("09", "Compare", "Compare EOR providers: choose the best", "How Paybooks compares with the platforms you will be quoted by. Prices are the published India rates; fees for other countries come in your quote.")
-           + ctable() + '<p class="fine">Fees published September 23, 2026: <a href="https://www.deel.com/pricing/" rel="nofollow" target="_blank">Deel</a>, <a href="https://remote.com/pricing" rel="nofollow" target="_blank">Remote</a>, <a href="https://remotepeople.com/blog/employer-of-record-cost/" rel="nofollow" target="_blank">Multiplier</a>; Paybooks from <a href="https://paybooks.in/eor/" rel="nofollow" target="_blank">paybooks.in/eor</a>. Country pages and languages counted from each site’s sitemap, September 2026. “Not published” means the company does not state it publicly.</p></div></section>')
+           + ctable() + '</div></section>')
 
 # ---------- 05 compliance strip, timeline, proof, faq, cta ----------
 comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("05", "Compliance", "Local law, handled in every country", "Employment rules differ in every country. Getting them right is our job, not yours.")
