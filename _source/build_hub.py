@@ -160,7 +160,7 @@ def ctable():
     tr = "".join("<tr>" + "".join(f'<td{" class=hl" if i == 1 else ""}>{c}</td>' for i, c in enumerate(r)) + "</tr>" for r in CMP_ROWS)
     return f'<div class="t-wrap"><table class="tbl"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
 compare = ('<section class="sec alt" id="compare"><div class="wrap">' + head("09", "Compare", "Compare EOR providers: choose the best", "How Paybooks compares with the platforms you will be quoted by. Prices are the published India rates; fees for other countries come in your quote.")
-           + ctable() + '</div></section>')
+           + ctable() + '<div class="btns" style="margin-top:26px"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to an EOR expert</a></div></div></section>')
 
 # ---------- 05 compliance strip, timeline, proof, faq, cta ----------
 comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("05", "Compliance", "Local law, handled in every country", "Employment rules differ in every country. Getting them right is our job, not yours.")
@@ -214,6 +214,7 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
        '<div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>')
 
 EXTRA_CSS = '''<style>
+#compare .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
 #proof .chips span{background:#fff;border:1px solid var(--line);color:var(--ink);font-weight:600}#proof .card{background:#fff}
 .cpick{padding:8px 0 40px}.cpick-card{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 22px}.cpick-card b{display:block;font-family:var(--head);font-size:18px;margin-bottom:4px}.cpick-card span{font-size:14px;color:var(--muted)}.cpick-form{display:flex;gap:10px;align-items:center}.cpick-form select{flex:1;height:46px;border:1px solid var(--line);border-radius:12px;background:#F8F9F7;font:500 15px Inter,sans-serif;padding:0 12px;color:var(--ink)}.cpick-form .btn{white-space:nowrap;gap:10px;padding:0 20px;min-width:180px;justify-content:space-between}.cpick-form .btn span,.cpick-form .btn i{color:#fff!important}.cpick-form .btn i{font-style:normal;font-size:18px;transition:transform .15s}.cpick-form .btn:hover i{transform:translateX(3px)}.cpick-form select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(79,138,16,.15)}@media(max-width:860px){.cpick-card{grid-template-columns:1fr}.cpick-form{flex-direction:column;align-items:stretch}}
 .dark .head{display:grid;grid-template-columns:72px 1fr;gap:20px;max-width:900px;align-items:start;margin-bottom:34px}.dark .head .num{font-family:var(--head);font-size:13px;font-weight:600;padding-top:6px;letter-spacing:.06em}.dark .head .num::after{content:"";display:block;width:36px;height:2px;margin-top:10px}.dark .head h2{font-size:clamp(30px,3vw,42px)}
