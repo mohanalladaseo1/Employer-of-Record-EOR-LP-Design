@@ -132,7 +132,7 @@ cost = ('<section class="sec" id="cost"><div class="wrap">' + head("06", "Cost",
         '<li><span class="cp-n">2</span><div><b>Employer costs</b><p>Social security, pension and other contributions the law requires. They vary by country and are the same with any provider.</p></div></li>'
         '<li><span class="cp-n">3</span><div><b>Our fee</b><p>A monthly fee per employee, set by country. In India, from $199 a month plus a one-time $50 onboarding fee.</p></div></li></ul>'
         + f'<div class="calc calc2"><div class="calc-in"><h3>Employee cost calculator</h3><p class="calc-note">Based on September 2026 rules. This is an estimate. Your written quote is final.</p>'
-        f'<div class="calc-row"><label for="cec">Hiring country</label><select id="cec">{opts}</select></div>'
+        f'<div class="calc-row" style="margin:0 0 22px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.1)"><label for="cec">Hiring country</label><select id="cec">{opts}</select></div>'
         '<label>Annual pay <span id="cesv"></span></label><input id="ces" type="range">'
         '<label>Employees <span id="nv"></span></label><input id="n" type="range" min="1" max="100" step="1" value="5">'
         '<div class="calc-row" id="strow"><label>State</label><select id="st"><option value="200">Karnataka (about $2 professional tax)</option><option value="200">Maharashtra (about $2 professional tax)</option><option value="0">Delhi / Haryana (no professional tax)</option><option value="200">Telangana (about $2 professional tax)</option><option value="208">Tamil Nadu (about $2 professional tax)</option></select></div>'
