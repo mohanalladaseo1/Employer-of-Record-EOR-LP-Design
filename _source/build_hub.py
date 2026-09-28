@@ -145,7 +145,7 @@ cost = ('<section class="sec" id="cost"><div class="wrap">' + head("07", "Cost",
         '<div class="calc-row"><label>Our fee</label><span class="fee-pill" id="feepill"></span></div><p class="fine" id="cenote"></p></div>'
         '<div class="calc-out" id="ceout"><div class="kpis"><div class="kpi"><b id="ce_total"></b><span>per employee per month</span></div><div class="kpi"><b id="ce_year"></b><span id="ce_year_l">a year for your team</span></div><div class="kpi"><b id="ce_stat"></b><span>employer costs on top of salary</span></div></div>'
         '<ul class="lines" id="ce_rows"></ul><p class="fine" id="ce_src"></p></div></div>'
-        '</div></section>')
+        '<div class="btns" style="margin-top:26px"><a class="btn" href="#quote">Talk to an EOR expert</a></div></div></section>')
 
 # ---------- 06 compare ----------
 CMP_HEAD = ["", "Paybooks", "Deel", "Remote", "Multiplier"]
@@ -160,7 +160,7 @@ def ctable():
     tr = "".join("<tr>" + "".join(f'<td{" class=hl" if i == 1 else ""}>{c}</td>' for i, c in enumerate(r)) + "</tr>" for r in CMP_ROWS)
     return f'<div class="t-wrap"><table class="tbl"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
 compare = ('<section class="sec alt" id="compare"><div class="wrap">' + head("09", "Compare", "Compare EOR providers: choose the best", "How Paybooks compares with the platforms you will be quoted by. Prices are the published India rates; fees for other countries come in your quote.")
-           + ctable() + '<div class="btns" style="margin-top:26px"><a class="btn" href="#quote">Talk to an EOR expert</a></div></div></section>')
+           + ctable() + '</div></section>')
 
 # ---------- 05 compliance strip, timeline, proof, faq, cta ----------
 comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("05", "Compliance", "Local law, handled in every country", "Employment rules differ in every country. Getting them right is our job, not yours.")
