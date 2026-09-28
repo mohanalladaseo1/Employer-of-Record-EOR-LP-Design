@@ -62,14 +62,17 @@ fit = ('<section class="sec alt" id="fit"><div class="wrap">' + head("02", "Pain
 <div class="ff-a" id="ffa"><div class="ff-empty"><b>Answer the three questions</b><p>Your recommendation appears here, with the reason and the option we would not suggest.</p></div></div></div>'''
        + '</div></section>')
 
-# ---------- 03 country search ----------
-COUNTRIES = [(c, "6A") for c in PH["6A"]] + [(c, "6B") for c in PH["6B"]] + [(c, "6C") for c in PH["6C"]]
-chips = "".join((f'<a class="cc live" href="employer-of-record/india/" data-n="{esc(c)}"><b>{esc(c)}</b><span>Country guide live →</span></a>' if c == "India" else
-                 f'<button type="button" class="cc" data-n="{esc(c)}"><b>{esc(c)}</b><span>Guide coming · get a quote</span></button>') for c, ph in COUNTRIES)
-countries = ('<section class="sec" id="countries"><div class="wrap">' + head("02", "Pain point: every country has its own rules, and the wrong one costs you", "Find your country", "42 countries, each with local contracts, payroll and compliance handled. Type a country to check it, or pick one below.")
-             + f'<div class="cs"><input id="csq" type="search" placeholder="Type a country, for example Germany" autocomplete="off" aria-label="Find your country"><span id="csn">42 countries</span></div>'
-             f'<div class="cgrid" id="cgrid">{chips}</div><p class="fine" id="csmsg"></p></div></section>')
-
+# ---------- 02 countries by region ----------
+REGIONS = [("Europe", ["United Kingdom", "Germany", "Netherlands", "Ireland", "Switzerland", "France", "Sweden", "Denmark", "Finland", "Norway", "Belgium", "Austria", "Italy", "Spain", "Portugal", "Czech Republic", "Poland", "Hungary", "Romania", "Turkey"]),
+           ("Americas", ["United States", "Canada", "Brazil", "Mexico", "Argentina", "Colombia", "Costa Rica", "Dominican Republic"]),
+           ("Asia-Pacific", ["India", "Singapore", "Australia", "Hong Kong", "Japan", "South Korea", "China", "Thailand", "Philippines"]),
+           ("Middle East and Africa", ["UAE", "Saudi Arabia", "South Africa", "Kenya", "Nigeria"])]
+ALL42 = PH["6A"] + PH["6B"] + PH["6C"]; assert sorted(c for _, L in REGIONS for c in L) == sorted(ALL42)
+regions = "".join(f'<div class="rg"><h4>{esc(r)} <span>{len(L)}</span></h4><div class="rg-pills">' + "".join(f'<button type="button" class="cp{" on" if c == "India" else ""}" data-n="{esc(c)}" data-r="{esc(r)}">{esc(c)}</button>' for c in L) + '</div></div>' for r, L in REGIONS)
+countries = ('<section class="sec alt" id="countries"><div class="wrap">' + head("02", "Pain point: every country has its own rules, and the wrong one costs you", "Hire in 42 countries",
+             "Local contracts, payroll and compliance handled in each one. Pick a country to see what an employee costs there.")
+             + f'<div class="cw"><div><div class="cs"><input id="csq" type="search" placeholder="Search a country" autocomplete="off" aria-label="Search a country"><span id="csn">42 countries</span></div><div class="rgs">{regions}</div></div>'
+             '<aside class="cpanel" id="cpanel"></aside></div></div></section>')
 
 HIRE_CARDS = [("Your name on the letter", "Paybooks is the employer. Your company, manager and role are on page one."),
               ("Real benefits from day one", "The statutory benefits of the country, plus any extras you choose. Payslips and tax forms in one app."),
@@ -100,7 +103,7 @@ RATES = {
         "lines": [["Canada Pension Plan", "5.95% of pay above $3,500 up to $74,600 (2026)"], ["Employment Insurance, employer share", "1.4 × 1.63% of pay up to $68,900 (2026)"]], "extra": "The second CPP tier and provincial plans are applied in your quote.",
         "src": [["Canada Revenue Agency, CPP rates", "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/canada-pension-plan-cpp/cpp-contribution-rates-maximums-exemptions.html"], ["Canada Revenue Agency, EI premiums", "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/employment-insurance-ei/ei-premium-rates-maximums.html"]]},
 }
-QUOTE_ONLY = [c for c, _ in COUNTRIES if c not in {v["name"] for v in RATES.values()}]
+QUOTE_ONLY = [c for c in ALL42 if c not in {v["name"] for v in RATES.values()}]
 opts = "".join(f'<option value="{k}">{esc(v["name"])}</option>' for k, v in RATES.items()) + "".join(f'<option value="Q:{esc(c)}">{esc(c)} · in your quote</option>' for c in QUOTE_ONLY)
 cost = ('<section class="sec" id="cost"><div class="wrap">' + head("04", "Pain point: hidden employer costs and fees that surface after you sign", "What it costs, line by line",
         "Salary, the employer contributions the country's law requires, and our fee, in the open. Statutory rates come from each country's official source, linked below the result.")
@@ -208,9 +211,13 @@ EXTRA_CSS = '''<style>
 .ff-opts button.on{background:var(--forest);color:#fff;border-color:var(--forest)}
 .ff-a{background:var(--forest);color:#fff;border-radius:20px;padding:28px;position:sticky;top:90px;align-self:start;min-height:220px}.ff-a b{font-family:var(--head)}.ff-empty b{font-size:20px;display:block;margin-bottom:8px}.ff-empty p{color:#BFD3B9;margin:0;font-size:15px}
 .ff-r small{display:block;font:700 11.5px Inter;letter-spacing:.1em;text-transform:uppercase;color:#9FD35C;margin-bottom:8px}.ff-r h3{font-size:26px;margin:0 0 10px;color:#fff}.ff-r p{color:#DDE8D6;font-size:15px;line-height:1.55;margin:0 0 10px}.ff-r .no{color:#BFD3B9;font-size:13.5px;border-top:1px solid rgba(255,255,255,.14);padding-top:12px;margin-top:12px}.ff-r .btn{margin-top:14px}
-.cs{display:flex;gap:14px;align-items:center;margin-bottom:16px}.cs input{flex:1;height:50px;border:1px solid var(--line);border-radius:12px;padding:0 16px;font:500 16px Inter,sans-serif;background:#fff}.cs input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(79,138,16,.15)}.cs span{font-size:13.5px;color:var(--muted);white-space:nowrap}
-.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.cc{display:flex;flex-direction:column;gap:3px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;font:inherit;cursor:pointer}
-.cc b{font-family:var(--head);font-size:16px}.cc span{font-size:12.5px;color:var(--muted)}.cc.live{border-color:var(--green);box-shadow:0 10px 30px -18px rgba(79,138,16,.6)}.cc.live span{color:var(--green);font-weight:600}.cc.hide{display:none}.cc.pick{border-color:var(--orange);background:#FFF7F1}
+.cs{display:flex;gap:14px;align-items:center;margin-bottom:18px}.cs input{flex:1;height:46px;border:1px solid var(--line);border-radius:12px;padding:0 16px;font:500 15px Inter,sans-serif;background:#fff}.cs input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(79,138,16,.15)}.cs span{font-size:13px;color:var(--muted);white-space:nowrap}
+.cw{display:grid;grid-template-columns:1.4fr .8fr;gap:22px;align-items:start}.rgs{display:grid;gap:14px}.rg h4{margin:0 0 8px;font:600 13px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.rg h4 span{font-weight:500;color:#98A2B3;margin-left:6px}
+.rg-pills{display:flex;flex-wrap:wrap;gap:6px}.cp{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font:500 13.5px Inter,sans-serif;color:var(--ink);cursor:pointer;transition:all .15s}.cp:hover{border-color:var(--green)}.cp.on{background:var(--forest);color:#fff;border-color:var(--forest)}.cp.dim{opacity:.28}.cp.hit{border-color:var(--green);box-shadow:0 0 0 3px rgba(79,138,16,.15)}
+.cpanel{position:sticky;top:90px;background:var(--forest);color:#fff;border-radius:20px;padding:26px 26px 24px}.cpanel small{display:block;font:700 11.5px Inter;letter-spacing:.1em;text-transform:uppercase;color:#9FD35C;margin-bottom:8px}.cpanel h3{font-family:var(--head);font-size:28px;margin:0 0 4px;color:#fff}.cpanel .rgn{color:#BFD3B9;font-size:14px;margin:0 0 16px}
+.cpanel .st{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.cpanel .st div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 14px}.cpanel .st b{display:block;font-family:var(--head);font-size:22px;color:#9FD35C;line-height:1.1}.cpanel .st span{display:block;font-size:11.5px;color:#8FAF86;margin-top:3px}
+.cpanel p{color:#DDE8D6;font-size:14.5px;line-height:1.5;margin:0 0 16px}.cpanel .btns{display:flex;flex-wrap:wrap;gap:10px}.cpanel .btn.ghost{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.35)!important}
+@media(max-width:900px){.cw{grid-template-columns:1fr}.cpanel{position:static}}
 .ce{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px;background:#0B1F14;color:#fff;border-radius:24px;padding:28px}.ce label{display:block;font:600 13px Inter;letter-spacing:.06em;text-transform:uppercase;color:#BFD3B9;margin:14px 0 8px}.ce label span{color:#fff;text-transform:none;letter-spacing:0;font-size:15px;margin-left:8px}
 .ce select{width:100%;height:46px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:#143A25;color:#fff;font:500 15px Inter,sans-serif;padding:0 12px}.ce input[type=range]{width:100%;accent-color:var(--lime)}
 .ce .fine{color:#8FAF86;font-size:12.5px}.ce .fine a{color:#9FD35C}.ce-out .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.ce-out .kpi{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 14px}.ce-out .kpi b{display:block;font-family:var(--head);font-size:22px;color:#9FD35C;line-height:1.1}.ce-out .kpi span{display:block;font-size:11.5px;color:#8FAF86;margin-top:3px}
@@ -225,10 +232,18 @@ var nodes=[].slice.call(document.querySelectorAll('.lc-node')),panes=[].slice.ca
 function go(i){cur=Math.max(0,Math.min(nodes.length-1,i));nodes.forEach(function(n,k){n.classList.toggle('on',k===cur);n.classList.toggle('done',k<cur)});panes.forEach(function(p,k){p.classList.toggle('on',k===cur)});fill.style.height=(cur/(nodes.length-1)*100)+'%'}
 nodes.forEach(function(n){n.onclick=function(){go(+n.dataset.i)}});
 document.querySelector('.lc').addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});go(0);
-var q=document.getElementById('csq'),chips=[].slice.call(document.querySelectorAll('.cc')),n=document.getElementById('csn'),msg=document.getElementById('csmsg');
-function filt(){var v=(q.value||'').trim().toLowerCase(),k=0;chips.forEach(function(c){var h=c.dataset.n.toLowerCase().indexOf(v)>-1;c.classList.toggle('hide',!h);if(h)k++});n.textContent=k+(k===1?' country':' countries');msg.textContent=(v&&!k)?'Not on the 42-country list yet. Send us the country with your quote request and we will confirm.':''}
+var RR,CALC;var q=document.getElementById('csq'),pills=[].slice.call(document.querySelectorAll('.cp')),cn=document.getElementById('csn'),panel=document.getElementById('cpanel');
+var KEY={'India':'IN','United States':'US','United Kingdom':'UK','Singapore':'SG','Canada':'CA'};
+function pct(k){var r=RR[k];if(!r)return null;var s=r['default'],L=CALC(k,s);return (L.reduce(function(a,x){return a+x[2]},0)/s*100).toFixed(1)}
+function show(n,rg){pills.forEach(function(p){p.classList.toggle('on',p.dataset.n===n)});var k=KEY[n],pc=k?pct(k):null;
+ panel.innerHTML='<small>Hire in</small><h3>'+n+'</h3><p class="rgn">'+rg+' · local contract, payroll and compliance handled</p>'
+ +'<div class="st"><div><b>'+(pc?pc+'%':'Quoted')+'</b><span>'+(pc?'employer costs on top of salary, at a typical salary':'employer costs, shown in your quote')+'</span></div><div><b>'+(k==='IN'?'$199':'Quoted')+'</b><span>'+(k==='IN'?'Paybooks fee per employee a month':'Paybooks fee, set by country')+'</span></div></div>'
+ +'<p>'+(k?'Statutory rates from '+n+'\\'s official sources. Move the calculator sliders to see the full monthly cost for your salary.':'We have not published '+n+'\\'s statutory rates here yet. Send us the role and pay and you get the full monthly cost, the contract terms and a start date.')+'</p>'
+ +'<div class="btns">'+(k?'<a class="btn" href="#cost" data-k="'+k+'">Estimate the cost in '+n+'</a>':'<a class="btn" href="#cost" data-k="Q:'+n+'">See the cost breakdown</a>')+'<a class="btn ghost" href="#quote">Get a quote</a></div>';
+ var b=panel.querySelector('[data-k]');if(b)b.onclick=function(){var sel=document.getElementById('cec');sel.value=b.dataset.k;sel.onchange()}}
+pills.forEach(function(p){p.onclick=function(){show(p.dataset.n,p.dataset.r)}});
+function filt(){var v=(q.value||'').trim().toLowerCase(),k=0,first=null;pills.forEach(function(p){var h=!v||p.dataset.n.toLowerCase().indexOf(v)>-1;p.classList.toggle('dim',v&&!h);p.classList.toggle('hit',v&&h);if(h){k++;if(!first)first=p}});cn.textContent=v?(k?k+(k===1?' match':' matches'):'Not on the 42-country list yet. Ask us with your quote.'):'42 countries';if(v&&first&&k===1)show(first.dataset.n,first.dataset.r)}
 q.addEventListener('input',filt);
-chips.forEach(function(c){if(c.tagName==='BUTTON')c.onclick=function(){chips.forEach(function(x){x.classList.toggle('pick',x===c)});msg.textContent=c.dataset.n+': the country guide is on its way. Get a quote for a role there and we will send the full cost and contract terms.'}});
 var R='''+json.dumps(RATES)+''',sel=document.getElementById('cec'),sl=document.getElementById('ces'),sv=document.getElementById('cesv'),note=document.getElementById('cenote'),N=document.getElementById('n'),NV=document.getElementById('nv'),ST=document.getElementById('st'),SR=document.getElementById('strow'),FP=document.getElementById('feepill'),OUT=document.getElementById('ceout');
 var OUTHTML=OUT.innerHTML;
 function money(c,x){return c+Math.round(x).toLocaleString('en-US')}
@@ -252,7 +267,7 @@ function draw(){var k=sel.value,n=+N.value;NV.textContent=n;
  document.getElementById('ce_rows').innerHTML=rows;document.getElementById('ce_total').textContent=money(r.cur,(s+stat+fee)/12);document.getElementById('ce_stat').textContent=(stat/s*100).toFixed(1)+'%';document.getElementById('ce_year').textContent=money(r.cur,(s+stat+fee)*n);document.getElementById('ce_year_l').textContent='a year for '+n+(n===1?' hire':' hires');
  document.getElementById('ce_src').innerHTML=(r.extra?r.extra+' ':'')+(r.yearNote?r.yearNote+'. ':'')+'Sources: '+r.src.map(function(x){return '<a href="'+x[1]+'"'+(x[1].indexOf('http')===0?' rel="nofollow" target="_blank"':'')+'>'+x[0]+'</a>'}).join(', ')+'.';
  note.textContent=k==='IN'?'About $'+Math.round(s/r.usd).toLocaleString('en-US')+' a year at ₹95.7 per $1.':''}
-N.oninput=draw;ST.onchange=draw;sel.onchange=draw;sl.oninput=draw;draw();
+N.oninput=draw;ST.onchange=draw;RR=R;CALC=calc;show('India','Asia-Pacific');sel.onchange=draw;sl.oninput=draw;draw();
 })();</script>'''
 
 schema = [
