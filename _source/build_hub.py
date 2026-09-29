@@ -67,14 +67,16 @@ def table(hd, rows, hl=1):
     th = "".join(f'<th{" class=hl" if i == hl else ""}>{esc(h)}</th>' for i, h in enumerate(hd))
     tr = "".join("<tr>" + "".join(f'<td{" class=hl" if i == hl else ""}>{c}</td>' for i, c in enumerate(r)) + "</tr>" for r in rows)
     return f'<div class="t-wrap"><table class="tbl"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
-fit = ('<section class="sec" id="fit"><div class="wrap">' + head("01", "Start here", "Is an Employer of Record right for you?", "Find your situation below to see which way of hiring fits you best.")
-       + table(["If you have", "Best option", "Why it fits", "Not recommended"], [
-           ["1 to 20 hires in a country where you have no entity", "<b>Employer of Record</b>", "Live within days. No entity to set up or close.", "Opening an entity first"],
-           ["A new market to test", "<b>Employer of Record</b>", "Hire now; decide on an entity once the market proves itself.", "Committing to an entity too early"],
-           ["Contractors working full time for you", "<b>EOR conversion</b>", "Removes the risk of treating employees as contractors.", "Leaving them as contractors"],
-           ["A large team in one country, or IP-heavy work", "<b>Your own entity, with Paybooks payroll</b>", "At scale, owning an entity usually costs less per person.", "EOR at any size"],
-           ["A team to build in India", "<b>EOR now, Managed India Office later</b>", "Start on EOR. Move to your own India entity, run by Paybooks, as the team grows.", "Waiting to hire until an entity is ready"],
-           ["Your own entities in several countries", "<b>Multi-Country Payroll</b>", "One provider and one report for payroll in every country.", "A different payroll vendor per country"]]) + '</div></section>')
+FIT = [("1 to 20 hires in a country where you have no entity", "Employer of Record", "Live within days. No entity to set up or close. Paybooks employs your people under local law while you run the work.", "Opening an entity first: months of setup for a team this size.", "Get a quote for a role"),
+       ("A new market to test", "Employer of Record", "Hire now and decide on an entity once the market proves itself. Nothing to close if you change course.", "Committing to an entity before the market is proven.", "Get a quote for a role"),
+       ("Contractors working full time for you", "EOR conversion", "We move full-time contractors onto local employment contracts. Same people, no misclassification risk.", "Leaving them as contractors and carrying the risk.", "Convert my contractors"),
+       ("A large team in one country, or IP-heavy work", "Your own entity, with Paybooks payroll", "At scale, owning an entity usually costs less per person. Start on EOR if you need to hire before it exists; we move the team over when it is ready.", "Staying on an EOR at this size for the long term.", "Talk to our EOR experts"),
+       ("A team to build in India", "EOR now, Managed India Office later", "Start on EOR within days. As the team grows, move to your own India entity, set up and run by Paybooks.", "Waiting to hire until an entity is ready.", "Get a quote for India"),
+       ("Your own entities in several countries", "Multi-Country Payroll", "One provider, one report and one standard for payroll in every country you already operate in.", "A different payroll vendor in every country.", "Talk to our EOR experts")]
+fbtns = "".join(f'<button type="button" class="fb{" on" if k == 0 else ""}" data-i="{k}"><span>{k+1}</span>{esc(a)}</button>' for k, (a, *_) in enumerate(FIT))
+fpanes = "".join(f'<div class="fp{" on" if k == 0 else ""}" data-i="{k}"><small>Best option</small><h3>{esc(b)}</h3><p class="fw"><b>Why it fits.</b> {esc(w)}</p><p class="fn"><b>Not recommended.</b> {esc(n)}</p><a class="btn" href="#quote">{esc(c)}</a></div>' for k, (a, b, w, n, c) in enumerate(FIT))
+fit = ('<section class="sec" id="fit"><div class="wrap">' + head("01", "Start here", "Is an Employer of Record right for you?", "Pick your situation to see which way of hiring fits you best, and when it is not us.")
+       + f'<div class="fitx"><div class="fbs">{fbtns}</div><div class="fps">{fpanes}</div></div></div></section>')
 def col(cls, h3, items): return f'<div class="col {cls}"><h3>{esc(h3)}</h3><ul>' + "".join(f'<li><div><b>{esc(a)}</b><span>{esc(b)}</span></div></li>' for a, b in items) + '</ul></div>'
 control = ('<section class="sec" id="control"><div class="wrap">' + head("03", "Who does what", "You manage the work. We handle the employer duties.", "Exactly who handles what, as written in your service agreement.")
            + '<div class="raci">' + col("you", "You decide", [("Who to hire and what to pay", "We quote the full monthly cost first"), ("Day-to-day work, reviews, promotions", "Managers are yours"),
@@ -214,6 +216,9 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
        '<div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>')
 
 EXTRA_CSS = '''<style>
+.fitx{display:grid;grid-template-columns:1fr 1.05fr;gap:22px;align-items:start}.fbs{display:grid;gap:8px}.fb{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:center;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font:500 15.5px Inter,sans-serif;color:var(--ink);cursor:pointer;transition:all .15s}.fb span{width:30px;height:30px;border-radius:50%;background:#EEF1EC;display:grid;place-items:center;font:600 12.5px Inter,sans-serif}.fb:hover{border-color:var(--sage)}.fb.on{background:var(--forest);color:#fff;border-color:var(--forest)}.fb.on span{background:#9FD35C;color:var(--forest)}
+.fps{position:sticky;top:90px;background:#F5F9EF;border:1px solid #DDE8CF;border-radius:20px;padding:28px 30px;min-height:300px}.fp{display:none}.fp.on{display:block;animation:lcin .25s ease}.fp small{display:block;font:700 11.5px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--g600);margin-bottom:8px}.fp h3{font-family:var(--head);font-size:28px;letter-spacing:-.02em;margin:0 0 14px}.fp p{font-size:15.5px;line-height:1.55;margin:0 0 12px;color:var(--ink2)}.fp p b{color:var(--ink)}.fp .fn{color:var(--muted);border-top:1px solid #DDE8CF;padding-top:12px}.fp .btn{margin-top:8px}
+@keyframes lcin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media(max-width:860px){.fitx{grid-template-columns:1fr}.fps{position:static}}
 @media(min-width:1000px){.hero.v2 .grid{grid-template-columns:3fr 2fr!important;gap:48px!important}.hero.v2 h1{max-width:none}.hero.v2 .sub{max-width:none}}
 .hero.v2 h1{font-size:clamp(34px,3.9vw,54px);letter-spacing:-.03em;line-height:1.06}@media(min-width:1000px){.hero.v2 h1 em{white-space:nowrap;font-size:.86em}}@media(max-width:700px){.hero.v2 h1 br{display:none}}
 .dark .head p{color:#BFD3B9}#service .card .ic{background:rgba(159,211,92,.18);color:#9FD35C}
@@ -267,6 +272,7 @@ if(document.querySelector('.lc')){var nodes=[].slice.call(document.querySelector
 function go(i){cur=Math.max(0,Math.min(nodes.length-1,i));nodes.forEach(function(n,k){n.classList.toggle('on',k===cur);n.classList.toggle('done',k<cur)});panes.forEach(function(p,k){p.classList.toggle('on',k===cur)});fill.style.height=(cur/(nodes.length-1)*100)+'%'}
 nodes.forEach(function(n){n.onclick=function(){go(+n.dataset.i)}});
 document.querySelector('.lc').addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});go(0);}
+var fbs=[].slice.call(document.querySelectorAll('.fb')),fps=[].slice.call(document.querySelectorAll('.fp'));fbs.forEach(function(b){b.onclick=function(){fbs.forEach(function(x){x.classList.toggle('on',x===b)});fps.forEach(function(p){p.classList.toggle('on',p.dataset.i===b.dataset.i)})}});
 var cps=document.getElementById('cpsel'),cpg=document.getElementById('cpgo');if(cps){cps.onchange=function(){var c=cps.value;cpg.href=c==='India'?'employer-of-record/india/':'#quote';cpg.textContent='Employee cost in '+c+' →'}}
 var RR,CALC;var q=document.getElementById('csq')||{addEventListener:function(){}},pills=[].slice.call(document.querySelectorAll('.cp')),cn=document.getElementById('csn'),panel=document.getElementById('cpanel');
 var KEY={'India':'IN','United States':'US','United Kingdom':'UK','Singapore':'SG','Canada':'CA'};
