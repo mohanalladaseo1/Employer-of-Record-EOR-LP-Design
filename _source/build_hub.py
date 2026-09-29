@@ -29,7 +29,7 @@ TITLE = "Employer of Record Services | Hire From Any Country Without an Entity |
 DESC = "Hire employees in 42 countries without setting up an entity. Paybooks becomes the legal employer and runs contracts, payroll, taxes and benefits under local law. Estimate the cost, check your fit, get a quote."
 
 hero = (f'<section class="hero v2"><div class="wrap"><div class="grid"><div><span class="cta2-tag hero-tag">Your first international hire, live within days</span>'
-        '<h1><em>Employer of Record services.</em><br>Hire from any country,<br>no entity needed.</h1>'
+        '<h1><em>Employer of Record services.</em> <br>Hire from any country, <br>no entity needed.</h1>'
         '<p class="sub">Wherever your company is based, Paybooks becomes the legal employer of your people in any of 42 countries. We run the local contract, payroll, taxes and benefits under that country’s law. You choose the people and direct their work.</p>'
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to our EOR experts</a></div>'
         f'<ul class="cta2-ticks hero-ticks">{TICKS}</ul></div>{HQ}</div></div></section>{TRUST}')
