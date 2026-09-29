@@ -110,7 +110,7 @@ HIRE_CARDS = [("Your name on the letter", "Paybooks is the employer. Your compan
               ("Their LinkedIn profile", "They list your company as their employer. We explain how Paybooks shows up before the offer."),
               ("People to ask", "Our HR team answers their payslip, insurance and leave questions.")]
 CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>'
-hire = ('<section class="sec alt" id="experience"><div class="wrap">' + head("02", "Your hire", "What your hire sees", "The offer letter, benefits and support your new hire gets from day one, in their country.")
+hire = ('<section class="sec alt" id="experience"><div class="wrap">' + head("02", "Your hire", "Your name on the offer. Our name on the contract.", "The offer letter, benefits and support your new hire gets from day one, in their country.")
         + '<div class="split"><div class="sticky"><p class="fine" style="margin:0 0 10px;color:var(--g600);font-weight:600">Example offer letter · India</p>' + LETTER + '</div>'
         + '<ul class="cards" style="grid-template-columns:1fr 1fr">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in HIRE_CARDS) + '</ul></div></div></section>')
 
