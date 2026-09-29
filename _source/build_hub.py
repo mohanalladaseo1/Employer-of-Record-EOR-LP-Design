@@ -9,6 +9,14 @@ ts = T.find('<div class="trust">'); TRUST = T[ts:T.find("</div></div></div></div
 js0 = T.find("<script>(function(){var io="); REVEAL = T[js0:T.find("</script>", js0) + 9]
 VID = ('<div class="vidhold" role="img" aria-label="Video placeholder"><div class="vh-frame"><span class="vh-mini"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>'
        '<span class="vh-cap"><b>How Paybooks EOR works</b><small>2-minute walkthrough</small></span><span class="vh-tag">Video</span></div></div>')
+PH = json.load(open(os.path.join(H, "..", "strategy", "paybooks_phases.json")))
+ALL42_EARLY = PH["6A"] + PH["6B"] + PH["6C"]
+HQ = ('<div class="hq" id="hq"><div class="hq-head"><b>Check your fit in 10 seconds</b><span>Three taps. Best option, cost level and a quote.</span></div>'
+      '<div class="hq-q"><label>Where do you want to hire?</label><select id="hq_c"><option value="" selected disabled>Choose a country</option>' + "".join(f'<option value="{esc(c)}">{esc(c)}</option>' for c in sorted(ALL42_EARLY)) + '</select></div>'
+      '<div class="hq-q"><label>Do you have an entity there?</label><div class="hq-o" data-q="e"><button type="button" data-v="no">No</button><button type="button" data-v="yes">Yes</button><button type="button" data-v="c">They’re contractors today</button></div></div>'
+      '<div class="hq-q"><label>How many people?</label><div class="hq-o" data-q="n"><button type="button" data-v="s">1 to 20</button><button type="button" data-v="m">21 to 50</button><button type="button" data-v="l">50+</button></div></div>'
+      '<div class="hq-a" id="hq_a"><div class="hq-empty">Your best option and the employer cost level appear here.</div></div></div>')
+
 TICKS = '<li>No entity to set up</li><li>Local contracts and payroll</li><li>One monthly invoice</li>'
 PH = json.load(open(os.path.join(H, "..", "strategy", "paybooks_phases.json")))
 i0 = T.find('<div class="letter">'); i1 = T.find('</div><ul class="cards"', i0)
@@ -24,7 +32,7 @@ hero = (f'<section class="hero v2"><div class="wrap"><div class="grid"><div><spa
         '<h1><em>Employer of Record services.</em><br>Hire from any country,<br>no entity needed.</h1>'
         '<p class="sub">Wherever your company is based, Paybooks becomes the legal employer of your people in any of 42 countries. We run the local contract, payroll, taxes and benefits under that country’s law. You choose the people and direct their work.</p>'
         '<div class="btns"><a class="btn" href="#quote">Get a quote for a role</a><a class="btn ghost" href="#quote">Talk to our EOR experts</a></div>'
-        f'<ul class="cta2-ticks hero-ticks">{TICKS}</ul></div>{VID}</div></div></section>{TRUST}')
+        f'<ul class="cta2-ticks hero-ticks">{TICKS}</ul></div>{HQ}</div></div></section>{TRUST}')
 
 # ---------- 01 lifecycle stepper ----------
 OUTCOME = ["The full cost and contract terms, before anyone signs", "A local contract, signed in days", "Registered and ready before day one", "Paid on the local date, every month", "Statutory benefits from day one, plus your extras", "Every filing done, and proven", "A clean exit, or the same job under your own name"]
@@ -78,7 +86,7 @@ fpanes = "".join(f'<div class="fp{" on" if k == 0 else ""}" data-i="{k}"><small>
 fit = ('<section class="sec" id="fit"><div class="wrap">' + head("01", "Start here", "Is an Employer of Record right for you?", "Pick your situation to see which way of hiring fits you best, and when it is not us.")
        + f'<div class="fitx"><div class="fbs">{fbtns}</div><div class="fps">{fpanes}</div></div></div></section>')
 def col(cls, h3, items): return f'<div class="col {cls}"><h3>{esc(h3)}</h3><ul>' + "".join(f'<li><div><b>{esc(a)}</b><span>{esc(b)}</span></div></li>' for a, b in items) + '</ul></div>'
-control = ('<section class="sec" id="control"><div class="wrap">' + head("03", "Who does what", "You manage the work. We handle the employer duties.", "Exactly who handles what, as written in your service agreement.")
+control = ('<section class="sec" id="control"><div class="wrap">' + head("02", "Who does what", "You manage the work. We handle the employer duties.", "Exactly who handles what, as written in your service agreement.")
            + '<div class="raci">' + col("you", "You decide", [("Who to hire and what to pay", "We quote the full monthly cost first"), ("Day-to-day work, reviews, promotions", "Managers are yours"),
                ("Work hours, leave and remote rules", "Your policies, within local law"), ("Raises, bonuses, equity", "Processed in the next payroll, no fee"), ("When to part ways", "We handle it under local law"), ("When to own your entity", "Your team moves over. Nothing restarts.")])
            + col("us", "We take care of", [("The employment contract and legal liability", "Under the country’s labor law"), ("Payroll and every government payment", "Taxes and social contributions: we calculate, file and pay"),
@@ -110,7 +118,7 @@ HIRE_CARDS = [("Your name on the letter", "Paybooks is the employer. Your compan
               ("Their LinkedIn profile", "They list your company as their employer. We explain how Paybooks shows up before the offer."),
               ("People to ask", "Our HR team answers their payslip, insurance and leave questions.")]
 CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>'
-hire = ('<section class="sec alt" id="experience"><div class="wrap">' + head("02", "Your hire", "Your name on the offer. Our name on the contract.", "The offer letter, benefits and support your new hire gets from day one, in their country.")
+hire = ('<section class="sec alt" id="experience"><div class="wrap">' + head("01", "Your hire", "Your name on the offer. Our name on the contract.", "The offer letter, benefits and support your new hire gets from day one, in their country.")
         + '<div class="split"><div class="sticky"><p class="fine" style="margin:0 0 10px;color:var(--g600);font-weight:600">Example offer letter · India</p>' + LETTER + '</div>'
         + '<ul class="cards" style="grid-template-columns:1fr 1fr">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in HIRE_CARDS) + '</ul></div></div></section>')
 
@@ -134,7 +142,7 @@ RATES = {
 }
 QUOTE_ONLY = [c for c in ALL42 if c not in {v["name"] for v in RATES.values()}]
 opts = "".join(f'<option value="{k}">{esc(v["name"])}</option>' for k, v in RATES.items()) + "".join(f'<option value="Q:{esc(c)}">{esc(c)} · in your quote</option>' for c in QUOTE_ONLY)
-cost = ('<section class="sec" id="cost"><div class="wrap">' + head("07", "Cost", "What an employee costs, country by country",
+cost = ('<section class="sec" id="cost"><div class="wrap">' + head("06", "Cost", "What an employee costs, country by country",
         "Salary, the employer contributions the country's law requires, and our fee. Statutory rates come from each country's official source, linked below the result.")
         + '<ul class="cparts"><li><span class="cp-n">1</span><div><b>Salary</b><p>The pay you agree with your hire, paid in their local currency on the local payroll date.</p></div></li>'
         '<li><span class="cp-n">2</span><div><b>Employer costs</b><p>Social security, pension and other contributions the law requires. They vary by country and are the same with any provider.</p></div></li>'
@@ -161,35 +169,35 @@ def ctable():
     th = "".join(f'<th{" class=hl" if i == 1 else ""}>{esc(h)}</th>' for i, h in enumerate(CMP_HEAD))
     tr = "".join("<tr>" + "".join(f'<td{" class=hl" if i == 1 else ""}>{c}</td>' for i, c in enumerate(r)) + "</tr>" for r in CMP_ROWS)
     return f'<div class="t-wrap"><table class="tbl"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
-compare = ('<section class="sec alt" id="compare"><div class="wrap">' + head("09", "Compare", "Compare EOR providers: choose the best", "How Paybooks compares with the platforms you will be quoted by. Prices are the published India rates; fees for other countries come in your quote.")
+compare = ('<section class="sec alt" id="compare"><div class="wrap">' + head("08", "Compare", "Compare EOR providers: choose the best", "How Paybooks compares with the platforms you will be quoted by. Prices are the published India rates; fees for other countries come in your quote.")
            + ctable() + '</div></section>')
 
 # ---------- 05 compliance strip, timeline, proof, faq, cta ----------
-comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("05", "Compliance", "Local law, handled in every country", "Employment rules differ in every country. Getting them right is our job, not yours.")
+comp = ('<section class="sec alt" id="compliance"><div class="wrap">' + head("04", "Compliance", "Local law, handled in every country", "Employment rules differ in every country. Getting them right is our job, not yours.")
         + '<ul class="chk">' + "".join(f'<li><b>{esc(a)}</b><span>{esc(b)}</span></li>' for a, b in [
             ("Contracts under local law", "Notice, probation, hours and leave written as the country requires."), ("Taxes and social security", "Withheld, filed and paid on time, with proof of every filing."),
             ("Misclassification risk removed", "Full-time workers employed properly, not paid as contractors."), ("Exits done right", "Notice, severance and final pay under local rules."),
             ("IP assigned to you", "Every contract assigns the work and the intellectual property to your company."), ("Tax risk flagged early", "Roles that could create a taxable presence are flagged before you hire.")]) + '</ul>'
         '</div></section>')
 
-exits = ('<section class="sec" id="exits"><div class="wrap">' + head("06", "Exits", "Clean exits, whenever you need them", "Letting one person go, or moving your team to your own entity. We handle both, under local law.")
+exits = ('<section class="sec" id="exits"><div class="wrap">' + head("05", "Exits", "Clean exits, whenever you need them", "Letting one person go, or moving your team to your own entity. We handle both, under local law.")
         + '<div class="split" style="grid-template-columns:1fr 1fr">'
         + "".join(f'<div><h3 style="margin-bottom:12px">{h3}</h3><ul class="tl">' + "".join(f'<li><span class="d">{esc(a)}</span><div><p>{b}</p></div></li>' for a, b in items) + '</ul></div>' for h3, items in [
             ("Letting someone go", [("Decide", "You tell us. We confirm the notice and severance the country requires."), ("Notice", "We issue the termination under local law: notice, or pay in place of notice."), ("Last day", "Final pay: salary, unused leave and any severance due."), ("After", "Tax forms, documents and equipment return.")]),
             ("Moving to your own entity", [("Decide", "Usually once a country team is large enough to justify an entity. In India, Paybooks sets it up and runs it for you."), ("Set up", "Your entity is set up. New hires keep joining through us."), ("Switch day", "Contracts move to your entity. Service continues, same payslip app."), ("After", "Paybooks can keep running payroll for your entity.")])])
         + '</div></div></section>')
-service = ('<section class="dark" id="service"><div class="wrap">' + head("04", "Working with us", "How we work with you", "One team, one monthly report and one invoice for your whole international team.")
+service = ('<section class="dark" id="service"><div class="wrap">' + head("03", "Working with us", "How we work with you", "One team, one monthly report and one invoice for your whole international team.")
            + '<ul class="cards three">' + "".join(f'<li class="card"><div class="ic">{CHECK}</div><h3>{esc(h)}</h3><p>{t}</p></li>' for h, t in [
                ("One account manager", "With a payroll and compliance specialist for each country behind them."), ("Reply within one working day", "With overlap for calls across US, UK and Asia-Pacific hours."),
                ("One monthly report", "Payroll summary, filing proof and cost in your currency, every country on one page."), ("One invoice", "In USD, GBP or EUR at the bank rate. Salary, employer costs and our fee."),
                ("Integrations", "Employee and cost data flows to your HR or finance system. Single sign-on for the employee app."), ("Security", "ISO 27001:2022. SOC 2 Type II. GDPR.")]) + '</ul></div></section>')
-timeline = ('<section class="sec tight" id="timeline"><div class="wrap"><div class="split">' + head("08", "Timeline", "From offer to first day, within a week", "In India it is days, not months. Elsewhere your quote confirms the start date.")
+timeline = ('<section class="sec tight" id="timeline"><div class="wrap"><div class="split">' + head("07", "Timeline", "From offer to first day, within a week", "In India it is days, not months. Elsewhere your quote confirms the start date.")
             + '<ul class="tl">' + "".join(f'<li><span class="d">{esc(a)}</span><div><p>{b}</p></div></li>' for a, b in [
                 ("Step 1", "You send the role, country and pay. We send the full cost and the contract terms."), ("Step 2", "You approve. We issue the local contract and your hire signs."),
                 ("Step 3", "We collect documents and complete the registrations."), ("Step 4", "Any background checks you choose are completed."), ("Step 5", "First day."),
                 ("Monthly", "Salary paid on the local date, filings done, and one invoice to you.")]) + '</ul></div></div></section>')
 
-proof = ('<section class="sec" id="proof"><div class="wrap"><div class="head rv"><span class="num">10</span><div><span class="eyebrow">Why Paybooks</span><h2>Payroll depth. A global parent.</h2></div></div>'
+proof = ('<section class="sec" id="proof"><div class="wrap"><div class="head rv"><span class="num">09</span><div><span class="eyebrow">Why Paybooks</span><h2>Payroll depth. A global parent.</h2></div></div>'
          '<ul class="cards">' + "".join(f'<li class="card"><h3>{esc(a)}</h3><p>{b}</p><div class="chips">' + "".join(f"<span>{esc(z)}</span>" for z in ch) + '</div></li>' for a, b, ch in [
              ("Payroll since 2012", "3,000+ employers. 1.5 million paychecks a year. $1B+ in salaries paid a year.", ["Payroll", "Taxes", "Benefits", "Compliance"]),
              ("A $1.32 billion parent", "TransPerfect bought Paybooks in 2024. 150+ cities on six continents. Trusted by 90% of the Fortune 500.", ["ISO 27001:2022", "SOC 2 Type II", "GDPR"])]) + '</ul></div></section>')
@@ -216,6 +224,11 @@ cta = ('<section class="cta2" id="quote"><div class="wrap"><div class="cta2-card
        '<div class="q-docs"><span>Contract terms</span><span>Sample offer letter</span></div></div></div></div></section>')
 
 EXTRA_CSS = '''<style>
+.hq{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:22px 22px 20px;backdrop-filter:blur(6px);color:#fff}.hq-head b{display:block;font-family:var(--head);font-size:19px}.hq-head span{display:block;font-size:13px;color:#BFD3B9;margin:3px 0 14px}
+.hq-q{margin-bottom:12px}.hq-q label{display:block;font:600 12px Inter;letter-spacing:.06em;text-transform:uppercase;color:#BFD3B9;margin-bottom:7px}.hq-q select{width:100%;height:44px;border-radius:11px;border:1px solid rgba(255,255,255,.18);background:#F2F1EC;color:#0E1411;font:500 15px Inter,sans-serif;padding:0 12px}
+.hq-o{display:flex;flex-wrap:wrap;gap:7px}.hq-o button{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;border-radius:999px;padding:8px 13px;font:500 13.5px Inter,sans-serif;cursor:pointer}.hq-o button.on{background:#9FD35C;color:#0B1F14;border-color:#9FD35C;font-weight:600}
+.hq-a{margin-top:14px;border-top:1px solid rgba(255,255,255,.14);padding-top:14px}.hq-empty{font-size:13.5px;color:#8FAF86}.hq-r small{display:block;font:700 11px Inter;letter-spacing:.1em;text-transform:uppercase;color:#9FD35C;margin-bottom:4px}.hq-r h4{font-family:var(--head);font-size:21px;margin:0 0 6px;color:#fff}.hq-r p{margin:0 0 10px;font-size:13.5px;color:#DDE8D6;line-height:1.5}.hq-r .st{display:flex;gap:8px;margin:0 0 12px}.hq-r .st div{flex:1;background:rgba(255,255,255,.07);border-radius:10px;padding:8px 10px}.hq-r .st b{display:block;font-family:var(--head);font-size:18px;color:#9FD35C;line-height:1.1}.hq-r .st span{font-size:11px;color:#8FAF86}.hq-r .btns{display:flex;gap:8px;flex-wrap:wrap}.hq-r .btn{height:42px;padding:0 16px;font-size:14px}.hq-r .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+@media(max-width:999px){.hq{margin-top:10px}}
 .fitx{display:grid;grid-template-columns:1fr 1.05fr;gap:22px;align-items:start}.fbs{display:grid;gap:8px}.fb{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:center;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font:500 15.5px Inter,sans-serif;color:var(--ink);cursor:pointer;transition:all .15s}.fb span{width:30px;height:30px;border-radius:50%;background:#EEF1EC;display:grid;place-items:center;font:600 12.5px Inter,sans-serif}.fb:hover{border-color:var(--sage)}.fb.on{background:var(--forest);color:#fff;border-color:var(--forest)}.fb.on span{background:#9FD35C;color:var(--forest)}
 .fps{position:sticky;top:90px;background:#F5F9EF;border:1px solid #DDE8CF;border-radius:20px;padding:28px 30px;min-height:300px}.fp{display:none}.fp.on{display:block;animation:lcin .25s ease}.fp small{display:block;font:700 11.5px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--g600);margin-bottom:8px}.fp h3{font-family:var(--head);font-size:28px;letter-spacing:-.02em;margin:0 0 14px}.fp p{font-size:15.5px;line-height:1.55;margin:0 0 12px;color:var(--ink2)}.fp p b{color:var(--ink)}.fp .fn{color:var(--muted);border-top:1px solid #DDE8CF;padding-top:12px}.fp .btn{margin-top:8px}
 @keyframes lcin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media(max-width:860px){.fitx{grid-template-columns:1fr}.fps{position:static}}
@@ -272,6 +285,18 @@ if(document.querySelector('.lc')){var nodes=[].slice.call(document.querySelector
 function go(i){cur=Math.max(0,Math.min(nodes.length-1,i));nodes.forEach(function(n,k){n.classList.toggle('on',k===cur);n.classList.toggle('done',k<cur)});panes.forEach(function(p,k){p.classList.toggle('on',k===cur)});fill.style.height=(cur/(nodes.length-1)*100)+'%'}
 nodes.forEach(function(n){n.onclick=function(){go(+n.dataset.i)}});
 document.querySelector('.lc').addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});go(0);}
+var HQA={},hqc=document.getElementById('hq_c'),hqa=document.getElementById('hq_a');
+var HQKEY={'India':'IN','United States':'US','United Kingdom':'UK','Singapore':'SG','Canada':'CA'};
+function hqOut(){if(!(hqc.value&&HQA.e&&HQA.n))return;var c=hqc.value,k=HQKEY[c],pc=null;
+ if(k&&typeof RR!=='undefined'&&RR){var r=RR[k],L=CALC(k,r['default']);pc=(L.reduce(function(a,x){return a+x[2]},0)/r['default']*100).toFixed(1)}
+ var f;if(HQA.e==='c')f=['EOR conversion','Your contractors move onto local employment contracts in '+c+'. Same people, no misclassification risk.','Convert my contractors'];
+ else if(HQA.e==='yes')f=['Multi-Country Payroll','You already employ people through your own entity in '+c+'. One provider and one report for payroll there and everywhere else.','Talk to our EOR experts'];
+ else if(c==='India'&&HQA.n!=='s')f=['EOR now, Managed India Office later','Start hiring in India within days. As the team grows, move to your own India entity, set up and run by Paybooks.','Get a quote for India'];
+ else if(HQA.n==='l')f=['Your own entity, with Paybooks payroll','Above 50 people in '+c+', owning an entity usually costs less per person. Start on EOR now; we move the team over when it is ready.','Talk to our EOR experts'];
+ else f=['Employer of Record','Hire in '+c+' within days. Paybooks employs your people under local law while you run the work. No entity to set up.','Get a quote for '+c];
+ hqa.innerHTML='<div class="hq-r"><small>Best option for '+c+'</small><h4>'+f[0]+'</h4><p>'+f[1]+'</p><div class="st"><div><b>'+(pc?pc+'%':'Quoted')+'</b><span>'+(pc?'employer costs on top of salary':'employer costs, in your quote')+'</span></div><div><b>'+(k==='IN'?'$199':'Quoted')+'</b><span>'+(k==='IN'?'Paybooks fee a month':'fee, set by country')+'</span></div></div><div class="btns"><a class="btn" href="#quote">'+f[2]+'</a>'+(k?'<a class="btn ghost" href="#cost" data-k="'+k+'">See full cost</a>':'')+'</div></div>';
+ var b=hqa.querySelector('[data-k]');if(b)b.onclick=function(){var sel=document.getElementById('cec');sel.value=b.dataset.k;sel.onchange()}}
+hqc.onchange=hqOut;[].slice.call(document.querySelectorAll('.hq-o')).forEach(function(g){[].slice.call(g.children).forEach(function(b){b.onclick=function(){[].slice.call(g.children).forEach(function(x){x.classList.toggle('on',x===b)});HQA[g.dataset.q]=b.dataset.v;hqOut()}})});
 var fbs=[].slice.call(document.querySelectorAll('.fb')),fps=[].slice.call(document.querySelectorAll('.fp'));fbs.forEach(function(b){b.onclick=function(){fbs.forEach(function(x){x.classList.toggle('on',x===b)});fps.forEach(function(p){p.classList.toggle('on',p.dataset.i===b.dataset.i)})}});
 var cps=document.getElementById('cpsel'),cpg=document.getElementById('cpgo');if(cps){cps.onchange=function(){var c=cps.value;cpg.href=c==='India'?'employer-of-record/india/':'#quote';cpg.textContent='Employee cost in '+c+' →'}}
 var RR,CALC;var q=document.getElementById('csq')||{addEventListener:function(){}},pills=[].slice.call(document.querySelectorAll('.cp')),cn=document.getElementById('csn'),panel=document.getElementById('cpanel');
@@ -323,6 +348,6 @@ HEAD = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="
         + "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in schema) + EXTRA_CSS + '</head>')
 FOOT = ('<footer class="ftr"><div class="wrap" style="grid-template-columns:1fr"><div><h4>Paybooks, a TransPerfect company</h4><p>Employer of Record, Multi-Country Payroll, Managed India Office and Global HCM for companies building teams across borders.</p></div></div></footer>'
         '<script src="assets/protect.js" defer></script></body></html>')
-page = HEAD + HEADER + "<main>" + hero + fit + hire + control + service + comp + cstrip + exits + cost + timeline + compare + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
+page = HEAD + HEADER + "<main>" + hero + hire + control + service + comp + cstrip + exits + cost + timeline + compare + proof + faq + cta + REVEAL + JS + "</main>" + FOOT
 open(OUT, "w", encoding="utf-8").write(page)
 print("hub v2 written", len(page))
