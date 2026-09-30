@@ -121,7 +121,7 @@ hire = ('<section class="sec alt" id="experience"><div class="wrap">' + head("02
 RATES = {
  "IN": {"name": "India", "cur": "₹", "code": "INR", "default": 1500000, "min": 300000, "max": 6000000, "step": 50000, "fee": 199, "feeCur": "$", "usd": 95.7, "yearNote": "Converted at ₹95.7 per $1 (Sep 23, 2026)",
         "lines": [["Provident fund", "12% of basic pay (basic is half of gross)"], ["Gratuity", "4.81% of basic pay, due after one year"], ["State insurance (ESI)", "3.25% of gross when gross is ₹21,000 a month or less"]],
-        "src": [["Paybooks India cost breakdown", "employer-of-record/india/#cost"]]},
+        "src": []},
  "US": {"name": "United States", "cur": "$", "code": "USD", "default": 90000, "min": 30000, "max": 300000, "step": 1000, "fee": None, "usd": 1,
         "lines": [["Social Security", "6.2% of pay up to $184,500 (2026)"], ["Medicare", "1.45% of all pay"], ["Federal unemployment (FUTA)", "0.6% of the first $7,000"]], "extra": "State unemployment insurance is added in your quote; it varies by state.",
         "src": [["IRS, Topic 751", "https://www.irs.gov/taxtopics/tc751"]]},
@@ -323,7 +323,7 @@ function draw(){var k=sel.value,n=+N.value;NV.textContent=n;
  rows+=r.fee?'<li><span>Paybooks fee<small>$'+r.fee+' per employee a month'+(r.usd>1?', shown in '+r.code:'')+'</small></span><b>'+money(r.cur,fee/12)+'</b></li>':'<li><span>Paybooks fee<small>set by country</small></span><b>In your quote</b></li>';
  rows+='<li class="tot"><span>Total per employee, per month</span><b>'+money(r.cur,(s+stat+fee)/12)+'</b></li>';
  document.getElementById('ce_rows').innerHTML=rows;document.getElementById('ce_total').textContent=money(r.cur,(s+stat+fee)/12);document.getElementById('ce_stat').textContent=(stat/s*100).toFixed(1)+'%';document.getElementById('ce_year').textContent=money(r.cur,(s+stat+fee)*n);document.getElementById('ce_year_l').textContent='a year for '+n+(n===1?' hire':' hires');
- document.getElementById('ce_src').innerHTML=(r.extra?r.extra+' ':'')+(r.yearNote?r.yearNote+'. ':'')+'Sources: '+r.src.map(function(x){return '<a href="'+x[1]+'"'+(x[1].indexOf('http')===0?' rel="nofollow" target="_blank"':'')+'>'+x[0]+'</a>'}).join(', ')+'.';
+ document.getElementById('ce_src').innerHTML=(r.extra?r.extra+' ':'')+(r.yearNote?r.yearNote+'. ':'')+(r.src.length?'Sources: '+r.src.map(function(x){return '<a href="'+x[1]+'"'+(x[1].indexOf('http')===0?' rel="nofollow" target="_blank"':'')+'>'+x[0]+'</a>'}).join(', ')+'.':'');
  note.textContent=k==='IN'?'About $'+Math.round(s/r.usd).toLocaleString('en-US')+' a year at ₹95.7 per $1.':''}
 N.oninput=draw;ST.onchange=draw;RR=R;CALC=calc;if(panel)show('India','Asia-Pacific');sel.onchange=draw;sl.oninput=draw;draw();
 })();</script>'''
