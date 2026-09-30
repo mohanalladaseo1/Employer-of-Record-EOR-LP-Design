@@ -149,8 +149,8 @@ cost = ('<section class="sec" id="cost"><div class="wrap">' + head("07", "Cost",
         '<div class="calc-row" id="strow"><label>State</label><select id="st"><option value="200">Karnataka (about $2 professional tax)</option><option value="200">Maharashtra (about $2 professional tax)</option><option value="0">Delhi / Haryana (no professional tax)</option><option value="200">Telangana (about $2 professional tax)</option><option value="208">Tamil Nadu (about $2 professional tax)</option></select></div>'
         '<div class="calc-row"><label>Our fee</label><span class="fee-pill" id="feepill"></span></div><p class="fine" id="cenote"></p></div>'
         '<div class="calc-out" id="ceout"><div class="kpis"><div class="kpi"><b id="ce_total"></b><span>per employee per month</span></div><div class="kpi"><b id="ce_year"></b><span id="ce_year_l">a year for your team</span></div><div class="kpi"><b id="ce_stat"></b><span>employer costs on top of salary</span></div></div>'
-        '<ul class="lines" id="ce_rows"></ul><p class="fine" id="ce_src"></p></div></div>'
-        '<div class="btns" style="margin-top:26px"><a class="btn" href="#quote">Talk to our EOR experts</a></div></div></section>')
+        '<ul class="lines" id="ce_rows"></ul><p class="fine" id="ce_src"></p><div class="btns" style="margin-top:18px"><a class="btn" href="#quote">Talk to our EOR experts</a></div></div></div>'
+        '</div></section>')
 
 # ---------- 06 compare ----------
 CMP_HEAD = ["", "Paybooks", "Deel", "Remote", "Multiplier"]
